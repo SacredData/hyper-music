@@ -1,6 +1,6 @@
 ## Settings
 title: multipli.city
-owner: "Andrew Grathwohl"
+owner: "S⧊CREDdata"
 url: "https://sacreddata.github.io"
 baseurl: "/pRoJEct-NeGYa"
 permalink: /:title/
@@ -11,7 +11,7 @@ webrick:
     Access-Control-Allow-Origin: "*"
 ## Global Variables
 email: "andrew@multipli.city"
-github: "agrathwohl"
+github: "sacreddata"
 # path to: css/, fonts/, img/ and js/
 assets_path: "/assets" # i.e. "/assets" 
 statement: "uninstall your DAW"
@@ -19,4 +19,4 @@ statement: "uninstall your DAW"
 toc_level: 3
 # texts randomly displayed in background
 #bgtext: "αβγδεζηθικλμνξοπρστυφχψω∷∫∮∝∞∧∨∑∏∪∩∈∵∴⊥‖∠⌒⊙≌√"
-bgtext: "▲⟁◮◬▷▷△◁⧍⧋⧊⨹∧∨⨺⧌⛛◀▶▵"
+bgtext: "▲⟁◮◬▷▷△◁⧍⧋⧊⨹∧∨⨺⧌⛛◀▶▵⨻⨻⨻"
