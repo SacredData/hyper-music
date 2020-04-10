@@ -1,0 +1,20 @@
+<div id="player"></div>
+ <script>
+   var url = "{{ page.stream_url }}";
+   console.log(url)
+
+   var dur = 0.0;
+
+   var wavesurfer = WaveSurfer.create({
+     container: "#player"
+   });
+
+   wavesurfer.on('ready', function () {
+         wavesurfer.play();
+         dur = wavesurfer.getDuration();
+         console.log(dur);
+   });
+
+   wavesurfer.load(`//${url}`);
+
+ </script>
