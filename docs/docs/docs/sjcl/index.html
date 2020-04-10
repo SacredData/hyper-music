@@ -12,17 +12,17 @@
   <!-- title -->
   <title>
     
-    multipli.city
+    An Encrypt and Dectrypt tool with sjcl.js
     
   </title>
   <!-- icon -->
-  <link href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon" />
+  <link href="http://localhost:4000/assets/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon" />
   <!-- main stylesheet -->
-  <link rel="stylesheet" href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css" type="text/css" />
   <!-- fa 5.9.0 -->
-  <link rel="stylesheet" href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/css/fa.min.css" type="text/css" />
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/fa.min.css" type="text/css" />
   <!-- rouge theme-->
-  <link rel="stylesheet" href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/css/rouge-bg.css" />
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/rouge-bg.css" />
   <!-- mathjax 2.7.5 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
   </head>
@@ -68,7 +68,7 @@
                 class="li_left">
                 <!-- home -->
                 
-                    <a class="header_btn" href="https://sacreddata.github.io/pRoJEct-NeGYa">
+                    <a class="header_btn" href="http://localhost:4000">
                         <i class="fa fa-home">
                             
                                 <p class="btn_text">Home</p>
@@ -199,7 +199,126 @@
 
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
-          <h1 id="404---page-not-found">404 - Page Not Found</h1>
+          <h1>
+  An Encrypt and Dectrypt tool with sjcl.js
+</h1>
+<div class="post_info">
+  <!-- author -->
+  
+  <span>
+    <i class="fa fa-user-secret"></i>
+    DeerRIDER
+  </span>
+  
+  <!-- date -->
+  
+  <span>
+    <i class="fa fa-calendar"></i>
+    Apr 16, 2019
+  </span>
+  
+  <!-- category -->
+  
+  <span>
+    <i class="fa fa-archive"></i>
+    Sample
+  </span>
+  
+</div>
+<!-- abstract -->
+<div class="abstract">
+  
+</div>
+
+<!-- aes encrypt and decrypt method -->
+<script
+  src="http://localhost:4000/assets/js/sjcl.js"
+  async
+></script>
+
+<div class="div_token">
+  <table>
+    <thead>
+      <th colspan="3">
+        Password is required in both encryption and decryption
+      </th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Password</td>
+        <td>
+          <textarea
+            class="access_token"
+            rows="1"
+            cols="50"
+            id="pwd"
+            style="resize: vertical;"
+          ></textarea>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          Message
+        </td>
+        <td>
+          <textarea
+            class="access_token"
+            rows="5"
+            cols="50"
+            id="msg"
+            style="resize: vertical;"
+          ></textarea>
+        </td>
+        <td><button class="encrypt" onclick="encrypt()">Encrypt</button></td>
+      </tr>
+      <tr>
+        <td>Ciphertext</td>
+        <td>
+          <textarea
+            class="access_token"
+            rows="5"
+            cols="50"
+            id="ct"
+            style="resize: vertical;"
+          ></textarea>
+        </td>
+        <td><button class="encrypt" onclick="decrypt()">Decrypt</button></td>
+      </tr>
+      <tr>
+        <td>Minimized</td>
+        <td>
+          <textarea
+            class="access_token"
+            rows="5"
+            cols="50"
+            id="min_text"
+            style="resize: vertical;"
+          ></textarea>
+        </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<script>
+  function encrypt() {
+    var pwd = document.getElementById("pwd").value;
+    var msg = document.getElementById("msg").value;
+    var ct =  sjcl.json.encrypt(pwd, msg,{salt: ""});
+    var ct_obj = JSON.parse(ct);
+    document.getElementById("ct").value = ct;
+    document.getElementById("msg").value = "";
+    document.getElementById("min_text").value = (ct_obj.iv.substring(0,22) + ct_obj.ct);
+  }
+  function decrypt() {
+    var pwd = document.getElementById("pwd").value;
+    var ct = document.getElementById("ct").value;
+    document.getElementById("msg").value = sjcl.json.decrypt(pwd, ct);
+    document.getElementById("ct").value = "";
+    document.getElementById("min_text").value = "";
+  }
+</script>
 
 
           

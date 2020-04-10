@@ -12,17 +12,17 @@
   <!-- title -->
   <title>
     
-    multipli.city
+    pRoJEct-NeGYa 使用说明
     
   </title>
   <!-- icon -->
-  <link href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon" />
+  <link href="http://localhost:4000/pRoJEct-NeGYa/assets/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon" />
   <!-- main stylesheet -->
-  <link rel="stylesheet" href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="http://localhost:4000/pRoJEct-NeGYa/assets/css/main.css" type="text/css" />
   <!-- fa 5.9.0 -->
-  <link rel="stylesheet" href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/css/fa.min.css" type="text/css" />
+  <link rel="stylesheet" href="http://localhost:4000/pRoJEct-NeGYa/assets/css/fa.min.css" type="text/css" />
   <!-- rouge theme-->
-  <link rel="stylesheet" href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/css/rouge-bg.css" />
+  <link rel="stylesheet" href="http://localhost:4000/pRoJEct-NeGYa/assets/css/rouge-bg.css" />
   <!-- mathjax 2.7.5 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
   </head>
@@ -37,7 +37,7 @@
   var ctx = c.getContext("2d");
   c.height = window.innerHeight;
   c.width = window.innerWidth;
-  var txts = "▲⟁◮◬▷▷△◁⧍⧋⧊⨹∧∨";
+  var txts = "▲⟁◮◬▷▷△◁⧍⧋⧊⨹∧∨⨺⧌⛛◀▶▵";
   txts = txts.split("");
   var font_size = 92;
   var columns = c.width / font_size;
@@ -68,7 +68,7 @@
                 class="li_left">
                 <!-- home -->
                 
-                    <a class="header_btn" href="https://sacreddata.github.io/pRoJEct-NeGYa">
+                    <a class="header_btn" href="http://localhost:4000/pRoJEct-NeGYa">
                         <i class="fa fa-home">
                             
                                 <p class="btn_text">Home</p>
@@ -199,7 +199,92 @@
 
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
-          <h1 id="404---page-not-found">404 - Page Not Found</h1>
+          <h1>
+  pRoJEct-NeGYa 使用说明
+</h1>
+<div class="post_info">
+  <!-- author -->
+  
+  <span>
+    <i class="fa fa-user-secret"></i>
+    DeerRIDER
+  </span>
+  
+  <!-- date -->
+  
+  <span>
+    <i class="fa fa-calendar"></i>
+    Jul 16, 2019
+  </span>
+  
+  <!-- category -->
+  
+  <span>
+    <i class="fa fa-archive"></i>
+    Sample
+  </span>
+  
+</div>
+<!-- abstract -->
+<div class="abstract">
+  
+</div>
+
+<h1 id="project-negya">PRoJEct-NeGYa</h1>
+
+<p>黑客风格的个人主页模板。</p>
+
+<p>版本： v2.01</p>
+
+<h2 id="特性">特性</h2>
+
+<ol>
+  <li>狂拽酷炫，高度可定制化</li>
+  <li>Rouge支持代码高亮</li>
+  <li>MathJax公式</li>
+  <li>Toc文章索引</li>
+  <li>加密文本</li>
+</ol>
+
+<h2 id="更新日志">更新日志</h2>
+
+<p>2019.7.28：更改加密方式，修改Rouge主题</p>
+
+<p>2019.7.17：更新说明文件</p>
+
+<p>2019.6.15：老子就做这一版，凑合能用得了，我可不改了啊！</p>
+
+<h2 id="使用方法">使用方法</h2>
+
+<ul>
+  <li>下载或者fork到自己的github仓库里</li>
+  <li>修改_config.yml文件</li>
+  <li>（自定义域名）修改CNAME文件</li>
+  <li>修改pages/index.md文件，自定义主页</li>
+  <li>删除_posts/文件夹里的文件，添加自己的文章</li>
+  <li>同步到github远程仓库</li>
+</ul>
+
+<h2 id="工程结构">工程结构</h2>
+
+<p>功能和内容隔离TMD！</p>
+
+<p>网站内容：</p>
+<ul>
+  <li>_posts：文章</li>
+  <li>pages：页面</li>
+  <li>assets/img：图</li>
+</ul>
+
+<p>功能样式：</p>
+<ul>
+  <li>_includes：子页面模块</li>
+  <li>_layouts：页面模板（单纯地组合子页面模块）</li>
+  <li>assets/css：样式表文件</li>
+  <li>assets/fonts：字体文件</li>
+  <li>assets/js：脚本文件</li>
+  <li>_config.yml：配置文件</li>
+</ul>
 
 
           

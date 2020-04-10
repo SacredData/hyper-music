@@ -6,23 +6,23 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <!-- site description -->
   
-  <meta content="" name="description" />
+  <meta content="This is excerpt." name="description" />
   <!-- referer for 3rd-part images-->
   <meta content="no-referrer" name="referrer" />
   <!-- title -->
   <title>
     
-    
+    Text Styles and Markdown Quick Reference
     
   </title>
   <!-- icon -->
-  <link href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon" />
+  <link href="http://localhost:4000/pRoJEct-NeGYa/assets/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon" />
   <!-- main stylesheet -->
-  <link rel="stylesheet" href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="http://localhost:4000/pRoJEct-NeGYa/assets/css/main.css" type="text/css" />
   <!-- fa 5.9.0 -->
-  <link rel="stylesheet" href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/css/fa.min.css" type="text/css" />
+  <link rel="stylesheet" href="http://localhost:4000/pRoJEct-NeGYa/assets/css/fa.min.css" type="text/css" />
   <!-- rouge theme-->
-  <link rel="stylesheet" href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/css/rouge-bg.css" />
+  <link rel="stylesheet" href="http://localhost:4000/pRoJEct-NeGYa/assets/css/rouge-bg.css" />
   <!-- mathjax 2.7.5 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
   </head>
@@ -37,7 +37,7 @@
   var ctx = c.getContext("2d");
   c.height = window.innerHeight;
   c.width = window.innerWidth;
-  var txts = "▲⟁◮◬▷▷△◁⧍⧋⧊⨹∧∨";
+  var txts = "▲⟁◮◬▷▷△◁⧍⧋⧊⨹∧∨⨺⧌⛛◀▶▵";
   txts = txts.split("");
   var font_size = 92;
   var columns = c.width / font_size;
@@ -68,7 +68,7 @@
                 class="li_left">
                 <!-- home -->
                 
-                    <a class="header_btn" href="https://sacreddata.github.io/pRoJEct-NeGYa">
+                    <a class="header_btn" href="http://localhost:4000/pRoJEct-NeGYa">
                         <i class="fa fa-home">
                             
                                 <p class="btn_text">Home</p>
@@ -123,12 +123,29 @@
                 class="span_right">
                 <!-- popup table of content -->
                 
-                    <a class="title">multipli.city</a>
-                    
-                        <a class="owner">
-                            -
-                            Andrew Grathwohl</a>
-                    
+                    <a class="header_btn" onclick="scroll_percentage(-0.88)">
+                        <i class="fa fa-backward">
+                            
+                                <p class="btn_text">Prev</p>
+                            
+                        </i>
+                    </a>
+                    <!-- scroll down -->
+                    <a class="header_btn" onclick="scroll_percentage(0.88)">
+                        <i class="fa fa-forward">
+                            
+                                <p class="btn_text">Next</p>
+                            
+                        </i>
+                    </a>
+                    <!-- popup table of content -->
+                    <a class="header_btn popup_btn" onclick="toggle_toc()">
+                        <i class="fa fa-bars">
+                            
+                                <p class="btn_text">Content</p>
+                            
+                        </i>
+                    </a>
                 
             </span>
         </ul>
@@ -136,6 +153,27 @@
     <hr/>
 </div>
 <!-- table of content -->
+
+    <div class="div_toc toc" id="popup_toc">
+    
+    <!-- generate toc -->
+    
+    </div>
+    <!-- toggle toc -->
+    <script>
+    function toggle_toc() {
+        var popup = document.getElementById("popup_toc");
+        popup.classList.toggle("show");
+    }
+    </script>
+    <!-- scroll page -->
+        <script>
+    function scroll_percentage(mtpler) {
+        document
+        .getElementById("div_atcl")
+        .scrollBy(0, window.innerHeight * mtpler);
+    }
+    </script>
 
 <!-- toggle maximize -->
 
@@ -167,7 +205,7 @@
 
 <!-- encrypt and decrypt -->
 
-    <script src="https://sacreddata.github.io/pRoJEct-NeGYa/assets/js/sjcl.js" async></script>
+    <script src="http://localhost:4000/pRoJEct-NeGYa/assets/js/sjcl.js" async></script>
     <script>
   function decrypt_all(pwd, class_name) {
     var elem_clct = document.getElementsByClassName(class_name);
@@ -205,40 +243,144 @@
 
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
-          <h1 id="sonic-multiplicities"><strong>SONIC MULTIPLICITIES</strong></h1>
+          <h1>
+  Text Styles and Markdown Quick Reference
+</h1>
+<div class="post_info">
+  <!-- author -->
+  
+  <span>
+    <i class="fa fa-user-secret"></i>
+    DeerRIDER
+  </span>
+  
+  <!-- date -->
+  
+  <span>
+    <i class="fa fa-calendar"></i>
+    May 25, 2019
+  </span>
+  
+  <!-- category -->
+  
+  <span>
+    <i class="fa fa-archive"></i>
+    Sample
+  </span>
+  
+</div>
+<!-- abstract -->
+<div class="abstract">
+  
+  <p>This is abstract. Abstract is blank by default.</p>
+  
+</div>
 
-<p><strong>Sonic Multiplicities</strong> is an effort to construct a unified, broadened musical consciousness out of today’s technologies of war, aiming to propel elite instrumentalists’ capabilities towards the outer-most reaches of musical aptitude. What results from this ambitious musical endeavor is among the world’s longest-running datasets comprised of advanced, complex, and challenging extended techniques, free improvisation strategem, and instrumental varieties.</p>
+<h2 id="style-test-below">Style Test Below</h2>
 
-<p><strong>SM</strong> practictioners reject today’s “state of the art,” which in truth amounts to little more than turning the highly nuanced, intimately and infinitely detailed computer music paradigm into expensive, buggy computer games. We encourage soloists to wrestle control not just over their own instrument, but also the 360 degree sonic universe which spawns, morphs, mutates, and evolves all around the performance space when utilizing <strong>SM</strong> software.</p>
+<h3 id="text">Text</h3>
 
-<!--
-##  Features
-* Highly customizable, content-oriented with The Matrix style
-* Eyesight-protection layout
-* Decrypt and encrypt text (access token: 233): 
-  * secret msg 1: 
-  <p class="encrypted" id="/MZAf/PKx9jpw8/Jnp7XQQFki2ibGnArZP46W+keVThXquhWwFROEFnbY8eC57Tw==">Encrypted content!</p>
-  * secret msg 2: 
-  <p class="encrypted" id="G7D+0370pNmixIP1j7teCg1jtm9XCdOWYFH61lcM0LYWlT0hB3rS9raIs=">Encrypted content!</p>
-* LaTeX formula Support with MathJax
+<p>Wand fest wa gét. D’Welt weisen Fréijor ze ech. Da d’Land Faarwen nei, dé fir rëscht blëtzen.</p>
 
-$$
-NADH+Q+5\;H_{matrix}^{+}\rightarrow NAD^{+}+QH_{2}+4\;H_{intermembrane}^{+}\!
-$$
+<p>Encrypted text:<br /></p>
+<p class="encrypted">elKwQPCOLF4w86wRItKMqge8qDO6fU80wbdANG6AnS8kgT8qAqGFC5VkVexu+4RBhBMUWwdkzEVo8HAKUT</p>
 
-* Code highlight with Rouge
+<p>normal, <strong>bold</strong>, <em>italic</em>, <del>strikethrough</del>, <code class="highlighter-rouge">keyword</code>, <a href="www.google.com">link</a></p>
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-## Download and Documentation
+<blockquote>
+  <p>blockquote</p>
 
-[**pRoJEct NeGYa (Github)**](https://github.com/akiritsu/pRoJEct-NeGYa)
+  <p>Den wa Stad Schuebersonndeg, op all d’Pan hinnen. Ké net geet sech Mier, ass gutt Kaffi an.</p>
+</blockquote>
 
--->
+<h3 id="code">Code</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
+<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
+  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h3 id="formula">Formula</h3>
+
+<script type="math/tex; mode=display">NADH+Q+5\;H_{matrix}^{+}\rightarrow NAD^{+}+QH_{2}+4\;H_{intermembrane}^{+}\!</script>
+
+<h3 id="list">List</h3>
+<ol>
+  <li>ordered list item 1</li>
+  <li>ordered list item 2
+    <ol>
+      <li>sublist
+        <ol>
+          <li>subsublist
+            <ul>
+              <li>unordered list</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<ul>
+  <li>unordered sublist
+    <ul>
+      <li>subsublist
+        <ul>
+          <li>subsubsublist</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="horizontal-line">horizontal line</h3>
+
+<hr />
+
+<h3 id="table">Table</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">surprise</th>
+      <th style="text-align: left">surprise</th>
+      <th style="text-align: left">maza faka</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">fark</td>
+      <td style="text-align: left">Ya</td>
+      <td style="text-align: left">maza faka</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">surprise</td>
+      <td style="text-align: left">babe</td>
+      <td style="text-align: left">surprise</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">surprise</td>
+      <td style="text-align: left">maza faka</td>
+      <td style="text-align: left">surprise</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">surprise</td>
+      <td style="text-align: left">maza faka</td>
+      <td style="text-align: left">surprise surprise surprise maza faka maza faka maza faka kakakakak</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="image">image</h3>
+<p><img src="http://localhost:4000/pRoJEct-NeGYa/assets/img/img-sample.jpg" alt="img-smpl" /></p>
+
+<h3 id="heading">heading</h3>
+<h4 id="this-is-heading-4">This is heading 4</h4>
+<h5 id="this-is-heading-5">This is heading 5</h5>
+<h6 id="this-is-heading-6">This is heading 6</h6>
+
 
           
 <!-- list of articles: sort by date (by default) -->
@@ -254,39 +396,9 @@ end
     <tbody>
         
         </tr>
-        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/readme/">pRoJEct-NeGYa 使用说明</a></td>
-        <td class="td_date">Jul 16, 19</td>
-        <td class="td_category">Sample</td>
-        </tr>
-        
-        </tr>
-        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/sample3/">Text Styles and Markdown Quick Reference</a></td>
+        <td class="td_title"><a href="http://localhost:4000/pRoJEct-NeGYa/sample3/">Text Styles and Markdown Quick Reference</a></td>
         <td class="td_date">May 25, 19</td>
         <td class="td_category">Sample</td>
-        </tr>
-        
-        </tr>
-        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/sjcl/">An Encrypt and Dectrypt tool with sjcl.js</a></td>
-        <td class="td_date">Apr 16, 19</td>
-        <td class="td_category">Sample</td>
-        </tr>
-        
-        </tr>
-        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/sample1/">dummy sample post 1</a></td>
-        <td class="td_date">Mar 09, 19</td>
-        <td class="td_category">Dummy</td>
-        </tr>
-        
-        </tr>
-        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/code-sample/">Sample Code - Quick Sort</a></td>
-        <td class="td_date">Feb 04, 19</td>
-        <td class="td_category">Sample</td>
-        </tr>
-        
-        </tr>
-        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/sample2/">Test Toc Level - TOC_LEVEL = 6</a></td>
-        <td class="td_date">Jan 01, 19</td>
-        <td class="td_category">Dummy</td>
         </tr>
         
     </tbody>
