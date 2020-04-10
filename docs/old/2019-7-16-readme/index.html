@@ -294,6 +294,7 @@
   <li>_config.yml：配置文件</li>
 </ul>
 
+<div id="player_msg">LOADING SONICS</div>
 <div id="player"></div>
 <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
  <script>
@@ -307,6 +308,7 @@
    });
 
    wavesurfer.on('ready', function () {
+         document.getElementById("player_msg").innerHTML = "";
          wavesurfer.play();
          dur = wavesurfer.getDuration();
          console.log(dur);
