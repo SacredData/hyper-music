@@ -16,13 +16,13 @@
     
   </title>
   <!-- icon -->
-  <link href="http://localhost:4000/pRoJEct-NeGYa/assets/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon" />
+  <link href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon" />
   <!-- main stylesheet -->
-  <link rel="stylesheet" href="http://localhost:4000/pRoJEct-NeGYa/assets/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/css/main.css" type="text/css" />
   <!-- fa 5.9.0 -->
-  <link rel="stylesheet" href="http://localhost:4000/pRoJEct-NeGYa/assets/css/fa.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/css/fa.min.css" type="text/css" />
   <!-- rouge theme-->
-  <link rel="stylesheet" href="http://localhost:4000/pRoJEct-NeGYa/assets/css/rouge-bg.css" />
+  <link rel="stylesheet" href="https://sacreddata.github.io/pRoJEct-NeGYa/assets/css/rouge-bg.css" />
   <!-- mathjax 2.7.5 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
   </head>
@@ -32,14 +32,16 @@
   <canvas id="c"></canvas>
 </div>
 <script>
-  var colors = [ "#faa", "#f12", "#f2a" ]
+  // var colors = [ "#faa", "#f12", "#f2a" ]
+  var colors = [ "#ebbebe", "#b95775", "#be639b", "#a63333", "#7b3349" ]
+  var fontSizeMults = [ 0.5, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.5, 2.0 ]
   var c = document.getElementById("c");
   var ctx = c.getContext("2d");
   c.height = window.innerHeight;
   c.width = window.innerWidth;
-  var txts = "▲⟁◮◬▷▷△◁⧍⧋⧊⨹∧∨⨺⧌⛛◀▶▵";
+  var txts = "▲⟁◮◬▷▷△◁⧍⧋⧊⨹∧∨⨺⧌⛛◀▶▵⨻⨻⨻";
   txts = txts.split("");
-  var font_size = 92;
+  var font_size = 2;
   var columns = c.width / font_size;
   var drops = [];
   for (var x = 0; x < columns; x++) drops[x] = 1;
@@ -48,6 +50,7 @@
     ctx.fillStyle = "rgba(0, 0, 0, 0.01)";
     ctx.fillRect(0, 0, c.width, c.height);
     ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];// "#faa";
+    font_size = font_size * fontSizeMults[Math.floor(Math.random() * fontSizeMults.length)];
     ctx.font = font_size + "px arial";
     for (var i = 0; i < drops.length; i++) {
       var text = txts[Math.floor(Math.random() * txts.length)];
@@ -56,7 +59,7 @@
       drops[i]++;
     }
   }
-  setInterval(draw, 20000);
+  setInterval(draw, 9000);
 </script>
 
     <div class="container" id="ctner">
@@ -68,7 +71,7 @@
                 class="li_left">
                 <!-- home -->
                 
-                    <a class="header_btn" href="http://localhost:4000/pRoJEct-NeGYa">
+                    <a class="header_btn" href="https://sacreddata.github.io/pRoJEct-NeGYa">
                         <i class="fa fa-home">
                             
                                 <p class="btn_text">Home</p>
@@ -78,7 +81,7 @@
                 
                 <!-- email -->
                 
-                    <a class="header_btn" href="mailto://andrew@multipli.city">
+                    <a class="header_btn" href="mailto:andrew@multipli.city">
                         <i class="fa fa-envelope-square">
                             
                                 <p class="btn_text">Email</p>
@@ -88,7 +91,7 @@
                 
                 <!-- github -->
                 
-                    <a class="header_btn" href="https://github.com/agrathwohl">
+                    <a class="header_btn" href="https://github.com/sacreddata">
                         <i class="fa fa-github">
                             
                                 <p class="btn_text">Github</p>
@@ -127,7 +130,7 @@
                     
                         <a class="owner">
                             -
-                            Andrew Grathwohl</a>
+                            S⧊CREDdata</a>
                     
                 
             </span>
@@ -167,7 +170,7 @@
 
 <!-- encrypt and decrypt -->
 
-    <script src="http://localhost:4000/pRoJEct-NeGYa/assets/js/sjcl.js" async></script>
+    <script src="https://sacreddata.github.io/pRoJEct-NeGYa/assets/js/sjcl.js" async></script>
     <script>
   function decrypt_all(pwd, class_name) {
     var elem_clct = document.getElementsByClassName(class_name);
@@ -242,20 +245,22 @@ end
 
           
 <!-- list of articles: sort by date (by default) -->
-<h1 class="loa">sorted by date</h1>
+<h1 class="loa">music sorted by date</h1>
 <table>
     <thead>
         <tr>
             <th> TITLE </th>
             <th> DATE </th>
+            <th> PERFORMER </th>
             <th> CATEGORY </th>
         </tr>
     </thead>
     <tbody>
         
         </tr>
-        <td class="td_title"><a href="http://localhost:4000/pRoJEct-NeGYa/sample3/">Text Styles and Markdown Quick Reference</a></td>
+        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/sample3/">Text Styles and Markdown Quick Reference</a></td>
         <td class="td_date">May 25, 19</td>
+        <td class="td_performer">Andrew Grathwohl</td>
         <td class="td_category">Sample</td>
         </tr>
         
@@ -269,7 +274,7 @@ end
     <nav class="nav_bar">
         <ul>
             <li class="copyright">
-                © 2020
+                © 2020 SACRED DATA
             </li>
             
             <li>
