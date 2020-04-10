@@ -263,7 +263,9 @@
 
 <div id="player_msg">LOADING SONICS</div>
 <div id="player"></div>
-<button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
+<div id="player_controls">
+  <div id="music_dur"></div>
+  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
  <script>
    var url = "";
    console.log(url)
@@ -279,6 +281,7 @@
          wavesurfer.play();
          dur = wavesurfer.getDuration();
          console.log(dur);
+         document.getElementById("music_dur").innerHTML = `${dur}`;
    });
 
    wavesurfer.load(`//${url}`);

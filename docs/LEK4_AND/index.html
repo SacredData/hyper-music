@@ -246,7 +246,9 @@
 
 <div id="player_msg">LOADING SONICS</div>
 <div id="player"></div>
-<button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
+<div id="player_controls">
+  <div id="music_dur"></div>
+  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
  <script>
    var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_007.mp3";
    console.log(url)
@@ -262,6 +264,7 @@
          wavesurfer.play();
          dur = wavesurfer.getDuration();
          console.log(dur);
+         document.getElementById("music_dur").innerHTML = `${dur}`;
    });
 
    wavesurfer.load(`//${url}`);
@@ -282,6 +285,48 @@
         </tr>
     </thead>
     <tbody>
+        
+        </tr>
+        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/Infatuated/">Infatuated</a></td>
+        <td class="td_date">Aug 01, 15</td>
+        <td class="td_performer">Garrett Semmelink</td>
+        <td class="td_category">Composition</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/Reflection-No-2/">Reflection No. 2</a></td>
+        <td class="td_date">Jun 13, 15</td>
+        <td class="td_performer">Garrett Semmelink</td>
+        <td class="td_category">Reflection</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/Splatter/">Splatter</a></td>
+        <td class="td_date">Apr 23, 15</td>
+        <td class="td_performer">Garrett Semmelink</td>
+        <td class="td_category">Composition</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/Prelude/">Prelude to Titan</a></td>
+        <td class="td_date">Mar 06, 15</td>
+        <td class="td_performer">Garrett Semmelink</td>
+        <td class="td_category">Composition</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/Reflection-No-1/">Reflection No. 1</a></td>
+        <td class="td_date">Feb 27, 15</td>
+        <td class="td_performer">Garrett Semmelink</td>
+        <td class="td_category">Reflection</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/Theia/">Theia</a></td>
+        <td class="td_date">Feb 25, 15</td>
+        <td class="td_performer">Garrett Semmelink</td>
+        <td class="td_category">Composition</td>
+        </tr>
         
         </tr>
         <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/Electric-Chair/">Electric Chair</a></td>
