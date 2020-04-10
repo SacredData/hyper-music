@@ -244,6 +244,7 @@
 
 <h2 id="cosmo-d-cello">Cosmo D: cello</h2>
 
+<div id="player_msg">LOADING SONICS</div>
 <div id="player"></div>
 <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
  <script>
@@ -257,6 +258,7 @@
    });
 
    wavesurfer.on('ready', function () {
+         document.getElementById("player_msg").innerHTML = "";
          wavesurfer.play();
          dur = wavesurfer.getDuration();
          console.log(dur);
@@ -280,6 +282,13 @@
         </tr>
     </thead>
     <tbody>
+        
+        </tr>
+        <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/Electric-Chair/">Electric Chair</a></td>
+        <td class="td_date">Jan 14, 15</td>
+        <td class="td_performer">Garrett Semmelink</td>
+        <td class="td_category">Composition</td>
+        </tr>
         
         </tr>
         <td class="td_title"><a href="https://sacreddata.github.io/pRoJEct-NeGYa/Titan/">Titan</a></td>
