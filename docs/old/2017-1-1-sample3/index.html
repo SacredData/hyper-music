@@ -284,6 +284,33 @@
   
 </div>
 
+<div id="player_msg">LOADING SONICS</div>
+<div id="player"></div>
+<div id="player_controls">
+  <div id="music_dur"></div>
+  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
+ <script>
+   var url = "";
+   console.log(url)
+
+   var dur = 0.0;
+
+   var wavesurfer = WaveSurfer.create({
+     container: "#player"
+   });
+
+   wavesurfer.on('ready', function () {
+         document.getElementById("player_msg").innerHTML = "";
+         wavesurfer.play();
+         dur = wavesurfer.getDuration();
+         console.log(dur);
+         document.getElementById("music_dur").innerHTML = `${dur}`;
+   });
+
+   wavesurfer.load(`//${url}`);
+
+ </script>
+
 <h2 id="style-test-below">Style Test Below</h2>
 
 <h3 id="text">Text</h3>
@@ -388,33 +415,6 @@
 <h4 id="this-is-heading-4">This is heading 4</h4>
 <h5 id="this-is-heading-5">This is heading 5</h5>
 <h6 id="this-is-heading-6">This is heading 6</h6>
-
-<div id="player_msg">LOADING SONICS</div>
-<div id="player"></div>
-<div id="player_controls">
-  <div id="music_dur"></div>
-  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
- <script>
-   var url = "";
-   console.log(url)
-
-   var dur = 0.0;
-
-   var wavesurfer = WaveSurfer.create({
-     container: "#player"
-   });
-
-   wavesurfer.on('ready', function () {
-         document.getElementById("player_msg").innerHTML = "";
-         wavesurfer.play();
-         dur = wavesurfer.getDuration();
-         console.log(dur);
-         document.getElementById("music_dur").innerHTML = `${dur}`;
-   });
-
-   wavesurfer.load(`//${url}`);
-
- </script>
 
 
           

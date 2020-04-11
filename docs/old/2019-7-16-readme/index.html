@@ -238,6 +238,33 @@
   
 </div>
 
+<div id="player_msg">LOADING SONICS</div>
+<div id="player"></div>
+<div id="player_controls">
+  <div id="music_dur"></div>
+  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
+ <script>
+   var url = "";
+   console.log(url)
+
+   var dur = 0.0;
+
+   var wavesurfer = WaveSurfer.create({
+     container: "#player"
+   });
+
+   wavesurfer.on('ready', function () {
+         document.getElementById("player_msg").innerHTML = "";
+         wavesurfer.play();
+         dur = wavesurfer.getDuration();
+         console.log(dur);
+         document.getElementById("music_dur").innerHTML = `${dur}`;
+   });
+
+   wavesurfer.load(`//${url}`);
+
+ </script>
+
 <h1 id="project-negya">PRoJEct-NeGYa</h1>
 
 <p>黑客风格的个人主页模板。</p>
@@ -293,33 +320,6 @@
   <li>assets/js：脚本文件</li>
   <li>_config.yml：配置文件</li>
 </ul>
-
-<div id="player_msg">LOADING SONICS</div>
-<div id="player"></div>
-<div id="player_controls">
-  <div id="music_dur"></div>
-  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
- <script>
-   var url = "";
-   console.log(url)
-
-   var dur = 0.0;
-
-   var wavesurfer = WaveSurfer.create({
-     container: "#player"
-   });
-
-   wavesurfer.on('ready', function () {
-         document.getElementById("player_msg").innerHTML = "";
-         wavesurfer.play();
-         dur = wavesurfer.getDuration();
-         console.log(dur);
-         document.getElementById("music_dur").innerHTML = `${dur}`;
-   });
-
-   wavesurfer.load(`//${url}`);
-
- </script>
 
 
           

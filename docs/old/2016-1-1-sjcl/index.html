@@ -238,6 +238,33 @@
   
 </div>
 
+<div id="player_msg">LOADING SONICS</div>
+<div id="player"></div>
+<div id="player_controls">
+  <div id="music_dur"></div>
+  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
+ <script>
+   var url = "";
+   console.log(url)
+
+   var dur = 0.0;
+
+   var wavesurfer = WaveSurfer.create({
+     container: "#player"
+   });
+
+   wavesurfer.on('ready', function () {
+         document.getElementById("player_msg").innerHTML = "";
+         wavesurfer.play();
+         dur = wavesurfer.getDuration();
+         console.log(dur);
+         document.getElementById("music_dur").innerHTML = `${dur}`;
+   });
+
+   wavesurfer.load(`//${url}`);
+
+ </script>
+
 <!-- aes encrypt and decrypt method -->
 <script
   src="https://sacreddata.github.io/pRoJEct-NeGYa/assets/js/sjcl.js"
@@ -327,33 +354,6 @@
     document.getElementById("min_text").value = "";
   }
 </script>
-
-<div id="player_msg">LOADING SONICS</div>
-<div id="player"></div>
-<div id="player_controls">
-  <div id="music_dur"></div>
-  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
- <script>
-   var url = "";
-   console.log(url)
-
-   var dur = 0.0;
-
-   var wavesurfer = WaveSurfer.create({
-     container: "#player"
-   });
-
-   wavesurfer.on('ready', function () {
-         document.getElementById("player_msg").innerHTML = "";
-         wavesurfer.play();
-         dur = wavesurfer.getDuration();
-         console.log(dur);
-         document.getElementById("music_dur").innerHTML = `${dur}`;
-   });
-
-   wavesurfer.load(`//${url}`);
-
- </script>
 
 
           
