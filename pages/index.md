@@ -13,10 +13,19 @@ permalink: /
 
 # **SONIC MULTIPLICITIES**
 
+## Empowering Soloists with Software
 **Sonic Multiplicities** is an effort by composer & audio engineer Andrew Grathwohl, to construct a unified, broadened musical consciousness out of today's technologies of war, aiming to propel elite instrumentalists' capabilities towards the outer-most reaches of musical aptitude. What results from this ambitious musical endeavor is among the world's longest-running datasets comprised of advanced, complex, and challenging extended techniques, free improvisation strategem, and instrumental varieties.
 
-**SM** practictioners reject today's "state of the art," which in truth amounts to little more than turning the burgeoning computer music paradigm into expensive, buggy computer games. We encourage soloists to wrestle control not just over their own instrument, but also the 360 degree sonic universe which spawns, morphs, mutates, and evolves all around the performance space when utilizing **SM** software.
+## The Anti-Computer Music
+**SM** practictioners reject today's "state of the art," in computer music, because the people responsible for serving this burgeoning community have done little to promote the computer as a musical instrument. Instead, they've developed expensive, buggy computer games and called them "Digital Audio Workstations."
 
+We fight back against these decades of precedent by engaging with free and open source software, with the explicit goal of turning the personal computer into an actual musical instrument. Our "stack" includes `SuperCollider`, `jack2`, `ffmpeg`, and `sox` - all running on a specially-designed low-latency Linux operating system, specifically optimized for the SM software. Using these tools, we achieve 4ms round-trip latencies, a measurement few professional audio platforms can claim.
+
+## Honest Electroacoustics
+Our recorded works follow a strict production code:
+
+- All recordings are live, captured in real-time, with no additional edits, mixing, or post-processing performed.
+- SM performances are output in 20-channel third-order ambisonics, and from there are mixed down to stereo and binaural with automated software.
 
 <!--
 ##  Features
