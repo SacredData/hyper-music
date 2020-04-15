@@ -17,5 +17,3 @@ stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_008.mp3
 excerpt: "SM #8"
 abstract: "The premiere Sonic Multiplicities 1.0 performance."
 ---
-
-## Garrett Semmelink: violin

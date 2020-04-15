@@ -17,5 +17,3 @@ stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_002.mp3
 excerpt: "SM #2"
 abstract: ""
 ---
-
-## Garrett Semmelink: violin
