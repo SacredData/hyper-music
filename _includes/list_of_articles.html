@@ -5,18 +5,20 @@
     <thead>
         <tr>
             <th> TITLE </th>
-            <th> DATE </th>
             <th> PERFORMER </th>
+            <th> INSTRUMENT </th>
             <th> CATEGORY </th>
+            <th> DATE </th>
         </tr>
     </thead>
     <tbody>
         {% for post in site.posts %}
         </tr>
         <td class="td_title"><a href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a></td>
-        <td class="td_date">{{post.date | date: "%b %d, %y"}}</td>
         <td class="td_performer">{{post.author}}</td>
+        <td class="td_performer">{{post.instrument}}</td>
         <td class="td_category">{{post.category}}</td>
+        <td class="td_date">{{post.date | date: "%b %d, %y"}}</td>
         </tr>
         {% endfor %}
     </tbody>
