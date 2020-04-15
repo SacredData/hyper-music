@@ -247,6 +247,7 @@
 <div id="player_controls">
   <div id="music_dur"></div>
   <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
+  
  <script>
    var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM003.mp3";
    console.log(url)
@@ -267,11 +268,18 @@
 
    wavesurfer.load(`//${url}`);
 
+   function toggleBin() {
+     var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM003.mp3";
+     var binUrl = "";
+     url = url == stUrl ? binUrl : stUrl
+     wavesurfer.load(`//${url}`);
+   }
+
  </script>
 
 <h2 id="art">Art</h2>
 
-<p><img src="//s3.amazonaws.com/sonicmultiplicities.audio/feed/g1drsm.jpg" alt="Cover Art" /></p>
+<p><img src="//s3.amazonaws.com/sonicmultiplicities.audio/feed/g1drsm.png" alt="Cover Art" /></p>
 
 
           

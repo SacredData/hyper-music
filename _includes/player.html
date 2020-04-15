@@ -3,6 +3,9 @@
 <div id="player_controls">
   <div id="music_dur"></div>
   <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
+  {% if page.bin_url %}
+    <button id="toggleBinBtn" onclick="toggleBin()">Toggle Stereo/Binaural</button>
+  {% endif %}
  <script>
    var url = "{{ page.stream_url }}";
    console.log(url)
@@ -22,5 +25,12 @@
    });
 
    wavesurfer.load(`//${url}`);
+
+   function toggleBin() {
+     var stUrl = "{{ page.stream_url }}";
+     var binUrl = "{{ page.bin_url }}";
+     url = url == stUrl ? binUrl : stUrl
+     wavesurfer.load(`//${url}`);
+   }
 
  </script>
