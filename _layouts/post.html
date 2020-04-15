@@ -7,4 +7,7 @@ layout: default
 </h1>
 {% include post_info.html %}
 {% include player.html %}
+{% if page.video_url %}
+  {% include video.html %}
+{% endif %}
 {{ content }}
