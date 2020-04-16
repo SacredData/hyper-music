@@ -269,13 +269,13 @@
   
  <script>
    var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM002a.mp3";
-   console.log(url)
-
+   console.log(url);
+   
    var dur = 0.0;
 
    var wavesurfer = WaveSurfer.create({
      container: "#player",
-     cursorWidth: 3
+     cursorWidth: 2,
    });
 
    wavesurfer.on('ready', function () {
@@ -297,14 +297,6 @@
    }
 
  </script>
-
-
-  <!--<div id="videoplayer"></div>
-<script>
-  var player = new Clappr.Player({source: `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/mafa.mov`, parentId: "#videoplayer"});
-</script>
--->
-
 
 <h2 id="art">Art</h2>
 

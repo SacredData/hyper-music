@@ -265,13 +265,13 @@
   
  <script>
    var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM003.mp3";
-   console.log(url)
-
+   console.log(url);
+   
    var dur = 0.0;
 
    var wavesurfer = WaveSurfer.create({
      container: "#player",
-     cursorWidth: 3
+     cursorWidth: 2,
    });
 
    wavesurfer.on('ready', function () {
@@ -293,7 +293,6 @@
    }
 
  </script>
-
 
 <h2 id="art">Art</h2>
 
