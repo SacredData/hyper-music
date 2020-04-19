@@ -279,9 +279,7 @@
   
  <script>
    var cover = "";
-   console.log(cover)
    var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_009.mp3";
-   console.log(url);
    
    var dur = 0.0;
 
@@ -296,14 +294,15 @@
          document.getElementById("player_msg").innerHTML = "";
          wavesurfer.play();
          dur = wavesurfer.getDuration().toFixed(2);
-         console.log(dur);
          document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
    });
 
    wavesurfer.load(`//${url}`);
 
    v.getPalette((err, palette) => {
-     console.log(err)
+     if (err) {
+       console.log(err)
+     }
 
      var muted = !err ? palette.Muted ? palette.Muted.getHex() : null : null;
      var vibrant = !err ? palette.Vibrant ? palette.Vibrant.getHex() : null : null;
@@ -322,6 +321,8 @@
      wavesurfer.setWaveColor(vibrant || "#999");
      wavesurfer.setProgressColor(muted || "#555");
      wavesurfer.setCursorColor(darkVibrant || "#333");
+
+     colors.push(darkVibrant, vibrant, muted);
    })
 
 
