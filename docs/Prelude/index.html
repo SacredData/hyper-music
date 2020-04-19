@@ -249,6 +249,7 @@
   
 </div>
 
+<script src="https://sacreddata.github.io/pRoJEct-NeGYa/assets/js/vibrant.js"></script>
 <div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS</div>
 <div id="player"></div>
 <div id="player_controls">
@@ -262,10 +263,14 @@
   <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
   
  <script>
+   var cover = "";
+   console.log(cover)
    var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_017.mp3";
    console.log(url);
    
    var dur = 0.0;
+
+   var v = new Vibrant("http:" + cover);
 
    var wavesurfer = WaveSurfer.create({
      container: "#player",
@@ -278,10 +283,32 @@
          dur = wavesurfer.getDuration().toFixed(2);
          console.log(dur);
          document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
-  
    });
 
    wavesurfer.load(`//${url}`);
+
+   v.getPalette((err, palette) => {
+     console.log(err)
+
+     var muted = !err ? palette.Muted ? palette.Muted.getHex() : null : null;
+     var vibrant = !err ? palette.Vibrant ? palette.Vibrant.getHex() : null : null;
+     var darkVibrant = !err ? palette.DarkVibrant ? palette.DarkVibrant.getHex() : null : null;
+
+     /*
+     var wavesurfer = WaveSurfer.create({
+       container: "#player",
+       cursorWidth: 2,
+       cursorColor: darkVibrant || "#333",
+       progressColor: muted || "#555",
+       waveColor: vibrant || "#999"
+     });
+     */
+
+     wavesurfer.setWaveColor(vibrant || "#999");
+     wavesurfer.setProgressColor(muted || "#555");
+     wavesurfer.setCursorColor(darkVibrant || "#333");
+   })
+
 
    function toggleBin() {
      var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_017.mp3";
