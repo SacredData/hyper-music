@@ -249,6 +249,21 @@
   
 </div>
 
+<div id="downloads">
+  <b>Download:</b>
+  <a href="" id="flac_download">FLAC</a>
+  <a href="" id="opus_download">OPUS</a><br><br>
+</div>
+<script>
+  var sm = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_019.mp3".split('/')[3].replace('.mp3','');
+  var flacUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.flac`;
+  var opusUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.opus`;
+
+  document.getElementById("flac_download").href = flacUrl;
+  document.getElementById("opus_download").href = opusUrl;
+
+</script>
+
 <script src="https://sacreddata.github.io/pRoJEct-NeGYa/assets/js/vibrant.js"></script>
 <div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS</div>
 <div id="player"></div>

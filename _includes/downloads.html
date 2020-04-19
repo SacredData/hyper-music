@@ -1,0 +1,14 @@
+<div id="downloads">
+  <b>Download:</b>
+  <a href="" id="flac_download">FLAC</a>
+  <a href="" id="opus_download">OPUS</a><br><br>
+</div>
+<script>
+  var sm = "{{ page.stream_url }}".split('/')[3].replace('.mp3','');
+  var flacUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.flac`;
+  var opusUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.opus`;
+
+  document.getElementById("flac_download").href = flacUrl;
+  document.getElementById("opus_download").href = opusUrl;
+
+</script>
