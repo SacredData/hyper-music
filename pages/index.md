@@ -13,13 +13,16 @@ permalink: /
 
 # **SONIC MULTIPLICITIES**
 
-## Empowering Soloists with Software
-**Sonic Multiplicities** is an effort by composer & audio engineer Andrew Grathwohl, to construct a unified, broadened musical consciousness out of today's technologies of war, aiming to propel elite instrumentalists' capabilities towards the outer-most reaches of musical aptitude. What results from this ambitious musical endeavor is among the world's longest-running datasets comprised of advanced, complex, and challenging extended techniques, free improvisation strategem, and instrumental varieties.
+An effort by composer & audio engineer Andrew Grathwohl to construct a unified, broadened musical consciousness out of today's technologies of war, aiming to propel elite instrumentalists' capabilities towards the outer-most reaches of musical aptitude.
 
-### The Anti-Computer Music
-**SM** practictioners reject today's "state of the art," in computer music, because the people responsible for serving this burgeoning community have done little to promote the computer as a musical instrument. Instead, they've developed expensive, buggy computer games and called them "Digital Audio Workstations."
+What results from this ambitious musical endeavor is among the world's longest-running datasets comprised of advanced, complex, and challenging extended techniques, free improvisation strategem, and instrumental varieties.
 
-We fight back against these decades of precedent by engaging with free and open source software, with the explicit goal of turning the personal computer into an actual musical instrument. Our "stack" includes `SuperCollider`, `jack2`, `ffmpeg`, and `sox` - all running on a specially-designed low-latency Linux operating system, specifically optimized for the **SM** software. Using these tools, we achieve 4ms round-trip latencies, a measurement few professional audio platforms can claim.
+# Sound is our study. Data is our religion
+
+## The Anti-Computer Music
+Fuck all the synchronized bleepity-bloops, messes of wires, and nonsense proprietary "DAW" software. Our approach to computer music invokes a little-known dark art within the sonic realm. We find the diamonds in your sound and make it the rough. With your sound, we drench the soundstage with the deepest, most passionate memories your instrument. Because software is not an instrument, and your goofy computer toys are not "hardware."
+
+Music begins and ends with acoustic output from a human being. We provide a real-time musical AI that can talk back to that most infinite of mankind's oldest language.
 
 <!--
 ### Honesty
