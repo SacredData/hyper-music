@@ -252,15 +252,18 @@
 <div id="downloads">
   <b>Download:</b>
   <a href="" id="flac_download">FLAC</a>
-  <a href="" id="opus_download">OPUS</a><br><br>
+  <a href="" id="opus_download">OPUS</a>
+  <a href="" id="mp3_download">MP3</a><br><br>
 </div>
 <script>
   var sm = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_017.mp3".split('/')[3].replace('.mp3','');
+  var mp3Url = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/${sm}.mp3`;
   var flacUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.flac`;
   var opusUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.opus`;
 
   document.getElementById("flac_download").href = flacUrl;
   document.getElementById("opus_download").href = opusUrl;
+  document.getElementById("mp3_download").href = mp3Url;
 
 </script>
 
