@@ -13,7 +13,7 @@ permalink: /
 
 # **SONIC MULTIPLICITIES**
 
-> *An effort by composer & audio engineer Andrew Grathwohl to construct a unified, broadened musical consciousness out of today's technologies of war, aiming to propel elite instrumentalists' capabilities towards the outer-most reaches of musical aptitude.*
+> *An effort by composer & audio engineer [Andrew Grathwohl](//multipli.city/Andrew-Grathwohl/) to construct a unified, broadened musical consciousness out of today's technologies of war, aiming to propel elite instrumentalists' capabilities towards the outer-most reaches of musical aptitude.*
 
 
 # Sound is our study. Data is our religion
