@@ -21,15 +21,13 @@ permalink: /
 > What results from this ambitious musical endeavor is among the world's longest-running datasets comprised of advanced, complex, and challenging extended techniques, free improvisation strategem, and instrumental varieties.
 
 ## The Anti-Computer Music
-> **Software** should liberate, enable, and optimize. Fuck Ableton Live. Fuck Max/MSP. Long live the human spirit that lives within *music*.
+> **Software** should liberate, enable, and optimize. Music software in vogue today needlessly limits, restricts, and constrains. Long live the human spirit that lives within *music*. Long live free software.
 
 - **SM** emphasizes the soloist's *novel fundamentals*
 - **SM** is an AI free improvisation *friend*
 - **SM** is contact-free yet is an incredible *listener*
 
 Today's state of the art in real-time computer music software only optimizes for *giving it* but the true power behind the personal computer is its ability to *take it*.
-
-Fuck all the synchronized bleepity-bloops, messes of wires, and nonsense proprietary "DAW" software. Our approach to computer music invokes a little-known dark art within the sonic realm. We find the diamonds in your sound and make it the rough. With your sound, we drench the soundstage with the deepest, most passionate memories your instrument. Because software is not an instrument, and your goofy computer toys are not "hardware."
 
 Music begins and ends with acoustic output from a human being. We provide a real-time musical AI that can talk back to that most infinite of mankind's oldest language.
 
