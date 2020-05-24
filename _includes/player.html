@@ -1,3 +1,12 @@
+{% if page.video_url %}
+<center><video id="videoplayer" controls></video></center>
+  <script>
+    var videoUrl = "{{ page.video_url }}";
+    var videoPlayer = dashjs.MediaPlayer().create();
+    videoPlayer.initialize(document.querySelector("#videoplayer"), videoUrl, true);
+    videoPlayer.setAutoPlay(false);
+  </script>
+{% else %}
 <script src="{{ site.url  }}{{ site.baseurl  }}{{ site.assets_path  }}/js/vibrant.js"></script>
 <div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS</div>
 <div id="player"></div>
@@ -13,6 +22,7 @@
   {% if page.bin_url %}
     <button id="toggleBinBtn" onclick="toggleBin()">Toggle Stereo/Binaural</button>
   {% endif %}
+</div>
  <script>
    var cover = "{{ page.cover }}";
    var url = "{{ page.stream_url }}";
@@ -44,16 +54,6 @@
      var vibrant = !err ? palette.Vibrant ? palette.Vibrant.getHex() : null : null;
      var darkVibrant = !err ? palette.DarkVibrant ? palette.DarkVibrant.getHex() : null : null;
 
-     /*
-     var wavesurfer = WaveSurfer.create({
-       container: "#player",
-       cursorWidth: 2,
-       cursorColor: darkVibrant || "#333",
-       progressColor: muted || "#555",
-       waveColor: vibrant || "#999"
-     });
-     */
-
      wavesurfer.setWaveColor(vibrant || "#999");
      wavesurfer.setProgressColor(muted || "#555");
      wavesurfer.setCursorColor(darkVibrant || "#333");
@@ -70,3 +70,4 @@
    }
 
  </script>
+ {% endif %}

@@ -257,6 +257,7 @@
 
 </script>
 
+
 <script src="https://sacreddata.github.io/pRoJEct-NeGYa/assets/js/vibrant.js"></script>
 <div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS</div>
 <div id="player"></div>
@@ -270,6 +271,7 @@
   </button>
   <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
   
+</div>
  <script>
    var cover = "";
    var url = "";
@@ -301,16 +303,6 @@
      var vibrant = !err ? palette.Vibrant ? palette.Vibrant.getHex() : null : null;
      var darkVibrant = !err ? palette.DarkVibrant ? palette.DarkVibrant.getHex() : null : null;
 
-     /*
-     var wavesurfer = WaveSurfer.create({
-       container: "#player",
-       cursorWidth: 2,
-       cursorColor: darkVibrant || "#333",
-       progressColor: muted || "#555",
-       waveColor: vibrant || "#999"
-     });
-     */
-
      wavesurfer.setWaveColor(vibrant || "#999");
      wavesurfer.setProgressColor(muted || "#555");
      wavesurfer.setCursorColor(darkVibrant || "#333");
@@ -327,6 +319,7 @@
    }
 
  </script>
+ 
 
 <h2 id="quick-sort-in-python">Quick sort in python</h2>
 

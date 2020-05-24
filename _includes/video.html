@@ -1,4 +1,9 @@
-<div id="videoplayer"></div>
+<video id="videoplayer" controls>
 <script>
-  var player = new Clappr.Player({source: `//{{ page.video_url }}`, parentId: "#videoplayer"});
+  // var url = "https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd";
+  // var url = "//sonicmultiplicities.audio.s3.amazonaws.com/dash_streams/dash16/dash.mpd";
+  var videoUrl = "{{ page.video_url }}";
+  var videoPlayer = dashjs.MediaPlayer().create();
+  videoPlayer.initialize(document.querySelector("#videoplayer"), videoUrl, true);
+  videoPlayer.setAutoPlay(false); // remove this line if you want the player to start automatically on load
 </script>

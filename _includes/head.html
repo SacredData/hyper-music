@@ -36,7 +36,13 @@
   {% endif %}
 
   {% if page.video_url %}
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+  <style>
+  video {
+   width: 640px;
+   height: 360px;
+  }
+  </style>
+    <script src="//cdn.dashjs.org/latest/dash.all.min.js"></script>
   {% endif %}
 
   <!-- mathjax 2.7.5 -->
