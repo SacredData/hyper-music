@@ -26,16 +26,49 @@ permalink: /Soiree-1/
 
 - *A friendly crowd of cool people who like music and are chill!*
 
-- No money required this shit is for cool people and is therefore my gift to you for being cool
+- Don't even think about bringing any money it won't be accepted!
 
 ### We're Cool Because We Are Friends
 
-We may do a little bit of recording during the proceeds of the evening. This is mainly so that we can show off how we are cool for getting together and being humans. We will totally not capture you on audio or video unless you are comfy with it.
+Let's be real about music for a minute: it's nothing without friendship.
+
+Friends transmit music between one another by virtue of our embedded human desire to share and cultivate. Without it, music has little distance to travel and will die the same death any stagnant entity would endure due to entropy.
+
+I want to put on this event in order to counteract the very disturbing effect lockdown has had on music, those who practice it, and those who love it.
+
+## Activities
+
+- Free improvisation musical chairs!
+- Sonic Pictionary!
+- Intimate roundtable discussion about what the hell we can do to save music from certain destruction
 
 ## Cleanliness
 
-This shit will be done clean.
+This shit will be done clean. The hope is that by doing things right, we don't need people feeling the need to wear facemasks and other anti-social items. We all look super cool in our Mad Max cosplay outfits, sure, but we are way more fun to be around when our facial expressions are not being obscured by a (admit it) filthy rag strewn across your lips and nose.
+
+So we will be doing the following things:
 
 - Individually-labeled disposable cupware
 - Enough seating to promote comfortable, respectfully-distant socializing
 - Individual volcano bags *for each stoner who attends*
+
+*Please do* suggest other things we can be doing to cultivate a friendly and clean atmosphere!
+
+# Boring Details
+
+## Where
+
+The Cathedral is on Eastern Parkway in Brooklyn, NY. Contact Andrew for specific building and apartment number.
+
+### Parking
+
+Parking is super easy. Easy like a fox! If you are driving to the soirée, you should be able to park right outside.
+
+### Subway
+
+The Cathedral is very conveniently located on the `2`, `3`, `4`, `5`, and `S` (Franklin-Prospect Park) lines. All lines are all operating normally **however** they are now shutting the lines down for "cleaning" at 1AM. Please plan accordingly! We are starting things a little early in the evening in order to accommodate.
+
+## Recording
+
+We may do a little bit of recording during the proceeds of the evening. This is mainly so that we can show off how we are cool for getting together and being humans. We will totally not capture you on audio or video unless you are comfy with it.
+
