@@ -15,6 +15,13 @@ permalink: /Soiree-1/
 
 > **SATURDAY, JUNE 13th, 2020** - please join us for a *10 person or under* soirée at The Cathedral in Brooklyn, NY. **Begins at 7pm**
 
+## The FAQs
+
+- If you haven't ever tested positive for COVID-19, you're welcome!
+- We will be following all of NY State's pertinent regulations, including [Executive Order 202.33](https://www.governor.ny.gov/sites/governor.ny.gov/files/atoms/files/EO_202.33.pdf), and therefore the DoH's [Guidance for Cleaning and Disinfecting](https://coronavirus.health.ny.gov/system/files/documents/2020/03/cleaning_guidance_general_building.pdf)
+- Space will be fully sanitized by [a professional cleaning service](https://www.yelp.com/biz/si-se-puede-womens-cooperative-we-can-do-it-brooklyn) and spacious enough to promote comfortable distances
+- We are going to be doing **over the top stuff** to ensure peoples' comfort, health, and safety
+
 ## WHAT DO 
 > This is an effort to say *fuck you lockdown* while also being *clean*, *festive*, and *social*! By jamming out with impromptu music-making sessions and such. Good times to be had by all.
 
