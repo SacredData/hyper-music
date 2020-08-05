@@ -1,0 +1,17 @@
+{% if page.apple_music or page.bandcamp or page.soundcloud or page.spotify %}
+<div id="streams"><br><br>
+  <b>Stream:</b>
+  {% if page.apple_music %}
+  <a href="{{ page.apple_music }}" id="apple"><i class="fa fa-apple"></i></a>
+  {% endif %}
+  {% if page.bandcamp %}
+  <a href="{{ page.bandcamp }}" id="bandcamp"><i class="fa fa-bandcamp"></i></a>
+  {% endif %}
+  {% if page.soundcloud %}
+  <a href="{{ page.soundcloud }}" id="soundcloud"><i class="fa fa-soundcloud"></i></a>
+  {% endif %}
+  {% if page.spotify %}
+  <a href="{{ page.spotify }}" id="spotify"><i class="fa fa-spotify"></i></a><br><br>
+  {% endif %}
+</div>
+{% endif %}
