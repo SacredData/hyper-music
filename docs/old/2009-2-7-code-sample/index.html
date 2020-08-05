@@ -341,8 +341,6 @@
 		canvasCtx.stroke();
 	}
 
-	draw();
-
 
 
 
@@ -350,6 +348,7 @@
 
    wavesurfer.on('ready', function () {
          document.getElementById("player_msg").innerHTML = "";
+         draw();
          wavesurfer.play();
          dur = wavesurfer.getDuration().toFixed(2);
          document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
