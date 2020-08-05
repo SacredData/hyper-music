@@ -1,8 +1,10 @@
 ## Settings
 title: multipli.city
 owner: "S⧊CREDdata"
-url: "https://sacreddata.github.io"
-baseurl: "/pRoJEct-NeGYa"
+#url: "https://sacreddata.github.io"
+url: "https://multipli.city"
+#baseurl: "/pRoJEct-NeGYa"
+baseurl: ""
 permalink: /:title/
 description: ""
 markdown: kramdown
