@@ -286,10 +286,12 @@
   
     <button id="toggleBinBtn" onclick="toggleBin()">Toggle Stereo/Binaural</button>
   
+  <!-- <canvas id="oscilloscope" width="400" height="100" style="vertical-align:center;float:right"></canvas> -->
 </div>
  <script>
-   var cover = "//s3.amazonaws.com/sonicmultiplicities.audio/feed/adrift.jpg";
-   var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SS001.mp3";
+   var cover = "//s3.amazonaws.com/sonicmultiplicities.audio/feed/adrift.jpg"
+   var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SS001.mp3"
+
    
    var dur = 0.0;
 
@@ -299,6 +301,65 @@
      container: "#player",
      cursorWidth: 2,
    });
+
+   // var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+   var audioCtx = wavesurfer.backend.ac;
+   var analyser = audioCtx.createAnalyser();
+
+   analyser.fftSize = 2048;
+
+   var bufferLength = analyser.frequencyBinCount;
+   var dataArray = new Uint8Array(bufferLength);
+   analyser.getByteTimeDomainData(dataArray);
+
+	// var canvas = document.getElementById("oscilloscope");
+	var canvas = document.getElementById("c");
+
+	var canvasCtx = canvas.getContext("2d");
+
+	// draw an oscilloscope of the current audio source
+
+	function draw() {
+
+		requestAnimationFrame(draw);
+
+		analyser.getByteTimeDomainData(dataArray);
+
+		canvasCtx.fillStyle = "rgb(0, 0, 0)";
+		canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+		canvasCtx.lineWidth = 2;
+		canvasCtx.strokeStyle = "rgb(200, 200, 200)";
+
+		canvasCtx.beginPath();
+
+		var sliceWidth = canvas.width * 1.0 / bufferLength;
+		var x = 0;
+
+		for (var i = 0; i < bufferLength; i++) {
+
+			var v = dataArray[i] / 128.0;
+			var y = v * canvas.height / 2;
+
+			if (i === 0) {
+				canvasCtx.moveTo(x, y);
+			} else {
+				canvasCtx.lineTo(x, y);
+			}
+
+			x += sliceWidth;
+		}
+
+		canvasCtx.lineTo(canvas.width, canvas.height / 2);
+		canvasCtx.stroke();
+	}
+
+	draw();
+
+
+
+
+   wavesurfer.backend.setFilter(analyser);
 
    wavesurfer.on('ready', function () {
          document.getElementById("player_msg").innerHTML = "";
