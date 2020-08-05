@@ -21,8 +21,3 @@ bin_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SM005b_binaural.mp3
 excerpt: "SM005b"
 abstract: "Jeffrey Epstein didn't kill himself."
 ---
-
-## Art
-
-![Cover Art]({{ page.cover  }})
-

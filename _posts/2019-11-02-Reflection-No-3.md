@@ -21,7 +21,3 @@ video_url: //s3.amazonaws.com/sonicmultiplicities.audio/dash_streams/dash16/dash
 excerpt: "SM003"
 abstract: ""
 ---
-
-## Art
-
-![Cover Art]({{ page.cover  }})

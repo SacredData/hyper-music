@@ -18,5 +18,3 @@ video_url: s3.amazonaws.com/sonicmultiplicities.audio/videos/lange.mov
 excerpt: "SM #20"
 abstract: ""
 ---
-
-## Garrett Semmelink: violin

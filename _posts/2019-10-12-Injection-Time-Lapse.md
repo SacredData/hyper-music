@@ -21,7 +21,3 @@ intro_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SM001a_intro.mp3
 excerpt: "SM001"
 abstract: "Marking our triumphant return, with Sonic Multiplicities 1.1!"
 ---
-
-## Art
-
-![Cover Art]({{ page.cover  }})
