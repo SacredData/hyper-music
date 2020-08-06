@@ -298,7 +298,7 @@
    var audioCtx = wavesurfer.backend.ac;
    var analyser = audioCtx.createAnalyser();
 
-   analyser.fftSize = 4096;
+   analyser.fftSize = 2048;
 
    var bufferLength = analyser.frequencyBinCount;
    var dataArray = new Uint8Array(bufferLength);
