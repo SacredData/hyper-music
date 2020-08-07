@@ -315,6 +315,20 @@
 	var canvas = document.getElementById("c");
 
 	var canvasCtx = canvas.getContext("2d");
+  
+  function shuffle(a) {
+      for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+  }
+
+  var lineWidth = 2;
+  var drawColors = shuffle(colors)
+  var widthDelta = 0;
+  var alpha = 1.0;
+  console.log(drawColors)
 
 	// draw an oscilloscope of the current audio source
 
@@ -324,11 +338,13 @@
 
 		analyser.getByteTimeDomainData(dataArray);
 
-		canvasCtx.fillStyle = "rgb(0, 0, 0)";
+    
+    canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
 		canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
-
-		canvasCtx.lineWidth = 2;
-		canvasCtx.strokeStyle = "rgb(200, 200, 200)";
+    
+		canvasCtx.lineWidth = lineWidth;
+    canvasCtx.strokeStyle = drawColors[0];
+		// canvasCtx.strokeStyle = "rgb(200, 200, 200)";
 
 		canvasCtx.beginPath();
 
@@ -342,12 +358,31 @@
 
 			if (i === 0) {
 				canvasCtx.moveTo(x, y);
+        if (lineWidth > 5) {
+          drawColors = shuffle(drawColors)
+        }
 			} else {
 				canvasCtx.lineTo(x, y);
+        widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
+        if (lineWidth > 0) {
+          lineWidth += widthDelta
+        } else {
+          lineWidth = 2;
+          alpha += shuffle([-0.1, 0.1, 1.0])[0];
+        }
 			}
 
 			x += sliceWidth;
 		}
+
+    if (lineWidth > 100.0) {
+      lineWidth = 1.0;
+      alpha = shuffle([0.5, 0.005, 0.0008])[2];
+    }
+
+    if (alpha > 1) {
+      alpha = shuffle([0.1, 0.001, 0.0001])[0];
+    } 
 
 		canvasCtx.lineTo(canvas.width, canvas.height / 2);
 		canvasCtx.stroke();
@@ -384,6 +419,9 @@
      colors.push(darkVibrant, vibrant, muted);
    })
 
+   wavesurfer.on('seek', () => {
+     alpha = 0.0001;
+   })
 
    function toggleBin() {
      var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_006.mp3";
