@@ -324,7 +324,7 @@
   </button>
   <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
   
-  <!-- <canvas id="oscilloscope" width="400" height="100" style="vertical-align:center;float:right"></canvas> -->
+  <input id="volume" type="range" min="0" max="1" value="1" step="0.1" style="float:right">
 </div>
  <script>
    var cover = ""
@@ -402,6 +402,11 @@
         }
 			} else {
 				canvasCtx.lineTo(x, y);
+
+        if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
+          drawColors = shuffle(drawColors)
+        }
+
         widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
         if (lineWidth > 0) {
           lineWidth += widthDelta
@@ -428,6 +433,16 @@
 	}
 
 
+	 wavesurfer.setVolume(0.4);
+	 document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+
+    var volumeInput = document.querySelector('#volume');
+    var onChangeVolume = function (e) {
+      wavesurfer.setVolume(e.target.value);
+      console.log(e.target.value);
+    };
+		volumeInput.addEventListener('input', onChangeVolume);
+		volumeInput.addEventListener('change', onChangeVolume);
 
 
    wavesurfer.backend.setFilter(analyser);
@@ -441,7 +456,6 @@
    });
 
    wavesurfer.load(`//${url}`);
-
    v.getPalette((err, palette) => {
      if (err) {
        console.log(err)
