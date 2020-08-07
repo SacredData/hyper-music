@@ -13,6 +13,9 @@ encrypted_text: false
 toc_level: 4
 category: Composition
 date: 2014-10-23
+bandcamp: //sonicmultiplicities.bandcamp.com/track/vasoconstriction
+soundcloud: //soundcloud.com/sonicmultiplicities/vasoconstriction-empire
+cover: //s3.amazonaws.com/sonicmultiplicities.audio/feed/vasoconstriction.jpg
 stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_008.mp3
 excerpt: "SM #8"
 abstract: "The premiere Sonic Multiplicities 1.0 performance."
