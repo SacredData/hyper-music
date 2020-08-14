@@ -30,14 +30,6 @@
   
 
   
-  <style>
-  video {
-   width: 640px;
-   height: 360px;
-  }
-  </style>
-    <script src="//cdn.dashjs.org/latest/dash.all.min.js"></script>
-  
 
   <!-- mathjax 2.7.5 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
@@ -278,15 +270,232 @@
 </script>
 
 
-<center><video id="videoplayer" controls></video></center>
-  <script>
-    var videoUrl = "s3.amazonaws.com/sonicmultiplicities.audio/videos/lange.mov";
-    var videoPlayer = dashjs.MediaPlayer().create();
-    videoPlayer.initialize(document.querySelector("#videoplayer"), videoUrl, true);
-    videoPlayer.setAutoPlay(false);
-  </script>
+<script src="https://multipli.city/assets/js/vibrant.js"></script>
+<div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS <br> <h1>SPACEBAR: PLAY/PAUSE <br>ARROW KEYS: SEEK/VOLUME</h1></div>
+<div id="player"></div>
+<div id="player_controls">
+  <div id="music_dur"></div>
+  <button id="audioBtnPlay" onclick="wavesurfer.play()">
+    <i class="fa fa-play" aria-hidden="true"></i>
+  </button>
+  <button id="audioBtnPause" onclick="wavesurfer.pause()">
+    <i class="fa fa-pause" aria-hidden="true"></i>
+  </button>
+  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
+  
+  <input id="volume" type="range" min="0" max="1" value="1" step="0.1" style="float:right">
+</div>
+ <script>
+   var cover = ""
+   var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_020.mp3"
+
+   
+   var dur = 0.0;
+
+   var v = new Vibrant("https:" + cover);
+
+   var wavesurfer = WaveSurfer.create({
+     container: "#player",
+     cursorWidth: 2,
+   });
+
+   var audioCtx = wavesurfer.backend.ac;
+   var analyser = audioCtx.createAnalyser();
+
+   analyser.fftSize = 2048;
+
+   var bufferLength = analyser.frequencyBinCount;
+   var dataArray = new Uint8Array(bufferLength);
+   analyser.getByteTimeDomainData(dataArray);
+
+	// var canvas = document.getElementById("oscilloscope");
+	var canvas = document.getElementById("c");
+
+	var canvasCtx = canvas.getContext("2d");
+
+  // Add event listener for `click` events.
+   canvas.addEventListener('click', function(event) {
+     var x2 = event.pageX,
+         y2 = event.pageY;
+     console.log(x2, y2);
+     if (animationId) {
+       cancelAnimationFrame(animationId)
+       animationId = undefined;
+     } else {
+       draw()
+     }
+   })
+  
+  function shuffle(a) {
+      for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+  }
+
+  var lineWidth = 2;
+  var drawColors = shuffle(colors)
+  var widthDelta = 0;
+  var alpha = 1.0;
+  var animationId = '';
+  console.log(drawColors)
+
+	// draw an oscilloscope of the current audio source
+
+	function draw() {
+
+		animationId = requestAnimationFrame(draw);
+
+		analyser.getByteTimeDomainData(dataArray);
+
+    
+    canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
+		canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+    
+		canvasCtx.lineWidth = lineWidth;
+    canvasCtx.strokeStyle = drawColors[0];
+		// canvasCtx.strokeStyle = "rgb(200, 200, 200)";
+
+		canvasCtx.beginPath();
+
+		var sliceWidth = canvas.width * 1.0 / bufferLength;
+		var x = 0;
+
+		for (var i = 0; i < bufferLength; i++) {
+
+			var v = dataArray[i] / 128.0;
+			var y = v * canvas.height / 2;
+
+			if (i === 0) {
+				canvasCtx.moveTo(x, y);
+        if (lineWidth > 5) {
+          drawColors = shuffle(drawColors)
+        }
+			} else {
+				canvasCtx.lineTo(x, y);
+
+        if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
+          drawColors = shuffle(drawColors)
+        }
+
+        widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
+        if (lineWidth > 0) {
+          lineWidth += widthDelta
+        } else {
+          lineWidth = 2;
+          alpha += shuffle([-0.1, 0.1, 1.0])[0];
+        }
+			}
+
+			x += sliceWidth;
+		}
+
+    if (lineWidth > 100.0) {
+      lineWidth = 1.0;
+      alpha = shuffle([0.5, 0.005, 0.0008])[2];
+    }
+
+    if (alpha > 1) {
+      alpha = shuffle([0.1, 0.001, 0.0001])[0];
+    } 
+
+		canvasCtx.lineTo(canvas.width, canvas.height / 2);
+		canvasCtx.stroke();
+	}
 
 
+	 wavesurfer.setVolume(0.4);
+	 document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+
+    var volumeInput = document.querySelector('#volume');
+    var onChangeVolume = function (e) {
+      wavesurfer.setVolume(e.target.value);
+      console.log(e.target.value);
+    };
+		volumeInput.addEventListener('input', onChangeVolume);
+		volumeInput.addEventListener('change', onChangeVolume);
+
+
+   wavesurfer.backend.setFilter(analyser);
+
+   wavesurfer.on('finish', () => {
+     if (animationId) {
+       cancelAnimationFrame(animationId)
+       animationId = undefined
+     }
+   })
+
+   wavesurfer.on('ready', function () {
+         document.getElementById("player_msg").innerHTML = "";
+         draw();
+         wavesurfer.play();
+         dur = wavesurfer.getDuration().toFixed(2);
+         document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
+   });
+
+   wavesurfer.load(`//${url}`);
+   v.getPalette((err, palette) => {
+     if (err) {
+       console.log(err)
+     }
+
+     var muted = !err ? palette.Muted ? palette.Muted.getHex() : null : null;
+     var vibrant = !err ? palette.Vibrant ? palette.Vibrant.getHex() : null : null;
+     var darkVibrant = !err ? palette.DarkVibrant ? palette.DarkVibrant.getHex() : null : null;
+
+     wavesurfer.setWaveColor(vibrant || "#999");
+     wavesurfer.setProgressColor(muted || "#555");
+     wavesurfer.setCursorColor(darkVibrant || "#333");
+
+     colors.push(darkVibrant, vibrant, muted);
+   })
+
+   wavesurfer.on('seek', () => {
+     alpha = 0.0001;
+   })
+
+   function toggleBin() {
+     var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_020.mp3";
+     var binUrl = "";
+     url = url == stUrl ? binUrl : stUrl
+     wavesurfer.load(`//${url}`);
+   }
+
+   // Media controls
+   document.body.onkeyup = function(e){
+     if(e.keyCode == 32){ // spacebar
+       wavesurfer.playPause()
+     } else if (e.keyCode == 37) { // left arrow key
+       wavesurfer.skip(-10);
+     } else if (e.keyCode == 39) { // right arrow key
+       wavesurfer.skip(10);
+     } else if (e.keyCode == 38) { // up arrow key
+       wavesurfer.setVolume(wavesurfer.getVolume() + 0.1)
+	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+     } else if (e.keyCode == 40) { // down arrow key
+       wavesurfer.setVolume(wavesurfer.getVolume() - 0.1)
+	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+     }
+   }
+
+ </script>
+ 
+
+
+<div id="streams"><br><br>
+  <b>Stream:</b>
+  
+  
+  <a href="//sonicmultiplicities.bandcamp.com/album/inertia" id="bandcamp"><i class="fa fa-bandcamp"></i></a>
+  
+  
+  <a href="//soundcloud.com/sonicmultiplicities/infatuated-garrett-semmelink-violin" id="soundcloud"><i class="fa fa-soundcloud"></i></a>
+  
+  
+  <a href="//open.spotify.com/album/4joIAX8CLKK08XR3NCu05k" id="spotify"><i class="fa fa-spotify"></i></a><br><br>
+  
+</div>
 
 
 

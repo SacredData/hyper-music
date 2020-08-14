@@ -165,7 +165,9 @@
     <div class="div_toc toc" id="popup_toc">
     
     <!-- generate toc -->
-    
+    <ul id="ul_toc" class="ul_toc">
+  <li><a href="#artistic-statement">Artistic Statement</a></li>
+</ul>
     </div>
     <!-- toggle toc -->
     <script>
@@ -272,7 +274,7 @@
 
 
 <script src="https://multipli.city/assets/js/vibrant.js"></script>
-<div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS</div>
+<div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS <br> <h1>SPACEBAR: PLAY/PAUSE <br>ARROW KEYS: SEEK/VOLUME</h1></div>
 <div id="player"></div>
 <div id="player_controls">
   <div id="music_dur"></div>
@@ -300,7 +302,6 @@
      cursorWidth: 2,
    });
 
-   // var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
    var audioCtx = wavesurfer.backend.ac;
    var analyser = audioCtx.createAnalyser();
 
@@ -486,7 +487,10 @@
 
 
 
+<h2 id="artistic-statement">Artistic Statement</h2>
+<p><em>“I mean, my emotion is feeling a deep sense of responsibility to try to fix the problem. I don’t know, that’s a … that’s the most productive stance.” - Mark Zuckerberg</em></p>
 
+<p>A living composition, chronicling each iteration of Facebook’s corporate mission statement. Next time they decide to change the way they lie, we’ll be back with a third movement. I hope to one day know the pleasure of never having to record another movement of this piece ever again.</p>
 
 
           

@@ -21,3 +21,11 @@ intro_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SM001a_intro.mp3
 excerpt: "SM001"
 abstract: "Marking our triumphant return, with Sonic Multiplicities 1.1!"
 ---
+```
+                                   ▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁
+                                   The near-timelessness of a pin-prick, upon
+                                   careful observation, lapses time in reverse,
+                                     and unravels its higher-order harmonies
+                                   ever-downward towards its own origin point.
+                                   ◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁ 
+```
