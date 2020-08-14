@@ -316,6 +316,19 @@
 	var canvas = document.getElementById("c");
 
 	var canvasCtx = canvas.getContext("2d");
+
+  // Add event listener for `click` events.
+   canvas.addEventListener('click', function(event) {
+     var x2 = event.pageX,
+         y2 = event.pageY;
+     console.log(x2, y2);
+     if (animationId) {
+       cancelAnimationFrame(animationId)
+       animationId = undefined;
+     } else {
+       draw()
+     }
+   })
   
   function shuffle(a) {
       for (let i = a.length - 1; i > 0; i--) {
