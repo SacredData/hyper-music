@@ -329,13 +329,14 @@
   var drawColors = shuffle(colors)
   var widthDelta = 0;
   var alpha = 1.0;
+  var animationId = '';
   console.log(drawColors)
 
 	// draw an oscilloscope of the current audio source
 
 	function draw() {
 
-		requestAnimationFrame(draw);
+		animationId = requestAnimationFrame(draw);
 
 		analyser.getByteTimeDomainData(dataArray);
 
@@ -408,6 +409,13 @@
 
 
    wavesurfer.backend.setFilter(analyser);
+
+   wavesurfer.on('finish', () => {
+     if (animationId) {
+       cancelAnimationFrame(animationId)
+       animationId = undefined
+     }
+   })
 
    wavesurfer.on('ready', function () {
          document.getElementById("player_msg").innerHTML = "";
