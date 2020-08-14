@@ -27,8 +27,6 @@ permalink: /
 - **SM** is an AI free improvisation *friend*
 - **SM** is contact-free yet is an incredible *listener*
 
-Today's state of the art in real-time computer music software only optimizes for *giving it* but the true power behind the personal computer is its ability to *take it*.
-
 Music begins and ends with acoustic output from a human being. We provide a real-time musical AI that can talk back to that most infinite of mankind's oldest language.
 
 <!--
