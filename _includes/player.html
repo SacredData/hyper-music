@@ -27,7 +27,6 @@
  <script>
    var cover = "{{ page.cover }}"
    var url = "{{ page.stream_url }}"
-
    
    var dur = 0.0;
 
@@ -47,15 +46,13 @@
    var dataArray = new Uint8Array(bufferLength);
    analyser.getByteTimeDomainData(dataArray);
 
-	// var canvas = document.getElementById("oscilloscope");
-	var canvas = document.getElementById("c");
+	 var canvas = document.getElementById("c");
+	 var canvasCtx = canvas.getContext("2d");
 
-	var canvasCtx = canvas.getContext("2d");
-
-  // Add event listener for `click` events.
-   canvas.addEventListener('click', function(event) {
+   // Add event listener for `click` events.
+   canvas.addEventListener('click', (event) => {
      var x2 = event.pageX,
-         y2 = event.pageY;
+       y2 = event.pageY;
      console.log(x2, y2);
      if (animationId) {
        cancelAnimationFrame(animationId)
@@ -64,97 +61,91 @@
        draw()
      }
    })
-  
-  function shuffle(a) {
-      for (let i = a.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [a[i], a[j]] = [a[j], a[i]];
-      }
-      return a;
-  }
+   
+   function shuffle(a) {
+     for (let i = a.length - 1; i > 0; i--) {
+       const j = Math.floor(Math.random() * (i + 1));
+       [a[i], a[j]] = [a[j], a[i]];
+     }
+     return a;
+   }
 
-  var lineWidth = 2;
-  var drawColors = shuffle(colors)
-  var widthDelta = 0;
-  var alpha = 1.0;
-  var animationId = '';
-  console.log(drawColors)
+   var lineWidth = 2;
+   var drawColors = shuffle(colors)
+   var widthDelta = 0;
+   var alpha = 1.0;
+   var animationId = '';
 
-	// draw an oscilloscope of the current audio source
+   // draw an oscilloscope of the current audio source
 
-	function draw() {
+   function draw() {
+     animationId = requestAnimationFrame(draw);
+     analyser.getByteTimeDomainData(dataArray);
 
-		animationId = requestAnimationFrame(draw);
+     canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
+		 canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
-		analyser.getByteTimeDomainData(dataArray);
+     canvasCtx.lineWidth = lineWidth;
+     canvasCtx.strokeStyle = drawColors[0];
 
-    
-    canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
-		canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
-    
-		canvasCtx.lineWidth = lineWidth;
-    canvasCtx.strokeStyle = drawColors[0];
-		// canvasCtx.strokeStyle = "rgb(200, 200, 200)";
+     canvasCtx.beginPath();
+     
+     var sliceWidth = canvas.width * 1.0 / bufferLength;
+     var x = 0;
 
-		canvasCtx.beginPath();
+     for (var i = 0; i < bufferLength; i++) {
+       var v = dataArray[i] / 128.0;
+       var y = v * canvas.height / 2;
 
-		var sliceWidth = canvas.width * 1.0 / bufferLength;
-		var x = 0;
+       if (i === 0) {
+         canvasCtx.moveTo(x, y);
 
-		for (var i = 0; i < bufferLength; i++) {
+         if (lineWidth > 5) {
+           drawColors = shuffle(drawColors)
+         }
+       } else {
+         canvasCtx.lineTo(x, y);
 
-			var v = dataArray[i] / 128.0;
-			var y = v * canvas.height / 2;
+         if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
+           drawColors = shuffle(drawColors)
+         }
 
-			if (i === 0) {
-				canvasCtx.moveTo(x, y);
-        if (lineWidth > 5) {
-          drawColors = shuffle(drawColors)
-        }
-			} else {
-				canvasCtx.lineTo(x, y);
+         widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
+         
+         if (lineWidth > 0) {
+           lineWidth += widthDelta
+         } else {
+           lineWidth = 2;
+           alpha += shuffle([-0.1, 0.1, 1.0])[0];
+         }
+       }
+       x += sliceWidth;
+     }
 
-        if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
-          drawColors = shuffle(drawColors)
-        }
+     if (lineWidth > 100.0) {
+       lineWidth = 1.0;
+       alpha = shuffle([0.5, 0.005, 0.0008])[2];
+     }
 
-        widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
-        if (lineWidth > 0) {
-          lineWidth += widthDelta
-        } else {
-          lineWidth = 2;
-          alpha += shuffle([-0.1, 0.1, 1.0])[0];
-        }
-			}
+     if (alpha > 1) {
+       alpha = shuffle([0.1, 0.001, 0.0001])[0];
+     }
 
-			x += sliceWidth;
-		}
-
-    if (lineWidth > 100.0) {
-      lineWidth = 1.0;
-      alpha = shuffle([0.5, 0.005, 0.0008])[2];
-    }
-
-    if (alpha > 1) {
-      alpha = shuffle([0.1, 0.001, 0.0001])[0];
-    } 
-
-		canvasCtx.lineTo(canvas.width, canvas.height / 2);
-		canvasCtx.stroke();
-	}
+     canvasCtx.lineTo(canvas.width, canvas.height / 2);
+     canvasCtx.stroke();
+   }
 
 
 	 wavesurfer.setVolume(0.4);
 	 document.querySelector('#volume').value = wavesurfer.backend.getVolume();
 
-    var volumeInput = document.querySelector('#volume');
-    var onChangeVolume = function (e) {
-      wavesurfer.setVolume(e.target.value);
-      console.log(e.target.value);
-    };
-		volumeInput.addEventListener('input', onChangeVolume);
-		volumeInput.addEventListener('change', onChangeVolume);
-
+   var volumeInput = document.querySelector('#volume');
+   var onChangeVolume = function (e) {
+     wavesurfer.setVolume(e.target.value);
+     console.log(e.target.value);
+   };
+	 volumeInput.addEventListener('input', onChangeVolume);
+	 volumeInput.addEventListener('change', onChangeVolume);
 
    wavesurfer.backend.setFilter(analyser);
 
@@ -166,11 +157,11 @@
    })
 
    wavesurfer.on('ready', function () {
-         document.getElementById("player_msg").innerHTML = "";
-         draw();
-         wavesurfer.play();
-         dur = wavesurfer.getDuration().toFixed(2);
-         document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
+     document.getElementById("player_msg").innerHTML = "";
+     draw();
+     wavesurfer.play();
+     dur = wavesurfer.getDuration().toFixed(2);
+     document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
    });
 
    wavesurfer.load(`//${url}`);
