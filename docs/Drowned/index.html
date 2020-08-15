@@ -327,6 +327,7 @@
    var totalDurs = 0;
    var startStop = [];
 
+   /*
    var regDurs = [ 275, 516, 403, 566, 1229, 663, 1175 ];
 
    regDurs.forEach(reg => {
@@ -338,6 +339,7 @@
    });
 
    console.log(startStop);
+
 
    var regions = [
      {
@@ -401,6 +403,12 @@
      plugins: [
        RegionsPlugin.create({ regions })
      ]
+   });
+   */
+ 
+   var wavesurfer = WaveSurfer.create({
+     container: "#player",
+     cursorWidth: 2
    });
 
    var audioCtx = wavesurfer.backend.ac;
