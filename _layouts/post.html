@@ -4,10 +4,10 @@ layout: default
 {% if page.cover %}
 <h1>
   <img src="{{ page.cover }}" alt="Cover art for {{ page.title }}" height="540" style="vertical-align:bottom"><br><br>
-  {{ page.title }}
+  <div id="musicTitle">{{ page.title }}</div>
 </h1>
 {% else %}
-<h1>
+<h1 id="musicTitle">
   {{ page.title }}
 </h1>
 {% endif %}

@@ -33,6 +33,11 @@
   {% if page.stream_url %}
     <!-- Wavesurfer.js -->
     <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.min.js"></script>
+  {% endif %}
+
+  {% if page.m3u %}
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.playlist.min.js"></script>
   {% endif %}
 
   {% if page.video_url %}
