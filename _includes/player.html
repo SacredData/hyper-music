@@ -33,18 +33,20 @@
    var v = new Vibrant("https:" + cover);
 
 
-	function hexToRgbA(hex){
-			var c;
-			if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
-					c= hex.substring(1).split('');
-					if(c.length== 3){
-							c= [c[0], c[0], c[1], c[1], c[2], c[2]];
-					}
-					c= '0x'+c.join('');
-					return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.8)';
-			}
-			throw new Error('Bad Hex');
-	}
+   // Converts hex colors from Vibrant into RGB format so that it can be used
+   // in real-time with our canvas animation function `draw()`
+   function hexToRgbA(hex){
+     var c;
+     if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+       c= hex.substring(1).split('');
+       if(c.length== 3){
+           c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+       }
+       c= '0x'+c.join('');
+       return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.8)';
+     }
+		 throw new Error('Bad Hex');
+   }
    
    function shuffle(a) {
      for (let i = a.length - 1; i > 0; i--) {
@@ -183,7 +185,7 @@
 
    var mult1 = day / month;
    var mult2 = month / day;
-   var mult3 = dur / year;
+   var mult3 = 0;
 
    console.log(mult1, mult2);
 
@@ -196,7 +198,7 @@
      canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
 		 canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
-     canvasCtx.lineWidth = (10 + lineWidth) / hour;
+     canvasCtx.lineWidth = (10 + lineWidth) / hour / day;
      canvasCtx.strokeStyle = drawColors[0];
 
      canvasCtx.beginPath();
@@ -225,7 +227,7 @@
            lineWidth += drawColors.length * mult2;
          }
          
-         if (lineWidth > 10) {
+         if (lineWidth > 15) {
            lineWidth += shuffle([-1, 1, 10])[0] * Math.abs(widthDelta) * (1 - alpha);
            mult1 += 1;
            mult3 -= 0.01;
@@ -246,6 +248,7 @@
        alpha = shuffle([0.1, 0.001, 0.0001])[0];
      }
 
+     canvasCtx.lineWidth = Math.min(Math.abs(lineWidth), 100);
      canvasCtx.lineTo(canvas.width, canvas.height / 2);
      canvasCtx.stroke();
    }
@@ -280,10 +283,11 @@
 
    wavesurfer.on('ready', function () {
      document.getElementById("player_msg").innerHTML = "";
-     draw();
      wavesurfer.play();
-     dur = wavesurfer.getDuration().toFixed(2);
+     dur = Number(wavesurfer.getDuration().toFixed(2));
      document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
+     mult3 = (dur / year) || 1;
+     draw();
    });
 
    wavesurfer.load(`//${url}`);
