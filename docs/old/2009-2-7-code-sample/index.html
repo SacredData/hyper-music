@@ -314,7 +314,7 @@
 
    var widthDelta = 0;
    var alpha = 1.0;
-   var animationId = '';
+   var animationId = undefined;
    var totalDurs = 0;
    var startStop = [];
 
@@ -439,8 +439,6 @@
    var mult1 = day / month;
    var mult2 = month / day;
    var mult3 = 0;
-
-   console.log(mult1, mult2);
 
    // draw an oscilloscope of the current audio source
 
