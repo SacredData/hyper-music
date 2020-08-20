@@ -21,7 +21,7 @@ permalink: /
 > What results from this ambitious musical endeavor is among the world's longest-running datasets comprised of advanced, complex, and challenging extended techniques, free improvisation strategem, and instrumental varieties.
 
 ## The Anti-Computer Music
-> **Software** should liberate, enable, and optimize. Music software in vogue today needlessly limits, restricts, and constrains. Long live the human spirit that lives within *music* and free software!
+> **Software** should liberate, enable, and optimize. Music software in vogue today needlessly limits, restricts, and constrains. Long live the human spirit that is carried within *music* and *free software*!
 
 - **SM** emphasizes the soloist's *novel fundamentals*
 - **SM** is an AI free improvisation *friend*
