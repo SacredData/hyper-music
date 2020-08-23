@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: playlist
 title: Upward Fall
 author: Garrett Semmelink / Tyler Dinner
 instrument: violin / guitar
@@ -14,6 +14,7 @@ toc_level: 4
 category: Composition
 date: 2020-08-14
 m3u: //s3.amazonaws.com/sonicmultiplicities.audio/feed/playlists/SM007/playlist.m3u
+sidecar: //s3.amazonaws.com/sonicmultiplicities.audio/feed/sidecar_SM007.json
 bandcamp: //sonicmultiplicities.bandcamp.com/album/upward-fall
 soundcloud: //soundcloud.com/sonicmultiplicities/sets/upward-fall
 cover: //s3.amazonaws.com/sonicmultiplicities.audio/feed/SM007.png

@@ -31,10 +31,6 @@
   
 
   
-    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.playlist.min.js"></script>
-  
-
-  
 
   <!-- mathjax 2.7.5 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
@@ -277,7 +273,7 @@
 
 
 <script src="https://multipli.city/assets/js/vibrant.js"></script>
-<div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS <br> <h1>SPACEBAR: PLAY/PAUSE <br>ARROW KEYS: SEEK/VOLUME</h1></div>
+<div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS <br> <h1>SPACEBAR: PLAY/PAUSE <br>ARROW KEYS: SEEK/VOLUME <br>DOUBLE-CLICK: SKIP TO SEGMENT</h1></div>
 <div id="player"></div>
 <div id="player_controls">
   <div id="music_dur"></div>
@@ -292,313 +288,267 @@
   <input id="volume" type="range" min="0" max="1" value="1" step="0.1" style="float:right">
 </div>
  <script>
-   var cover = "//s3.amazonaws.com/sonicmultiplicities.audio/feed/SM007.png"
-   var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM007.mp3"
-   
-   var dur = 0.0;
+   fetch(" //s3.amazonaws.com/sonicmultiplicities.audio/feed/sidecar_SM007.json").then(response => response.json()).then(scData => {
+     var regions = scData.regions;
+     console.log(regions);
+     var cover = "//s3.amazonaws.com/sonicmultiplicities.audio/feed/SM007.png";
+     var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM007.mp3";
+     
+     var dur = 0.0;
 
-   var v = new Vibrant("https:" + cover);
+     var v = new Vibrant("https:" + cover);
 
 
-   // Converts hex colors from Vibrant into RGB format so that it can be used
-   // in real-time with our canvas animation function `draw()`
-   function hexToRgbA(hex){
-     var c;
-     if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
-       c= hex.substring(1).split('');
-       if(c.length== 3){
-           c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+     // Converts hex colors from Vibrant into RGB format so that it can be used
+     // in real-time with our canvas animation function `draw()`
+     function hexToRgbA(hex){
+       var c;
+       if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+         c= hex.substring(1).split('');
+         if(c.length== 3){
+             c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+         }
+         c= '0x'+c.join('');
+         return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.8)';
        }
-       c= '0x'+c.join('');
-       return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.8)';
+       throw new Error('Bad Hex');
      }
-		 throw new Error('Bad Hex');
-   }
-   
-   function shuffle(a) {
-     for (let i = a.length - 1; i > 0; i--) {
-       const j = Math.floor(Math.random() * (i + 1));
-       [a[i], a[j]] = [a[j], a[i]];
+     
+     function shuffle(a) {
+       for (let i = a.length - 1; i > 0; i--) {
+         const j = Math.floor(Math.random() * (i + 1));
+         [a[i], a[j]] = [a[j], a[i]];
+       }
+       return a;
      }
-     return a;
-   }
 
-   var lineWidth = 2;
-   var drawColors = shuffle(colors);
+     var lineWidth = 2;
+     var drawColors = shuffle(colors);
 
-   var widthDelta = 0;
-   var alpha = 1.0;
-   var animationId = undefined;
-   var totalDurs = 0;
-   var startStop = [];
+     var widthDelta = 0;
+     var alpha = 1.0;
+     var animationId = undefined;
+     var totalDurs = 0;
+     var startStop = [];
 
-   /*
-   var regDurs = [ 275, 516, 403, 566, 1229, 663, 1175 ];
+     var regDurs = regions.map(r => r.duration);
 
-   regDurs.forEach(reg => {
-     var start = totalDurs;
-     totalDurs += reg;
-     startStop.push({
-       start, end: totalDurs
+		 regDurs.forEach(reg => {
+			 var start = totalDurs;
+			 totalDurs += reg;
+			 startStop.push({
+				 start, end: totalDurs
+			 });
+		 });
+
+		 let regCount = 0;
+
+		 regions.forEach(reg => {
+			 reg.start = startStop[regCount].start;
+			 reg.end = startStop[regCount].end;
+			 reg.color = hexToRgbA(shuffle(drawColors)[0]);
+			 regCount++;
+		 });
+
+     var RegionsPlugin = window.WaveSurfer.regions;
+
+     var wavesurfer = WaveSurfer.create({
+       container: "#player",
+       cursorWidth: 2,
+       plugins: [
+         RegionsPlugin.create({ regions })
+       ]
      });
-   });
 
-   console.log(startStop);
+     var audioCtx = wavesurfer.backend.ac;
+     var analyser = audioCtx.createAnalyser();
 
+     analyser.fftSize = 2048;
 
-   var regions = [
-     {
-       id: "Prelude: Head in the Sand",
-       loop: false,
-       drag: false,
-       resize: false
-     },
-     {
-       id: "Upward Fall, I. Modern Attrocities",
-       loop: false,
-       drag: false,
-       resize: false
-     },
-     {
-       id: "Upward Fall, II. The Nightlife Circuit",
-       loop: false,
-       drag: false,
-       resize: false
-     },
-     {
-       id: "Upward Fall, III. Yoga",
-       loop: false,
-       drag: false,
-       resize: false
-     },
-     {
-       id: "Distension, I. Do-si-do",
-       loop: false,
-       drag: false,
-       resize: false
-     },
-     {
-       id: "Distension, I. Paradise, CA",
-       loop: false,
-       drag: false,
-       resize: false
-     },
-     {
-       id: "Finale: Head in the Clouds",
-       loop: false,
-       drag: false,
-       resize: false
-     }
-   ];
-
-   let regCount = 0;
-
-   regions.forEach(reg => {
-     reg.start = startStop[regCount].start;
-     reg.end = startStop[regCount].end;
-     reg.color = hexToRgbA(shuffle(drawColors)[0]);
-     regCount++;
-   });
-
-   var RegionsPlugin = window.WaveSurfer.regions;
-
-   var wavesurfer = WaveSurfer.create({
-     container: "#player",
-     cursorWidth: 2,
-     plugins: [
-       RegionsPlugin.create({ regions })
-     ]
-   });
-   */
- 
-   var wavesurfer = WaveSurfer.create({
-     container: "#player",
-     cursorWidth: 2
-   });
-
-   var audioCtx = wavesurfer.backend.ac;
-   var analyser = audioCtx.createAnalyser();
-
-   analyser.fftSize = 2048;
-
-   var bufferLength = analyser.frequencyBinCount;
-   var dataArray = new Uint8Array(bufferLength);
-   analyser.getByteTimeDomainData(dataArray);
-
-	 var canvas = document.getElementById("c");
-	 var canvasCtx = canvas.getContext("2d");
-
-   // Add event listener for `click` events.
-   canvas.addEventListener('click', (event) => {
-     var x2 = event.pageX,
-       y2 = event.pageY;
-     console.log(x2, y2);
-     if (animationId) {
-       cancelAnimationFrame(animationId)
-       animationId = undefined;
-     } else {
-       draw()
-     }
-   })
-   let [mo, da, ye]    = ( new Date()  ).toLocaleDateString().split("/");
-   let [ho, mi, se] = ( new Date()  ).toLocaleTimeString().slice(0,7).split(":");
-
-   var month = Number(mo);
-   var day = Number(da);
-   var year = Number(ye);
-   var hour = Number(ho);
-   var minute = Number(mi);
-   var second = Number(se);
-
-   var mult1 = day / month;
-   var mult2 = month / day;
-   var mult3 = 0;
-
-   // draw an oscilloscope of the current audio source
-
-   function draw() {
-     animationId = requestAnimationFrame(draw);
+     var bufferLength = analyser.frequencyBinCount;
+     var dataArray = new Uint8Array(bufferLength);
      analyser.getByteTimeDomainData(dataArray);
 
-     canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
-		 canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+     var canvas = document.getElementById("c");
+     var canvasCtx = canvas.getContext("2d");
 
-     canvasCtx.lineWidth = (10 + lineWidth) / hour / day;
-     canvasCtx.strokeStyle = drawColors[0];
-
-     canvasCtx.beginPath();
-     
-     var sliceWidth = canvas.width * 1.0 / bufferLength;
-     var x = 0;
-
-     for (var i = 0; i < bufferLength; i++) {
-       var v = dataArray[i] / 128.0;
-       var y = v * canvas.height / 2;
-
-       if (i === 0) {
-         canvasCtx.moveTo(x, y);
-
-         if (lineWidth > 50) {
-           drawColors = shuffle(drawColors);
-           alpha = 1 - (shuffle([0.1, 0.01, 0.5, 0.91])[1] * mult1);
-         }
+     // Add event listener for `click` events.
+     canvas.addEventListener('click', (event) => {
+       var x2 = event.pageX,
+         y2 = event.pageY;
+       console.log(x2, y2);
+       if (animationId) {
+         cancelAnimationFrame(animationId)
+         animationId = undefined;
        } else {
-         canvasCtx.lineTo(x, y);
-
-         widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
-
-         if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
-           drawColors = shuffle(drawColors);
-           lineWidth += drawColors.length * mult2;
-         }
-         
-         if (lineWidth > 15) {
-           lineWidth += shuffle([-1, 1, 10])[0] * Math.abs(widthDelta) * (1 - alpha);
-           mult1 += 1;
-           mult3 -= 0.01;
-         } else {
-           lineWidth = mult3 * (2 + Math.abs(widthDelta));
-           alpha += shuffle([0.01, 0.1, 0.2, 0.5, 0.8, 1.0])[0];
-         }
+         draw()
        }
-       x += sliceWidth;
+     })
+     let [mo, da, ye]    = ( new Date()  ).toLocaleDateString().split("/");
+     let [ho, mi, se] = ( new Date()  ).toLocaleTimeString().slice(0,7).split(":");
+
+     var month = Number(mo);
+     var day = Number(da);
+     var year = Number(ye);
+     var hour = Number(ho);
+     var minute = Number(mi);
+     var second = Number(se);
+
+     var mult1 = day / month;
+     var mult2 = month / day;
+     var mult3 = 0;
+
+     // draw an oscilloscope of the current audio source
+
+     function draw() {
+       animationId = requestAnimationFrame(draw);
+       analyser.getByteTimeDomainData(dataArray);
+
+       canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
+       canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+       canvasCtx.lineWidth = (10 + lineWidth) / hour / day;
+       canvasCtx.strokeStyle = drawColors[0];
+
+       canvasCtx.beginPath();
+       
+       var sliceWidth = canvas.width * 1.0 / bufferLength;
+       var x = 0;
+
+       for (var i = 0; i < bufferLength; i++) {
+         var v = dataArray[i] / 128.0;
+         var y = v * canvas.height / 2;
+
+         if (i === 0) {
+           canvasCtx.moveTo(x, y);
+
+           if (lineWidth > 50) {
+             drawColors = shuffle(drawColors);
+             alpha = 1 - (shuffle([0.1, 0.01, 0.5, 0.91])[1] * mult1);
+           }
+         } else {
+           canvasCtx.lineTo(x, y);
+
+           widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
+
+           if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
+             drawColors = shuffle(drawColors);
+             lineWidth += drawColors.length * mult2;
+           }
+           
+           if (lineWidth > 15) {
+             lineWidth += shuffle([-1, 1, 10])[0] * Math.abs(widthDelta) * (1 - alpha);
+             mult1 += 1;
+             mult3 -= 0.01;
+           } else {
+             lineWidth = mult3 * (2 + Math.abs(widthDelta));
+             alpha += shuffle([0.01, 0.1, 0.2, 0.5, 0.8, 1.0])[0];
+           }
+         }
+         x += sliceWidth;
+       }
+
+       if (lineWidth > 100.0) {
+         lineWidth = 1.0 * mult3;
+         alpha = shuffle([0.5, 0.005, 0.0008])[2];
+       }
+
+       if (alpha > 1) {
+         alpha = shuffle([0.1, 0.001, 0.0001])[0];
+       }
+
+       canvasCtx.lineWidth = Math.min(Math.abs(lineWidth), 100);
+       canvasCtx.lineTo(canvas.width, canvas.height / 2);
+       canvasCtx.stroke();
      }
 
-     if (lineWidth > 100.0) {
-       lineWidth = 1.0 * mult3;
-       alpha = shuffle([0.5, 0.005, 0.0008])[2];
-     }
+     let currentRegion = 0;
 
-     if (alpha > 1) {
-       alpha = shuffle([0.1, 0.001, 0.0001])[0];
-     }
+     wavesurfer.setVolume(0.4);
+     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
 
-     canvasCtx.lineWidth = Math.min(Math.abs(lineWidth), 100);
-     canvasCtx.lineTo(canvas.width, canvas.height / 2);
-     canvasCtx.stroke();
-   }
+     var volumeInput = document.querySelector('#volume');
+     var onChangeVolume = function (e) {
+       wavesurfer.setVolume(e.target.value);
+       console.log(e.target.value);
+     };
+     volumeInput.addEventListener('input', onChangeVolume);
+     volumeInput.addEventListener('change', onChangeVolume);
 
-   let currentRegion = 0;
+     wavesurfer.backend.setFilter(analyser);
 
-	 wavesurfer.setVolume(0.4);
-	 document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+     wavesurfer.on('region-in', r => {
+       console.log(r);
+       var trackNum = regions.findIndex(rr => rr.start == r.start);
+       document.getElementById("musicTitle").innerHTML = "Upward Fall" + `: 0${trackNum+1} - <b><i>${r.id}</i></b>`;
+     });
 
-   var volumeInput = document.querySelector('#volume');
-   var onChangeVolume = function (e) {
-     wavesurfer.setVolume(e.target.value);
-     console.log(e.target.value);
-   };
-	 volumeInput.addEventListener('input', onChangeVolume);
-	 volumeInput.addEventListener('change', onChangeVolume);
+     wavesurfer.on('region-dblclick', r => {
+       wavesurfer.setCurrentTime(r.start);
+     })
 
-   wavesurfer.backend.setFilter(analyser);
+     wavesurfer.on('finish', () => {
+       if (animationId) {
+         cancelAnimationFrame(animationId)
+         animationId = undefined
+       }
+     })
 
-   wavesurfer.on('region-in', r => {
-     console.log(r);
-     var trackNum = regions.findIndex(rr => rr.start == r.start);
-     document.getElementById("musicTitle").innerHTML = "Upward Fall" + `: 0${trackNum+1} - <b><i>${r.id}</i></b>`;
-   });
+     wavesurfer.on('ready', function () {
+       document.getElementById("player_msg").innerHTML = "";
+       wavesurfer.play();
+       dur = Number(wavesurfer.getDuration().toFixed(2));
+       document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
+       mult3 = (dur / year) || 1;
+       draw();
+     });
 
-   wavesurfer.on('finish', () => {
-     if (animationId) {
-       cancelAnimationFrame(animationId)
-       animationId = undefined
-     }
-   })
-
-   wavesurfer.on('ready', function () {
-     document.getElementById("player_msg").innerHTML = "";
-     wavesurfer.play();
-     dur = Number(wavesurfer.getDuration().toFixed(2));
-     document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
-     mult3 = (dur / year) || 1;
-     draw();
-   });
-
-   wavesurfer.load(`//${url}`);
-   v.getPalette((err, palette) => {
-     if (err) {
-       console.log(err)
-     }
-
-     var muted = !err ? palette.Muted ? palette.Muted.getHex() : null : null;
-     var vibrant = !err ? palette.Vibrant ? palette.Vibrant.getHex() : null : null;
-     var darkVibrant = !err ? palette.DarkVibrant ? palette.DarkVibrant.getHex() : null : null;
-
-     wavesurfer.setWaveColor(vibrant || "#999");
-     wavesurfer.setProgressColor(muted || "#555");
-     wavesurfer.setCursorColor(darkVibrant || "#333");
-
-     colors.push(darkVibrant, vibrant, muted);
-   })
-
-   wavesurfer.on('seek', () => {
-     alpha = 0.6;
-   })
-
-   function toggleBin() {
-     var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM007.mp3";
-     var binUrl = "";
-     url = url == stUrl ? binUrl : stUrl
      wavesurfer.load(`//${url}`);
-   }
+     v.getPalette((err, palette) => {
+       if (err) {
+         console.log(err)
+       }
 
-   // Media controls
-   document.body.onkeyup = function(e){
-     if(e.keyCode == 32){ // spacebar
-       wavesurfer.playPause()
-     } else if (e.keyCode == 37) { // left arrow key
-       wavesurfer.skip(-10);
-     } else if (e.keyCode == 39) { // right arrow key
-       wavesurfer.skip(10);
-     }/* else if (e.keyCode == 38) { // up arrow key
-       wavesurfer.setVolume(wavesurfer.getVolume() + 0.1)
-	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
-     } else if (e.keyCode == 40) { // down arrow key
-       wavesurfer.setVolume(wavesurfer.getVolume() - 0.1)
-	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
-     }*/
-   }
+       var muted = !err ? palette.Muted ? palette.Muted.getHex() : null : null;
+       var vibrant = !err ? palette.Vibrant ? palette.Vibrant.getHex() : null : null;
+       var darkVibrant = !err ? palette.DarkVibrant ? palette.DarkVibrant.getHex() : null : null;
+
+       wavesurfer.setWaveColor(vibrant || "#999");
+       wavesurfer.setProgressColor(muted || "#555");
+       wavesurfer.setCursorColor(darkVibrant || "#333");
+
+       colors.push(darkVibrant, vibrant, muted);
+     })
+
+     wavesurfer.on('seek', () => {
+       alpha = 0.6;
+     })
+
+     function toggleBin() {
+       var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM007.mp3";
+       var binUrl = "";
+       url = url == stUrl ? binUrl : stUrl
+       wavesurfer.load(`//${url}`);
+     }
+
+     // Media controls
+     document.body.onkeyup = function(e){
+       if(e.keyCode == 32){ // spacebar
+         wavesurfer.playPause()
+       } else if (e.keyCode == 37) { // left arrow key
+         wavesurfer.skip(-10);
+       } else if (e.keyCode == 39) { // right arrow key
+         wavesurfer.skip(10);
+       }/* else if (e.keyCode == 38) { // up arrow key
+         wavesurfer.setVolume(wavesurfer.getVolume() + 0.1)
+         document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+       } else if (e.keyCode == 40) { // down arrow key
+         wavesurfer.setVolume(wavesurfer.getVolume() - 0.1)
+         document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+       }*/
+     }
+
+   });
 
  </script>
  
