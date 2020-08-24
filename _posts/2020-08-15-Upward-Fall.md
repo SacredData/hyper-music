@@ -21,6 +21,7 @@ bandcamp: //sonicmultiplicities.bandcamp.com/album/upward-fall
 soundcloud: //soundcloud.com/sonicmultiplicities/sets/upward-fall
 cover: //sonicmultiplicities.audio/feed/SM007.png
 stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SM007.mp3
+duration: 4831
 excerpt: "SM007"
 abstract: ""
 ---
