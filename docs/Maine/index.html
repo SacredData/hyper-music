@@ -272,7 +272,6 @@
 </script>
 
 
-<script src="https://multipli.city/assets/js/vibrant.js"></script>
 <div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS <br> <h1>SPACEBAR: PLAY/PAUSE <br>ARROW KEYS: SEEK/VOLUME</h1></div>
 <div id="player"></div>
 <div id="player_controls">
@@ -288,11 +287,96 @@
   <input id="volume" type="range" min="0" max="1" value="1" step="0.1" style="float:right">
 </div>
  <script>
-   var cover = ""
    var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_003.mp3"
    
    var dur = 0.0;
 
+   var wavesurfer = WaveSurfer.create({
+     container: "#player",
+     cursorWidth: 2
+   });
+
+	 wavesurfer.setVolume(0.4);
+	 document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+
+   var volumeInput = document.querySelector('#volume');
+   var onChangeVolume = function (e) {
+     wavesurfer.setVolume(e.target.value);
+     console.log(e.target.value);
+   };
+	 volumeInput.addEventListener('input', onChangeVolume);
+	 volumeInput.addEventListener('change', onChangeVolume);
+
+   wavesurfer.on('ready', function () {
+     document.getElementById("player_msg").innerHTML = "";
+     wavesurfer.play();
+     dur = Number(wavesurfer.getDuration().toFixed(2));
+     document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
+     mult3 = (dur / year) || 1;
+     // draw();
+   });
+
+   wavesurfer.load(`//${url}`);
+
+   wavesurfer.on('seek', () => {
+     alpha = 0.6;
+   })
+
+   wavesurfer.on('pause', () => {
+     if (animationId) {
+       cancelAnimationFrame(animationId)
+       animationId = undefined
+     }
+   })
+
+   wavesurfer.on('play', () => {
+     if (!animationId) {
+       draw();
+     }
+   })
+
+   function toggleBin() {
+     var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_003.mp3";
+     var binUrl = "";
+     url = url == stUrl ? binUrl : stUrl
+     wavesurfer.load(`//${url}`);
+   }
+
+   // Media controls
+   document.body.onkeyup = function(e){
+     if(e.keyCode == 32){ // spacebar
+       wavesurfer.playPause()
+     } else if (e.keyCode == 37) { // left arrow key
+       wavesurfer.skip(-10);
+     } else if (e.keyCode == 39) { // right arrow key
+       wavesurfer.skip(10);
+     }/* else if (e.keyCode == 38) { // up arrow key
+       wavesurfer.setVolume(wavesurfer.getVolume() + 0.1)
+	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+     } else if (e.keyCode == 40) { // down arrow key
+       wavesurfer.setVolume(wavesurfer.getVolume() - 0.1)
+	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+     }*/
+   }
+
+ </script>
+ 
+
+
+<div id="streams"><br><br>
+  <b>Stream:</b>
+  
+  
+  
+  <a href="//soundcloud.com/sonicmultiplicities/maine" id="soundcloud"><i class="fa fa-soundcloud"></i></a>
+  
+  
+</div>
+
+
+<script src="https://multipli.city/assets/js/vibrant.js"></script>
+<script>
+   var cover = ""
    var v = new Vibrant("https:" + cover);
 
 
@@ -326,14 +410,8 @@
    var alpha = 1.0;
    var animationId = undefined;
 
-   var wavesurfer = WaveSurfer.create({
-     container: "#player",
-     cursorWidth: 2
-   });
-
    var audioCtx = wavesurfer.backend.ac;
    var analyser = audioCtx.createAnalyser();
-
 
    var bufferLength = analyser.frequencyBinCount;
    var dataArray = new Uint8Array(bufferLength);
@@ -434,19 +512,6 @@
      canvasCtx.stroke();
    }
 
-   let currentRegion = 0;
-
-	 wavesurfer.setVolume(0.4);
-	 document.querySelector('#volume').value = wavesurfer.backend.getVolume();
-
-   var volumeInput = document.querySelector('#volume');
-   var onChangeVolume = function (e) {
-     wavesurfer.setVolume(e.target.value);
-     console.log(e.target.value);
-   };
-	 volumeInput.addEventListener('input', onChangeVolume);
-	 volumeInput.addEventListener('change', onChangeVolume);
-
    wavesurfer.backend.setFilter(analyser);
 
    wavesurfer.on('region-in', r => {
@@ -460,18 +525,8 @@
        cancelAnimationFrame(animationId)
        animationId = undefined
      }
-   })
-
-   wavesurfer.on('ready', function () {
-     document.getElementById("player_msg").innerHTML = "";
-     wavesurfer.play();
-     dur = Number(wavesurfer.getDuration().toFixed(2));
-     document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
-     mult3 = (dur / year) || 1;
-     // draw();
    });
 
-   wavesurfer.load(`//${url}`);
    v.getPalette((err, palette) => {
      if (err) {
        console.log(err)
@@ -488,61 +543,20 @@
      colors.push(darkVibrant, vibrant, muted);
    })
 
-   wavesurfer.on('seek', () => {
-     alpha = 0.6;
-   })
-
    wavesurfer.on('pause', () => {
      if (animationId) {
        cancelAnimationFrame(animationId)
        animationId = undefined
      }
-   })
+   });
 
    wavesurfer.on('play', () => {
      if (!animationId) {
        draw();
      }
-   })
-
-   function toggleBin() {
-     var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_003.mp3";
-     var binUrl = "";
-     url = url == stUrl ? binUrl : stUrl
-     wavesurfer.load(`//${url}`);
-   }
-
-   // Media controls
-   document.body.onkeyup = function(e){
-     if(e.keyCode == 32){ // spacebar
-       wavesurfer.playPause()
-     } else if (e.keyCode == 37) { // left arrow key
-       wavesurfer.skip(-10);
-     } else if (e.keyCode == 39) { // right arrow key
-       wavesurfer.skip(10);
-     }/* else if (e.keyCode == 38) { // up arrow key
-       wavesurfer.setVolume(wavesurfer.getVolume() + 0.1)
-	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
-     } else if (e.keyCode == 40) { // down arrow key
-       wavesurfer.setVolume(wavesurfer.getVolume() - 0.1)
-	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
-     }*/
-   }
+   });
 
  </script>
- 
-
-
-<div id="streams"><br><br>
-  <b>Stream:</b>
-  
-  
-  
-  <a href="//soundcloud.com/sonicmultiplicities/maine" id="soundcloud"><i class="fa fa-soundcloud"></i></a>
-  
-  
-</div>
-
 
 
 

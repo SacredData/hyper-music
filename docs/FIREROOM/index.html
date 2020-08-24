@@ -275,7 +275,6 @@
 </script>
 
 
-<script src="https://multipli.city/assets/js/vibrant.js"></script>
 <div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS <br> <h1>SPACEBAR: PLAY/PAUSE <br>ARROW KEYS: SEEK/VOLUME</h1></div>
 <div id="player"></div>
 <div id="player_controls">
@@ -291,11 +290,102 @@
   <input id="volume" type="range" min="0" max="1" value="1" step="0.1" style="float:right">
 </div>
  <script>
-   var cover = "//sonicmultiplicities.audio/feed/fireroom.jpg"
    var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM004.mp3"
    
    var dur = 0.0;
 
+   var wavesurfer = WaveSurfer.create({
+     container: "#player",
+     cursorWidth: 2
+   });
+
+	 wavesurfer.setVolume(0.4);
+	 document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+
+   var volumeInput = document.querySelector('#volume');
+   var onChangeVolume = function (e) {
+     wavesurfer.setVolume(e.target.value);
+     console.log(e.target.value);
+   };
+	 volumeInput.addEventListener('input', onChangeVolume);
+	 volumeInput.addEventListener('change', onChangeVolume);
+
+   wavesurfer.on('ready', function () {
+     document.getElementById("player_msg").innerHTML = "";
+     wavesurfer.play();
+     dur = Number(wavesurfer.getDuration().toFixed(2));
+     document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
+     mult3 = (dur / year) || 1;
+     // draw();
+   });
+
+   wavesurfer.load(`//${url}`);
+
+   wavesurfer.on('seek', () => {
+     alpha = 0.6;
+   })
+
+   wavesurfer.on('pause', () => {
+     if (animationId) {
+       cancelAnimationFrame(animationId)
+       animationId = undefined
+     }
+   })
+
+   wavesurfer.on('play', () => {
+     if (!animationId) {
+       draw();
+     }
+   })
+
+   function toggleBin() {
+     var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM004.mp3";
+     var binUrl = "";
+     url = url == stUrl ? binUrl : stUrl
+     wavesurfer.load(`//${url}`);
+   }
+
+   // Media controls
+   document.body.onkeyup = function(e){
+     if(e.keyCode == 32){ // spacebar
+       wavesurfer.playPause()
+     } else if (e.keyCode == 37) { // left arrow key
+       wavesurfer.skip(-10);
+     } else if (e.keyCode == 39) { // right arrow key
+       wavesurfer.skip(10);
+     }/* else if (e.keyCode == 38) { // up arrow key
+       wavesurfer.setVolume(wavesurfer.getVolume() + 0.1)
+	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+     } else if (e.keyCode == 40) { // down arrow key
+       wavesurfer.setVolume(wavesurfer.getVolume() - 0.1)
+	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
+     }*/
+   }
+
+ </script>
+ 
+
+
+<div id="streams"><br><br>
+  <b>Stream:</b>
+  
+  <a href="//music.apple.com/us/album/fireroom/1494042743" id="apple"><i class="fa fa-apple"></i></a>
+  
+  
+  <a href="//sonicmultiplicities.bandcamp.com/track/fireroom" id="bandcamp"><i class="fa fa-bandcamp"></i></a>
+  
+  
+  <a href="//soundcloud.com/sonicmultiplicities/cryptography-carnival" id="soundcloud"><i class="fa fa-soundcloud"></i></a>
+  
+  
+  <a href="//open.spotify.com/album/03X3730XufCaPxz8WXDaTI" id="spotify"><i class="fa fa-spotify"></i></a><br><br>
+  
+</div>
+
+
+<script src="https://multipli.city/assets/js/vibrant.js"></script>
+<script>
+   var cover = "//sonicmultiplicities.audio/feed/fireroom.jpg"
    var v = new Vibrant("https:" + cover);
 
 
@@ -329,14 +419,8 @@
    var alpha = 1.0;
    var animationId = undefined;
 
-   var wavesurfer = WaveSurfer.create({
-     container: "#player",
-     cursorWidth: 2
-   });
-
    var audioCtx = wavesurfer.backend.ac;
    var analyser = audioCtx.createAnalyser();
-
 
    var bufferLength = analyser.frequencyBinCount;
    var dataArray = new Uint8Array(bufferLength);
@@ -437,19 +521,6 @@
      canvasCtx.stroke();
    }
 
-   let currentRegion = 0;
-
-	 wavesurfer.setVolume(0.4);
-	 document.querySelector('#volume').value = wavesurfer.backend.getVolume();
-
-   var volumeInput = document.querySelector('#volume');
-   var onChangeVolume = function (e) {
-     wavesurfer.setVolume(e.target.value);
-     console.log(e.target.value);
-   };
-	 volumeInput.addEventListener('input', onChangeVolume);
-	 volumeInput.addEventListener('change', onChangeVolume);
-
    wavesurfer.backend.setFilter(analyser);
 
    wavesurfer.on('region-in', r => {
@@ -463,18 +534,8 @@
        cancelAnimationFrame(animationId)
        animationId = undefined
      }
-   })
-
-   wavesurfer.on('ready', function () {
-     document.getElementById("player_msg").innerHTML = "";
-     wavesurfer.play();
-     dur = Number(wavesurfer.getDuration().toFixed(2));
-     document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
-     mult3 = (dur / year) || 1;
-     // draw();
    });
 
-   wavesurfer.load(`//${url}`);
    v.getPalette((err, palette) => {
      if (err) {
        console.log(err)
@@ -491,67 +552,20 @@
      colors.push(darkVibrant, vibrant, muted);
    })
 
-   wavesurfer.on('seek', () => {
-     alpha = 0.6;
-   })
-
    wavesurfer.on('pause', () => {
      if (animationId) {
        cancelAnimationFrame(animationId)
        animationId = undefined
      }
-   })
+   });
 
    wavesurfer.on('play', () => {
      if (!animationId) {
        draw();
      }
-   })
-
-   function toggleBin() {
-     var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM004.mp3";
-     var binUrl = "";
-     url = url == stUrl ? binUrl : stUrl
-     wavesurfer.load(`//${url}`);
-   }
-
-   // Media controls
-   document.body.onkeyup = function(e){
-     if(e.keyCode == 32){ // spacebar
-       wavesurfer.playPause()
-     } else if (e.keyCode == 37) { // left arrow key
-       wavesurfer.skip(-10);
-     } else if (e.keyCode == 39) { // right arrow key
-       wavesurfer.skip(10);
-     }/* else if (e.keyCode == 38) { // up arrow key
-       wavesurfer.setVolume(wavesurfer.getVolume() + 0.1)
-	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
-     } else if (e.keyCode == 40) { // down arrow key
-       wavesurfer.setVolume(wavesurfer.getVolume() - 0.1)
-	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
-     }*/
-   }
+   });
 
  </script>
- 
-
-
-<div id="streams"><br><br>
-  <b>Stream:</b>
-  
-  <a href="//music.apple.com/us/album/fireroom/1494042743" id="apple"><i class="fa fa-apple"></i></a>
-  
-  
-  <a href="//sonicmultiplicities.bandcamp.com/track/fireroom" id="bandcamp"><i class="fa fa-bandcamp"></i></a>
-  
-  
-  <a href="//soundcloud.com/sonicmultiplicities/cryptography-carnival" id="soundcloud"><i class="fa fa-soundcloud"></i></a>
-  
-  
-  <a href="//open.spotify.com/album/03X3730XufCaPxz8WXDaTI" id="spotify"><i class="fa fa-spotify"></i></a><br><br>
-  
-</div>
-
 
 <h2 id="artistic-statement">Artistic Statement</h2>
 <p>Reports prior to and during WWII identified a common issue with the earlier vintage of steam-powered ships. The fire room - that place where poor, miserable people shoveled coal into fire burners to heat up the steam, which powered the engines inside the engine room - was first put behind an airlock, which, when it failed, would erupt in a fantastic ball of fire and kill every last person in the room, and often times, the entire ship itself.</p>
