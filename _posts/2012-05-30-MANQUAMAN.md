@@ -16,6 +16,7 @@ date: 2012-05-30
 episode: 3
 soundcloud: //soundcloud.com/sonicmultiplicities/man-qua-man-seamus
 stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_005.mp3
+duration: 373
 excerpt: "SMOLD_005"
 abstract: "Live at SEAMUS 2011 - Miami, FL"
 ---

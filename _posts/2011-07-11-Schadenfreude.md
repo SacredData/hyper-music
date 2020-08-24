@@ -16,6 +16,7 @@ date: 2011-07-11
 episode: 1
 soundcloud: //soundcloud.com/sonicmultiplicities/schadenfreude
 stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_002.mp3
+duration: 205
 excerpt: "SMOLD_002"
 abstract: ""
 ---

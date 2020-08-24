@@ -19,6 +19,7 @@ soundcloud: //soundcloud.com/sonicmultiplicities/sets/titan-ep
 spotify: //open.spotify.com/album/3FqBju9SNY8OukvzlY50pk
 cover: //sonicmultiplicities.audio/feed/a1258003089_10.jpg
 stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_014.mp3
+duration: 1118
 excerpt: "SMOLD_014"
 abstract: ""
 ---
