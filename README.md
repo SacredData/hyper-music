@@ -1,47 +1,63 @@
-# PRoJEct-NeGYa
+# Multipli.city
 
-黑客风格的个人主页模板。
+> Jekyll code for the Sonic Multiplicities deep-learning music project.
 
-版本： v1.01
+## Functionality
 
-## 特性
+For each new `post`, the following are generated:
 
-1. 狂拽酷炫
-2. Rouge支持代码高亮
-3. MathJax公式
-4. 文章索引
-5. 高度可定制化
-6. 加密内容（也可以把元素id改成密文，元素内容写“无该字段访问权限！”）
+* New post on the website
+* New episode in the podcast
 
-## 更新日志
+### /_post/
 
-2019.7.17：更新说明文件
+This is where new music releases get added.
 
-2019.6.15：老子就做这一版，凑合能用得了，我可不改了啊！
+Each post provides cover art and analyzes the art's colors (using Vibrant) to
+draw unique visualizations on both the Wavesurfer waveform, as well as the canvas
+background.
 
-## 使用方法
+#### `post` metadata
 
-* 下载或者fork到自己的github仓库里
-* 修改_config.yml文件
-* （自定义域名）修改CNAME文件
-* 修改pages/index.md文件，自定义主页
-* 删除_posts/文件夹里的文件，添加自己的文章
-* 同步到github远程仓库
+Unique `post` metadata is as follows:
 
-## 工程结构
+```
+---
+author: # In this case, author = musician
+instrument: # Instrument played by the musician
+season: # Podcast season, for iTunes podcast network
+episode: # Podcast episode, for iTunes podcast network
+sidecar: # Sidecar file provides human-readable album metadata in JSON format
+# Other homes for this release on the web
+apple_music:
+bandcamp:
+soundcloud:
+spotify:
+cover: # Square cover art for the release
+stream_url: # Streamable remote URL where the release lives
+duration: # Duration of the complete release, in seconds
+excerpt: # Put the catalog number for the release here, if relevant.
+abstract: # Optional front matter to put on the page as the release's "subtitle"
+---
+```
 
-功能和内容隔离TMD！
+#### layout: post
 
-网站内容：
-* _posts：文章
-* pages：页面
-* assets/img：图
+Creates a new webpage & podcast item entry for a single track.
 
-功能样式：
-* _includes：子页面模块
-* _layouts：页面模板（单纯地组合子页面模块）
-* assets/css：样式表文件
-* assets/fonts：字体文件
-* assets/js：脚本文件
-* _config.yml：配置文件
+Posts may be of type `Composition` or `Reflection`.
 
+#### layout: playlist
+
+Creates a new webpage & podcast item entry for a collection of tracks.
+
+Playlists expect there to be a `post.stream_url` containing a remote URL to all
+of the tracks in the playlist, concatenated in the proper order. It also expects
+a `post.sidecar` containing a remote URL to a JSON sidecar file with playlist
+metadata provided to assist with the Wavesurfer region construction process.
+
+Playlists may be of type `Composition` or `Album`.
+
+### /podcast.xml
+
+XML template for podcast. Publishes to `/podcast.xml` when jekyll code is built.
