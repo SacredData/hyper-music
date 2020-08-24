@@ -12,25 +12,25 @@
 <div id="player"></div>
 <div id="player_controls">
   <div id="music_dur"></div>
-  <button id="audioBtnPlay" onclick="wavesurfer.play()">
+  <button id="audioBtnPlay">
     <i class="fa fa-play" aria-hidden="true"></i>
   </button>
-  <button id="audioBtnPause" onclick="wavesurfer.pause()">
+  <button id="audioBtnPause">
     <i class="fa fa-pause" aria-hidden="true"></i>
   </button>
-  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
+  <button id="toggleMuteBtn">Toggle Mute</button>
   {% if page.bin_url %}
     <button id="toggleBinBtn" onclick="toggleBin()">Toggle Stereo/Binaural</button>
   {% endif %}
   <input id="volume" type="range" min="0" max="1" value="1" step="0.1" style="float:right">
 </div>
  <script>
-   fetch(" {{page.sidecar}}").then(response => response.json()).then(scData => {
+   fetch("{{page.sidecar}}").then(response => response.json()).then(scData => {
      var regions = scData.regions;
      console.log(regions);
      var cover = "{{ page.cover }}";
      var url = "{{ page.stream_url }}";
-     
+
      var dur = 0.0;
 
      var v = new Vibrant("https:" + cover);
@@ -240,6 +240,22 @@
        draw();
      });
 
+     /* Add event listeners for the buttons so that wavesurfer has time to load
+     in this async browser-based sorta environment ya know? */
+
+     var playButton = document.querySelector('#audioBtnPlay');
+     playButton.addEventListener('click', () => {
+       wavesurfer.play();
+     });
+     var pauseButton = document.querySelector('#audioBtnPause');
+     pauseButton.addEventListener('click', () => {
+       wavesurfer.playPause();
+     });
+     var muteButton = document.querySelector('#toggleMuteBtn');
+     muteButton.addEventListener('click', () => {
+       wavesurfer.toggleMute();
+     });
+     
      wavesurfer.load(`//${url}`);
      v.getPalette((err, palette) => {
        if (err) {
