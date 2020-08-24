@@ -15,6 +15,6 @@ category: Composition
 date: 2011-07-11
 soundcloud: //soundcloud.com/sonicmultiplicities/schadenfreude
 stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_002.mp3
-excerpt: "SM #2"
+excerpt: "SMOLD_002"
 abstract: ""
 ---

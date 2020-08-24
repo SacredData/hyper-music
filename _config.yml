@@ -22,3 +22,17 @@ toc_level: 3
 # texts randomly displayed in background
 #bgtext: "αβγδεζηθικλμνξοπρστυφχψω∷∫∮∝∞∧∨∑∏∪∩∈∵∴⊥‖∠⌒⊙≌√"
 bgtext: "▲⟁◮◬▷▷△◁⧍⧋⧊⨹∧∨⨺⧌⛛◀▶▵⨻⨻⨻"
+podcast:
+  title: "▲ Presents: Sonic Multiplicities"
+  description: "The official podcast feed for works of Sonic Multiplicities performed by ▲. Each episode presents a complete, unmodified Sonic Multiplicities session, heard here exactly as it was performed at The Cathedral, ▲'s Brooklyn, NY headquarters. Join us for an intimate and intense journey through the roaring musical psyches of some of NYC's finest free improvisers! Highly recommended for fans of electroacoustic music, free and avant-garde jazz, noise music, the violin and the SuperCollider programming language."
+  url: /podcast.xml # podcast xml url
+  author: "Andrew Grathwohl"
+  email: "andrew@multipli.city"
+  logo: "https://sonicmultiplicities.audio/triangle.jpg"
+  language: "eng"
+  category: "Arts"
+  subcategory: "Performing Arts"
+  type: "episodic"
+  explicit: false
+  complete: "no"
+  block: "no"

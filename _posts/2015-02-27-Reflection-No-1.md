@@ -13,8 +13,8 @@ encrypted_text: false
 toc_level: 4
 category: Reflection
 date: 2015-02-27
-cover: //s3.amazonaws.com/sonicmultiplicities.audio/feed/artworks-000125170994-cj37zh-t500x500.jpg
+cover: ///sonicmultiplicities.audio/feed/artworks-000125170994-cj37zh-t500x500.jpg
 stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_016.mp3
-excerpt: "SM #16"
+excerpt: "SMOLD_016"
 abstract: "Reflection performances are explicit attempts by the soloist to reflect upon their overarching SM experience, as it relates to the present time period."
 ---

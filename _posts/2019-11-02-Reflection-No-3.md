@@ -15,9 +15,11 @@ category: Reflection
 bandcamp: //sonicmultiplicities.bandcamp.com/track/reflection-no-3
 soundcloud: //soundcloud.com/sonicmultiplicities/reflection-no-3
 date: 2019-11-02
-cover: //s3.amazonaws.com/sonicmultiplicities.audio/feed/g1drsm.png
+season: 2019
+episode: 3
+cover: ///sonicmultiplicities.audio/feed/g1drsm.png
 stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SM003.mp3
-video_url: //s3.amazonaws.com/sonicmultiplicities.audio/dash_streams/dash16/dash.mpd
+video_url: ///sonicmultiplicities.audio/dash_streams/dash16/dash.mpd
 excerpt: "SM003"
 abstract: ""
 ---

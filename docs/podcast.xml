@@ -1,0 +1,715 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss version='2.0' xmlns:content='http://purl.org/rss/1.0/modules/content/' xmlns:itunes='http://www.itunes.com/dtds/podcast-1.0.dtd'>
+    <channel>
+        <title>▲ Presents: Sonic Multiplicities</title>
+        <description>The official podcast feed for works of Sonic Multiplicities performed by ▲. Each episode presents a complete, unmodified Sonic Multiplicities session, heard here exactly as it was performed at The Cathedral, ▲'s Brooklyn, NY headquarters. Join us for an intimate and intense journey through the roaring musical psyches of some of NYC's finest free improvisers! Highly recommended for fans of electroacoustic music, free and avant-garde jazz, noise music, the violin and the SuperCollider programming language.</description>
+        <link>https://multipli.city/</link>
+        <itunes:author>Andrew Grathwohl</itunes:author>
+        <itunes:email>andrew@multipli.city</itunes:email>
+        <itunes:image href='https://sonicmultiplicities.audio/triangle.jpg'/>
+        <language>eng</language>
+        <copyright>copyright © Andrew Grathwohl</copyright>
+        <itunes:owner>
+            <itunes:name>Andrew Grathwohl</itunes:name>
+            <itunes:email>andrew@multipli.city</itunes:email>
+        </itunes:owner>
+        <itunes:category text='Arts'>
+            <itunes:category text='Performing Arts'/>
+        </itunes:category>
+        <itunes:type>episodic</itunes:type>
+        <itunes:explicit>false</itunes:explicit>
+        <itunes:complete>no</itunes:complete>
+        <itunes:block>no</itunes:block>
+          
+            
+        <item>
+          <title>SM008: PSEUDO</title>
+          <guid isPermaLink="false">SM008</guid>
+          <itunes:title>SM008: PSEUDO</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2020</itunes:season>
+            <itunes:episode>5</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/PSEUDO/"><h1>PSEUDO</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM008.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM008.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM008.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/feed/pseudo.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM008.mp3</link>
+            <pubDate>Sun, 23 Aug 2020 00:00:00 -0400</pubDate>
+            <itunes:duration>1361</itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM008.mp3' length='1361'/>
+            <description><![CDATA[<a href="/PSEUDO/"><h1>PSEUDO</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM008.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM008.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM008.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SM007: Upward Fall</title>
+          <guid isPermaLink="false">SM007</guid>
+          <itunes:title>SM007: Upward Fall</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2020</itunes:season>
+            <itunes:episode>4</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Upward-Fall/"><h1>Upward Fall</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink / Tyler Dinner on violin / guitar.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM007.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM007.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM007.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/feed/SM007.png"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM007.mp3</link>
+            <pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM007.mp3' length=''/>
+            <description><![CDATA[<a href="/Upward-Fall/"><h1>Upward Fall</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink / Tyler Dinner on violin / guitar.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM007.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM007.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM007.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SM006: Birthday Cake Chest Wound</title>
+          <guid isPermaLink="false">SM006</guid>
+          <itunes:title>SM006: Birthday Cake Chest Wound</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2020</itunes:season>
+            <itunes:episode>3</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/BCCW/"><h1>Birthday Cake Chest Wound</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM006.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM006.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM006.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/feed/bccw.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM006.mp3</link>
+            <pubDate>Fri, 14 Feb 2020 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM006.mp3' length=''/>
+            <description><![CDATA[<a href="/BCCW/"><h1>Birthday Cake Chest Wound</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM006.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM006.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM006.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SM005b: Rococo Slaughter</title>
+          <guid isPermaLink="false">SM005b</guid>
+          <itunes:title>SM005b: Rococo Slaughter</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2020</itunes:season>
+            <itunes:episode>2</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Rococo-Slaughter/"><h1>Rococo Slaughter</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM005b.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM005b.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM005b.mp3">MP3</a></p><br><br><p><h2 id="artistic-statement">Artistic Statement</h2>
+<p>On rainy summer nights, I seem destined to traverse the deepest caverns of my mind - particularly in the early morning hours. The thing I keep visually referencing in my mind is: gold trim.</p>
+
+<p>The kind of trim that fits so elegantly upon the creaky walls, paneled with wondrous arts - its volume, though, a veil upon the specific beauty of each individual piece. The kind of trim that elegantly drips down from the corners where the ceilings meet the walls, and into the porous lavishness of wooden furniture hailing from 18th-century Europe.</p>
+
+<p>Whenever the sensibilities of the people who owned such extravagances was put to the test, it is certain that these proto-revolutionary victims found themselves situated among the trim. And I just wonder whether any of them thanked their lucky stars, that their last glimpses of life would likely be the sight of this golden trim, all covered by the blood running down their eyes as they drift peaceably beyond consciousness and into deep, indefinite rest.</p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:///sonicmultiplicities.audio/feed/mafa.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM005b.mp3</link>
+            <pubDate>Fri, 31 Jan 2020 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM005b.mp3' length=''/>
+            <description><![CDATA[<a href="/Rococo-Slaughter/"><h1>Rococo Slaughter</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM005b.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM005b.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM005b.mp3">MP3</a></p><br><br><p><h2 id="artistic-statement">Artistic Statement</h2>
+<p>On rainy summer nights, I seem destined to traverse the deepest caverns of my mind - particularly in the early morning hours. The thing I keep visually referencing in my mind is: gold trim.</p>
+
+<p>The kind of trim that fits so elegantly upon the creaky walls, paneled with wondrous arts - its volume, though, a veil upon the specific beauty of each individual piece. The kind of trim that elegantly drips down from the corners where the ceilings meet the walls, and into the porous lavishness of wooden furniture hailing from 18th-century Europe.</p>
+
+<p>Whenever the sensibilities of the people who owned such extravagances was put to the test, it is certain that these proto-revolutionary victims found themselves situated among the trim. And I just wonder whether any of them thanked their lucky stars, that their last glimpses of life would likely be the sight of this golden trim, all covered by the blood running down their eyes as they drift peaceably beyond consciousness and into deep, indefinite rest.</p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SS001: Adrift</title>
+          <guid isPermaLink="false">SS001</guid>
+          <itunes:title>SS001: Adrift</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2020</itunes:season>
+            <itunes:episode>1</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Adrift/"><h1>Adrift</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SS001.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SS001.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SS001.mp3">MP3</a></p><br><br><p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                                    ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+                                    |`Towards the magickable future!`|
+                                    **********************************
+</code></pre></div></div>
+</p>]]></itunes:summary>
+            <itunes:image href="https:///sonicmultiplicities.audio/feed/adrift.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SS001.mp3</link>
+            <pubDate>Fri, 17 Jan 2020 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SS001.mp3' length=''/>
+            <description><![CDATA[<a href="/Adrift/"><h1>Adrift</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SS001.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SS001.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SS001.mp3">MP3</a></p><br><br><p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                                    ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+                                    |`Towards the magickable future!`|
+                                    **********************************
+</code></pre></div></div>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SM005: A Deep Sense of Responsibility</title>
+          <guid isPermaLink="false">SM005</guid>
+          <itunes:title>SM005: A Deep Sense of Responsibility</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2019</itunes:season>
+            <itunes:episode>5</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/ADSR/"><h1>A Deep Sense of Responsibility</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin & percussion.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM005.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM005.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM005.mp3">MP3</a></p><br><br><p><h2 id="artistic-statement">Artistic Statement</h2>
+<p><em>“I mean, my emotion is feeling a deep sense of responsibility to try to fix the problem. I don’t know, that’s a … that’s the most productive stance.” - Mark Zuckerberg</em></p>
+
+<p>A living composition, chronicling each iteration of Facebook’s corporate mission statement. Next time they decide to change the way they lie, we’ll be back with a third movement. I hope to one day know the pleasure of never having to record another movement of this piece ever again.</p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:///sonicmultiplicities.audio/feed/adsr.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM005.mp3</link>
+            <pubDate>Wed, 18 Dec 2019 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM005.mp3' length=''/>
+            <description><![CDATA[<a href="/ADSR/"><h1>A Deep Sense of Responsibility</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin & percussion.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM005.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM005.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM005.mp3">MP3</a></p><br><br><p><h2 id="artistic-statement">Artistic Statement</h2>
+<p><em>“I mean, my emotion is feeling a deep sense of responsibility to try to fix the problem. I don’t know, that’s a … that’s the most productive stance.” - Mark Zuckerberg</em></p>
+
+<p>A living composition, chronicling each iteration of Facebook’s corporate mission statement. Next time they decide to change the way they lie, we’ll be back with a third movement. I hope to one day know the pleasure of never having to record another movement of this piece ever again.</p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SM004: FIREROOM</title>
+          <guid isPermaLink="false">SM004</guid>
+          <itunes:title>SM004: FIREROOM</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2019</itunes:season>
+            <itunes:episode>4</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/FIREROOM/"><h1>FIREROOM</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM004.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM004.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM004.mp3">MP3</a></p><br><br><p><h2 id="artistic-statement">Artistic Statement</h2>
+<p>Reports prior to and during WWII identified a common issue with the earlier vintage of steam-powered ships. The fire room - that place where poor, miserable people shoveled coal into fire burners to heat up the steam, which powered the engines inside the engine room - was first put behind an airlock, which, when it failed, would erupt in a fantastic ball of fire and kill every last person in the room, and often times, the entire ship itself.</p>
+
+<p>We are pretty sure this violin composition, performed expertly by master Sonicmeister Garrett Semmelink, is exactly what those fire rooms sounded like. Listen for yourself, and as always, we encourage you not to die.</p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:///sonicmultiplicities.audio/feed/fireroom.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM004.mp3</link>
+            <pubDate>Wed, 04 Dec 2019 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM004.mp3' length=''/>
+            <description><![CDATA[<a href="/FIREROOM/"><h1>FIREROOM</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM004.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM004.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM004.mp3">MP3</a></p><br><br><p><h2 id="artistic-statement">Artistic Statement</h2>
+<p>Reports prior to and during WWII identified a common issue with the earlier vintage of steam-powered ships. The fire room - that place where poor, miserable people shoveled coal into fire burners to heat up the steam, which powered the engines inside the engine room - was first put behind an airlock, which, when it failed, would erupt in a fantastic ball of fire and kill every last person in the room, and often times, the entire ship itself.</p>
+
+<p>We are pretty sure this violin composition, performed expertly by master Sonicmeister Garrett Semmelink, is exactly what those fire rooms sounded like. Listen for yourself, and as always, we encourage you not to die.</p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SM003: Reflection No. 3</title>
+          <guid isPermaLink="false">SM003</guid>
+          <itunes:title>SM003: Reflection No. 3</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2019</itunes:season>
+            <itunes:episode>3</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Reflection-No-3/"><h1>Reflection No. 3</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM003.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM003.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM003.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:///sonicmultiplicities.audio/feed/g1drsm.png"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM003.mp3</link>
+            <pubDate>Sat, 02 Nov 2019 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM003.mp3' length=''/>
+            <description><![CDATA[<a href="/Reflection-No-3/"><h1>Reflection No. 3</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM003.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM003.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM003.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SM002a: Music Ain't For Airports</title>
+          <guid isPermaLink="false">SM002a</guid>
+          <itunes:title>SM002a: Music Ain't For Airports</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2019</itunes:season>
+            <itunes:episode>2</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/MAFA/"><h1>Music Ain't For Airports</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM002a.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM002a.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM002a.mp3">MP3</a></p><br><br><p><h2 id="artistic-statement">Artistic Statement</h2>
+
+<p>Think back to the last time you had to visit an airport in the United States. You’re sitting in some brazenly uncomfortable airport bench, anxious from having just had your junk fondled by an old person pushing sixty in a blue uniform; annoyed by the hoards of people who take far more personal space than they require, and; overwhelmed by the slap echo hustle and bustle that seems to be present in every such complex of buildings.</p>
+
+<p>Only the deliberately psychopathic would dare look at such a scenario and suggest: “let’s AstroTurf this environment with the playback of commercial music recordings. That should plug up this glaring hole of thoughtlessness, bureaucracy, and corruption.” And yet, here we are.</p>
+
+<p>Given all the events, which have transpired since 1978, one could easily conclude that music ain’t for airports. However, hindsight being 20/20, it was perhaps essential that somebody conceived of such an exaggerated expansion in the size and scope of music’s reach. For it is now exceedingly clear today, that the literate mind’s tendency to disrespect the confines of music’s glory, is on display in numerous social dilemmata.</p>
+
+<p>Music may put more asses in the seats, more shoppers in the supermarket aisles, and more enthusiastic workers into boring office jobs - but what other human ingenuity have we tossed aside, which could have more adequately addressed such concerns? Worse yet, what has this severe mis-allocation of resources done to stall and disarm the lateral, multi-dimensional expansion of the sonic arts required for the survival and evolution of modern humanity?</p>
+
+<p>Music can’t solve our problems; it can only synthesize new ones. It is our hope that you have a very, very troubled day after listening to this recording.</p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/feed/SM002a.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM002a.mp3</link>
+            <pubDate>Thu, 17 Oct 2019 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM002a.mp3' length=''/>
+            <description><![CDATA[<a href="/MAFA/"><h1>Music Ain't For Airports</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM002a.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM002a.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM002a.mp3">MP3</a></p><br><br><p><h2 id="artistic-statement">Artistic Statement</h2>
+
+<p>Think back to the last time you had to visit an airport in the United States. You’re sitting in some brazenly uncomfortable airport bench, anxious from having just had your junk fondled by an old person pushing sixty in a blue uniform; annoyed by the hoards of people who take far more personal space than they require, and; overwhelmed by the slap echo hustle and bustle that seems to be present in every such complex of buildings.</p>
+
+<p>Only the deliberately psychopathic would dare look at such a scenario and suggest: “let’s AstroTurf this environment with the playback of commercial music recordings. That should plug up this glaring hole of thoughtlessness, bureaucracy, and corruption.” And yet, here we are.</p>
+
+<p>Given all the events, which have transpired since 1978, one could easily conclude that music ain’t for airports. However, hindsight being 20/20, it was perhaps essential that somebody conceived of such an exaggerated expansion in the size and scope of music’s reach. For it is now exceedingly clear today, that the literate mind’s tendency to disrespect the confines of music’s glory, is on display in numerous social dilemmata.</p>
+
+<p>Music may put more asses in the seats, more shoppers in the supermarket aisles, and more enthusiastic workers into boring office jobs - but what other human ingenuity have we tossed aside, which could have more adequately addressed such concerns? Worse yet, what has this severe mis-allocation of resources done to stall and disarm the lateral, multi-dimensional expansion of the sonic arts required for the survival and evolution of modern humanity?</p>
+
+<p>Music can’t solve our problems; it can only synthesize new ones. It is our hope that you have a very, very troubled day after listening to this recording.</p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SM001: Injection Time Lapse</title>
+          <guid isPermaLink="false">SM001</guid>
+          <itunes:title>SM001: Injection Time Lapse</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2019</itunes:season>
+            <itunes:episode>1</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Injection-Time-Lapse/"><h1>Injection Time Lapse</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM001.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM001.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM001.mp3">MP3</a></p><br><br><p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                                   ▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁
+                                   The near-timelessness of a pin-prick, upon
+                                   careful observation, lapses time in reverse,
+                                     and unravels its higher-order harmonies
+                                   ever-downward towards its own origin point.
+                                   ◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁ 
+</code></pre></div></div>
+</p>]]></itunes:summary>
+            <itunes:image href="https:///sonicmultiplicities.audio/feed/SM001.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM001.mp3</link>
+            <pubDate>Sat, 12 Oct 2019 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM001.mp3' length=''/>
+            <description><![CDATA[<a href="/Injection-Time-Lapse/"><h1>Injection Time Lapse</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM001.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM001.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM001.mp3">MP3</a></p><br><br><p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                                   ▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁
+                                   The near-timelessness of a pin-prick, upon
+                                   careful observation, lapses time in reverse,
+                                     and unravels its higher-order harmonies
+                                   ever-downward towards its own origin point.
+                                   ◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁ 
+</code></pre></div></div>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_020: Infatuated</title>
+          <guid isPermaLink="false">SMOLD_020</guid>
+          <itunes:title>SMOLD_020: Infatuated</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2015</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Infatuated/"><h1>Infatuated</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_020.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_020.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_020.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_020.mp3</link>
+            <pubDate>Sat, 01 Aug 2015 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_020.mp3' length=''/>
+            <description><![CDATA[<a href="/Infatuated/"><h1>Infatuated</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_020.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_020.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_020.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_019: Reflection No. 2</title>
+          <guid isPermaLink="false">SMOLD_019</guid>
+          <itunes:title>SMOLD_019: Reflection No. 2</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2015</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Reflection-No-2/"><h1>Reflection No. 2</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_019.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_019.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_019.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/feed/artworks-000125170994-cj37zh-t500x500.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_019.mp3</link>
+            <pubDate>Sat, 13 Jun 2015 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_019.mp3' length=''/>
+            <description><![CDATA[<a href="/Reflection-No-2/"><h1>Reflection No. 2</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_019.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_019.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_019.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_018: Splatter</title>
+          <guid isPermaLink="false">SMOLD_018</guid>
+          <itunes:title>SMOLD_018: Splatter</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2015</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Splatter/"><h1>Splatter</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_018.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_018.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_018.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_018.mp3</link>
+            <pubDate>Thu, 23 Apr 2015 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_018.mp3' length=''/>
+            <description><![CDATA[<a href="/Splatter/"><h1>Splatter</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_018.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_018.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_018.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_021: Luxury Prism</title>
+          <guid isPermaLink="false">SMOLD_021</guid>
+          <itunes:title>SMOLD_021: Luxury Prism</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2015</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Luxry-Prism/"><h1>Luxury Prism</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_021.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_021.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_021.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/feed/lp.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_021.mp3</link>
+            <pubDate>Thu, 23 Apr 2015 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_021.mp3' length=''/>
+            <description><![CDATA[<a href="/Luxry-Prism/"><h1>Luxury Prism</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_021.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_021.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_021.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_017: Prelude to Titan</title>
+          <guid isPermaLink="false">SMOLD_017</guid>
+          <itunes:title>SMOLD_017: Prelude to Titan</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2015</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Prelude/"><h1>Prelude to Titan</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_017.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_017.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_017.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_017.mp3</link>
+            <pubDate>Fri, 06 Mar 2015 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_017.mp3' length=''/>
+            <description><![CDATA[<a href="/Prelude/"><h1>Prelude to Titan</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_017.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_017.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_017.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_016: Reflection No. 1</title>
+          <guid isPermaLink="false">SMOLD_016</guid>
+          <itunes:title>SMOLD_016: Reflection No. 1</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2015</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Reflection-No-1/"><h1>Reflection No. 1</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_016.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_016.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_016.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:///sonicmultiplicities.audio/feed/artworks-000125170994-cj37zh-t500x500.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_016.mp3</link>
+            <pubDate>Fri, 27 Feb 2015 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_016.mp3' length=''/>
+            <description><![CDATA[<a href="/Reflection-No-1/"><h1>Reflection No. 1</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_016.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_016.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_016.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_015: Theia</title>
+          <guid isPermaLink="false">SMOLD_015</guid>
+          <itunes:title>SMOLD_015: Theia</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2015</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Theia/"><h1>Theia</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_015.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_015.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_015.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/feed/a1258003089_10.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_015.mp3</link>
+            <pubDate>Wed, 25 Feb 2015 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_015.mp3' length=''/>
+            <description><![CDATA[<a href="/Theia/"><h1>Theia</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_015.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_015.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_015.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_014: Electric Chair</title>
+          <guid isPermaLink="false">SMOLD_014</guid>
+          <itunes:title>SMOLD_014: Electric Chair</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2015</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Electric-Chair/"><h1>Electric Chair</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_014.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_014.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_014.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/feed/a1258003089_10.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_014.mp3</link>
+            <pubDate>Wed, 14 Jan 2015 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_014.mp3' length=''/>
+            <description><![CDATA[<a href="/Electric-Chair/"><h1>Electric Chair</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_014.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_014.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_014.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_013: Titan</title>
+          <guid isPermaLink="false">SMOLD_013</guid>
+          <itunes:title>SMOLD_013: Titan</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2015</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Titan/"><h1>Titan</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_013.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_013.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_013.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/feed/a1258003089_10.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_013.mp3</link>
+            <pubDate>Fri, 09 Jan 2015 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_013.mp3' length=''/>
+            <description><![CDATA[<a href="/Titan/"><h1>Titan</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_013.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_013.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_013.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_011: Labor</title>
+          <guid isPermaLink="false">SMOLD_011</guid>
+          <itunes:title>SMOLD_011: Labor</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2014</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Labor/"><h1>Labor</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_011.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_011.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_011.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_011.mp3</link>
+            <pubDate>Wed, 17 Dec 2014 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_011.mp3' length=''/>
+            <description><![CDATA[<a href="/Labor/"><h1>Labor</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_011.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_011.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_011.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_010: Miasma</title>
+          <guid isPermaLink="false">SMOLD_010</guid>
+          <itunes:title>SMOLD_010: Miasma</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2014</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Miasma/"><h1>Miasma</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_010.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_010.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_010.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_010.mp3</link>
+            <pubDate>Fri, 12 Dec 2014 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_010.mp3' length=''/>
+            <description><![CDATA[<a href="/Miasma/"><h1>Miasma</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_010.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_010.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_010.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_009: Inertia</title>
+          <guid isPermaLink="false">SMOLD_009</guid>
+          <itunes:title>SMOLD_009: Inertia</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2014</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Inertia/"><h1>Inertia</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_009.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_009.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_009.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/feed/inertia.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_009.mp3</link>
+            <pubDate>Sun, 26 Oct 2014 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_009.mp3' length=''/>
+            <description><![CDATA[<a href="/Inertia/"><h1>Inertia</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_009.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_009.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_009.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_008: Vasoconstriction</title>
+          <guid isPermaLink="false">SMOLD_008</guid>
+          <itunes:title>SMOLD_008: Vasoconstriction</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2014</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Vasoconstriction/"><h1>Vasoconstriction</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_008.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_008.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_008.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/feed/vasoconstriction.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_008.mp3</link>
+            <pubDate>Thu, 23 Oct 2014 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_008.mp3' length=''/>
+            <description><![CDATA[<a href="/Vasoconstriction/"><h1>Vasoconstriction</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_008.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_008.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_008.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_007: LEK4_AND</title>
+          <guid isPermaLink="false">SMOLD_007</guid>
+          <itunes:title>SMOLD_007: LEK4_AND</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2012</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/LEK4_AND/"><h1>LEK4_AND</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on steel violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_007.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_007.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_007.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_007.mp3</link>
+            <pubDate>Fri, 19 Oct 2012 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_007.mp3' length=''/>
+            <description><![CDATA[<a href="/LEK4_AND/"><h1>LEK4_AND</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on steel violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_007.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_007.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_007.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_006: Untitled</title>
+          <guid isPermaLink="false">SMOLD_006</guid>
+          <itunes:title>SMOLD_006: Untitled</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2012</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Untitled/"><h1>Untitled</h1></a><br><br>A work of Sonic Multiplicities performed by Cosmo D on cello.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_006.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_006.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_006.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_006.mp3</link>
+            <pubDate>Fri, 06 Jul 2012 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_006.mp3' length=''/>
+            <description><![CDATA[<a href="/Untitled/"><h1>Untitled</h1></a><br><br>A work of Sonic Multiplicities performed by Cosmo D on cello.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_006.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_006.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_006.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_005: MAN QUA MAN</title>
+          <guid isPermaLink="false">SMOLD_005</guid>
+          <itunes:title>SMOLD_005: MAN QUA MAN</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2012</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/MANQUAMAN/"><h1>MAN QUA MAN</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_005.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_005.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_005.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_005.mp3</link>
+            <pubDate>Wed, 30 May 2012 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_005.mp3' length=''/>
+            <description><![CDATA[<a href="/MANQUAMAN/"><h1>MAN QUA MAN</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_005.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_005.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_005.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_003: Maine</title>
+          <guid isPermaLink="false">SMOLD_003</guid>
+          <itunes:title>SMOLD_003: Maine</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2012</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Maine/"><h1>Maine</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_003.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_003.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_003.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_003.mp3</link>
+            <pubDate>Fri, 10 Feb 2012 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_003.mp3' length=''/>
+            <description><![CDATA[<a href="/Maine/"><h1>Maine</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_003.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_003.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_003.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_004: Drowned</title>
+          <guid isPermaLink="false">SMOLD_004</guid>
+          <itunes:title>SMOLD_004: Drowned</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2012</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Drowned/"><h1>Drowned</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_004.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_004.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_004.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_004.mp3</link>
+            <pubDate>Fri, 10 Feb 2012 00:00:00 -0500</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_004.mp3' length=''/>
+            <description><![CDATA[<a href="/Drowned/"><h1>Drowned</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_004.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_004.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_004.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_002: Schadenfreude</title>
+          <guid isPermaLink="false">SMOLD_002</guid>
+          <itunes:title>SMOLD_002: Schadenfreude</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2011</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Schadenfreude/"><h1>Schadenfreude</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_002.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_002.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_002.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https:"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_002.mp3</link>
+            <pubDate>Mon, 11 Jul 2011 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_002.mp3' length=''/>
+            <description><![CDATA[<a href="/Schadenfreude/"><h1>Schadenfreude</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_002.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_002.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_002.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SM_OLD001: Freiburg</title>
+          <guid isPermaLink="false">SM_OLD001</guid>
+          <itunes:title>SM_OLD001: Freiburg</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2010</itunes:season>
+            <itunes:episode></itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Freiburg/"><h1>Freiburg</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM_OLD001.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM_OLD001.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM_OLD001.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/feed/SM_OLD001.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM_OLD001.mp3</link>
+            <pubDate>Wed, 28 Jul 2010 00:00:00 -0400</pubDate>
+            <itunes:duration></itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM_OLD001.mp3' length=''/>
+            <description><![CDATA[<a href="/Freiburg/"><h1>Freiburg</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM_OLD001.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM_OLD001.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM_OLD001.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+    </channel>
+</rss>
