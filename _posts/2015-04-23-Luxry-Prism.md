@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: playlist
 title: Luxury Prism
 author: Garrett Semmelink
 instrument: violin
@@ -13,6 +13,7 @@ encrypted_text: false
 toc_level: 4
 category: Composition
 date: 2015-04-23
+sidecar: //s3.amazonaws.com/sonicmultiplicities.audio/feed/sidecar_SMOLD_021.json
 episode: 6
 bandcamp: //sonicmultiplicities.bandcamp.com/album/luxury-prism
 soundcloud: //soundcloud.com/sonicmultiplicities/sets/luxury-prism 
