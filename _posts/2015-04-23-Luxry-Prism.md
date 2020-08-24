@@ -13,6 +13,7 @@ encrypted_text: false
 toc_level: 4
 category: Composition
 date: 2015-04-23
+episode: 6
 bandcamp: //sonicmultiplicities.bandcamp.com/album/luxury-prism
 soundcloud: //soundcloud.com/sonicmultiplicities/sets/luxury-prism 
 spotify: //open.spotify.com/album/26GFpl1LwrYjIJrn0ParuG

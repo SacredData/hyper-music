@@ -13,6 +13,7 @@ encrypted_text: false
 toc_level: 4
 category: Composition
 date: 2012-05-30
+episode: 3
 soundcloud: //soundcloud.com/sonicmultiplicities/man-qua-man-seamus
 stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_005.mp3
 excerpt: "SMOLD_005"

@@ -13,6 +13,7 @@ encrypted_text: false
 toc_level: 4
 category: Composition
 date: 2014-10-23
+episode: 1
 bandcamp: //sonicmultiplicities.bandcamp.com/track/vasoconstriction
 soundcloud: //soundcloud.com/sonicmultiplicities/vasoconstriction-empire
 cover: //sonicmultiplicities.audio/feed/vasoconstriction.jpg
