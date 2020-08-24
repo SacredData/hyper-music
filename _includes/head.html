@@ -43,8 +43,16 @@
 
   {% if page.cover %}
     <meta property="og:image" content="https:{{ page.cover }}" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@sociosonics" />
     <meta name="twitter:creator" content="@andrewunmuted" />
+    <meta property="og:description" content="A {{ page.season }} Sonic Multiplicities recording, performed by {{ page.author }} on the {{ page.instrument }}. Catalog number {{ page.excerpt }}." />
+  {% endif %}
+
+  {% if page.title %}
+    <meta content="article" property="og:type">
+  {% else %}
+    <meta content="website" property="og:type">
   {% endif %}
 
   {% if page.video_url %}
