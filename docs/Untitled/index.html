@@ -547,7 +547,7 @@
      dur = Number(wavesurfer.getDuration().toFixed(2));
      document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
      mult3 = (dur / year) || 1;
-     draw();
+     // draw();
    });
 
    wavesurfer.load(`//${url}`);
@@ -569,6 +569,19 @@
 
    wavesurfer.on('seek', () => {
      alpha = 0.6;
+   })
+
+   wavesurfer.on('pause', () => {
+     if (animationId) {
+       cancelAnimationFrame(animationId)
+       animationId = undefined
+     }
+   })
+
+   wavesurfer.on('play', () => {
+     if (!animationId) {
+       draw();
+     }
    })
 
    function toggleBin() {
