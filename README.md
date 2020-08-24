@@ -61,3 +61,9 @@ Playlists may be of type `Composition` or `Album`.
 ### /podcast.xml
 
 XML template for podcast. Publishes to `/podcast.xml` when jekyll code is built.
+
+## Acknowledgements
+
+Many thanks to [akiritsu](https://github.com/akiritsu) for their outstanding
+[pRoJEct-NeGYa](https://github.com/akiritsu/pRoJEct-NeGYa) jekyll template.
+Without it, I'd just be another backend nix guy struggling with CSS and JS.
