@@ -27,7 +27,6 @@
  <script>
    fetch("{{page.sidecar}}").then(response => response.json()).then(scData => {
      var regions = scData.regions;
-     console.log(regions);
      var cover = "{{ page.cover }}";
      var url = "{{ page.stream_url }}";
 
@@ -86,6 +85,14 @@
 			 reg.color = hexToRgbA(shuffle(drawColors)[0]);
 			 regCount++;
 		 });
+     
+     console.log(regions);
+
+     var regionsTable = regions.map(r => `<h3>${r.id} (${r.duration} sec)</h3>`);
+
+     console.log(regionsTable)
+
+     var regionsText = regionsTable.join('\n');
 
      var RegionsPlugin = window.WaveSurfer.regions;
 
@@ -220,6 +227,11 @@
        document.getElementById("musicTitle").innerHTML = "{{ page.title }}" + `: 0${trackNum+1} - <b><i>${r.id}</i></b>`;
      });
 
+     wavesurfer.on('region-out', r => {
+       console.log(r);
+       // r.remove();
+     })
+
      wavesurfer.on('region-dblclick', r => {
        wavesurfer.setCurrentTime(r.start);
      })
@@ -237,6 +249,7 @@
        dur = Number(wavesurfer.getDuration().toFixed(2));
        document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
        mult3 = (dur / year) || 1;
+       document.getElementById("tracklist").innerHTML = `<div style="text-align:center;"><h2>TRACKLIST</h2><br>${regionsText}</div><hr>`;
        draw();
      });
 
