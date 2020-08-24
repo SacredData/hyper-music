@@ -7,7 +7,7 @@
         <itunes:author>Andrew Grathwohl</itunes:author>
         <itunes:email>andrew@multipli.city</itunes:email>
         <itunes:image href='https://sonicmultiplicities.audio/triangle.jpg'/>
-        <language>eng</language>
+        <language><![CDATA[ en ]]></language>
         <copyright>copyright © Andrew Grathwohl</copyright>
         <itunes:owner>
             <itunes:name>Andrew Grathwohl</itunes:name>

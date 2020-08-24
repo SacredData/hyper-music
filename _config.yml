@@ -29,7 +29,7 @@ podcast:
   author: "Andrew Grathwohl"
   email: "andrew@multipli.city"
   logo: "https://sonicmultiplicities.audio/triangle.jpg"
-  language: "eng"
+  language: "<![CDATA[ en ]]>"
   category: "Arts"
   subcategory: "Performing Arts"
   type: "episodic"
