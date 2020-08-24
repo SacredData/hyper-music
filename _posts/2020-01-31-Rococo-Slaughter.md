@@ -20,6 +20,7 @@ soundcloud: //soundcloud.com/sonicmultiplicities/rococo-slaughter?in=sonicmultip
 cover: ///sonicmultiplicities.audio/feed/mafa.jpg
 stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SM005b.mp3
 bin_url: /sonicmultiplicities.audio/feed/SM005b_binaural.mp3
+duration: 2281
 excerpt: "SM005b"
 abstract: "Jeffrey Epstein didn't kill himself."
 ---
