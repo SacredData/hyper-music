@@ -35,6 +35,17 @@
     <script src="https://unpkg.com/wavesurfer.js"></script>
     <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.min.js"></script>
   {% endif %}
+  
+  <!-- OG metadata -->
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+  <meta property="og:title" content="{{ page.title }}" />
+
+  {% if page.cover %}
+    <meta property="og:image" content="https:{{ page.cover }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@andrewunmuted" />
+  {% endif %}
 
   {% if page.video_url %}
   <style>
