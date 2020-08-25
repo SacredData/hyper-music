@@ -1,8 +1,7 @@
 # Multipli.city
+> A jekyll theme designed to maximize musical independence and enhance musical virtue.
 
-> Jekyll code for the Sonic Multiplicities deep-learning music project.
-
-A jekyll theme designed to maximize musical independence and enhance musical virtue.
+Jekyll code for the Sonic Multiplicities deep-learning music project.
 
 Combines several amazing web technologies, such as HTML5 Web Audio API, RSS, the
 Wavesurfer.js javascript module, and more, to enable a better and freer sounedcloud
