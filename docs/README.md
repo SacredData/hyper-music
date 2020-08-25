@@ -1,13 +1,39 @@
 # Multipli.city
+> A jekyll theme designed to maximize musical independence and enhance musical virtue.
 
-> Jekyll code for the Sonic Multiplicities deep-learning music project.
+Jekyll code for the Sonic Multiplicities deep-learning music project.
+
+Combines several amazing web technologies, such as HTML5 Web Audio API, RSS, the
+Wavesurfer.js javascript module, and more, to enable a better and freer sounedcloud
+than soundcloud!
+
+Enables a musician to fully take control over their musical catalog, on the cloud & on
+GitHub Pages. My personal implementation of this project spans dozens of hours of audio
+and hours of 4K raw video footage, plus a fancy domain name, and I only pay $7/month!
 
 ## Functionality
 
-For each new `post`, the following are generated:
+This jekyll theme generates the following:
 
-* New post on the website
-* New episode in the podcast
+* New post on the website (with cool audio and visualization features!)
+* New episode in the podcast (fully automated and compliant with Apple podcast directory)
+* Every page has OpenGraph & Twitter metadata in the header (in progress)
+* Schema.org data (implementation in-progress: MusicComposition, MusicGroup, MusicRecording, MusicRelease, etc.)
+
+### Planned Future Focuses
+
+#### Media Functionality
+
+* Live stream/broadcast events
+* Automated VOD generation & publishing
+* Automated multi-casting
+* Submission to other music services via APIs
+* Live chats
+
+#### eCommerce Features
+
+* Payment & licensing backends to facilitate independent licensing transactions
+* Merch & special item sales
 
 ### /_posts/
 
@@ -41,6 +67,32 @@ abstract: # Optional front matter to put on the page as the release's "subtitle"
 ---
 ```
 
+##### Playlist sidecar JSON file
+
+Playlists require a sidecar file written in JSON describing the different regions
+contained within the `post.stream_url`. Formatting is as follows:
+
+```json
+{
+  "regions": [
+    {
+    "id": "Track 1 Title",
+    "duration": 100,
+    "loop": false,
+    "drag": false,
+    "resize": false
+    },
+    {
+    "id": "Track 2 Title",
+    "duration": 330,
+    "loop": false,
+    "drag": false,
+    "resize": false
+    }
+  ]
+}
+```
+
 #### layout: post
 
 Creates a new webpage & podcast item entry for a single track.
@@ -71,6 +123,21 @@ XML template for podcast. Publishes to `/podcast.xml` when jekyll code is built.
 Do `jekyll build -d docs` to re-build your jekyll site into the `docs` directory.
 
 This approach enables your page to be 100% compatible with GitHub Pages, making publishing updates free, reliable, and easy.
+
+## The Future
+
+Right now, the project as-is works well for my purposes. It needs to be
+generalized further before it is an appropriate thing for others to fork.
+
+Even then, this is not the most intuitive interface for musicians that lack the
+necessary technical expertise to get up and running quickly. Comfort with the
+command line, with bash, and with text editors - not to mention, with the jekyll
+project - will be necessary for this template to be used successfully.
+
+For this project to serve the average musician effectively, we will need to make
+graphical interfaces and forms which allow users to easily fill in the front
+matter and metadata. We'll also need to further automate the generation of all 
+metadata from the music assets themselves.
 
 ## Acknowledgements
 

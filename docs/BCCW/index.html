@@ -444,6 +444,13 @@
      
      console.log(regions);
 
+     // Re-draw the track list table. Accepts the regions array for this page
+     // and the `region.id` for the region that should be highlighted.
+     function drawRegionsTable(reg, highlightId="") {
+       const regionsTable = reg.map(r => `${r.id == highlightId ? '<i><b><h3>▼' : '<h3>'}${r.id} [${r.duration} sec]${r.id == highlightId ? '▲</h3></b></i>' : '</h3>'}`)
+       document.getElementById("tracklist").innerHTML = `<div style="text-align:center;"><h2>TRACKLIST</h2><br>${regionsTable.join('\n')}</div><hr>`;
+     }
+
      var regionsTable = regions.map(r => `<h3>${r.id} [${r.duration} sec]</h3>`);
 
      console.log(regionsTable)
@@ -588,11 +595,11 @@
        console.log(r);
        var trackNum = regions.findIndex(rr => rr.start == r.start);
        document.getElementById("musicTitle").innerHTML = "Birthday Cake Chest Wound" + `: 0${trackNum+1} - <b><i>${r.id}</i></b>`;
+       drawRegionsTable(regions, r.id);
      });
 
      wavesurfer.on('region-out', r => {
        console.log(r);
-       // r.remove();
      })
 
      wavesurfer.on('region-dblclick', r => {
