@@ -4,10 +4,27 @@
 
 ## Functionality
 
-For each new `post`, the following are generated:
+This jekyll theme generates the following:
 
-* New post on the website
-* New episode in the podcast
+* New post on the website (with cool audio and visualization features!)
+* New episode in the podcast (fully automated and compliant with Apple podcast directory)
+* Every page has OpenGraph & Twitter metadata in the header (in progress)
+* Schema.org data (implementation in-progress: MusicComposition, MusicGroup, MusicRecording, MusicRelease, etc.)
+
+### Planned Future Focuses
+
+#### Media Functionality
+
+* Live stream/broadcast events
+* Automated VOD generation & publishing
+* Automated multi-casting
+* Submission to other music services via APIs
+* Live chats
+
+#### eCommerce Features
+
+* Payment & licensing backends to facilitate independent licensing transactions
+* Merch & special item sales
 
 ### /_posts/
 
