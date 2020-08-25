@@ -477,7 +477,7 @@
      var audioCtx = wavesurfer.backend.ac;
      var analyser = audioCtx.createAnalyser();
 
-     analyser.fftSize = 2048;
+     // analyser.fftSize = 2048;
 
      var bufferLength = analyser.frequencyBinCount;
      var dataArray = new Uint8Array(bufferLength);
@@ -485,6 +485,7 @@
 
      var canvas = document.getElementById("c");
      var canvasCtx = canvas.getContext("2d");
+     analyser.fftSize = canvas.height > 2000 ? 4096 : 2048;
 
      // Add event listener for `click` events.
      canvas.addEventListener('click', (event) => {
@@ -594,7 +595,7 @@
      wavesurfer.on('region-in', r => {
        console.log(r);
        var trackNum = regions.findIndex(rr => rr.start == r.start);
-       document.getElementById("musicTitle").innerHTML = "PSEUDO" + `: 0${trackNum+1} - <b><i>${r.id}</i></b>`;
+       document.getElementById("musicTitle").innerHTML = "PSEUDO" + `: <b><i>${r.id}</i></b>`;
        drawRegionsTable(regions, r.id);
      });
 
