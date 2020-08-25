@@ -124,6 +124,21 @@ Do `jekyll build -d docs` to re-build your jekyll site into the `docs` directory
 
 This approach enables your page to be 100% compatible with GitHub Pages, making publishing updates free, reliable, and easy.
 
+## The Future
+
+Right now, the project as-is works well for my purposes. It needs to be
+generalized further before it is an appropriate thing for others to fork.
+
+Even then, this is not the most intuitive interface for musicians that lack the
+necessary technical expertise to get up and running quickly. Comfort with the
+command line, with bash, and with text editors - not to mention, with the jekyll
+project - will be necessary for this template to be used successfully.
+
+For this project to serve the average musician effectively, we will need to make
+graphical interfaces and forms which allow users to easily fill in the front
+matter and metadata. We'll also need to further automate the generation of all 
+metadata from the music assets themselves.
+
 ## Acknowledgements
 
 Many thanks to [akiritsu](https://github.com/akiritsu) for their outstanding
