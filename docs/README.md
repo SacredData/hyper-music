@@ -9,7 +9,7 @@ For each new `post`, the following are generated:
 * New post on the website
 * New episode in the podcast
 
-### /_post/
+### /_posts/
 
 This is where new music releases get added.
 
@@ -58,9 +58,19 @@ metadata provided to assist with the Wavesurfer region construction process.
 
 Playlists may be of type `Composition` or `Album`.
 
+### `pages/`
+
+Inside the `pages` directory you may place pages that aren't related directly to publishing music releases. This is where you can add performer bio pages, contact information, etc.
+
 ### /podcast.xml
 
 XML template for podcast. Publishes to `/podcast.xml` when jekyll code is built.
+
+## Building
+
+Do `jekyll build -d docs` to re-build your jekyll site into the `docs` directory.
+
+This approach enables your page to be 100% compatible with GitHub Pages, making publishing updates free, reliable, and easy.
 
 ## Acknowledgements
 

@@ -7,6 +7,7 @@ btn_text: true
 footer: true
 title: "Garrett Semmelink"
 author: ""
+instrument: violin
 encrypted_text: false
 image: /img/garrett.jpg
 permalink: /Garrett-Semmelink/
