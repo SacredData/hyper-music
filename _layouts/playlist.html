@@ -11,6 +11,10 @@ layout: default
   {{ page.title }}
 </h1>
 {% endif %}
+{% include schema_musicGroup.html %}
+{% if page.category == "Composition" %}
+{% include schema_musicComposition.html %}
+{% endif %}
 {% include post_info.html %}
 {% include downloads.html %}
 {% include playlist.html %}
