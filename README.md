@@ -2,6 +2,16 @@
 
 > Jekyll code for the Sonic Multiplicities deep-learning music project.
 
+A jekyll theme designed to maximize musical independence and enhance musical virtue.
+
+Combines several amazing web technologies, such as HTML5 Web Audio API, RSS, the
+Wavesurfer.js javascript module, and more, to enable a better and freer sounedcloud
+than soundcloud!
+
+Enables a musician to fully take control over their musical catalog, on the cloud & on
+GitHub Pages. My personal implementation of this project spans dozens of hours of audio
+and hours of 4K raw video footage, plus a fancy domain name, and I only pay $7/month!
+
 ## Functionality
 
 This jekyll theme generates the following:
