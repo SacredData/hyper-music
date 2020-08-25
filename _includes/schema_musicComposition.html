@@ -1,0 +1,23 @@
+<script type="application/ld+json">
+{
+		"@context": "http://schema.org",
+		"@type": "MusicComposition",
+    "name": "{{ page.title }}",
+		"composer": [
+				{
+						"@type": "Person",
+						"name": "Andrew Grathwohl"
+				},
+				{
+						"@type": "Person",
+            "name": "{{ page.author }}"
+				}
+		],
+		"inLanguage": "EN",
+		"publisher": {
+				"@type": "Organization",
+				"name": "Sacred Audio"
+		},
+    "datePublished": "{{ page.date | date: "%Y" }}"
+}
+</script>
