@@ -25,8 +25,10 @@
 </div>
  <script>
    var url = "{{ page.stream_url }}"
+   var fadeTimerBase = Number("{{ page.duration }}");
    
    var dur = 0.0;
+   var fadeDur = 60;
 
    var wavesurfer = WaveSurfer.create({
      container: "#player",
@@ -50,6 +52,19 @@
      dur = Number(wavesurfer.getDuration().toFixed(2));
      document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
      mult3 = (dur / year) || 1;
+     /* Set the center content to fade out */
+		var style = document.createElement('style');
+		style.innerHTML = `
+		 #ctner {
+			 opacity: 0;
+       transition: opacity ${Math.round(dur / 6) > fadeDur ? fadeDur : Math.round(dur / 6)}s linear;   
+		 }
+     #ctner:hover {
+        opacity: 1;
+        transition: opacity 5s;
+     }
+		`;
+     document.head.appendChild(style);
      // draw();
    });
 
