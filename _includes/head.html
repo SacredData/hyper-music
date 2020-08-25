@@ -35,6 +35,10 @@
     <script src="https://unpkg.com/wavesurfer.js"></script>
     <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.min.js"></script>
   {% endif %}
+
+  {% if page.layout == "playlist" %}
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.minimap.min.js"></script>
+  {% endif %}
   
   <!-- OG metadata -->
   <meta property="og:site_name" content="{{ site.title }}" />

@@ -29,6 +29,10 @@
     <script src="https://unpkg.com/wavesurfer.js"></script>
     <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.min.js"></script>
   
+
+  
+    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.minimap.min.js"></script>
+  
   
   <!-- OG metadata -->
   <meta property="og:site_name" content="multipli.city" />
@@ -450,11 +454,18 @@
 
      var RegionsPlugin = window.WaveSurfer.regions;
 
+     var minimapConfig = {
+       waveColor: 'grey',
+       progressColor: 'black',
+       height: 30
+     }
+
      var wavesurfer = WaveSurfer.create({
        container: "#player",
        cursorWidth: 2,
        plugins: [
-         RegionsPlugin.create({ regions })
+         RegionsPlugin.create({ regions }),
+         WaveSurfer.minimap.create(minimapConfig)
        ]
      });
 
