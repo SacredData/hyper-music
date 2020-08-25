@@ -67,6 +67,32 @@ abstract: # Optional front matter to put on the page as the release's "subtitle"
 ---
 ```
 
+##### Playlist sidecar JSON file
+
+Playlists require a sidecar file written in JSON describing the different regions
+contained within the `post.stream_url`. Formatting is as follows:
+
+```json
+{
+  "regions": [
+    {
+    "id": "Track 1 Title",
+    "duration": 100,
+    "loop": false,
+    "drag": false,
+    "resize": false
+    },
+    {
+    "id": "Track 2 Title",
+    "duration": 330,
+    "loop": false,
+    "drag": false,
+    "resize": false
+    }
+  ]
+}
+```
+
 #### layout: post
 
 Creates a new webpage & podcast item entry for a single track.
