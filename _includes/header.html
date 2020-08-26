@@ -67,7 +67,8 @@
                 class="span_right">
                 <!-- popup table of content -->
                 {% if page.toc != false %}
-                    <a class="header_btn" onclick="scroll_percentage(-0.88)">
+                <!--<a class="header_btn" onclick="scroll_percentage(-0.88)">-->
+                    <a class="header_btn" onclick='window.location.href="{{ page.next.url }}"'>
                         <i class="fa fa-backward">
                             {% if page.btn_text != false %}
                                 <p class="btn_text">Prev</p>
@@ -75,7 +76,7 @@
                         </i>
                     </a>
                     <!-- scroll down -->
-                    <a class="header_btn" onclick="scroll_percentage(0.88)">
+                    <a class="header_btn" onclick='window.location.href="{{ page.previous.url }}"'>
                         <i class="fa fa-forward">
                             {% if page.btn_text != false %}
                                 <p class="btn_text">Next</p>
