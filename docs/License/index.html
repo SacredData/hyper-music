@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <!-- multi-device width -->
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <!-- site description -->
+  
+  <meta content="RIGHTS &amp; LICENSING" name="description" />
+  <!-- referer for 3rd-part images-->
+  <meta content="no-referrer" name="referrer" />
+  <!-- title -->
+  <title>
+    
+    
+    
+  </title>
+  <!-- icon -->
+  <link href="https://multipli.city/assets/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon" />
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="https://multipli.city/assets/css/main.css" type="text/css" />
+  <!-- fa 5.9.0 -->
+  <link rel="stylesheet" href="https://multipli.city/assets/css/fa.min.css" type="text/css" />
+  <!-- rouge theme-->
+  <link rel="stylesheet" href="https://multipli.city/assets/css/rouge-bg.css" />
+
+  
+
+  
+  
+  <!-- OG metadata -->
+  <meta property="og:site_name" content="multipli.city" />
+  <meta property="og:url" content="https://multipli.city/License/" />
+  <meta property="og:title" content="" />
+
+  
+
+  
+    <meta content="article" property="og:type">
+  
+
+  
+
+  <!-- mathjax 2.7.5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+  </head>
+
+  <body class="page">
+    <!-- background animations -->
+<div class="div_bg">
+  <canvas id="c"></canvas>
+</div>
+<script>
+  // var colors = [ "#faa", "#f12", "#f2a" ]
+  var colors = [ "#ebbebe", "#b95775", "#be639b", "#a63333", "#7b3349" ]
+  var fontSizeMults = [ 0.5, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.5, 2.0 ]
+  var c = document.getElementById("c");
+  var ctx = c.getContext("2d");
+  c.height = window.innerHeight;
+  c.width = window.innerWidth;
+  var txts = "▲⟁◮◬▷▷△◁⧍⧋⧊⨹∧∨⨺⧌⛛◀▶▵⨻⨻⨻";
+  txts = txts.split("");
+  var font_size = 2;
+  var columns = c.width / font_size;
+  var drops = [];
+  for (var x = 0; x < columns; x++) drops[x] = 1;
+
+  function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.01)";
+    ctx.fillRect(0, 0, c.width, c.height);
+    ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];// "#faa";
+    font_size = font_size * fontSizeMults[Math.floor(Math.random() * fontSizeMults.length)];
+    ctx.font = font_size + "px arial";
+    for (var i = 0; i < drops.length; i++) {
+      var text = txts[Math.floor(Math.random() * txts.length)];
+      ctx.fillText(text, i * font_size, drops[i] * font_size);
+      if (drops[i] * font_size > c.height || Math.random() > 0.98) drops[i] = 0;
+      drops[i]++;
+    }
+  }
+  setInterval(draw, 9000);
+</script>
+
+    <div class="container" id="ctner">
+      <div class="header">
+    <nav class="nav_bar">
+        <ul>
+            <!-- left header -->
+            <li
+                class="li_left">
+                <!-- home -->
+                
+                    <a class="header_btn" href="https://multipli.city">
+                        <i class="fa fa-home">
+                            
+                                <p class="btn_text">Home</p>
+                            
+                        </i>
+                    </a>
+                
+                  <a class="header_btn" href="https://multipli.city/podcast.xml">
+                  <!--<a class="header_btn" href="//s3.amazonaws.com/sonicmultiplicities.audio/feed/feed.xml"> -->
+                  <i class="fa fa-podcast" aria-hidden="true">
+                    <p class="btn_text">Podcast</p>
+                  </i>
+                </a>
+                <!-- email -->
+                
+                    <a class="header_btn" href="mailto:andrew@multipli.city">
+                        <i class="fa fa-envelope-square">
+                            
+                                <p class="btn_text">Email</p>
+                            
+                        </i>
+                    </a>
+                
+                <!-- github -->
+                
+                    <a class="header_btn" href="https://github.com/sacreddata">
+                        <i class="fa fa-github">
+                            
+                                <p class="btn_text">Github</p>
+                            
+                        </i>
+                    </a>
+                
+                <!-- maximize -->
+                
+                    <a class="header_btn" id="mxmz_btn" onclick="toggle_maximize()">
+                        <i class="fa fa-window-maximize">
+                            
+                                <p class="btn_text" id="mxmz_text">Maximize</p>
+                            
+                        </i>
+                    </a>
+                
+                <!-- access token -->
+                
+                    <a class="header_btn" id="acs_btn" onclick="apply_token()">
+                        <i class="fa fa-key">
+                            
+                                <p class="btn_text">Token</p>
+                            
+                        </i>
+                    </a>
+                    <textarea class="access_token" cols="8" id="acs_tkn" rows="1"></textarea>
+                
+            </li>
+            <!-- right header -->
+            <span
+                class="span_right">
+                <!-- popup table of content -->
+                
+                    <a class="title">multipli.city</a>
+                    
+                        <a class="owner">
+                            -
+                            S⧊CREDdata</a>
+                    
+                
+            </span>
+        </ul>
+    </nav>
+    <hr/>
+</div>
+<!-- table of content -->
+
+<!-- toggle maximize -->
+
+<script>
+  var ctner_state = 0;
+  var ctner = document.getElementById("ctner");
+  function toggle_maximize() {
+    if (ctner_state == 0) {
+      ctner.style.width = "100%";
+      ctner.style.height = "100%";
+      ctner.style.top = "0";
+      ctner.style.maxWidth = "100%";
+      if (document.getElementById("mxmz_text")) {
+        document.getElementById("mxmz_text").innerHTML = "Restore";
+      }
+      ctner_state = 1;
+    } else if (ctner_state == 1) {
+      ctner.style.width = "84%";
+      ctner.style.height = "97%";
+      ctner.style.top = "2%";
+      ctner.style.maxWidth = "1240px";
+      if (document.getElementById("mxmz_text")) {
+        document.getElementById("mxmz_text").innerHTML = "Maximize";
+      }
+      ctner_state = 0;
+    }
+  }
+</script>
+
+<!-- encrypt and decrypt -->
+
+    <script src="https://multipli.city/assets/js/sjcl.js" async></script>
+    <script>
+  function decrypt_all(pwd, class_name) {
+    var elem_clct = document.getElementsByClassName(class_name);
+    if (elem_clct.length == 0) {
+      console.log("No texts to decrypt!");
+      return false;
+    }
+    for (acc = 0; acc < elem_clct.length; acc++) {
+      var encrypted = elem_clct[acc].id;
+      var ct =
+        '{"iv":"' +
+        encrypted.substring(0, 22) +
+        '==",salt:"","ct":"' +
+        encrypted.substring(22) +
+        '"}';
+      try {
+        var txt = sjcl.json.decrypt(pwd, ct);
+      } catch (e) {
+        alert("Invalid Access Token!");
+        return;
+      }
+      elem_clct[acc].innerHTML = txt;
+    }
+    return true;
+  }
+  function apply_token() {
+    var tkn = document.getElementById("acs_tkn");
+    if (decrypt_all(tkn.value, "encrypted")) {
+      tkn.style.display = "none";
+      document.getElementById("acs_btn").style.display = "none";
+    }
+  }
+</script>
+
+
+      <div class="div_article" id="div_atcl">       
+        <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
+          <h1 id="rights--licensing"><strong>RIGHTS &amp; LICENSING</strong></h1>
+
+<p><strong>The music on Multipli.city is free for all to stream and download. This is and
+always will be the Sonic Multiplicities model for music releases.</strong></p>
+
+<p>By downloading, streaming, and/or sharing the music on Multipli.city, you agree
+to follow all of the terms on this page.</p>
+
+<p>Email Andrew Grathwohl (andrew [at] multipli {dot} city) for any and all
+communications regarding this matter.</p>
+
+<h2 id="use-in-music">Use In Music</h2>
+
+<p>Sampling of music from Multipli.city is expressly forbidden without direct
+authorization from Andrew Grathwohl. The music hosted on this page is made
+entirely without the use of sampling. We kindly ask that our music’s sanctity be
+respected.</p>
+
+<h2 id="use-in-non-audio-media">Use In Non-Audio Media</h2>
+
+<p>You are free to use any of the music on Multipli.city in your own work, such as
+a film, TV show, web video, etc., so long as the following conditions are met:</p>
+
+<ol>
+  <li>The work is available to viewers for free and is not monetized in any fashion.</li>
+  <li>The work is available to viewers in a media format compliant with free software.</li>
+  <li>The work is available without the use of any conventional or custom digital rights management, aka “DRM.”
+<!--4. Stipulation that credit must be given to Andrew Grathwohl goes here. --></li>
+</ol>
+
+<p><em>It is your responsibility to be well-versed and informed about free software and
+digital rights management, as well as any relevant laws that may be specific to
+your particular locale.</em></p>
+
+<h3 id="paid-creative-works">Paid Creative Works</h3>
+
+<p>If the creative work will not be licensed under a permissive, free speech license
+such as public domain or Creative Commons, or GPL, licensing options are available.</p>
+
+<p>Contact Andrew Grathwohl to get that conversation started.</p>
+
+<h2 id="sharing--redistribution">Sharing &amp; Redistribution</h2>
+
+<p>You are free to share and host any of the music on Multipli.city on your own
+server as long as the following conditions are met:</p>
+
+<ol>
+  <li>Absolutely no modifications of any kind are made to the file. It must match the MD5 checksum of the audio sourced from Multipli.city.</li>
+  <li>Access to the server is not contingent upon payment of any kind.</li>
+</ol>
+
+<h3 id="piracy">Piracy</h3>
+
+<p>Feel free to “pirate” the music on Multipli.city - place it on Usenet, public
+and private torrent trackers, etc. We invite one and all to help us distribute
+this unique music to as many ears as can possibly bear to hear it.</p>
+
+          
+<!-- list of articles: sort by date (by default) -->
+<h1 class="loa">music sorted by date</h1>
+<table>
+    <thead>
+        <tr>
+            <th> TITLE </th>
+            <th> PERFORMER </th>
+            <th> INSTRUMENT </th>
+            <th> CATEGORY </th>
+            <th> DATE </th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Nineteen-Years/">Nineteen Years</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Aug 26, 20</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/POP/">People Over Platforms, 2020</a></td>
+        <td class="td_title"><a href='https://multipli.city/Tyler-Dinner'>Tyler Dinner</a></td>
+        <td class="td_performer">guitar</td>
+        <td class="td_category">Album</td>
+        <td class="td_date">Aug 25, 20</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/PSEUDO/">PSEUDO</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Aug 23, 20</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Upward-Fall/">Upward Fall</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink-/-Tyler-Dinner'>Garrett Semmelink / Tyler Dinner</a></td>
+        <td class="td_performer">violin / guitar</td>
+        <td class="td_category">Album</td>
+        <td class="td_date">Aug 14, 20</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/BCCW/">Birthday Cake Chest Wound</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Feb 14, 20</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Rococo-Slaughter/">Rococo Slaughter</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Jan 31, 20</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Adrift/">Adrift</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Jan 17, 20</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/ADSR/">A Deep Sense of Responsibility</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin & percussion</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Dec 18, 19</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/FIREROOM/">FIREROOM</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Dec 04, 19</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Reflection-No-3/">Reflection No. 3</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Reflection</td>
+        <td class="td_date">Nov 02, 19</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/MAFA/">Music Ain't For Airports</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Oct 17, 19</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Injection-Time-Lapse/">Injection Time Lapse</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Oct 12, 19</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Infatuated/">Infatuated</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Aug 01, 15</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Reflection-No-2/">Reflection No. 2</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Reflection</td>
+        <td class="td_date">Jun 13, 15</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Splatter/">Splatter</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Apr 23, 15</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Luxry-Prism/">Luxury Prism</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Apr 23, 15</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Prelude/">Prelude to Titan</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Mar 06, 15</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Reflection-No-1/">Reflection No. 1</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Reflection</td>
+        <td class="td_date">Feb 27, 15</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Theia/">Theia</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Feb 25, 15</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Electric-Chair/">Electric Chair</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Jan 14, 15</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Titan/">Titan</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Jan 09, 15</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Labor/">Labor</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Dec 17, 14</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Miasma/">Miasma</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Dec 12, 14</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Inertia/">Inertia</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Oct 26, 14</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Vasoconstriction/">Vasoconstriction</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Oct 23, 14</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/LEK4_AND/">LEK4_AND</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">steel violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Oct 19, 12</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Untitled/">Untitled</a></td>
+        <td class="td_title"><a href='https://multipli.city/Cosmo-D'>Cosmo D</a></td>
+        <td class="td_performer">cello</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Jul 06, 12</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/MANQUAMAN/">MAN QUA MAN</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">May 30, 12</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Maine/">Maine</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Feb 10, 12</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Drowned/">Drowned</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Feb 10, 12</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Schadenfreude/">Schadenfreude</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Jul 11, 11</td>
+        </tr>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Freiburg/">Freiburg</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin</td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Jul 28, 10</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+
+        </article>
+          
+          <div class="footer">
+    <nav class="nav_bar">
+        <ul>
+            <li class="copyright">
+                © 2020 SACRED DATA
+            </li>
+            
+            <li>
+                uninstall your DAW
+            </li>
+            
+        </ul>
+        <br>
+        <ul>
+          <a href="//itunes.apple.com/us/artist/1493047427"><i class="fa fa-apple" aria-hidden="true"></i></a>
+          <a href="//sonicmultiplicities.bandcamp.com/music"><i class="fa fa-bandcamp" aria-hidden="true"></i></a>
+          <a href="//soundcloud.com/sonicmultiplicities"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
+          <a href="//open.spotify.com/artist/7y3b4MROsSlg8Md4yDtoS4"><i class="fa fa-spotify" aria-hidden="true"></i></a>
+          <a href="//vimeo.com/sonicmultiplicities"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a>
+          <a href="//www.youtube.com/channel/UCPPgYvCAGXn-HSqtwAEvvrg/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+        </ul>
+    </nav>
+</div>
+
+          
+      </div>
+    </div>
+  </body>
+</html>

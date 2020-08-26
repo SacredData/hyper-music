@@ -70,7 +70,11 @@ abstract: # Optional front matter to put on the page as the release's "subtitle"
 ##### Playlist sidecar JSON file
 
 Playlists require a sidecar file written in JSON describing the different regions
-contained within the `post.stream_url`. Formatting is as follows:
+contained within the `post.stream_url`. Users may leverage the
+[generateSidecar](https://github.com/SacredData/generateSidecar) script to aid
+in the generation of these assets.
+
+Formatting is as follows:
 
 ```json
 {
