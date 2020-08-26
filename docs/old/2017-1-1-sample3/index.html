@@ -448,6 +448,14 @@
        draw();
      }
    })
+   
+   wavesurfer.on('finish', () => {
+     if (animationId) {
+       cancelAnimationFrame(animationId);
+       animationId = undefined;
+     }
+     
+   });
 
    function toggleBin() {
      var stUrl = "";

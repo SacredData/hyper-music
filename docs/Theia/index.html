@@ -440,6 +440,16 @@
        draw();
      }
    })
+   
+   wavesurfer.on('finish', () => {
+     if (animationId) {
+       cancelAnimationFrame(animationId);
+       animationId = undefined;
+     }
+     
+     window.location.href = "/Electric-Chair/";
+     
+   });
 
    function toggleBin() {
      var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_015.mp3";

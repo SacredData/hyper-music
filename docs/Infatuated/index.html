@@ -433,6 +433,16 @@
        draw();
      }
    })
+   
+   wavesurfer.on('finish', () => {
+     if (animationId) {
+       cancelAnimationFrame(animationId);
+       animationId = undefined;
+     }
+     
+     window.location.href = "/Reflection-No-2/";
+     
+   });
 
    function toggleBin() {
      var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_020.mp3";

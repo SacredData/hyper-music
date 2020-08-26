@@ -86,6 +86,16 @@
        draw();
      }
    })
+   
+   wavesurfer.on('finish', () => {
+     if (animationId) {
+       cancelAnimationFrame(animationId);
+       animationId = undefined;
+     }
+     {% if page.previous.url %}
+     window.location.href = "{{ page.previous.url }}";
+     {% endif %}
+   });
 
    function toggleBin() {
      var stUrl = "{{ page.stream_url }}";

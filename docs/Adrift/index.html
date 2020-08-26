@@ -442,6 +442,16 @@
        draw();
      }
    })
+   
+   wavesurfer.on('finish', () => {
+     if (animationId) {
+       cancelAnimationFrame(animationId);
+       animationId = undefined;
+     }
+     
+     window.location.href = "/ADSR/";
+     
+   });
 
    function toggleBin() {
      var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SS001.mp3";
