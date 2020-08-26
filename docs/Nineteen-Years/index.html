@@ -6,13 +6,13 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <!-- site description -->
   
-  <meta content="SMOLD_021" name="description" />
+  <meta content="SM010" name="description" />
   <!-- referer for 3rd-part images-->
   <meta content="no-referrer" name="referrer" />
   <!-- title -->
   <title>
     
-    Luxury Prism
+    Nineteen Years
     
   </title>
   <!-- icon -->
@@ -36,15 +36,15 @@
   
   <!-- OG metadata -->
   <meta property="og:site_name" content="multipli.city" />
-  <meta property="og:url" content="https://multipli.city/Luxry-Prism/" />
-  <meta property="og:title" content="Luxury Prism" />
+  <meta property="og:url" content="https://multipli.city/Nineteen-Years/" />
+  <meta property="og:title" content="Nineteen Years" />
 
   
-    <meta property="og:image" content="https://sonicmultiplicities.audio/feed/lp.jpg" />
+    <meta property="og:image" content="https://sonicmultiplicities.audio/feed/SM010.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@sociosonics" />
     <meta name="twitter:creator" content="@andrewunmuted" />
-    <meta property="og:description" content="A  Sonic Multiplicities recording, performed by Garrett Semmelink on the violin. Catalog number SMOLD_021." />
+    <meta property="og:description" content="A 2020 Sonic Multiplicities recording, performed by Garrett Semmelink on the violin. Catalog number SM010." />
   
 
   
@@ -155,7 +155,7 @@
                 <!-- popup table of content -->
                 
                 <!--<a class="header_btn" onclick="scroll_percentage(-0.88)">-->
-                    <a class="header_btn" onclick='window.location.href="/Splatter/"'>
+                    <a class="header_btn" onclick='window.location.href=""'>
                         <i class="fa fa-backward">
                             
                                 <p class="btn_text">Prev</p>
@@ -163,7 +163,7 @@
                         </i>
                     </a>
                     <!-- scroll down -->
-                    <a class="header_btn" onclick='window.location.href="/Prelude/"'>
+                    <a class="header_btn" onclick='window.location.href="/POP/"'>
                         <i class="fa fa-forward">
                             
                                 <p class="btn_text">Next</p>
@@ -189,7 +189,9 @@
     <div class="div_toc toc" id="popup_toc">
     
     <!-- generate toc -->
-    
+    <ul id="ul_toc" class="ul_toc">
+  <li><a href="#artistic-statement">Artistic Statement</a></li>
+</ul>
     </div>
     <!-- toggle toc -->
     <script>
@@ -242,8 +244,8 @@
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
           
 <h1>
-  <img src="//sonicmultiplicities.audio/feed/lp.jpg" alt="Cover art for Luxury Prism" height="540" style="vertical-align:bottom"><br><br>
-  <div id="musicTitle">Luxury Prism</div>
+  <img src="//sonicmultiplicities.audio/feed/SM010.jpg" alt="Cover art for Nineteen Years" height="540" style="vertical-align:bottom"><br><br>
+  <div id="musicTitle">Nineteen Years</div>
 </h1>
 
 <script type="application/ld+json">
@@ -296,7 +298,7 @@
 {
 		"@context": "http://schema.org",
 		"@type": "MusicComposition",
-    "name": "Luxury Prism",
+    "name": "Nineteen Years",
 		"composer": [
 				{
 						"@type": "Person",
@@ -312,7 +314,7 @@
 				"@type": "Organization",
 				"name": "Sacred Audio"
 		},
-    "datePublished": "2015"
+    "datePublished": "2020"
 }
 </script>
 
@@ -329,7 +331,7 @@
   
   <span>
     <i class="fa fa-calendar"></i>
-    Apr 23, 2015
+    Aug 26, 2020
   </span>
   
   <!-- category -->
@@ -343,7 +345,7 @@
 <!-- abstract -->
 <div class="abstract">
   
-  <p>Dedicated to the 26% average increase in property values in the Crown Heights, Brooklyn neighborhood.</p>
+  <p>It has been Nineteen Years since the US invaded Afghanistan.</p>
   
 </div>
 
@@ -354,7 +356,7 @@
   <a href="" id="mp3_download">MP3</a><br><br>
 </div>
 <script>
-  var sm = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_021.mp3".split('/')[3].replace('.mp3','');
+  var sm = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM010.mp3".split('/')[3].replace('.mp3','');
   var mp3Url = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/${sm}.mp3`;
   var flacUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.flac`;
   var opusUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.opus`;
@@ -382,10 +384,10 @@
   <input id="volume" type="range" min="0" max="1" value="1" step="0.1" style="float:right">
 </div>
  <script>
-   fetch("//s3.amazonaws.com/sonicmultiplicities.audio/feed/sidecar_SMOLD_021.json").then(response => response.json()).then(scData => {
+   fetch("//s3.amazonaws.com/sonicmultiplicities.audio/feed/sidecar_SM010.json").then(response => response.json()).then(scData => {
      var regions = scData.regions;
-     var cover = "//sonicmultiplicities.audio/feed/lp.jpg";
-     var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_021.mp3";
+     var cover = "//sonicmultiplicities.audio/feed/SM010.jpg";
+     var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM010.mp3";
 
      var dur = 0.0;
 
@@ -597,7 +599,7 @@
      wavesurfer.on('region-in', r => {
        console.log(r);
        var trackNum = regions.findIndex(rr => rr.start == r.start);
-       document.getElementById("musicTitle").innerHTML = "Luxury Prism" + `: <b><i>${r.id}</i></b>`;
+       document.getElementById("musicTitle").innerHTML = "Nineteen Years" + `: <b><i>${r.id}</i></b>`;
        drawRegionsTable(regions, r.id);
      });
 
@@ -620,7 +622,7 @@
          animationId = undefined;
        }
        
-       window.location.href = "/Prelude/";
+       window.location.href = "/POP/";
        
      })
 
@@ -672,7 +674,7 @@
      })
 
      function toggleBin() {
-       var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_021.mp3";
+       var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM010.mp3";
        var binUrl = "";
        url = url == stUrl ? binUrl : stUrl
        wavesurfer.load(`//${url}`);
@@ -705,13 +707,9 @@
   <b>Stream:</b>
   
   
-  <a href="//sonicmultiplicities.bandcamp.com/album/luxury-prism" id="bandcamp"><i class="fa fa-bandcamp"></i></a>
+  <a href="//sonicmultiplicities.bandcamp.com/album/nineteen-years" id="bandcamp"><i class="fa fa-bandcamp"></i></a>
   
   
-  <a href="//soundcloud.com/sonicmultiplicities/sets/luxury-prism" id="soundcloud"><i class="fa fa-soundcloud"></i></a>
-  
-  
-  <a href="//open.spotify.com/album/26GFpl1LwrYjIJrn0ParuG" id="spotify"><i class="fa fa-spotify"></i></a><br><br>
   
 </div>
 
@@ -719,7 +717,21 @@
 <div id="tracklist"></div>
 
 
+<blockquote>
+  <p>The American is a single-issue voter: their vote goes to whomever will promise to never speak about the US’s endless wars in the Middle East and Africa ever again.</p>
+</blockquote>
 
+<h2 id="artistic-statement">Artistic Statement</h2>
+
+<p>Despite the hundreds of thousands of innocent children who have died at the hands of US foreign policy over the past nineteen years, my fellow citizens feel it much more urgent and necessary to agonize over the yearly death toll of less than ten non-white individuals in 2019 at the hands of our domestic police.</p>
+
+<p>It is rather shameful that we, as a nation, would prioritize what is happening to a few of our own citizenry, instead of the massive clusterfuck of death, misery, and violence that we spread overseas. Not one of the cultural, spiritual, or political leaders responsible for facilitating 2020’s tensions in the US have mentioned the starving and cholera-stricken kids of Yemen, nor the ailing peoples of Afghanistan. They refuse to read about how the <a href="https://wikileaks.org/opcw-douma/#OPCW-DOUMA%20-%20Release%20Part%204">OPCW falsified reports</a> to force Obama to strike targets in Syria. We remain in the country to this day, giving aid and even fighting alongside <em>Al Qaeda</em> with the goal of overthrowing the Assad government.</p>
+
+<p>Even those protesting against no-knock raids seem doomed to misunderstand the full breadth of the situation. These SWAT raids bear a striking resemblance to the kind of coordinated shakedowns of Iraqi citizens performed by the US military throughout that country’s occupation.</p>
+
+<p><strong>It’s almost as if our tragic foreign policy leads to similar kinds of destruction here at home.</strong></p>
+
+<p>This piece of music is intended to awaken the anti-war spirit of the American citizenry. I trust that my fellow Americans are not cruel, awful, or vicious people - they are just carelessly, tragically, and ruthlessly uninformed. But there is no excuse to remain that way, after listening to this series of vignettes.</p>
 
 
           
