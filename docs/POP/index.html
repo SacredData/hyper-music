@@ -444,6 +444,7 @@
      var wavesurfer = WaveSurfer.create({
        container: "#player",
        cursorWidth: 2,
+       responsive: true,
        plugins: [
          RegionsPlugin.create({ regions }),
          WaveSurfer.minimap.create(minimapConfig)
@@ -590,9 +591,12 @@
 
      wavesurfer.on('finish', () => {
        if (animationId) {
-         cancelAnimationFrame(animationId)
-         animationId = undefined
+         cancelAnimationFrame(animationId);
+         animationId = undefined;
        }
+       
+       window.location.href = "/PSEUDO/";
+       
      })
 
      wavesurfer.on('ready', function () {
