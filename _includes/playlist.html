@@ -143,8 +143,8 @@
          draw()
        }
      })
-     let [mo, da, ye]    = ( new Date()  ).toLocaleDateString().split("/");
-     let [ho, mi, se] = ( new Date()  ).toLocaleTimeString().slice(0,7).split(":");
+     var [mo, da, ye]    = ( new Date()  ).toLocaleDateString().split("/");
+     var [ho, mi, se] = ( new Date()  ).toLocaleTimeString().slice(0,7).split(":");
 
      var month = Number(mo);
      var day = Number(da);
@@ -155,7 +155,7 @@
 
      var mult1 = day / month;
      var mult2 = month / day;
-     var mult3 = 0;
+     var mult3 = (second + 1) / minute;
 
      // draw an oscilloscope of the current audio source
 
@@ -245,11 +245,16 @@
 
      wavesurfer.on('region-out', r => {
        console.log(r);
-     })
+       [ho, mi, se] = ( new Date()  ).toLocaleTimeString().slice(0,7).split(":");
+       hour = Number(ho);
+       minute = Number(mi);
+       second = Number(se);
+       mult3 = Math.abs(((regions.findIndex(regi => regi.id == r.id) / regions.length) + 1) - 1 * (second + 1) / minute);
+     });
 
      wavesurfer.on('region-dblclick', r => {
        wavesurfer.setCurrentTime(r.start);
-     })
+     });
 
      wavesurfer.on('finish', () => {
        if (animationId) {
