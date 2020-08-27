@@ -1,9 +1,7 @@
 ## Settings
 title: multipli.city
 owner: "S⧊CREDdata"
-#url: "https://sacreddata.github.io"
 url: "https://multipli.city"
-#baseurl: "/pRoJEct-NeGYa"
 baseurl: ""
 permalink: /:title/
 description: ""
@@ -20,7 +18,6 @@ statement: "uninstall your DAW"
 # default max toc levels: 1 - 6 (h1 - h6)
 toc_level: 3
 # texts randomly displayed in background
-#bgtext: "αβγδεζηθικλμνξοπρστυφχψω∷∫∮∝∞∧∨∑∏∪∩∈∵∴⊥‖∠⌒⊙≌√"
 bgtext: "▲⟁◮◬▷▷△◁⧍⧋⧊⨹∧∨⨺⧌⛛◀▶▵⨻⨻⨻"
 podcast:
   title: "▲ Presents: Sonic Multiplicities"
