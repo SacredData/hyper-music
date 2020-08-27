@@ -32,12 +32,12 @@
 
   {% if page.stream_url %}
     <!-- Wavesurfer.js -->
-    <script src="https://unpkg.com/wavesurfer.js"></script>
-    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.min.js"></script>
+    <script src="{{site.url}}{{site.baseurl}}{{site.assets_path}}/js/wavesurfer.js"></script>
+    <script src="{{site.url}}{{site.baseurl}}{{site.assets_path}}/js/wavesurfer.regions.min.js"></script>
   {% endif %}
 
   {% if page.layout == "playlist" %}
-    <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.minimap.min.js"></script>
+    <script src="{{site.url}}{{site.baseurl}}{{site.assets_path}}/js/wavesurfer.minimap.min.js"></script>
   {% endif %}
   
   <!-- OG metadata -->
