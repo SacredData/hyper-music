@@ -20,6 +20,7 @@ episode: 7
 explicit: false
 cover: //sonicmultiplicities.audio/feed/SM010.jpg
 bandcamp: //sonicmultiplicities.bandcamp.com/album/nineteen-years
+soundcloud: //soundcloud.com/sonicmultiplicities/sets/nineteen-years
 stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SM010.mp3
 excerpt: "SM010"
 abstract: "It has been Nineteen Years since the US invaded Afghanistan."
