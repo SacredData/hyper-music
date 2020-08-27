@@ -20,6 +20,12 @@ permalink: /
 
 > What results from this ambitious musical endeavor is among the world's longest-running datasets comprised of advanced, complex, and challenging extended techniques, free improvisation strategem, and instrumental varieties.
 
+## HyperMusic
+
+**All music hosted on Multipli.city is available to download, stream, and share for free!** More information can be found in our [licensing](/License/) documentation.
+
+As an official implementation of the HyperMusic framework, Multipli.city aims to be as permissive, free, and flexible as possible.
+
 ## The Anti-Computer Music
 > **Software** should liberate, enable, and optimize. Music software in vogue today needlessly limits, restricts, and constrains. Long live the human spirit that is carried within *music* and *free software*!
 
