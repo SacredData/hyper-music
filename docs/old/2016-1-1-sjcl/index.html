@@ -445,185 +445,166 @@
 
 <script src="https://multipli.city/assets/js/vibrant.js"></script>
 <script>
-   var cover = ""
-   var v = new Vibrant("https:" + cover);
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+  // Converts hex colors from Vibrant into RGB format so that it can be used
+  // in real-time with our canvas animation function `draw()`
+  function hexToRgbA(hex){
+    var c;
+    if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+      c= hex.substring(1).split('');
+      if(c.length== 3){
+        c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+      }
+      c= '0x'+c.join('');
+      return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.8)';
+    }
+    throw new Error('Bad Hex');
+  }
 
+  var lineWidth = 2;
+  var drawColors = shuffle(colors);
 
-   // Converts hex colors from Vibrant into RGB format so that it can be used
-   // in real-time with our canvas animation function `draw()`
-   function hexToRgbA(hex){
-     var c;
-     if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
-       c= hex.substring(1).split('');
-       if(c.length== 3){
-           c= [c[0], c[0], c[1], c[1], c[2], c[2]];
-       }
-       c= '0x'+c.join('');
-       return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.8)';
-     }
-		 throw new Error('Bad Hex');
+  var widthDelta = 0;
+  var alpha = 1.0;
+  var animationId = undefined;
+
+  var audioCtx = wavesurfer.backend.ac;
+  var analyser = audioCtx.createAnalyser();
+
+  var bufferLength = analyser.frequencyBinCount;
+  var dataArray = new Uint8Array(bufferLength);
+  analyser.getByteTimeDomainData(dataArray);
+
+  var canvas = document.getElementById("c");
+  var canvasCtx = canvas.getContext("2d");
+
+  analyser.fftSize = canvas.height > 2000 ? 2048 : 4096;
+
+  // Add event listener for `click` events.
+  canvas.addEventListener('click', (event) => {
+   var x2 = event.pageX,
+     y2 = event.pageY;
+   console.log(x2, y2);
+   if (animationId) {
+     cancelAnimationFrame(animationId)
+     animationId = undefined;
+   } else {
+     draw()
    }
-   
-   function shuffle(a) {
-     for (let i = a.length - 1; i > 0; i--) {
-       const j = Math.floor(Math.random() * (i + 1));
-       [a[i], a[j]] = [a[j], a[i]];
-     }
-     return a;
-   }
+  })
+  let [mo, da, ye]    = ( new Date()  ).toLocaleDateString().split("/");
+  let [ho, mi, se] = ( new Date()  ).toLocaleTimeString().slice(0,7).split(":");
 
-   var lineWidth = 2;
-   var drawColors = shuffle(colors);
+  var month = Number(mo);
+  var day = Number(da);
+  var year = Number(ye);
+  var hour = Number(ho);
+  var minute = Number(mi);
+  var second = Number(se);
 
-   var widthDelta = 0;
-   var alpha = 1.0;
-   var animationId = undefined;
+  var mult1 = day / month;
+  var mult2 = month / day;
+  var mult3 = 0;
 
-   var audioCtx = wavesurfer.backend.ac;
-   var analyser = audioCtx.createAnalyser();
+  // draw an oscilloscope of the current audio source
 
-   var bufferLength = analyser.frequencyBinCount;
-   var dataArray = new Uint8Array(bufferLength);
+  function draw() {
+   animationId = requestAnimationFrame(draw);
    analyser.getByteTimeDomainData(dataArray);
 
-	 var canvas = document.getElementById("c");
-	 var canvasCtx = canvas.getContext("2d");
+   canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
+   canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+   canvasCtx.lineWidth = (10 + lineWidth) / hour / day;
+   canvasCtx.strokeStyle = drawColors[0];
+
+   canvasCtx.beginPath();
    
-   analyser.fftSize = canvas.height > 2000 ? 2048 : 4096;
+   var sliceWidth = canvas.width * 1.0 / bufferLength;
+   var x = 0;
 
-   // Add event listener for `click` events.
-   canvas.addEventListener('click', (event) => {
-     var x2 = event.pageX,
-       y2 = event.pageY;
-     console.log(x2, y2);
-     if (animationId) {
-       cancelAnimationFrame(animationId)
-       animationId = undefined;
-     } else {
-       draw()
-     }
-   })
-   let [mo, da, ye]    = ( new Date()  ).toLocaleDateString().split("/");
-   let [ho, mi, se] = ( new Date()  ).toLocaleTimeString().slice(0,7).split(":");
+   for (var i = 0; i < bufferLength; i++) {
+     var v = dataArray[i] / 128.0;
+     var y = v * canvas.height / 2;
 
-   var month = Number(mo);
-   var day = Number(da);
-   var year = Number(ye);
-   var hour = Number(ho);
-   var minute = Number(mi);
-   var second = Number(se);
+     if (i === 0) {
+       canvasCtx.moveTo(x, y);
 
-   var mult1 = day / month;
-   var mult2 = month / day;
-   var mult3 = 0;
-
-   // draw an oscilloscope of the current audio source
-
-   function draw() {
-     animationId = requestAnimationFrame(draw);
-     analyser.getByteTimeDomainData(dataArray);
-
-     canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
-		 canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
-
-     canvasCtx.lineWidth = (10 + lineWidth) / hour / day;
-     canvasCtx.strokeStyle = drawColors[0];
-
-     canvasCtx.beginPath();
-     
-     var sliceWidth = canvas.width * 1.0 / bufferLength;
-     var x = 0;
-
-     for (var i = 0; i < bufferLength; i++) {
-       var v = dataArray[i] / 128.0;
-       var y = v * canvas.height / 2;
-
-       if (i === 0) {
-         canvasCtx.moveTo(x, y);
-
-         if (lineWidth > 50) {
-           drawColors = shuffle(drawColors);
-           alpha = 1 - (shuffle([0.1, 0.01, 0.5, 0.91])[1] * mult1);
-         }
-       } else {
-         canvasCtx.lineTo(x, y);
-
-         widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
-
-         if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
-           drawColors = shuffle(drawColors);
-           lineWidth += drawColors.length * mult2;
-         }
-         
-         if (lineWidth > 15) {
-           lineWidth += shuffle([-1, 1, 10])[0] * Math.abs(widthDelta) * (1 - alpha);
-           mult1 += 1;
-           mult3 -= 0.01;
-         } else {
-           lineWidth = mult3 * (2 + Math.abs(widthDelta));
-           alpha += shuffle([0.01, 0.1, 0.2, 0.5, 0.8, 1.0])[0];
-         }
+       if (lineWidth > 50) {
+         drawColors = shuffle(drawColors);
+         alpha = 1 - (shuffle([0.1, 0.01, 0.5, 0.91])[1] * mult1);
        }
-       x += sliceWidth;
-     }
+     } else {
+       canvasCtx.lineTo(x, y);
 
-     if (lineWidth > 100.0) {
-       lineWidth = 1.0 * mult3;
-       alpha = shuffle([0.5, 0.005, 0.0008])[2];
-     }
+       widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
 
-     if (alpha > 1) {
-       alpha = shuffle([0.1, 0.001, 0.0001])[0];
+       if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
+         drawColors = shuffle(drawColors);
+         lineWidth += drawColors.length * mult2;
+       }
+       
+       if (lineWidth > 15) {
+         lineWidth += shuffle([-1, 1, 10])[0] * Math.abs(widthDelta) * (1 - alpha);
+         mult1 += 1;
+         mult3 -= 0.01;
+       } else {
+         lineWidth = mult3 * (2 + Math.abs(widthDelta));
+         alpha += shuffle([0.01, 0.1, 0.2, 0.5, 0.8, 1.0])[0];
+       }
      }
-
-     canvasCtx.lineWidth = Math.min(Math.abs(lineWidth), 100);
-     canvasCtx.lineTo(canvas.width, canvas.height / 2);
-     canvasCtx.stroke();
+     x += sliceWidth;
    }
 
-   wavesurfer.backend.setFilter(analyser);
+   if (lineWidth > 100.0) {
+     lineWidth = 1.0 * mult3;
+     alpha = shuffle([0.5, 0.005, 0.0008])[2];
+   }
 
-   wavesurfer.on('region-in', r => {
-     console.log(r);
-     var trackNum = regions.findIndex(rr => rr.start == r.start);
-     document.getElementById("musicTitle").innerHTML = "An Encrypt and Dectrypt tool with sjcl.js" + `: 0${trackNum+1} - <b><i>${r.id}</i></b>`;
-   });
+   if (alpha > 1) {
+     alpha = shuffle([0.1, 0.001, 0.0001])[0];
+   }
 
-   wavesurfer.on('finish', () => {
-     if (animationId) {
-       cancelAnimationFrame(animationId)
-       animationId = undefined
-     }
-   });
+   canvasCtx.lineWidth = Math.min(Math.abs(lineWidth), 100);
+   canvasCtx.lineTo(canvas.width, canvas.height / 2);
+   canvasCtx.stroke();
+  }
 
-   v.getPalette((err, palette) => {
-     if (err) {
-       console.log(err)
-     }
+  wavesurfer.backend.setFilter(analyser);
 
-     var muted = !err ? palette.Muted ? palette.Muted.getHex() : null : null;
-     var vibrant = !err ? palette.Vibrant ? palette.Vibrant.getHex() : null : null;
-     var darkVibrant = !err ? palette.DarkVibrant ? palette.DarkVibrant.getHex() : null : null;
+  wavesurfer.on('region-in', r => {
+   console.log(r);
+   var trackNum = regions.findIndex(rr => rr.start == r.start);
+   document.getElementById("musicTitle").innerHTML = "An Encrypt and Dectrypt tool with sjcl.js" + `: 0${trackNum+1} - <b><i>${r.id}</i></b>`;
+  });
 
-     wavesurfer.setWaveColor(vibrant || "#999");
-     wavesurfer.setProgressColor(muted || "#555");
-     wavesurfer.setCursorColor(darkVibrant || "#333");
+  wavesurfer.on('finish', () => {
+   if (animationId) {
+     cancelAnimationFrame(animationId)
+     animationId = undefined
+   }
+  });
 
-     colors.push(darkVibrant, vibrant, muted);
-   })
+  wavesurfer.on('pause', () => {
+   if (animationId) {
+     cancelAnimationFrame(animationId)
+     animationId = undefined
+   }
+  });
 
-   wavesurfer.on('pause', () => {
-     if (animationId) {
-       cancelAnimationFrame(animationId)
-       animationId = undefined
-     }
-   });
+  wavesurfer.on('play', () => {
+   if (!animationId) {
+     draw();
+   }
+  });
 
-   wavesurfer.on('play', () => {
-     if (!animationId) {
-       draw();
-     }
-   });
+  
 
  </script>
 
