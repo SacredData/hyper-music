@@ -362,6 +362,10 @@
      var cover = "//sonicmultiplicities.audio/feed/SM009.png";
      var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM009.mp3";
 
+			function getRandom(min, max) {
+				return Math.random() * (max - min) + min;
+			}
+
      var dur = 0.0;
 
      var v = new Vibrant("https:" + cover);
@@ -377,7 +381,7 @@
              c= [c[0], c[0], c[1], c[1], c[2], c[2]];
          }
          c= '0x'+c.join('');
-         return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.8)';
+         return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+`,${getRandom(0.1, 0.2)})`;
        }
        throw new Error('Bad Hex');
      }
