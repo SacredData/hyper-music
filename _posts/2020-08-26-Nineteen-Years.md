@@ -36,4 +36,6 @@ Even those protesting against no-knock raids seem doomed to misunderstand the fu
 
 **It's almost as if our tragic foreign policy leads to similar kinds of destruction here at home.**
 
-This piece of music is intended to awaken the anti-war spirit of the American citizenry. I trust that my fellow Americans are not cruel, awful, or vicious people - they are just carelessly, tragically, and ruthlessly uninformed. But there is no excuse to remain that way, after listening to this series of vignettes.
+This piece of music is intended to awaken the anti-war spirit of the American citizenry. I trust that my fellow Americans are not cruel, awful, or vicious people - they are just carelessly, tragically, and ruthlessly uninformed. I hope, for our own sake, that we do not remain this way for much longer. How long can a country be occupied?
+
+How long can an occupier occupy?
