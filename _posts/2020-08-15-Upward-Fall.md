@@ -1,8 +1,8 @@
 ---
 layout: playlist
 title: Upward Fall
-author: Garrett Semmelink / Tyler Dinner
-instrument: violin / guitar
+author: Garrett Semmelink / Tyler Dinner / Max Pena
+instrument: violin / guitar / guitar
 post_list: "date"
 toc: true
 home_btn: true
