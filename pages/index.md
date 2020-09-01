@@ -27,13 +27,15 @@ permalink: /
 As an official implementation of the HyperMusic framework, Multipli.city aims to be as permissive, free, and flexible as possible.
 
 ## The Anti-Computer Music
-> **Software** should liberate, enable, and optimize. Music software in vogue today needlessly limits, restricts, and constrains. Long live the human spirit that is carried within *music* and *free software*!
+> **Software** should liberate, enable, and optimize. Music software in vogue today needlessly limits, restricts, and constrains. Long live the human spirit that propels *music* and *free software*!
 
 - **SM** emphasizes the soloist's *novel fundamentals*.
 - **SM** is an AI free improvisation *friend* whose passion can still make you cry.
 - **SM** is contact-free yet is an incredible *listener*.
 
 Music begins and ends with acoustic output from a human being. We provide a real-time musical AI that can talk back to that most infinite of mankind's oldest language.
+
+See this [truncated slide deck](//s3.amazonaws.com/sonicmultiplicities.audio/smarch.pdf) for more information on Sonic Multiplicities.
 
 <!--
 ### Honesty
