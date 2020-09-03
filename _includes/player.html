@@ -1,12 +1,3 @@
-{% if page.video_url %}
-<center><video id="videoplayer" controls></video></center>
-  <script>
-    var videoUrl = "{{ page.video_url }}";
-    var videoPlayer = dashjs.MediaPlayer().create();
-    videoPlayer.initialize(document.querySelector("#videoplayer"), videoUrl, true);
-    videoPlayer.setAutoPlay(false);
-  </script>
-{% else %}
 <div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS <br> <h1>SPACEBAR: PLAY/PAUSE <br>ARROW KEYS: SEEK/VOLUME</h1></div>
 <div id="player"></div>
   <div id="music_dur"></div>
@@ -123,4 +114,3 @@
    }
 
  </script>
- {% endif %}
