@@ -8,7 +8,13 @@
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
           <center>
+            {% if page.video_url %}
+            <br>
+            {% include video.html %}
+            <br>
+            {% else %}
             <img src="{{site.url}}{{site.baseurl}}{{site.assets_path}}{{page.image}}" style="width:500px;">
+            {% endif %}
           </center>
           {{content}}
           {% include list_of_articles.html %}
