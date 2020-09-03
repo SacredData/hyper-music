@@ -43,6 +43,15 @@
   
 
   
+  <style>
+  video {
+   width: 640px;
+   height: 360px;
+  }
+  </style>
+  <!--<script src="//cdn.dashjs.org/latest/dash.all.min.js"></script>-->
+    <script src="//cdn.jsdelivr.net/npm/shaka-player@3.0.4/dist/shaka-player.compiled.min.js"></script>
+  
 
   <!-- mathjax 2.7.5 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
@@ -193,7 +202,70 @@
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
           <center>
-            <img src="https://multipli.city/assets/img/tyler.jpg" style="width:500px;">
+            
+            <br>
+            <video id="video" 
+  poster=""
+  controls autoplay></video>
+  <script>
+  const manifestUri =
+        "//s3.amazonaws.com/sonicmultiplicities.audio/videos/POP2020/POP9/dash.mpd";
+  const fallbackUri =
+        "//s3.amazonaws.com/sonicmultiplicities.audio/videos/POP2020/POP9/hls.m3u8";
+
+  function initApp() {
+    // Install built-in polyfills to patch browser incompatibilities.
+    shaka.polyfill.installAll();
+
+    // Check to see if the browser supports the basic APIs Shaka needs.
+    if (shaka.Player.isBrowserSupported()) {
+      // Everything looks good!
+      initPlayer();
+    } else {
+      // This browser does not have the minimum set of APIs we need.
+      console.error('Browser not supported!');
+    }
+  }
+
+  async function initPlayer() {
+    // Create a Player instance.
+    const video = document.getElementById('video');
+    const player = new shaka.Player(video);
+
+    // Attach player to the window to make it easy to access in the JS console.
+    window.player = player;
+
+    // Listen for error events.
+    player.addEventListener('error', onErrorEvent);
+
+    // Try to load a manifest.
+    // This is an asynchronous process.
+    try {
+      await player.load(manifestUri);
+      // This runs if the asynchronous load is successful.
+      console.log('The video has now been loaded!');
+    } catch (e) {
+      await player.load(fallbackUri);
+      // onError is executed if the asynchronous load fails.
+      onError(e);
+    }
+  }
+
+  function onErrorEvent(event) {
+    // Extract the shaka.util.Error object from the event.
+    onError(event.detail);
+  }
+
+  function onError(error) {
+    // Log the error.
+    console.error('Error code', error.code, 'object', error);
+  }
+
+  document.addEventListener('DOMContentLoaded', initApp);
+</script>
+
+            <br>
+            
           </center>
           <h1 id="tyler-dinner">Tyler Dinner</h1>
 
