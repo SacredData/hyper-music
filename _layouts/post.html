@@ -1,8 +1,11 @@
 ---
 layout: default
 ---
-{% if page.cover %}
 <h1>
+{% if page.video_url %}
+{% include video.html %}
+</h1>
+{% elsif page.cover %}
   <img src="{{ page.cover }}" alt="Cover art for {{ page.title }}" height="540" style="vertical-align:bottom"><br><br>
   <div id="musicTitle">{{ page.title }}</div>
 </h1>
@@ -17,8 +20,10 @@ layout: default
 {% endif %}
 {% include post_info.html %}
 {% include downloads.html %}
+{% unless page.video_url %}
 {% include player.html %}
-{% include streams.html %}
 {% include visualizer.html %}
+{% endunless %}
+{% include streams.html %}
 {% include cc.html %}
 {{ content }}
