@@ -12,19 +12,16 @@ permalink: /
 ---
 
 # **SONIC MULTIPLICITIES**
-
-> *An effort by composer & audio engineer [Andrew Grathwohl](//multipli.city/Andrew-Grathwohl/) to construct a unified, broadened musical consciousness out of today's technologies of war, aiming to propel elite instrumentalists' capabilities towards the outer-most reaches of musical aptitude.*
-
-
-# Sound is our study. Data is our religion
-
-> What results from this ambitious musical endeavor is among the world's longest-running datasets comprised of advanced, complex, and challenging extended techniques, free improvisation strategem, and instrumental varieties.
+# Pursuing Musical Transcendentalism Via DSP
+> An effort by composer & audio engineer [Andrew Grathwohl](//multipli.city/Andrew-Grathwohl/) to construct a unified, broadened musical consciousness out of today's technologies of war, aiming to propel elite instrumentalists' capabilities towards the outer-most reaches of musical aptitude. What results from this ambitious musical endeavor is among the world's longest-running datasets comprised of advanced, complex, and challenging extended techniques, free improvisation strategem, and instrumental varieties.
 
 ## HyperMusic
 
-**All music hosted on Multipli.city is available to download, stream, and share for free!** More information can be found in our [licensing](/License/) documentation.
+**All music hosted on Multipli.city is available to download, stream, and share for free!**
 
-As an official implementation of the HyperMusic framework, Multipli.city aims to be as permissive, free, and flexible as possible.
+[**Subscribe to our music releases podcast feed to get new albums as they are published.**](//podcasts.apple.com/us/podcast/presents-sonic-multiplicities/id1484097261)
+
+As an official implementation of the HyperMusic framework, Multipli.city aims to be as permissive, free, and flexible as possible. Learn more about our unique licensing [here](/License/).
 
 ## The Anti-Computer Music
 > **Software** should liberate, enable, and optimize. Music software in vogue today needlessly limits, restricts, and constrains. Long live the human spirit that propels *music* and *free software*!
