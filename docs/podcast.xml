@@ -23,6 +23,27 @@
           
             
         <item>
+          <title>SC001: CMYK</title>
+          <guid isPermaLink="false">SC001</guid>
+          <itunes:title>SC001: CMYK</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2020</itunes:season>
+            <itunes:episode>8</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/CMYK/"><h1>CMYK</h1></a><br><br>A work of Sonic Multiplicities performed by Tyler Dinner on guitar.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SC001.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SC001.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SC001.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/triangle.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SC001.mp3</link>
+            <pubDate>Fri, 04 Sep 2020 00:00:00 -0400</pubDate>
+            <itunes:duration>494</itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SC001.mp3' length='494'/>
+            <description><![CDATA[<a href="https://multipli.city/CMYK/"><h1>CMYK</h1></a><br><br>A work of Sonic Multiplicities performed by Tyler Dinner on guitar.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SC001.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SC001.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SC001.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
           <title>SM010: Nineteen Years</title>
           <guid isPermaLink="false">SM010</guid>
           <itunes:title>SM010: Nineteen Years</itunes:title>
@@ -86,7 +107,10 @@
             <itunes:explicit>false</itunes:explicit>
             <itunes:summary><![CDATA[<a href="https://multipli.city/POP/"><h1>People Over Platforms, 2020</h1></a><br><br>A work of Sonic Multiplicities performed by Tyler Dinner on guitar.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM009.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM009.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM009.mp3">MP3</a></p><br><br><p><h2 id="artistic-statement">Artistic Statement</h2>
 
-<p>People Over Platforms, 2020 features the sweet licks and profound ingenuity of guitarist, Tyler Dinner. He takes us on a wild ride through his mind - a place where the 1970s never ended. It’s surprising, it’s magical, it’s profoundly original. Say hello to the other Multiplicity. You cannot escape it.</p>
+<p>People Over Platforms, 2020 features the sweet licks and profound ingenuity of
+guitarist, Tyler Dinner. He takes us on a wild ride through his mind - a place
+where the 1970s never ended. It’s surprising, it’s magical, it’s profoundly
+original. Say hello to the other Multiplicity. You cannot escape it.</p>
 </p>]]></itunes:summary>
             <itunes:image href="https://multipli.city//sonicmultiplicities.audio/feed/SM009.png"/>
             <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM009.mp3</link>
@@ -95,7 +119,10 @@
             <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SM009.mp3' length='2759'/>
             <description><![CDATA[<a href="https://multipli.city/POP/"><h1>People Over Platforms, 2020</h1></a><br><br>A work of Sonic Multiplicities performed by Tyler Dinner on guitar.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SM009.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SM009.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SM009.mp3">MP3</a></p><br><br><p><h2 id="artistic-statement">Artistic Statement</h2>
 
-<p>People Over Platforms, 2020 features the sweet licks and profound ingenuity of guitarist, Tyler Dinner. He takes us on a wild ride through his mind - a place where the 1970s never ended. It’s surprising, it’s magical, it’s profoundly original. Say hello to the other Multiplicity. You cannot escape it.</p>
+<p>People Over Platforms, 2020 features the sweet licks and profound ingenuity of
+guitarist, Tyler Dinner. He takes us on a wild ride through his mind - a place
+where the 1970s never ended. It’s surprising, it’s magical, it’s profoundly
+original. Say hello to the other Multiplicity. You cannot escape it.</p>
 </p>]]></description>
         </item>
         
