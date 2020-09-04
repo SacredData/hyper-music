@@ -41,7 +41,7 @@
   <meta property="og:title" content="Head in the Clouds" />
 
   
-    <meta property="og:image" content="https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SC004.png" />
+    <meta property="og:image" content="https://sonicmultiplicities.audio/feed/SM007.png" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@sociosonics" />
     <meta name="twitter:creator" content="@andrewunmuted" />
@@ -180,14 +180,26 @@
                             
                         </i>
                     </a>
-                    <!-- popup table of content -->
-                    <a class="header_btn popup_btn" onclick="toggle_toc()">
-                        <i class="fa fa-bars">
+                    <!-- copy link of page to clipboard -->
+                    
+                    <script>
+                      function copyText() {
+                        var data = [new ClipboardItem({ "text/plain": new Blob(["https://multipli.city/Head-In-the-Clouds/"], { type: "text/plain" }) })];
+												navigator.clipboard.write(data).then(function() {
+													console.log("Copied to clipboard successfully!");
+												}, function() {
+													console.error("Unable to write to clipboard. :-(");
+												})
+                  }
+                    </script>
+                    <a class="header_btn" onclick="copyText()" id="sharelink">
+                      <i class="fa fa-share-square">
                             
-                                <p class="btn_text">Content</p>
+                                <p class="btn_text">Share</p>
                             
                         </i>
                     </a>
+                    
                 
             </span>
         </ul>
@@ -253,7 +265,7 @@
           <h1>
 
 <video id="video" 
-  poster="//s3.amazonaws.com/sonicmultiplicities.audio/feed/SC004.png"
+  poster="//sonicmultiplicities.audio/feed/SM007.png"
   controls autoplay></video>
   <script>
   const manifestUri =
