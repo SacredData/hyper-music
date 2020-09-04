@@ -23,6 +23,27 @@
           
             
         <item>
+          <title>SC003: Perspectum</title>
+          <guid isPermaLink="false">SC003</guid>
+          <itunes:title>SC003: Perspectum</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2020</itunes:season>
+            <itunes:episode>9</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Perspectum/"><h1>Perspectum</h1></a><br><br>A work of Sonic Multiplicities performed by Tyler Dinner on guitar.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SC003.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SC003.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SC003.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/triangle.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SC003.mp3</link>
+            <pubDate>Fri, 04 Sep 2020 00:00:00 -0400</pubDate>
+            <itunes:duration>345</itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SC003.mp3' length='345'/>
+            <description><![CDATA[<a href="https://multipli.city/Perspectum/"><h1>Perspectum</h1></a><br><br>A work of Sonic Multiplicities performed by Tyler Dinner on guitar.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SC003.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SC003.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SC003.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
           <title>SC001: CMYK</title>
           <guid isPermaLink="false">SC001</guid>
           <itunes:title>SC001: CMYK</itunes:title>
@@ -39,6 +60,27 @@
             <itunes:duration>494</itunes:duration>
             <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SC001.mp3' length='494'/>
             <description><![CDATA[<a href="https://multipli.city/CMYK/"><h1>CMYK</h1></a><br><br>A work of Sonic Multiplicities performed by Tyler Dinner on guitar.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SC001.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SC001.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SC001.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SC002: Artifices</title>
+          <guid isPermaLink="false">SC002</guid>
+          <itunes:title>SC002: Artifices</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2020</itunes:season>
+            <itunes:episode>10</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Artifices/"><h1>Artifices</h1></a><br><br>A work of Sonic Multiplicities performed by Tyler Dinner on guitar.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SC002.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SC002.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SC002.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://sonicmultiplicities.audio/triangle.jpg"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SC002.mp3</link>
+            <pubDate>Fri, 04 Sep 2020 00:00:00 -0400</pubDate>
+            <itunes:duration>508</itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SC002.mp3' length='508'/>
+            <description><![CDATA[<a href="https://multipli.city/Artifices/"><h1>Artifices</h1></a><br><br>A work of Sonic Multiplicities performed by Tyler Dinner on guitar.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SC002.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SC002.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SC002.mp3">MP3</a></p><br><br><p>
 </p>]]></description>
         </item>
         

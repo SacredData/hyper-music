@@ -6,13 +6,13 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <!-- site description -->
   
-  <meta content="This is excerpt." name="description" />
+  <meta content="SC003" name="description" />
   <!-- referer for 3rd-part images-->
   <meta content="no-referrer" name="referrer" />
   <!-- title -->
   <title>
     
-    Text Styles and Markdown Quick Reference
+    Perspectum
     
   </title>
   <!-- icon -->
@@ -28,13 +28,17 @@
   <link rel="stylesheet" href="https://multipli.city/assets/css/rouge-bg.css" />
 
   
+    <!-- Wavesurfer.js -->
+    <script src="https://multipli.city/assets/js/wavesurfer.js"></script>
+    <script src="https://multipli.city/assets/js/wavesurfer.regions.min.js"></script>
+  
 
   
   
   <!-- OG metadata -->
   <meta property="og:site_name" content="multipli.city" />
-  <meta property="og:url" content="https://multipli.city/old/2017-1-1-sample3/" />
-  <meta property="og:title" content="Text Styles and Markdown Quick Reference" />
+  <meta property="og:url" content="https://multipli.city/Perspectum/" />
+  <meta property="og:title" content="Perspectum" />
 
   
 
@@ -42,6 +46,15 @@
     <meta content="article" property="og:type">
   
 
+  
+  <style>
+  video {
+   width: 640px;
+   height: 360px;
+  }
+  </style>
+  <!--<script src="//cdn.dashjs.org/latest/dash.all.min.js"></script>-->
+    <script src="//cdn.jsdelivr.net/npm/shaka-player@3.0.4/dist/shaka-player.compiled.min.js"></script>
   
 
   <!-- mathjax 2.7.5 -->
@@ -139,15 +152,6 @@
                 
                 <!-- access token -->
                 
-                    <a class="header_btn" id="acs_btn" onclick="apply_token()">
-                        <i class="fa fa-key">
-                            
-                                <p class="btn_text">Token</p>
-                            
-                        </i>
-                    </a>
-                    <textarea class="access_token" cols="8" id="acs_tkn" rows="1"></textarea>
-                
             </li>
             <!-- right header -->
             <span
@@ -163,7 +167,7 @@
                         </i>
                     </a>
                     <!-- scroll down -->
-                    <a class="header_btn" onclick='window.location.href=""'>
+                    <a class="header_btn" onclick='window.location.href="/CMYK/"'>
                         <i class="fa fa-forward">
                             
                                 <p class="btn_text">Next</p>
@@ -237,48 +241,72 @@
 
 <!-- encrypt and decrypt -->
 
-    <script src="https://multipli.city/assets/js/sjcl.js" async></script>
-    <script>
-  function decrypt_all(pwd, class_name) {
-    var elem_clct = document.getElementsByClassName(class_name);
-    if (elem_clct.length == 0) {
-      console.log("No texts to decrypt!");
-      return false;
-    }
-    for (acc = 0; acc < elem_clct.length; acc++) {
-      var encrypted = elem_clct[acc].id;
-      var ct =
-        '{"iv":"' +
-        encrypted.substring(0, 22) +
-        '==",salt:"","ct":"' +
-        encrypted.substring(22) +
-        '"}';
-      try {
-        var txt = sjcl.json.decrypt(pwd, ct);
-      } catch (e) {
-        alert("Invalid Access Token!");
-        return;
-      }
-      elem_clct[acc].innerHTML = txt;
-    }
-    return true;
-  }
-  function apply_token() {
-    var tkn = document.getElementById("acs_tkn");
-    if (decrypt_all(tkn.value, "encrypted")) {
-      tkn.style.display = "none";
-      document.getElementById("acs_btn").style.display = "none";
-    }
-  }
-</script>
-
 
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
           <h1>
 
-<h1 id="musicTitle">
-  Text Styles and Markdown Quick Reference
+<video id="video" 
+  poster="https://sonicmultiplicities.audio/triangle.jpg"
+  controls autoplay></video>
+  <script>
+  const manifestUri =
+        "//s3.amazonaws.com/sonicmultiplicities.audio/videos/PERSPECTUM/dash.mpd";
+  const fallbackUri =
+        "//s3.amazonaws.com/sonicmultiplicities.audio/videos/PERSPECTUM/hls.m3u8";
+
+  function initApp() {
+    // Install built-in polyfills to patch browser incompatibilities.
+    shaka.polyfill.installAll();
+
+    // Check to see if the browser supports the basic APIs Shaka needs.
+    if (shaka.Player.isBrowserSupported()) {
+      // Everything looks good!
+      initPlayer();
+    } else {
+      // This browser does not have the minimum set of APIs we need.
+      console.error('Browser not supported!');
+    }
+  }
+
+  async function initPlayer() {
+    // Create a Player instance.
+    const video = document.getElementById('video');
+    const player = new shaka.Player(video);
+
+    // Attach player to the window to make it easy to access in the JS console.
+    window.player = player;
+
+    // Listen for error events.
+    player.addEventListener('error', onErrorEvent);
+
+    // Try to load a manifest.
+    // This is an asynchronous process.
+    try {
+      await player.load(manifestUri);
+      // This runs if the asynchronous load is successful.
+      console.log('The video has now been loaded!');
+    } catch (e) {
+      await player.load(fallbackUri);
+      // onError is executed if the asynchronous load fails.
+      onError(e);
+    }
+  }
+
+  function onErrorEvent(event) {
+    // Extract the shaka.util.Error object from the event.
+    onError(event.detail);
+  }
+
+  function onError(error) {
+    // Log the error.
+    console.error('Error code', error.code, 'object', error);
+  }
+
+  document.addEventListener('DOMContentLoaded', initApp);
+</script>
+
+<div id="musicTitle">Perspectum</div>
 </h1>
 
 <script type="application/ld+json">
@@ -332,28 +360,28 @@
   
   <span>
     <i class="fa fa-user-secret"></i>
-    <a href='https://multipli.city/DeerRIDER'>DeerRIDER</a>, 
+    <a href='https://multipli.city/Tyler-Dinner'>Tyler Dinner</a>, guitar
   </span>
   
   <!-- date -->
   
   <span>
     <i class="fa fa-calendar"></i>
-    May 25, 2019
+    Sep 04, 2020
   </span>
   
   <!-- category -->
   
   <span>
     <i class="fa fa-archive"></i>
-    Sample
+    Live Score
   </span>
   
 </div>
 <!-- abstract -->
 <div class="abstract">
   
-  <p>This is abstract. Abstract is blank by default.</p>
+  <p></p>
   
 </div>
 
@@ -368,7 +396,7 @@
   <br><br>
 </div>
 <script>
-  var sm = "".split('/')[3].replace('.mp3','');
+  var sm = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SC003.mp3".split('/')[3].replace('.mp3','');
   var mp3Url = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/${sm}.mp3`;
   var flacUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.flac`;
   var opusUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.opus`;
@@ -380,285 +408,6 @@
 </script>
 
 
-<div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS <br> <h1>SPACEBAR: PLAY/PAUSE <br>ARROW KEYS: SEEK/VOLUME</h1></div>
-<div id="player"></div>
-  <div id="music_dur"></div>
-<div id="player_controls" style="margin:10px;">
-  <button id="audioBtnPlay" onclick="wavesurfer.play()">
-    <i class="fa fa-play" aria-hidden="true"></i>
-  </button>
-  <button id="audioBtnPause" onclick="wavesurfer.pause()">
-    <i class="fa fa-pause" aria-hidden="true"></i>
-  </button>
-  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
-  
-  <input id="volume" type="range" min="0" max="1" value="1" step="0.1" style="float:right">
-</div>
- <script>
-   var url = ""
-   var fadeTimerBase = Number("");
-   
-   var dur = 0.0;
-   var fadeDur = 60;
-
-   var wavesurfer = WaveSurfer.create({
-     container: "#player",
-     cursorWidth: 2,
-     responsive: true
-   });
-
-	 wavesurfer.setVolume(0.4);
-	 document.querySelector('#volume').value = wavesurfer.backend.getVolume();
-
-   var volumeInput = document.querySelector('#volume');
-   var onChangeVolume = function (e) {
-     wavesurfer.setVolume(e.target.value);
-     console.log(e.target.value);
-   };
-	 volumeInput.addEventListener('input', onChangeVolume);
-	 volumeInput.addEventListener('change', onChangeVolume);
-
-   wavesurfer.on('ready', function () {
-     document.getElementById("player_msg").innerHTML = "";
-     wavesurfer.play();
-     dur = Number(wavesurfer.getDuration().toFixed(2));
-     document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
-     mult3 = (dur / year) || 1;
-     /* Set the center content to fade out */
-		var style = document.createElement('style');
-		style.innerHTML = `
-		 #ctner {
-			 opacity: 0;
-       transition: opacity ${Math.round(dur / 6) > fadeDur ? fadeDur : Math.round(dur / 6)}s linear;   
-		 }
-     #ctner:hover {
-        opacity: 1;
-        transition: opacity 5s;
-     }
-		`;
-     document.head.appendChild(style);
-     // draw();
-   });
-
-   wavesurfer.load(`//${url}`);
-
-   wavesurfer.on('seek', () => {
-     alpha = 0.6;
-   })
-
-   wavesurfer.on('pause', () => {
-     if (animationId) {
-       cancelAnimationFrame(animationId)
-       animationId = undefined
-     }
-   })
-
-   wavesurfer.on('play', () => {
-     if (!animationId) {
-       draw();
-     }
-   })
-   
-   wavesurfer.on('finish', () => {
-     if (animationId) {
-       cancelAnimationFrame(animationId);
-       animationId = undefined;
-     }
-     
-   });
-
-   function toggleBin() {
-     var stUrl = "";
-     var binUrl = "";
-     url = url == stUrl ? binUrl : stUrl
-     wavesurfer.load(`//${url}`);
-   }
-
-   // Media controls
-   document.body.onkeyup = function(e){
-     if(e.keyCode == 32){ // spacebar
-       wavesurfer.playPause()
-     } else if (e.keyCode == 37) { // left arrow key
-       wavesurfer.skip(-10);
-     } else if (e.keyCode == 39) { // right arrow key
-       wavesurfer.skip(10);
-     }/* else if (e.keyCode == 38) { // up arrow key
-       wavesurfer.setVolume(wavesurfer.getVolume() + 0.1)
-	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
-     } else if (e.keyCode == 40) { // down arrow key
-       wavesurfer.setVolume(wavesurfer.getVolume() - 0.1)
-	     document.querySelector('#volume').value = wavesurfer.backend.getVolume();
-     }*/
-   }
-
- </script>
-
-<script src="https://multipli.city/assets/js/vibrant.js"></script>
-<script>
-  function shuffle(a) {
-    for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-  }
-  // Converts hex colors from Vibrant into RGB format so that it can be used
-  // in real-time with our canvas animation function `draw()`
-  function hexToRgbA(hex){
-    var c;
-    if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
-      c= hex.substring(1).split('');
-      if(c.length== 3){
-        c= [c[0], c[0], c[1], c[1], c[2], c[2]];
-      }
-      c= '0x'+c.join('');
-      return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.8)';
-    }
-    throw new Error('Bad Hex');
-  }
-
-  var lineWidth = 2;
-  var drawColors = shuffle(colors);
-
-  var widthDelta = 0;
-  var alpha = 1.0;
-  var animationId = undefined;
-
-  var audioCtx = wavesurfer.backend.ac;
-  var analyser = audioCtx.createAnalyser();
-
-  var bufferLength = analyser.frequencyBinCount;
-  var dataArray = new Uint8Array(bufferLength);
-  analyser.getByteTimeDomainData(dataArray);
-
-  var canvas = document.getElementById("c");
-  var canvasCtx = canvas.getContext("2d");
-
-  analyser.fftSize = canvas.height > 2000 ? 2048 : 4096;
-
-  // Add event listener for `click` events.
-  canvas.addEventListener('click', (event) => {
-   var x2 = event.pageX,
-     y2 = event.pageY;
-   console.log(x2, y2);
-   if (animationId) {
-     cancelAnimationFrame(animationId)
-     animationId = undefined;
-   } else {
-     draw()
-   }
-  })
-  let [mo, da, ye]    = ( new Date()  ).toLocaleDateString().split("/");
-  let [ho, mi, se] = ( new Date()  ).toLocaleTimeString().slice(0,7).split(":");
-
-  var month = Number(mo);
-  var day = Number(da);
-  var year = Number(ye);
-  var hour = Number(ho);
-  var minute = Number(mi);
-  var second = Number(se);
-
-  var mult1 = day / month;
-  var mult2 = month / day;
-  var mult3 = 0;
-
-  // draw an oscilloscope of the current audio source
-
-  function draw() {
-   animationId = requestAnimationFrame(draw);
-   analyser.getByteTimeDomainData(dataArray);
-
-   canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
-   canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
-
-   canvasCtx.lineWidth = (10 + lineWidth) / hour / day;
-   canvasCtx.strokeStyle = drawColors[0];
-
-   canvasCtx.beginPath();
-   
-   var sliceWidth = canvas.width * 1.0 / bufferLength;
-   var x = 0;
-
-   for (var i = 0; i < bufferLength; i++) {
-     var v = dataArray[i] / 128.0;
-     var y = v * canvas.height / 2;
-
-     if (i === 0) {
-       canvasCtx.moveTo(x, y);
-
-       if (lineWidth > 50) {
-         drawColors = shuffle(drawColors);
-         alpha = 1 - (shuffle([0.1, 0.01, 0.5, 0.91])[1] * mult1);
-       }
-     } else {
-       canvasCtx.lineTo(x, y);
-
-       widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
-
-       if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
-         drawColors = shuffle(drawColors);
-         lineWidth += drawColors.length * mult2;
-       }
-       
-       if (lineWidth > 15) {
-         lineWidth += shuffle([-1, 1, 10])[0] * Math.abs(widthDelta) * (1 - alpha);
-         mult1 += 1;
-         mult3 -= 0.01;
-       } else {
-         lineWidth = mult3 * (2 + Math.abs(widthDelta));
-         alpha += shuffle([0.01, 0.1, 0.2, 0.5, 0.8, 1.0])[0];
-       }
-     }
-     x += sliceWidth;
-   }
-
-   if (lineWidth > 100.0) {
-     lineWidth = 1.0 * mult3;
-     alpha = shuffle([0.5, 0.005, 0.0008])[2];
-   }
-
-   if (alpha > 1) {
-     alpha = shuffle([0.1, 0.001, 0.0001])[0];
-   }
-
-   canvasCtx.lineWidth = Math.min(Math.abs(lineWidth), 100);
-   canvasCtx.lineTo(canvas.width, canvas.height / 2);
-   canvasCtx.stroke();
-  }
-
-  wavesurfer.backend.setFilter(analyser);
-
-  wavesurfer.on('region-in', r => {
-   console.log(r);
-   var trackNum = regions.findIndex(rr => rr.start == r.start);
-   document.getElementById("musicTitle").innerHTML = "Text Styles and Markdown Quick Reference" + `: 0${trackNum+1} - <b><i>${r.id}</i></b>`;
-  });
-
-  wavesurfer.on('finish', () => {
-   if (animationId) {
-     cancelAnimationFrame(animationId)
-     animationId = undefined
-   }
-  });
-
-  wavesurfer.on('pause', () => {
-   if (animationId) {
-     cancelAnimationFrame(animationId)
-     animationId = undefined
-   }
-  });
-
-  wavesurfer.on('play', () => {
-   if (!animationId) {
-     draw();
-   }
-  });
-
-  
-
- </script>
-
-
 
 
 
@@ -668,110 +417,7 @@
   </p>
 </div>
 
-<h2 id="style-test-below">Style Test Below</h2>
 
-<h3 id="text">Text</h3>
-
-<p>Wand fest wa gét. D’Welt weisen Fréijor ze ech. Da d’Land Faarwen nei, dé fir rëscht blëtzen.</p>
-
-<p>Encrypted text:<br /></p>
-<p class="encrypted">elKwQPCOLF4w86wRItKMqge8qDO6fU80wbdANG6AnS8kgT8qAqGFC5VkVexu+4RBhBMUWwdkzEVo8HAKUT</p>
-
-<p>normal, <strong>bold</strong>, <em>italic</em>, <del>strikethrough</del>, <code class="language-plaintext highlighter-rouge">keyword</code>, <a href="www.google.com">link</a></p>
-
-<blockquote>
-  <p>blockquote</p>
-
-  <p>Den wa Stad Schuebersonndeg, op all d’Pan hinnen. Ké net geet sech Mier, ass gutt Kaffi an.</p>
-</blockquote>
-
-<h3 id="code">Code</h3>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
-<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
-  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<h3 id="formula">Formula</h3>
-
-\[NADH+Q+5\;H_{matrix}^{+}\rightarrow NAD^{+}+QH_{2}+4\;H_{intermembrane}^{+}\!\]
-
-<h3 id="list">List</h3>
-<ol>
-  <li>ordered list item 1</li>
-  <li>ordered list item 2
-    <ol>
-      <li>sublist
-        <ol>
-          <li>subsublist
-            <ul>
-              <li>unordered list</li>
-            </ul>
-          </li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-</ol>
-
-<ul>
-  <li>unordered sublist
-    <ul>
-      <li>subsublist
-        <ul>
-          <li>subsubsublist</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="horizontal-line">horizontal line</h3>
-
-<hr />
-
-<h3 id="table">Table</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">surprise</th>
-      <th style="text-align: left">surprise</th>
-      <th style="text-align: left">maza faka</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">fark</td>
-      <td style="text-align: left">Ya</td>
-      <td style="text-align: left">maza faka</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">surprise</td>
-      <td style="text-align: left">babe</td>
-      <td style="text-align: left">surprise</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">surprise</td>
-      <td style="text-align: left">maza faka</td>
-      <td style="text-align: left">surprise</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">surprise</td>
-      <td style="text-align: left">maza faka</td>
-      <td style="text-align: left">surprise surprise surprise maza faka maza faka maza faka kakakakak</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="image">image</h3>
-<p><img src="https://multipli.city/assets/img/img-sample.jpg" alt="img-smpl" /></p>
-
-<h3 id="heading">heading</h3>
-<h4 id="this-is-heading-4">This is heading 4</h4>
-<h5 id="this-is-heading-5">This is heading 5</h5>
-<h6 id="this-is-heading-6">This is heading 6</h6>
 
 
           
