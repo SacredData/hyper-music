@@ -17,7 +17,7 @@ duration: 345
 season: 2020
 episode: 11
 explicit: false
-cover: //s3.amazonaws.com/sonicmultiplicities.audio/feed/SC004.png
+cover: //sonicmultiplicities.audio/feed/SM007.png
 bandcamp: //sonicmultiplicities.bandcamp.com/track/finale-head-in-the-clouds
 soundcloud: //soundcloud.com/sonicmultiplicities/finale-head-in-the-clouds?in=sonicmultiplicities/sets/upward-fall
 stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SC004.mp3
