@@ -83,14 +83,26 @@
                             {% endif %}
                         </i>
                     </a>
-                    <!-- popup table of content -->
-                    <a class="header_btn popup_btn" onclick="toggle_toc()">
-                        <i class="fa fa-bars">
+                    <!-- copy link of page to clipboard -->
+                    {% if page.url %}
+                    <script>
+                      function copyText() {
+                        var data = [new ClipboardItem({ "text/plain": new Blob(["{{ site.url }}{{ site.baseurl }}{{ page.url }}"], { type: "text/plain" }) })];
+												navigator.clipboard.write(data).then(function() {
+													console.log("Copied to clipboard successfully!");
+												}, function() {
+													console.error("Unable to write to clipboard. :-(");
+												})
+                  }
+                    </script>
+                    <a class="header_btn" onclick="copyText()" id="sharelink">
+                      <i class="fa fa-share-square">
                             {% if page.btn_text != false %}
-                                <p class="btn_text">Content</p>
+                                <p class="btn_text">Share</p>
                             {% endif %}
                         </i>
                     </a>
+                    {% endif %}
                 {% else site.title %}
                     <a class="title">{{ site.title }}</a>
                     {% if site.owner != ""%}
