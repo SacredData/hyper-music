@@ -44,6 +44,27 @@
         
             
         <item>
+          <title>SC004: Head in the Clouds</title>
+          <guid isPermaLink="false">SC004</guid>
+          <itunes:title>SC004: Head in the Clouds</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2020</itunes:season>
+            <itunes:episode>11</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Head-In-the-Clouds/"><h1>Head in the Clouds</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SC004.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SC004.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SC004.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            <itunes:image href="https://multipli.city//s3.amazonaws.com/sonicmultiplicities.audio/feed/SC004.png"/>
+            <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SC004.mp3</link>
+            <pubDate>Fri, 04 Sep 2020 00:00:00 -0400</pubDate>
+            <itunes:duration>345</itunes:duration>
+            <enclosure url='https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SC004.mp3' length='345'/>
+            <description><![CDATA[<a href="https://multipli.city/Head-In-the-Clouds/"><h1>Head in the Clouds</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SC004.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SC004.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SC004.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
           <title>SC001: CMYK</title>
           <guid isPermaLink="false">SC001</guid>
           <itunes:title>SC001: CMYK</itunes:title>
