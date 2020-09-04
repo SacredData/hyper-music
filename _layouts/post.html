@@ -4,6 +4,7 @@ layout: default
 <h1>
 {% if page.video_url %}
 {% include video.html %}
+<div id="musicTitle">{{ page.title }}</div>
 </h1>
 {% elsif page.cover %}
   <img src="{{ page.cover }}" alt="Cover art for {{ page.title }}" height="540" style="vertical-align:bottom"><br><br>

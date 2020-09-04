@@ -1,4 +1,4 @@
-{% if page.apple_music or page.bandcamp or page.soundcloud or page.spotify %}
+{% if page.apple_music or page.bandcamp or page.soundcloud or page.spotify or page.youtube %}
 <div id="streams"><br><br>
   <b>Stream:</b>
   {% if page.apple_music %}
@@ -12,6 +12,9 @@
   {% endif %}
   {% if page.spotify %}
   <a href="{{ page.spotify }}" id="spotify"><i class="fa fa-spotify"></i></a><br><br>
+  {% endif %}
+  {% if page.youtube %}
+  <a href="{{ page.youtube }}" id="youtube"><i class="fa fa-youtube-play"></i></a><br><br>
   {% endif %}
 </div>
 {% endif %}

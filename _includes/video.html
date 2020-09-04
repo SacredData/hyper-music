@@ -1,5 +1,5 @@
 <video id="video" 
-  poster="{{ page.cover }}"
+  poster="{{ page.cover | default: site.podcast.logo }}"
   controls autoplay></video>
   <script>
   const manifestUri =

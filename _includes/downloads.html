@@ -2,7 +2,17 @@
   <b>Download:</b>
   <a href="" id="flac_download">FLAC</a>
   <a href="" id="opus_download">OPUS</a>
-  <a href="" id="mp3_download">MP3</a><br><br>
+  <a href="" id="mp3_download">MP3</a>
+  {% if page.video_mp4 %}
+  <a href="{{ page.video_mp4 }}">MP4 (H.264)</a>
+  {% endif %}
+  {% if page.video_mkv %}
+  <a href="{{ page.video_mkv }}">MKV (HEVC)</a>
+  {% endif %}
+  {% if page.video_webm %}
+  <a href="{{ page.video_webm }}">WEBM (VP9)</a>
+  {% endif %}
+  <br><br>
 </div>
 <script>
   var sm = "{{ page.stream_url }}".split('/')[3].replace('.mp3','');

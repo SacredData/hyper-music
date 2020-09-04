@@ -352,7 +352,11 @@
   <b>Download:</b>
   <a href="" id="flac_download">FLAC</a>
   <a href="" id="opus_download">OPUS</a>
-  <a href="" id="mp3_download">MP3</a><br><br>
+  <a href="" id="mp3_download">MP3</a>
+  
+  
+  
+  <br><br>
 </div>
 <script>
   var sm = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_013.mp3".split('/')[3].replace('.mp3','');
@@ -391,6 +395,7 @@
    var wavesurfer = WaveSurfer.create({
      container: "#player",
      cursorWidth: 2,
+     partialRender: true,
      responsive: true
    });
 
@@ -679,6 +684,7 @@
   
   
   <a href="//open.spotify.com/album/3FqBju9SNY8OukvzlY50pk" id="spotify"><i class="fa fa-spotify"></i></a><br><br>
+  
   
 </div>
 
