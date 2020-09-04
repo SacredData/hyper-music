@@ -5,7 +5,18 @@
   const manifestUri =
         "{{ page.video_url }}";
   const fallbackUri =
-        "{{ page.video_fallback }}";
+        "{{ page.video_fallback | default: "" }}";
+  const uris = { proxies: [], manifestUri, fallbackUri };
+
+  {% if page.video_mp4 %}
+  uris.proxies.push("{{ page.video_mp4 }}");
+  {% endif %}
+  {% if page.video_mkv %}
+  uris.proxies.push("{{ page.video_mkv }}");
+  {% endif %}
+  {% if page.video_webm %}
+  uris.proxies.push("{{ page.video_webm }}");
+  {% endif %}
 
   function initApp() {
     // Install built-in polyfills to patch browser incompatibilities.
@@ -31,18 +42,25 @@
 
     // Listen for error events.
     player.addEventListener('error', onErrorEvent);
+    video.addEventListener('ended', onEnded);
 
     // Try to load a manifest.
     // This is an asynchronous process.
     try {
-      await player.load(manifestUri);
+      await player.load(uris.manifestUri);
       // This runs if the asynchronous load is successful.
       console.log('The video has now been loaded!');
     } catch (e) {
-      await player.load(fallbackUri);
+      await player.load(uris.fallbackUri);
       // onError is executed if the asynchronous load fails.
       onError(e);
     }
+  }
+
+  function onEnded() {
+    {% if page.previous.url %}
+    window.location.href = "{{ page.previous.url }}";
+    {% endif %}
   }
 
   function onErrorEvent(event) {
