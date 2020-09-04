@@ -272,6 +272,13 @@
         "//s3.amazonaws.com/sonicmultiplicities.audio/videos/CMYK/dash.mpd";
   const fallbackUri =
         "//s3.amazonaws.com/sonicmultiplicities.audio/videos/CMYK/hls.m3u8";
+  const uris = { proxies: [], manifestUri, fallbackUri };
+
+  
+  uris.proxies.push("//s3.amazonaws.com/sonicmultiplicities.audio/videos/cmyk-improved.mov");
+  
+  
+  
 
   function initApp() {
     // Install built-in polyfills to patch browser incompatibilities.
@@ -297,18 +304,25 @@
 
     // Listen for error events.
     player.addEventListener('error', onErrorEvent);
+    video.addEventListener('ended', onEnded);
 
     // Try to load a manifest.
     // This is an asynchronous process.
     try {
-      await player.load(manifestUri);
+      await player.load(uris.manifestUri);
       // This runs if the asynchronous load is successful.
       console.log('The video has now been loaded!');
     } catch (e) {
-      await player.load(fallbackUri);
+      await player.load(uris.fallbackUri);
       // onError is executed if the asynchronous load fails.
       onError(e);
     }
+  }
+
+  function onEnded() {
+    
+    window.location.href = "/Artifices/";
+    
   }
 
   function onErrorEvent(event) {
