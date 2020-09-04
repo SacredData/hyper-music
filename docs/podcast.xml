@@ -33,7 +33,7 @@
             <itunes:explicit>false</itunes:explicit>
             <itunes:summary><![CDATA[<a href="https://multipli.city/CMYK/"><h1>CMYK</h1></a><br><br>A work of Sonic Multiplicities performed by Tyler Dinner on guitar.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SC001.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SC001.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SC001.mp3">MP3</a></p><br><br><p>
 </p>]]></itunes:summary>
-            <itunes:image href="https://sonicmultiplicities.audio/triangle.jpg"/>
+            <itunes:image href="https://multipli.city//s3.amazonaws.com/sonicmultiplicities.audio/feed/SC001.png"/>
             <link>https://s3.amazonaws.com/sonicmultiplicities.audio/feed/SC001.mp3</link>
             <pubDate>Fri, 04 Sep 2020 00:00:00 -0400</pubDate>
             <itunes:duration>494</itunes:duration>
