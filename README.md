@@ -101,7 +101,7 @@ Formatting is as follows:
 
 Creates a new webpage & podcast item entry for a single track.
 
-Posts may be of type `Composition` or `Reflection`.
+Posts may be of type `Composition`, `Reflection`, or `Live Score`..
 
 #### layout: playlist
 
