@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% if page.video_url %}
+<h1>
+{% include video.html %}
+<div id="musicTitle">{{ page.title }}</div>
+</h1>
+{% endif %}
+{% include schema_musicGroup.html %}
+{% unless page.video_url %}
+{% include player.html %}
+{% include visualizer.html %}
+{% endunless %}
+{% include cc.html %}
+{{ content }}
