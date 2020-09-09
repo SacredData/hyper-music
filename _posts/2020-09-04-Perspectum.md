@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Perspectum
+title: Perspectrum
 author: Tyler Dinner
 instrument: guitar
 post_list: "date"
