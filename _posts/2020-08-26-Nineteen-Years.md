@@ -13,7 +13,7 @@ encrypted_text: false
 toc_level: 4
 category: Composition
 date: 2020-08-26
-sidecar: //s3.amazonaws.com/sonicmultiplicities.audio/feed/sidecar_SM010.json
+sidecar: //sonicmultiplicities.audio/feed/sidecar_SM010.json
 duration: 1806
 season: 2020
 episode: 7
@@ -21,7 +21,7 @@ explicit: false
 cover: //sonicmultiplicities.audio/feed/SM010.jpg
 bandcamp: //sonicmultiplicities.bandcamp.com/album/nineteen-years
 soundcloud: //soundcloud.com/sonicmultiplicities/sets/nineteen-years
-stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SM010.mp3
+stream_url: sonicmultiplicities.audio/feed/SM010.mp3
 excerpt: "SM010"
 abstract: "It has been Nineteen Years since the US invaded Afghanistan."
 ---

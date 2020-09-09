@@ -17,7 +17,7 @@ episode: 1
 bandcamp: //sonicmultiplicities.bandcamp.com/track/vasoconstriction
 soundcloud: //soundcloud.com/sonicmultiplicities/vasoconstriction-empire
 cover: //sonicmultiplicities.audio/feed/vasoconstriction.jpg
-stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_008.mp3
+stream_url: sonicmultiplicities.audio/feed/SMOLD_008.mp3
 duration: 1029
 excerpt: "SMOLD_008"
 abstract: "The premiere Sonic Multiplicities 1.0 performance."

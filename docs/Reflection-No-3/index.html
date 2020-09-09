@@ -269,16 +269,16 @@
   controls autoplay></video>
   <script>
   const manifestUri =
-        "//s3.amazonaws.com/sonicmultiplicities.audio/videos/RN3/dash.mpd";
+        "//sonicmultiplicities.audio/videos/RN3/dash.mpd";
   const fallbackUri =
-        "//s3.amazonaws.com/sonicmultiplicities.audio/videos/RN3/hls.m3u8";
+        "//sonicmultiplicities.audio/videos/RN3/hls.m3u8";
   const uris = { proxies: [], manifestUri, fallbackUri };
 
   
-  uris.proxies.push("//s3.amazonaws.com/sonicmultiplicities.audio/videos/RN3/proxyhq.mp4");
+  uris.proxies.push("//sonicmultiplicities.audio/videos/RN3/proxyhq.mp4");
   
   
-  uris.proxies.push("//s3.amazonaws.com/sonicmultiplicities.audio/videos/RN3/proxyhq.mkv");
+  uris.proxies.push("//sonicmultiplicities.audio/videos/RN3/proxyhq.mkv");
   
   
 
@@ -450,16 +450,16 @@
   <a href="" id="opus_download">OPUS</a>
   <a href="" id="mp3_download">MP3</a>
   
-  <a href="//s3.amazonaws.com/sonicmultiplicities.audio/videos/RN3/proxyhq.mp4">MP4 (H.264)</a>
+  <a href="//sonicmultiplicities.audio/videos/RN3/proxyhq.mp4">MP4 (H.264)</a>
   
   
-  <a href="//s3.amazonaws.com/sonicmultiplicities.audio/videos/RN3/proxyhq.mkv">MKV (HEVC)</a>
+  <a href="//sonicmultiplicities.audio/videos/RN3/proxyhq.mkv">MKV (HEVC)</a>
   
   
   <br><br>
 </div>
 <script>
-  var sm = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM003.mp3".split('/')[3].replace('.mp3','');
+  var sm = "sonicmultiplicities.audio/feed/SM003.mp3".split('/')[2].replace('.mp3','');
   var mp3Url = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/${sm}.mp3`;
   var flacUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.flac`;
   var opusUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.opus`;
