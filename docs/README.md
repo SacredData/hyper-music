@@ -67,6 +67,20 @@ abstract: # Optional front matter to put on the page as the release's "subtitle"
 ---
 ```
 
+##### Video metadata for `post`
+
+When a video is to be included with the post, the following additional metadata
+are available to provide:
+
+```
+---
+video_url: # URI to primary video source (ideally, a DASH manifest.)
+video_fallback: # URI to backup video source (ideally, an HLS manifest.)
+video_mp4: # URI to an MP4 proxy of the video
+video_mkv: # URI to an MKV master asset for the video
+video_webm: # URI to WebM proxy of the video
+```
+
 ##### Playlist sidecar JSON file
 
 Playlists require a sidecar file written in JSON describing the different regions
