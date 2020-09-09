@@ -19,11 +19,11 @@ date: 2019-11-02
 season: 2019
 episode: 3
 cover: //sonicmultiplicities.audio/feed/g1drsm.png
-stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SM003.mp3
-video_url: //s3.amazonaws.com/sonicmultiplicities.audio/videos/RN3/dash.mpd
-video_fallback: //s3.amazonaws.com/sonicmultiplicities.audio/videos/RN3/hls.m3u8
-video_mp4: //s3.amazonaws.com/sonicmultiplicities.audio/videos/RN3/proxyhq.mp4
-video_mkv: //s3.amazonaws.com/sonicmultiplicities.audio/videos/RN3/proxyhq.mkv
+stream_url: sonicmultiplicities.audio/feed/SM003.mp3
+video_url: //sonicmultiplicities.audio/videos/RN3/dash.mpd
+video_fallback: //sonicmultiplicities.audio/videos/RN3/hls.m3u8
+video_mp4: //sonicmultiplicities.audio/videos/RN3/proxyhq.mp4
+video_mkv: //sonicmultiplicities.audio/videos/RN3/proxyhq.mkv
 duration: 2192
 excerpt: "SM003"
 abstract: ""

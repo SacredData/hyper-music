@@ -373,7 +373,7 @@
   <br><br>
 </div>
 <script>
-  var sm = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM006.mp3".split('/')[3].replace('.mp3','');
+  var sm = "sonicmultiplicities.audio/feed/SM006.mp3".split('/')[2].replace('.mp3','');
   var mp3Url = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/${sm}.mp3`;
   var flacUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.flac`;
   var opusUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.opus`;
@@ -401,10 +401,10 @@
   <input id="volume" type="range" min="0" max="1" value="1" step="0.1" style="float:right">
 </div>
  <script>
-   fetch("//s3.amazonaws.com/sonicmultiplicities.audio/feed/sidecar_SM006.json").then(response => response.json()).then(scData => {
+   fetch("//sonicmultiplicities.audio/feed/sidecar_SM006.json").then(response => response.json()).then(scData => {
      var regions = scData.regions;
      var cover = "//sonicmultiplicities.audio/feed/bccw.jpg";
-     var url = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM006.mp3";
+     var url = "sonicmultiplicities.audio/feed/SM006.mp3";
 
 			function getRandom(min, max) {
 				return Math.random() * (max - min) + min;
@@ -695,7 +695,7 @@
      })
 
      function toggleBin() {
-       var stUrl = "s3.amazonaws.com/sonicmultiplicities.audio/feed/SM006.mp3";
+       var stUrl = "sonicmultiplicities.audio/feed/SM006.mp3";
        var binUrl = "";
        url = url == stUrl ? binUrl : stUrl
        wavesurfer.load(`//${url}`);

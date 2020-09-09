@@ -17,7 +17,7 @@ episode: 9
 bandcamp: //sonicmultiplicities.bandcamp.com/album/inertia
 soundcloud: //soundcloud.com/sonicmultiplicities/infatuated-garrett-semmelink-violin
 spotify: //open.spotify.com/album/4joIAX8CLKK08XR3NCu05k
-stream_url: s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_020.mp3
+stream_url: sonicmultiplicities.audio/feed/SMOLD_020.mp3
 duration: 1655
 excerpt: "SMOLD_020"
 abstract: ""
