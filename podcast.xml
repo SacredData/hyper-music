@@ -1,7 +1,6 @@
 ---
 layout: null
 ---
-
 <?xml version='1.0' encoding='utf-8'?>
 <rss version='2.0' xmlns:content='http://purl.org/rss/1.0/modules/content/' xmlns:itunes='http://www.itunes.com/dtds/podcast-1.0.dtd'>
     <channel>
@@ -36,7 +35,11 @@ layout: null
             <itunes:episodeType>{{ post.episodeType | default: "full" }}</itunes:episodeType>
             <itunes:explicit>{{ post.explicit | default: false }}</itunes:explicit>
             <itunes:summary><![CDATA[<a href="{{ site.url }}{{ post.url }}"><h1>{{ post.title }}</h1></a><br><br>A work of Sonic Multiplicities performed by {{ post.author }} on {{ post.instrument }}.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/{{ post.excerpt }}.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/{{ post.excerpt }}.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/{{ post.excerpt }}.mp3">MP3</a></p><br><br><p>{{ post.content }}</p>]]></itunes:summary>
-            <itunes:image href="{{ post.cover | default: site.podcast.logo | absolute_url }}"/>
+            {% if post.cover %}
+            <itunes:image href="{{ post.cover | prepend: 'https:'}}"/>
+            {% else %}
+            <itunes:image href="{{ site.podcast.logo }}"/>
+            {% endif %}
             <link>https://{{ post.stream_url }}</link>
             <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
             <itunes:duration>{{ post.duration | xml_escape }}</itunes:duration>

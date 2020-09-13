@@ -3,14 +3,6 @@
 
 Jekyll code for the Sonic Multiplicities deep-learning music project.
 
-Combines several amazing web technologies, such as HTML5 Web Audio API, RSS, the
-Wavesurfer.js javascript module, and more, to enable a better and freer sounedcloud
-than soundcloud!
-
-Enables a musician to fully take control over their musical catalog, on the cloud & on
-GitHub Pages. My personal implementation of this project spans dozens of hours of audio
-and hours of 4K raw video footage, plus a fancy domain name, and I only pay $7/month!
-
 ## Functionality
 
 This jekyll theme generates the following:
@@ -19,21 +11,6 @@ This jekyll theme generates the following:
 * New episode in the podcast (fully automated and compliant with Apple podcast directory)
 * Every page has OpenGraph & Twitter metadata in the header (in progress)
 * Schema.org data (implementation in-progress: MusicComposition, MusicGroup, MusicRecording, MusicRelease, etc.)
-
-### Planned Future Focuses
-
-#### Media Functionality
-
-* Live stream/broadcast events
-* Automated VOD generation & publishing
-* Automated multi-casting
-* Submission to other music services via APIs
-* Live chats
-
-#### eCommerce Features
-
-* Payment & licensing backends to facilitate independent licensing transactions
-* Merch & special item sales
 
 ### /_posts/
 
@@ -142,6 +119,18 @@ Do `jekyll build -d docs` to re-build your jekyll site into the `docs` directory
 
 This approach enables your page to be 100% compatible with GitHub Pages, making publishing updates free, reliable, and easy.
 
+## Design Philosophy
+
+COVID-19 has sort of stimulated my assumption that time is of the essence. I am
+seeking to simply get it out there immediately, with caution and with
+forethought.
+
+The site and whatever framework may be spawned from it are always going to target
+saving the host money, playing nice with open standards, and optimizing for
+visibility, indexing, and archiving on the open, modern web. Why pay some org
+to be your archivist when Google will gladly do it for you in order to preserve
+its own sick, dastardly aims? ;)
+
 ## The Future
 
 Right now, the project as-is works well for my purposes. It needs to be
@@ -156,6 +145,21 @@ For this project to serve the average musician effectively, we will need to make
 graphical interfaces and forms which allow users to easily fill in the front
 matter and metadata. We'll also need to further automate the generation of all 
 metadata from the music assets themselves.
+
+### Planned Future Focuses
+
+#### Media Functionality
+
+* Live stream/broadcast events
+* Automated VOD generation & publishing
+* Automated multi-casting
+* Submission to other music services via APIs
+* Live chats
+
+#### eCommerce Features
+
+* Payment & licensing backends to facilitate independent licensing transactions
+* Merch & special item sales
 
 ## Acknowledgements
 
