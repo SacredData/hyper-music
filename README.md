@@ -20,6 +20,18 @@ This jekyll theme generates the following:
 * Every page has OpenGraph & Twitter metadata in the header (in progress)
 * Schema.org data (implementation in-progress: MusicComposition, MusicGroup, MusicRecording, MusicRelease, etc.)
 
+### Design Philosophy
+
+COVID-19 has sort of stimulated my assumption that time is of the essence. I am
+seeking to simply get it out there immediately, with caution and with
+forethought.
+
+The site and whatever framework may be spawned from it are always going to target
+saving the host money, playing nice with open standards, and optimizing for
+visibility, indexing, and archiving on the open, modern web. Why pay some org
+to be your archivist when Google will gladly do it for you in order to preserve
+its own sick, dastardly aims? ;)
+
 ### Planned Future Focuses
 
 #### Media Functionality
