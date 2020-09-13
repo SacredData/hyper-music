@@ -32,21 +32,6 @@ visibility, indexing, and archiving on the open, modern web. Why pay some org
 to be your archivist when Google will gladly do it for you in order to preserve
 its own sick, dastardly aims? ;)
 
-### Planned Future Focuses
-
-#### Media Functionality
-
-* Live stream/broadcast events
-* Automated VOD generation & publishing
-* Automated multi-casting
-* Submission to other music services via APIs
-* Live chats
-
-#### eCommerce Features
-
-* Payment & licensing backends to facilitate independent licensing transactions
-* Merch & special item sales
-
 ### /_posts/
 
 This is where new music releases get added.
@@ -168,6 +153,21 @@ For this project to serve the average musician effectively, we will need to make
 graphical interfaces and forms which allow users to easily fill in the front
 matter and metadata. We'll also need to further automate the generation of all 
 metadata from the music assets themselves.
+
+### Planned Future Focuses
+
+#### Media Functionality
+
+* Live stream/broadcast events
+* Automated VOD generation & publishing
+* Automated multi-casting
+* Submission to other music services via APIs
+* Live chats
+
+#### eCommerce Features
+
+* Payment & licensing backends to facilitate independent licensing transactions
+* Merch & special item sales
 
 ## Acknowledgements
 
