@@ -531,7 +531,7 @@ notion often considered when the thirst for musical prowess builds. Tragically, 
             <itunes:season>2015</itunes:season>
             <itunes:episode>10</itunes:episode>
             <itunes:episodeType>full</itunes:episodeType>
-            <itunes:explicit>false</itunes:explicit>
+            <itunes:explicit>true</itunes:explicit>
             <itunes:summary><![CDATA[<a href="https://multipli.city/Animals/"><h1>Animals (Fucking)</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_023.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_023.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_023.mp3">MP3</a></p><br><br><p>
 </p>]]></itunes:summary>
             
@@ -588,6 +588,29 @@ notion often considered when the thirst for musical prowess builds. Tragically, 
             <itunes:duration>1932</itunes:duration>
             <enclosure url='https://sonicmultiplicities.audio/feed/SMOLD_019.mp3' length='1932'/>
             <description><![CDATA[<a href="https://multipli.city/Reflection-No-2/"><h1>Reflection No. 2</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_019.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_019.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_019.mp3">MP3</a></p><br><br><p>
+</p>]]></description>
+        </item>
+        
+            
+        <item>
+          <title>SMOLD_024: Mojo</title>
+          <guid isPermaLink="false">SMOLD_024</guid>
+          <itunes:title>SMOLD_024: Mojo</itunes:title>
+            <itunes:author>Andrew Grathwohl</itunes:author>
+            <itunes:season>2015</itunes:season>
+            <itunes:episode>11</itunes:episode>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:explicit>false</itunes:explicit>
+            <itunes:summary><![CDATA[<a href="https://multipli.city/Mojo/"><h1>Mojo</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_024.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_024.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_024.mp3">MP3</a></p><br><br><p>
+</p>]]></itunes:summary>
+            
+            <itunes:image href="https://sonicmultiplicities.audio/triangle.jpg"/>
+            
+            <link>https://sonicmultiplicities.audio/feed/SMOLD_024.mp3</link>
+            <pubDate>Thu, 30 Apr 2015 00:00:00 -0400</pubDate>
+            <itunes:duration>989</itunes:duration>
+            <enclosure url='https://sonicmultiplicities.audio/feed/SMOLD_024.mp3' length='989'/>
+            <description><![CDATA[<a href="https://multipli.city/Mojo/"><h1>Mojo</h1></a><br><br>A work of Sonic Multiplicities performed by Garrett Semmelink on violin.<br><br><h2>Downloads</h2><p><a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_024.opus">OPUS</a> <a href="https://sonicmultiplicities.audio/feed/downloads/SMOLD_024.flac">FLAC</a> <a href="https://sonicmultiplicities.audio/feed/SMOLD_024.mp3">MP3</a></p><br><br><p>
 </p>]]></description>
         </item>
         
