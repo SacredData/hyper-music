@@ -48,6 +48,15 @@
   <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
   <meta property="og:title" content="{{ page.title }}" />
 
+  {% if page.layout == "profile" %}
+  <meta property="og:type" content="profile">
+  {% if page.image %}
+  <meta property="og:image" content="{{site.url}}{{site.baseurl}}{{site.assets_path}}{{page.image}}">
+  {% endif %}
+  <meta property="profile:first_name" content="{{ page.firstname }}">
+  <meta property="profile:last_name" content="{{ page.lastname }}">
+  {% endif %}
+
   {% if page.cover %}
   <meta property="og:image" content="https:{{ page.cover }}" />
   <meta property="og:image:secure_url" content="https:{{ page.cover }}" />
@@ -64,24 +73,19 @@
 
   {% if page.stream_url %}
   <meta property="og:audio" content="https://{{ page.stream_url }}" />
+  <meta property="music:duration" content="{{ page.duration }}">
   {% endif %}
 
   {% if page.video_url %}
   <meta property="og:video" content="https:{{ page.video_url }}" />
   {% endif %}
 
-  {% if page.category == "Album" %}
+  <!-- Albums & playlist layouts have more than 1 track so are "Album" type -->
+  {% if page.category == "Album" or page.layout == "playlist" %}
   <meta property="og:type" content="music.album" />
   {% elsif page.category == "Composition" or page.category == "Reflection" %}
   <meta property="og:type" content="music.song" />
   <meta property="music:album:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
-  {% if page.duration %}
-  <meta property="music:duration" content="{{ page.duration }}">
-  {% endif %}
-  {% elsif page.title %}
-  <meta property="og:type" content="article" />
-  {% else %}
-  <meta property="og:type" content="website" />
   {% endif %}
 
   {% if page.video_url %}
