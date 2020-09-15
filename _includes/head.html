@@ -111,6 +111,13 @@
   </style>
   <meta property="og:video:width" content="{{ videoWidth }}" />
   <meta property="og:video:height" content="{{ videoHeight }}" />
+  <meta property="og:video:director" content="{{ site.url }}{{ site.baseurl }}/Andrew-Grathwohl/">
+  {% if page.author %}
+  <!-- Add the performer as an actor credit -->
+  {% assign theperformer = page.author | split: " " %}
+  <meta property="og:video:actor" content="{{ site.url }}{{ site.baseurl }}/{{ theperformer | join: '-'  }}/">
+  <meta property="og:video:actor:role" content="Performer">
+  {% endif %}
   <script src="//cdn.jsdelivr.net/npm/shaka-player@3.0.4/dist/shaka-player.compiled.min.js"></script>
   {% endif %}
 
