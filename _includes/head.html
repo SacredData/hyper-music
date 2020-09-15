@@ -34,13 +34,13 @@
   <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}{{site.assets_path}}/css/rouge-bg.css" />
 
   {% if page.stream_url %}
-    <!-- Wavesurfer.js -->
-    <script src="{{site.url}}{{site.baseurl}}{{site.assets_path}}/js/wavesurfer.js"></script>
-    <script src="{{site.url}}{{site.baseurl}}{{site.assets_path}}/js/wavesurfer.regions.min.js"></script>
+  <!-- Wavesurfer.js -->
+  <script src="{{site.url}}{{site.baseurl}}{{site.assets_path}}/js/wavesurfer.js"></script>
+  <script src="{{site.url}}{{site.baseurl}}{{site.assets_path}}/js/wavesurfer.regions.min.js"></script>
   {% endif %}
 
   {% if page.layout == "playlist" %}
-    <script src="{{site.url}}{{site.baseurl}}{{site.assets_path}}/js/wavesurfer.minimap.min.js"></script>
+  <script src="{{site.url}}{{site.baseurl}}{{site.assets_path}}/js/wavesurfer.minimap.min.js"></script>
   {% endif %}
   
   <!-- OG metadata -->
@@ -49,25 +49,31 @@
   <meta property="og:title" content="{{ page.title }}" />
 
   {% if page.cover %}
-    <meta property="og:image" content="https:{{ page.cover }}" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@sociosonics" />
-    <meta name="twitter:creator" content="@andrewunmuted" />
-    <meta property="og:description" content="A {{ page.season }} Sonic Multiplicities recording, performed by {{ page.author }} on the {{ page.instrument }}. Catalog number {{ page.excerpt }}." />
+  <meta property="og:image" content="https:{{ page.cover }}" />
+  <meta property="og:image:secure_url" content="https:{{ page.cover }}" />
+  {% if page.cover contains ".jpg" %}
+  <meta property="og:image:type" content="image/jpeg" />
+  {% elsif page.cover contains ".png" %}
+  <meta property="og:image:type" content="image/png" />
+  {% endif %}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@sociosonics" />
+  <meta name="twitter:creator" content="@andrewunmuted" />
+  <meta property="og:description" content="A {{ page.season }} Sonic Multiplicities recording, performed by {{ page.author }} on the {{ page.instrument }}. Catalog number {{ page.excerpt }}." />
   {% endif %}
 
   {% if page.stream_url %}
-    <meta property="og:audio" content="https://{{ page.stream_url }}" />
+  <meta property="og:audio" content="https://{{ page.stream_url }}" />
   {% endif %}
 
   {% if page.video_url %}
-    <meta property="og:video" content="https:{{ page.video_url }}" />
+  <meta property="og:video" content="https:{{ page.video_url }}" />
   {% endif %}
 
   {% if page.title %}
-    <meta property="og:type" content="article" />
+  <meta property="og:type" content="article" />
   {% else %}
-    <meta property="og:type" content="website" />
+  <meta property="og:type" content="website" />
   {% endif %}
 
   {% if page.video_url %}
