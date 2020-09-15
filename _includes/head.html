@@ -32,6 +32,11 @@
   <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}{{site.assets_path}}/css/fa.min.css" type="text/css" />
   <!-- rouge theme-->
   <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}{{site.assets_path}}/css/rouge-bg.css" />
+  
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@sociosonics" />
+  <meta name="twitter:creator" content="@andrewunmuted" />
 
   {% if page.stream_url %}
   <!-- Wavesurfer.js -->
@@ -65,13 +70,10 @@
   {% elsif page.cover contains ".png" %}
   <meta property="og:image:type" content="image/png" />
   {% endif %}
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@sociosonics" />
-  <meta name="twitter:creator" content="@andrewunmuted" />
-  <meta property="og:description" content="A {{ page.season }} Sonic Multiplicities recording, performed by {{ page.author }} on the {{ page.instrument }}. Catalog number {{ page.excerpt }}." />
   {% endif %}
 
   {% if page.stream_url %}
+  <meta property="og:description" content="A {{ page.season }} Sonic Multiplicities recording, performed by {{ page.author }} on the {{ page.instrument }}. Catalog number {{ page.excerpt }}." />
   <meta property="og:audio" content="https://{{ page.stream_url }}" />
   {% if page.stream_url contains ".mp3" %}
   <meta property="og:audio:type" content="audio/mpeg" />
