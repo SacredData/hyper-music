@@ -6,6 +6,8 @@ home_btn: true
 btn_text: true
 footer: true
 title: "Andrew Grathwohl"
+firstname: Andrew
+lastname: Grathwohl
 author: ""
 encrypted_text: false
 image: /img/andrew.jpg
