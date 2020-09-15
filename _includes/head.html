@@ -56,10 +56,18 @@
     <meta property="og:description" content="A {{ page.season }} Sonic Multiplicities recording, performed by {{ page.author }} on the {{ page.instrument }}. Catalog number {{ page.excerpt }}." />
   {% endif %}
 
+  {% if page.stream_url %}
+    <meta property="og:audio" content="https://{{ page.stream_url }}" />
+  {% endif %}
+
+  {% if page.video_url %}
+    <meta property="og:video" content="https:{{ page.video_url }}" />
+  {% endif %}
+
   {% if page.title %}
-    <meta content="article" property="og:type">
+    <meta property="og:type" content="article" />
   {% else %}
-    <meta content="website" property="og:type">
+    <meta property="og:type" content="website" />
   {% endif %}
 
   {% if page.video_url %}
