@@ -75,6 +75,9 @@
   {% elsif page.category == "Composition" or page.category == "Reflection" %}
   <meta property="og:type" content="music.song" />
   <meta property="music:album:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  {% if page.duration %}
+  <meta property="music:duration" content="{{ page.duration }}">
+  {% endif %}
   {% elsif page.title %}
   <meta property="og:type" content="article" />
   {% else %}
