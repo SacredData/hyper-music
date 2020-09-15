@@ -35,12 +35,14 @@ author: # In this case, author = musician
 instrument: # Instrument played by the musician
 season: # Podcast season, for iTunes podcast network
 episode: # Podcast episode, for iTunes podcast network
-sidecar: # Sidecar file provides human-readable album metadata in JSON format
+explicit: # Optional: true/false
+sidecar: # Sidecar URL provides human-readable album metadata in JSON format
 # Other homes for this release on the web
 apple_music:
 bandcamp:
 soundcloud:
 spotify:
+youtube:
 cover: # Square cover art for the release
 stream_url: # Streamable remote URL where the release lives
 duration: # Duration of the complete release, in seconds
