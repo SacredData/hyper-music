@@ -6,6 +6,8 @@ home_btn: true
 btn_text: true
 footer: true
 title: "Garrett Semmelink"
+firstname: Garrett
+lastname: Semmelink
 author: ""
 instrument: violin
 encrypted_text: false

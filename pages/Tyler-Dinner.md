@@ -6,6 +6,8 @@ home_btn: true
 btn_text: true
 footer: true
 title: "Tyler Dinner"
+firstname: Tyler
+lastname: Dinner
 author: ""
 instrument: guitar
 encrypted_text: false
