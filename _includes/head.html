@@ -73,6 +73,9 @@
 
   {% if page.stream_url %}
   <meta property="og:audio" content="https://{{ page.stream_url }}" />
+  {% if page.stream_url contains ".mp3" %}
+  <meta property="og:audio:type" content="audio/mpeg" />
+  {% endif %}
   <meta property="music:duration" content="{{ page.duration }}">
   {% endif %}
 
@@ -93,14 +96,17 @@
   {% endif %}
 
   {% if page.video_url %}
+  {% assign videoWidth = "640" %}
+  {% assign videoHeight = "360" %}
   <style>
   video {
-   width: 640px;
-   height: 360px;
+    width: {{ videoWidth }}px;
+    height: {{ videoHeight }}px;
   }
   </style>
-  <!--<script src="//cdn.dashjs.org/latest/dash.all.min.js"></script>-->
-    <script src="//cdn.jsdelivr.net/npm/shaka-player@3.0.4/dist/shaka-player.compiled.min.js"></script>
+  <meta property="og:video:width" content="{{ videoWidth }}" />
+  <meta property="og:video:height" content="{{ videoHeight }}" />
+  <script src="//cdn.jsdelivr.net/npm/shaka-player@3.0.4/dist/shaka-player.compiled.min.js"></script>
   {% endif %}
 
   <!-- mathjax 2.7.5 -->
