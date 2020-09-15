@@ -3,14 +3,19 @@
 
 Jekyll code for the Sonic Multiplicities deep-learning music project.
 
+* Aims to implement [OpenGraph](https://ogp.me/), [Schema.org](https://schema.org/), and other protocols for indexing.
+* Allows for posting of individual tracks, albums, playlists, and/or videos.
+* Provides an Apple-compatible podcast feed so fans can easily follow & download your new content.
+* Special content encryption & decryption tools to incentivize patronage models such as Patreon.
+
 ## Functionality
 
 This jekyll theme generates the following:
 
 * New post on the website (with cool audio and visualization features!)
 * New episode in the podcast (fully automated and compliant with Apple podcast directory)
-* Every page has OpenGraph & Twitter metadata in the header (in progress)
-* Schema.org data (implementation in-progress: MusicComposition, MusicGroup, MusicRecording, MusicRelease, etc.)
+* Every page has OpenGraph & Twitter metadata in the header (`og:audio`, `og:video`, `og:profile`, `og:music:song`, `og:music:album`, etc.)
+* Schema.org data (implementation in-progress: `MusicComposition`, `MusicGroup`, `MusicRecording`, `MusicRelease`, etc.)
 
 ### /_posts/
 
