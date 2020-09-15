@@ -70,7 +70,12 @@
   <meta property="og:video" content="https:{{ page.video_url }}" />
   {% endif %}
 
-  {% if page.title %}
+  {% if page.category == "Album" %}
+  <meta property="og:type" content="music.album" />
+  {% elsif page.category == "Composition" or page.category == "Reflection" %}
+  <meta property="og:type" content="music.song" />
+  <meta property="music:album:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  {% elsif page.title %}
   <meta property="og:type" content="article" />
   {% else %}
   <meta property="og:type" content="website" />
