@@ -11,11 +11,15 @@
   <a href="{{ page.soundcloud }}" id="soundcloud"><i class="fa fa-soundcloud"></i></a>
   {% endif %}
   {% if page.spotify %}
-  <a href="{{ page.spotify }}" id="spotify"><i class="fa fa-spotify"></i></a><br><br>
+  <a href="{{ page.spotify }}" id="spotify"><i class="fa fa-spotify"></i></a>
+  {% endif %}
+  {% if page.vimeo %}
+  <a href="{{ page.vimeo }}" id="vimeo"><i class="fa fa-vimeo-square"></i></a>
   {% endif %}
   {% if page.youtube %}
-  <a href="{{ page.youtube }}" id="youtube"><i class="fa fa-youtube-play"></i></a><br><br>
+  <a href="{{ page.youtube }}" id="youtube"><i class="fa fa-youtube-play"></i></a>
   {% endif %}
+  <br><br>
 </div>
 {% endif %}
 {% if page.sidecar %}
