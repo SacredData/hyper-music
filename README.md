@@ -122,6 +122,25 @@ Playlists may be of type `Composition` or `Album`.
 
 Inside the `pages` directory you may place pages that aren't related directly to publishing music releases. This is where you can add performer bio pages, contact information, etc.
 
+#### layout: profile
+
+Profile pages should be created as markdown files inside `pages/`. The following
+post metadata may be provided:
+
+```
+---
+layout: profile
+title: # Required; what you want to title the profile page, i.e., "First Last"
+firstname: # Required; Person's first name
+lastname: # Required; Person's last name
+gender: # Optional; See https://ogp.me/#type_profile for more information
+twitter: # Optional; twitter handle for the user
+instrument: # Required; what instrument they play
+image: # Optional; point to an image in `/assets/img/`
+permalink: # Required; set it to "/First-Last/", i.e., "/Todd-Smith/"
+---
+```
+
 ### /podcast.xml
 
 XML template for podcast. Publishes to `/podcast.xml` when jekyll code is built.
