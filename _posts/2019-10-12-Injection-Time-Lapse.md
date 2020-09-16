@@ -22,6 +22,7 @@ cover: ///sonicmultiplicities.audio/feed/SM001.jpg
 stream_url: sonicmultiplicities.audio/feed/SM001.mp3
 intro_url: /sonicmultiplicities.audio/feed/SM001a_intro.mp3
 duration: 1596
+discogs: //www.discogs.com/-Injection-Time-Lapse/release/14283849
 excerpt: "SM001"
 abstract: "Marking our triumphant return, with Sonic Multiplicities 1.1!"
 ---

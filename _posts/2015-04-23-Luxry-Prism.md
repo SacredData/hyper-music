@@ -21,6 +21,7 @@ spotify: //open.spotify.com/album/26GFpl1LwrYjIJrn0ParuG
 cover: //sonicmultiplicities.audio/feed/lp.jpg
 stream_url: sonicmultiplicities.audio/feed/SMOLD_021.mp3
 duration: 1968
+discogs: //www.discogs.com/-Luxury-Prism/release/13824472
 excerpt: "SMOLD_021"
 abstract: "Dedicated to the 26% average increase in property values in the Crown Heights, Brooklyn neighborhood."
 ---
