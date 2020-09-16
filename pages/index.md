@@ -12,8 +12,12 @@ permalink: /
 ---
 
 # **SONIC MULTIPLICITIES**
-# Pursuing Musical Transcendentalism Via DSP
-> An effort by composer & audio engineer [Andrew Grathwohl](//multipli.city/Andrew-Grathwohl/) to construct a unified, broadened musical consciousness out of today's technologies of war, aiming to propel elite instrumentalists' capabilities towards the outer-most reaches of musical aptitude. What results from this ambitious musical endeavor is among the world's longest-running datasets comprised of advanced, complex, and challenging extended techniques, free improvisation strategem, and instrumental varieties.
+> **Achieving musical transcendentalism by means of digital signal processing, neural networks, and free software.**
+
+
+Sonic Multiplicities is an effort by composer & audio engineer [Andrew Grathwohl](//multipli.city/Andrew-Grathwohl/) to construct a unified, broadened musical consciousness out of today's technologies of war, in order to help propel elite instrumentalists' capabilities towards the outer-most reaches of their musical aptitude and expressivity.
+
+We are the stewards of a wholly modern music mythology, constructed out of the ideas, technologies, and challenges of today's time cycle. We represent the most extreme effort ever made towards empowering the solo instrumentalist with software.
 
 ## HyperMusic
 
