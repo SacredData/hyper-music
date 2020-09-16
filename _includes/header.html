@@ -17,7 +17,9 @@
                   <a class="header_btn" href="{{ site.podcast.url | absolute_url }}">
                   <!--<a class="header_btn" href="//s3.amazonaws.com/sonicmultiplicities.audio/feed/feed.xml"> -->
                   <i class="fa fa-podcast" aria-hidden="true">
-                    <p class="btn_text">Podcast</p>
+                  {% if page.btn_text != false %}
+                  <p class="btn_text">Podcast</p>
+                  {% endif %}
                   </i>
                 </a>
                 <!-- email -->
