@@ -8,6 +8,8 @@ footer: true
 title: "Garrett Semmelink"
 firstname: Garrett
 lastname: Semmelink
+gender: male
+twitter: garrettsviolin
 author: ""
 instrument: violin
 encrypted_text: false

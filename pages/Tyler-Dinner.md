@@ -8,6 +8,7 @@ footer: true
 title: "Tyler Dinner"
 firstname: Tyler
 lastname: Dinner
+gender: male
 author: ""
 instrument: guitar
 encrypted_text: false
