@@ -22,6 +22,7 @@ _site
 .jekyll-metadata
 Gemfile.lock
 .jekyll-metadata
+.jekyll-cache
 .vscode
 .idea
 .DS_Store
