@@ -1,0 +1,54 @@
+{
+  "regions": [
+     {
+       "id": "Prelude: Head in the Sand",
+       "duration": 275,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "Upward Fall, I. Modern Attrocities",
+       "duration": 516,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "Upward Fall, II. The Nightlife Circuit",
+       "duration": 403,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "Upward Fall, III. Yoga",
+       "duration": 566,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "Distension, I. Do-si-do",
+       "duration": 1229,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "Distension, II. Paradise, CA",
+       "duration": 663,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "Finale: Head in the Clouds",
+       "duration": 1175,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     }
+  ]
+}
+

@@ -1,0 +1,26 @@
+{
+  "regions": [
+     {
+       "id": "I. Biconical Kransekake",
+       "duration": 463,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "II. So Juicy",
+       "duration": 256,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "III. Emergency Surgery",
+       "duration": 833,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     }
+  ]
+}
+
