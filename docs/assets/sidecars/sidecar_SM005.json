@@ -1,0 +1,19 @@
+{
+  "regions": [
+     {
+       "id": "I. Make the world more open and connected (2004 - 2017)",
+       "duration": 1265,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "II. Give people the power to build community and bring the world closer together (2017 - Present)",
+       "duration": 726,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     }
+  ]
+}
+

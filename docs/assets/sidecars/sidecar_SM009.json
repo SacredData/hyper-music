@@ -1,0 +1,68 @@
+{
+  "regions": [
+     {
+       "id": "I.",
+       "duration": 349,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "II.",
+       "duration": 286,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "III.",
+       "duration": 448,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "IV.",
+       "duration": 329,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "V.",
+       "duration": 261,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "VI.",
+       "duration": 342,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "VII.",
+       "duration": 364,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "VIII.",
+       "duration": 184,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "IX.",
+       "duration": 195,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     }
+  ]
+}
+

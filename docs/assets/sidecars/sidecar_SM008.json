@@ -1,0 +1,19 @@
+{
+  "regions": [
+     {
+       "id": "I. Secretum Secretorum",
+       "duration": 704,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "II. Christian Warlord",
+       "duration": 655,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     }
+  ]
+}
+

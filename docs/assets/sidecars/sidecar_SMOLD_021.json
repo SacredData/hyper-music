@@ -1,0 +1,26 @@
+{
+  "regions": [
+     {
+       "id": "I. Bouteille",
+       "duration": 690,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "II. Glass House",
+       "duration": 461,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     },
+     {
+       "id": "III. Evergreen",
+       "duration": 816,
+       "loop": false,
+       "drag": false,
+       "resize": false
+     }
+  ]
+}
+
