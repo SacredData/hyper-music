@@ -61,6 +61,10 @@
   {% endif %}
   <meta property="profile:first_name" content="{{ page.firstname }}">
   <meta property="profile:last_name" content="{{ page.lastname }}">
+  <meta property="profile:gender" content="{{ page.gender }}">
+  {% if page.twitter %}
+  <meta property="profile:username" scope=“twitter.com“ content="@{{ page.twitter }}">
+  {% endif %}
   {% endif %}
 
   {% if page.cover %}
