@@ -85,7 +85,6 @@
   <meta property="og:video" content="https:{{ page.video_url }}" />
   {% endif %}
 
-  <!-- Albums & playlist layouts have more than 1 track so are "Album" type -->
   {% if page.category == "Album" or page.layout == "playlist" %}
   <meta property="og:type" content="music.album" />
   <meta property="music:release_date" content="{{ page.date | date_to_xmlschema }}">
@@ -111,6 +110,12 @@
   </style>
   <meta property="og:video:width" content="{{ videoWidth }}" />
   <meta property="og:video:height" content="{{ videoHeight }}" />
+  {% if page.duration %}
+  <meta property="video:duration" content="{{ page.duration }}">
+  {% endif %}
+  {% if page.date %}
+  <meta property="video:release_date" content="{{ page.date | date_to_xmlschema }}">
+  {% endif %}
   <meta property="og:video:director" content="{{ site.url }}{{ site.baseurl }}/Andrew-Grathwohl/">
   {% if page.author %}
   <!-- Add the performer as an actor credit -->
