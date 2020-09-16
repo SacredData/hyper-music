@@ -65,6 +65,7 @@
   {% if page.cover %}
   <meta property="og:image" content="https:{{ page.cover }}" />
   <meta property="og:image:secure_url" content="https:{{ page.cover }}" />
+  <meta property="og:image:alt" content="A {{ page.season }} Sonic Multiplicities recording, performed by {{ page.author }} on the {{ page.instrument }}. Catalog number {{ page.excerpt }}." />
   {% if page.cover contains ".jpg" %}
   <meta property="og:image:type" content="image/jpeg" />
   {% elsif page.cover contains ".png" %}
@@ -79,10 +80,6 @@
   <meta property="og:audio:type" content="audio/mpeg" />
   {% endif %}
   <meta property="music:duration" content="{{ page.duration }}">
-  {% endif %}
-
-  {% if page.video_url %}
-  <meta property="og:video" content="https:{{ page.video_url }}" />
   {% endif %}
 
   {% if page.category == "Album" or page.layout == "playlist" %}
@@ -100,6 +97,17 @@
   {% endif %}
 
   {% if page.video_url %}
+  <meta property="og:video" content="https:{{ page.video_url }}" />
+  <meta property="og:video:secure_url" content="https:{{ page.video_url }}" />
+  {% if page.video_url contains ".mpd" %}
+  <meta property="og:video:type" content="application/dash+xml" />
+  {% elsif page.video_url contains ".m3u8" %}
+  <meta property="og:video:type" content="application/vnd.apple.mpegurl" />
+  {% elsif page.video_url contains ".mp4" %}
+  <meta property="og:video:type" content="video/mp4" />
+  {% elsif page.video_url contains ".mov" %}
+  <meta property="og:video:type" content="video/quicktime" />
+  {% endif %}
   {% assign videoWidth = "640" %}
   {% assign videoHeight = "360" %}
   <style>
