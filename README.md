@@ -37,23 +37,28 @@ btn_text: # Whether to include text labels for buttons; default: true
 post_list: # "date" for ordering by `page.date`; "category" for `page.category`
 author: # In this case, author = musician name (Make a profile for them in `pages/`)
 instrument: # Instrument played by the musician (Keep this string consistent)
+cover: # Square cover art for the release
+stream_url: # Streamable remote URL where the release lives
+bin_url: # Optional: Streamable URL for the binaural mix
 category: # Type of release - Composition, Album, etc.
 season: # Podcast season, for iTunes podcast network
 episode: # Podcast episode, for iTunes podcast network
 explicit: # Optional: true/false
 sidecar: # Sidecar URL provides human-readable album metadata in JSON format
+duration: # Duration of the complete release, in seconds
+excerpt: # Put the catalog number for the release here, if relevant.
+abstract: # Optional front matter to put on the page as the release's "subtitle"
+```
+
+##### External services metadata for `post`
+
+```
 # Other homes for this release on the web
 apple_music:
 bandcamp: # Can be album or single release
 soundcloud: # Can be playlist or single track
 spotify:
 youtube: # Can be playlist or video
-cover: # Square cover art for the release
-stream_url: # Streamable remote URL where the release lives
-bin_url: # Optional: Streamable URL for the binaural mix
-duration: # Duration of the complete release, in seconds
-excerpt: # Put the catalog number for the release here, if relevant.
-abstract: # Optional front matter to put on the page as the release's "subtitle"
 ---
 ```
 
