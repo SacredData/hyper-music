@@ -27,7 +27,7 @@ background.
 
 #### `post` metadata
 
-Unique `post` metadata is as follows:
+##### General metadata
 
 ```
 ---
@@ -35,24 +35,40 @@ layout: # Layout to use (`post` for single item, `playlist` for multiple items)
 home_btn: # Whether to include "home" button in header; default: true
 btn_text: # Whether to include text labels for buttons; default: true
 post_list: # "date" for ordering by `page.date`; "category" for `page.category`
+sidecar: # Sidecar URL provides human-readable album metadata in JSON format
+abstract: # Optional front matter to put on the page as the release's "subtitle"
+---
+```
+
+##### Release metadata
+
+```
+---
+category: # Type of release - Composition, Album, etc.
 author: # In this case, author = musician name (Make a profile for them in `pages/`)
 instrument: # Instrument played by the musician (Keep this string consistent)
 cover: # Square cover art for the release
 stream_url: # Streamable remote URL where the release lives
 bin_url: # Optional: Streamable URL for the binaural mix
-category: # Type of release - Composition, Album, etc.
-season: # Podcast season, for iTunes podcast network
-episode: # Podcast episode, for iTunes podcast network
-explicit: # Optional: true/false
-sidecar: # Sidecar URL provides human-readable album metadata in JSON format
 duration: # Duration of the complete release, in seconds
 excerpt: # Put the catalog number for the release here, if relevant.
-abstract: # Optional front matter to put on the page as the release's "subtitle"
+---
+```
+
+##### Podcast episode settings
+
+```
+---
+season: # Podcast season (release year), for iTunes podcast network
+episode: # Podcast episode (count, starting from 1), for iTunes podcast network
+explicit: # Optional: true/false
+---
 ```
 
 ##### External services metadata for `post`
 
 ```
+---
 # Other homes for this release on the web
 apple_music:
 bandcamp: # Can be album or single release
@@ -74,6 +90,7 @@ video_fallback: # URI to backup video source (ideally, an HLS manifest.)
 video_mp4: # URI to an MP4 proxy of the video
 video_mkv: # URI to an MKV master asset for the video
 video_webm: # URI to WebM proxy of the video
+---
 ```
 
 ##### Playlist sidecar JSON file
