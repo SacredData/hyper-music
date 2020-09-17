@@ -27,7 +27,7 @@ background.
 
 #### `post` metadata
 
-Unique `post` metadata is as follows:
+##### General metadata
 
 ```
 ---
@@ -35,25 +35,48 @@ layout: # Layout to use (`post` for single item, `playlist` for multiple items)
 home_btn: # Whether to include "home" button in header; default: true
 btn_text: # Whether to include text labels for buttons; default: true
 post_list: # "date" for ordering by `page.date`; "category" for `page.category`
+sidecar: # Sidecar URL provides human-readable album metadata in JSON format
+abstract: # Optional front matter to put on the page as the release's "subtitle"
+---
+```
+
+##### Release metadata
+
+```
+---
+category: # Type of release - Composition, Album, etc.
 author: # In this case, author = musician name (Make a profile for them in `pages/`)
 instrument: # Instrument played by the musician (Keep this string consistent)
-category: # Type of release - Composition, Album, etc.
-season: # Podcast season, for iTunes podcast network
-episode: # Podcast episode, for iTunes podcast network
-explicit: # Optional: true/false
-sidecar: # Sidecar URL provides human-readable album metadata in JSON format
-# Other homes for this release on the web
-apple_music:
-bandcamp: # Can be album or single release
-soundcloud: # Can be playlist or single track
-spotify:
-youtube: # Can be playlist or video
 cover: # Square cover art for the release
 stream_url: # Streamable remote URL where the release lives
 bin_url: # Optional: Streamable URL for the binaural mix
 duration: # Duration of the complete release, in seconds
 excerpt: # Put the catalog number for the release here, if relevant.
-abstract: # Optional front matter to put on the page as the release's "subtitle"
+---
+```
+
+##### Podcast episode settings
+
+```
+---
+season: # Podcast season (release year), for iTunes podcast network
+episode: # Podcast episode (count, starting from 1), for iTunes podcast network
+explicit: # Optional: true/false
+---
+```
+
+##### External services metadata for `post`
+
+```
+---
+# Other homes for this release on the web
+apple_music:
+bandcamp: # Can be album or single release
+discogs:
+soundcloud: # Can be playlist or single track
+spotify:
+vimeo:
+youtube: # Can be playlist or video
 ---
 ```
 
@@ -69,6 +92,7 @@ video_fallback: # URI to backup video source (ideally, an HLS manifest.)
 video_mp4: # URI to an MP4 proxy of the video
 video_mkv: # URI to an MKV master asset for the video
 video_webm: # URI to WebM proxy of the video
+---
 ```
 
 ##### Playlist sidecar JSON file
@@ -121,6 +145,25 @@ Playlists may be of type `Composition` or `Album`.
 ### `pages/`
 
 Inside the `pages` directory you may place pages that aren't related directly to publishing music releases. This is where you can add performer bio pages, contact information, etc.
+
+#### layout: profile
+
+Profile pages should be created as markdown files inside `pages/`. The following
+post metadata may be provided:
+
+```
+---
+layout: profile
+title: # Required; what you want to title the profile page, i.e., "First Last"
+firstname: # Required; Person's first name
+lastname: # Required; Person's last name
+gender: # Optional; See https://ogp.me/#type_profile for more information
+twitter: # Optional; twitter handle for the user
+instrument: # Required; what instrument they play
+image: # Optional; point to an image in `/assets/img/`
+permalink: # Required; set it to "/First-Last/", i.e., "/Todd-Smith/"
+---
+```
 
 ### /podcast.xml
 

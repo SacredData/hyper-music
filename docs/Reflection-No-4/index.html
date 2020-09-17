@@ -7,13 +7,13 @@
   <meta name=”robots” content=”index, follow”>
   <!-- site description -->
   
-  <meta content="This is excerpt." name="description" />
+  <meta content="SM011" name="description" />
   <!-- referer for 3rd-part images-->
   <meta content="no-referrer" name="referrer" />
   <!-- title -->
   <title>
     
-    Text Styles and Markdown Quick Reference
+    Reflection, No. 4
     
   </title>
   <!-- icon -->
@@ -34,20 +34,44 @@
   <meta name="twitter:creator" content="@andrewunmuted" />
 
   
+  <!-- Wavesurfer.js -->
+  <script src="https://multipli.city/assets/js/wavesurfer.js"></script>
+  <script src="https://multipli.city/assets/js/wavesurfer.regions.min.js"></script>
+  
 
   
   
   <!-- OG metadata -->
   <meta property="og:site_name" content="multipli.city" />
-  <meta property="og:url" content="https://multipli.city/old/2017-1-1-sample3/" />
-  <meta property="og:title" content="Text Styles and Markdown Quick Reference" />
+  <meta property="og:url" content="https://multipli.city/Reflection-No-4/" />
+  <meta property="og:title" content="Reflection, No. 4" />
 
   
 
   
-
+  <meta property="og:image" content="https://sonicmultiplicities.audio/feed/SM011.jpg" />
+  <meta property="og:image:secure_url" content="https://sonicmultiplicities.audio/feed/SM011.jpg" />
+  <meta property="og:image:alt" content="A 2020 Sonic Multiplicities recording, performed by Garrett Semmelink on the violin & percussion. Catalog number SM011." />
+  
+  <meta property="og:image:type" content="image/jpeg" />
+  
   
 
+  
+  <meta property="og:description" content="A 2020 Sonic Multiplicities recording, performed by Garrett Semmelink on the violin & percussion. Catalog number SM011." />
+  <meta property="og:audio" content="https://sonicmultiplicities.audio/feed/SM011.mp3" />
+  
+  <meta property="og:audio:type" content="audio/mpeg" />
+  
+  <meta property="music:duration" content="2829">
+  
+
+  
+  <meta property="og:type" content="music.song" />
+  <meta property="music:album:url" content="https://multipli.city/Reflection-No-4/">
+  <meta property="music:musician" content="https://multipli.city/Andrew-Grathwohl/">
+  
+  <meta property="music:musician" content="https://multipli.city/Garrett-Semmelink/">
   
 
   
@@ -149,15 +173,6 @@
                 
                 <!-- access token -->
                 
-                    <a class="header_btn" id="acs_btn" onclick="apply_token()">
-                        <i class="fa fa-key">
-                            
-                                <p class="btn_text">Token</p>
-                            
-                        </i>
-                    </a>
-                    <textarea class="access_token" cols="8" id="acs_tkn" rows="1"></textarea>
-                
             </li>
             <!-- right header -->
             <span
@@ -173,7 +188,7 @@
                         </i>
                     </a>
                     <!-- scroll down -->
-                    <a class="header_btn" onclick='window.location.href=""'>
+                    <a class="header_btn" onclick='window.location.href="/Perspectum/"'>
                         <i class="fa fa-forward">
                             
                                 <p class="btn_text">Next</p>
@@ -184,7 +199,7 @@
                     
                     <script>
                       function copyText() {
-                        var data = [new ClipboardItem({ "text/plain": new Blob(["https://multipli.city/old/2017-1-1-sample3/"], { type: "text/plain" }) })];
+                        var data = [new ClipboardItem({ "text/plain": new Blob(["https://multipli.city/Reflection-No-4/"], { type: "text/plain" }) })];
 												navigator.clipboard.write(data).then(function() {
 													console.log("Copied to clipboard successfully!");
 												}, function() {
@@ -259,48 +274,13 @@
 
 <!-- encrypt and decrypt -->
 
-    <script src="https://multipli.city/assets/js/sjcl.js" async></script>
-    <script>
-  function decrypt_all(pwd, class_name) {
-    var elem_clct = document.getElementsByClassName(class_name);
-    if (elem_clct.length == 0) {
-      console.log("No texts to decrypt!");
-      return false;
-    }
-    for (acc = 0; acc < elem_clct.length; acc++) {
-      var encrypted = elem_clct[acc].id;
-      var ct =
-        '{"iv":"' +
-        encrypted.substring(0, 22) +
-        '==",salt:"","ct":"' +
-        encrypted.substring(22) +
-        '"}';
-      try {
-        var txt = sjcl.json.decrypt(pwd, ct);
-      } catch (e) {
-        alert("Invalid Access Token!");
-        return;
-      }
-      elem_clct[acc].innerHTML = txt;
-    }
-    return true;
-  }
-  function apply_token() {
-    var tkn = document.getElementById("acs_tkn");
-    if (decrypt_all(tkn.value, "encrypted")) {
-      tkn.style.display = "none";
-      document.getElementById("acs_btn").style.display = "none";
-    }
-  }
-</script>
-
 
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
           <h1>
 
-<h1 id="musicTitle">
-  Text Styles and Markdown Quick Reference
+  <img src="//sonicmultiplicities.audio/feed/SM011.jpg" alt="Cover art for Reflection, No. 4" height="540" style="vertical-align:bottom"><br><br>
+  <div id="musicTitle">Reflection, No. 4</div>
 </h1>
 
 <script type="application/ld+json">
@@ -349,33 +329,58 @@
 </script>
 
 
+<script type="application/ld+json">
+{
+		"@context": "http://schema.org",
+		"@type": "MusicComposition",
+    "name": "Reflection, No. 4",
+		"composer": [
+				{
+						"@type": "Person",
+						"name": "Andrew Grathwohl"
+				},
+				{
+						"@type": "Person",
+            "name": "Garrett Semmelink"
+				}
+		],
+		"inLanguage": "EN",
+		"publisher": {
+				"@type": "Organization",
+				"name": "Sacred Audio"
+		},
+    "datePublished": "2020"
+}
+</script>
+
+
 <div class="post_info">
   <!-- author -->
   
   <span>
     <i class="fa fa-user-secret"></i>
-    <a href='https://multipli.city/DeerRIDER'>DeerRIDER</a>, 
+    <a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a>, violin & percussion
   </span>
   
   <!-- date -->
   
   <span>
     <i class="fa fa-calendar"></i>
-    May 25, 2019
+    Sep 18, 2020
   </span>
   
   <!-- category -->
   
   <span>
     <i class="fa fa-archive"></i>
-    Sample
+    Reflection
   </span>
   
 </div>
 <!-- abstract -->
 <div class="abstract">
   
-  <p>This is abstract. Abstract is blank by default.</p>
+  <p>CELEBRATING TEN YEARS OF MULTIPLICITATION WITH SPECIAL GUEST, JUDGE JUDY!</p>
   
 </div>
 
@@ -390,7 +395,7 @@
   <br><br>
 </div>
 <script>
-  var sm = "".split('/')[2].replace('.mp3','');
+  var sm = "sonicmultiplicities.audio/feed/SM011.mp3".split('/')[2].replace('.mp3','');
   var mp3Url = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/${sm}.mp3`;
   var flacUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.flac`;
   var opusUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.opus`;
@@ -417,8 +422,8 @@
   <input id="volume" type="range" min="0" max="1" value="1" step="0.1" style="float:right">
 </div>
  <script>
-   var url = ""
-   var fadeTimerBase = Number("");
+   var url = "sonicmultiplicities.audio/feed/SM011.mp3"
+   var fadeTimerBase = Number("2829");
    
    var dur = 0.0;
    var fadeDur = 60;
@@ -487,10 +492,12 @@
        animationId = undefined;
      }
      
+     window.location.href = "/Perspectum/";
+     
    });
 
    function toggleBin() {
-     var stUrl = "";
+     var stUrl = "sonicmultiplicities.audio/feed/SM011.mp3";
      var binUrl = "";
      url = url == stUrl ? binUrl : stUrl
      wavesurfer.load(`//${url}`);
@@ -653,7 +660,7 @@
   wavesurfer.on('region-in', r => {
    console.log(r);
    var trackNum = regions.findIndex(rr => rr.start == r.start);
-   document.getElementById("musicTitle").innerHTML = "Text Styles and Markdown Quick Reference" + `: 0${trackNum+1} - <b><i>${r.id}</i></b>`;
+   document.getElementById("musicTitle").innerHTML = "Reflection, No. 4" + `: 0${trackNum+1} - <b><i>${r.id}</i></b>`;
   });
 
   wavesurfer.on('finish', () => {
@@ -677,10 +684,44 @@
   });
 
   
+  var cover = "//sonicmultiplicities.audio/feed/SM011.jpg"
+  var v = new Vibrant("https:" + cover);
+
+  v.getPalette((err, palette) => {
+   if (err) {
+     console.log(err)
+   }
+
+   var muted = !err ? palette.Muted ? palette.Muted.getHex() : null : null;
+   var vibrant = !err ? palette.Vibrant ? palette.Vibrant.getHex() : null : null;
+   var darkVibrant = !err ? palette.DarkVibrant ? palette.DarkVibrant.getHex() : null : null;
+
+   wavesurfer.setWaveColor(vibrant || "#999");
+   wavesurfer.setProgressColor(muted || "#555");
+   wavesurfer.setCursorColor(darkVibrant || "#333");
+
+   colors.push(darkVibrant, vibrant, muted);
+  });
+  
 
  </script>
 
 
+
+<div id="streams"><br><br>
+  <b>Stream:</b>
+  
+  
+  <a href="//sonicmultiplicities.bandcamp.com/album/reflection-no-4" id="bandcamp"><i class="fa fa-bandcamp"></i></a>
+  
+  
+  <a href="//soundcloud.com/sonicmultiplicities/rn4" id="soundcloud"><i class="fa fa-soundcloud"></i></a>
+  
+  
+  
+  
+  <br><br>
+</div>
 
 
 
@@ -691,110 +732,7 @@
   </p>
 </div>
 
-<h2 id="style-test-below">Style Test Below</h2>
 
-<h3 id="text">Text</h3>
-
-<p>Wand fest wa gét. D’Welt weisen Fréijor ze ech. Da d’Land Faarwen nei, dé fir rëscht blëtzen.</p>
-
-<p>Encrypted text:<br /></p>
-<p class="encrypted">elKwQPCOLF4w86wRItKMqge8qDO6fU80wbdANG6AnS8kgT8qAqGFC5VkVexu+4RBhBMUWwdkzEVo8HAKUT</p>
-
-<p>normal, <strong>bold</strong>, <em>italic</em>, <del>strikethrough</del>, <code class="language-plaintext highlighter-rouge">keyword</code>, <a href="www.google.com">link</a></p>
-
-<blockquote>
-  <p>blockquote</p>
-
-  <p>Den wa Stad Schuebersonndeg, op all d’Pan hinnen. Ké net geet sech Mier, ass gutt Kaffi an.</p>
-</blockquote>
-
-<h3 id="code">Code</h3>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
-<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
-  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<h3 id="formula">Formula</h3>
-
-\[NADH+Q+5\;H_{matrix}^{+}\rightarrow NAD^{+}+QH_{2}+4\;H_{intermembrane}^{+}\!\]
-
-<h3 id="list">List</h3>
-<ol>
-  <li>ordered list item 1</li>
-  <li>ordered list item 2
-    <ol>
-      <li>sublist
-        <ol>
-          <li>subsublist
-            <ul>
-              <li>unordered list</li>
-            </ul>
-          </li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-</ol>
-
-<ul>
-  <li>unordered sublist
-    <ul>
-      <li>subsublist
-        <ul>
-          <li>subsubsublist</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="horizontal-line">horizontal line</h3>
-
-<hr />
-
-<h3 id="table">Table</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">surprise</th>
-      <th style="text-align: left">surprise</th>
-      <th style="text-align: left">maza faka</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">fark</td>
-      <td style="text-align: left">Ya</td>
-      <td style="text-align: left">maza faka</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">surprise</td>
-      <td style="text-align: left">babe</td>
-      <td style="text-align: left">surprise</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">surprise</td>
-      <td style="text-align: left">maza faka</td>
-      <td style="text-align: left">surprise</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">surprise</td>
-      <td style="text-align: left">maza faka</td>
-      <td style="text-align: left">surprise surprise surprise maza faka maza faka maza faka kakakakak</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="image">image</h3>
-<p><img src="https://multipli.city/assets/img/img-sample.jpg" alt="img-smpl" /></p>
-
-<h3 id="heading">heading</h3>
-<h4 id="this-is-heading-4">This is heading 4</h4>
-<h5 id="this-is-heading-5">This is heading 5</h5>
-<h6 id="this-is-heading-6">This is heading 6</h6>
 
 
           
@@ -811,6 +749,14 @@
         </tr>
     </thead>
     <tbody>
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Reflection-No-4/">Reflection, No. 4</a></td>
+        <td class="td_title"><a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a></td>
+        <td class="td_performer">violin & percussion</td>
+        <td class="td_category">Reflection</td>
+        <td class="td_date">Sep 18, 20</td>
+        </tr>
         
         </tr>
         <td class="td_title"><a href="https://multipli.city/Perspectum/">Perspectrum</a></td>
