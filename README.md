@@ -56,8 +56,10 @@ abstract: # Optional front matter to put on the page as the release's "subtitle"
 # Other homes for this release on the web
 apple_music:
 bandcamp: # Can be album or single release
+discogs:
 soundcloud: # Can be playlist or single track
 spotify:
+vimeo:
 youtube: # Can be playlist or video
 ---
 ```
