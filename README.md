@@ -72,8 +72,10 @@ explicit: # Optional: true/false
 # Other homes for this release on the web
 apple_music:
 bandcamp: # Can be album or single release
+discogs:
 soundcloud: # Can be playlist or single track
 spotify:
+vimeo:
 youtube: # Can be playlist or video
 ---
 ```
