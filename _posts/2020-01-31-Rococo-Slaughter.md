@@ -17,6 +17,7 @@ season: 2020
 episode: 2
 bandcamp: //sonicmultiplicities.bandcamp.com/track/rococo-slaughter
 soundcloud: //soundcloud.com/sonicmultiplicities/rococo-slaughter?in=sonicmultiplicities/sets/music-aint-for-airports
+youtube: //www.youtube.com/watch?v=YyGKHia1Rhw
 cover: //sonicmultiplicities.audio/feed/mafa.jpg
 stream_url: sonicmultiplicities.audio/feed/SM005b.mp3
 bin_url: //sonicmultiplicities.audio/feed/SM005b_binaural.mp3
