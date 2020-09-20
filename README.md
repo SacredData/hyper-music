@@ -19,11 +19,19 @@ This jekyll theme generates the following:
 
 ### /_posts/
 
+<img src="https://raw.githubusercontent.com/SacredData/pRoJEct-NeGYa/master/assets/img/post_preview.jpg" width="540">
+
 This is where new music releases get added.
 
 Each post provides cover art and analyzes the art's colors (using Vibrant) to
 draw unique visualizations on both the Wavesurfer waveform, as well as the canvas
 background.
+
+#### layout: post
+
+Creates a new webpage & podcast item entry for a single track.
+
+Posts may be of type `Composition`, `Reflection`, or `Live Score`..
 
 #### `post` metadata
 
@@ -95,7 +103,22 @@ video_webm: # URI to WebM proxy of the video
 ---
 ```
 
-##### Playlist sidecar JSON file
+#### layout: playlist
+
+<img src="https://raw.githubusercontent.com/SacredData/pRoJEct-NeGYa/master/assets/img/playlist_preview1.jpg" width="540">
+
+Creates a new webpage & podcast item entry for a collection of tracks.
+
+Playlists expect there to be a `post.stream_url` containing a remote URL to all
+of the tracks in the playlist, concatenated in the proper order. It also expects
+a `post.sidecar` containing a remote URL to a JSON sidecar file with playlist
+metadata provided to assist with the Wavesurfer region construction process.
+
+Playlists may be of type `Composition` or `Album`.
+
+#### Sidecar JSON file
+
+<img src="https://raw.githubusercontent.com/SacredData/pRoJEct-NeGYa/master/assets/img/playlist_preview2.jpg" width="540">
 
 Playlists require a sidecar file written in JSON describing the different regions
 contained within the `post.stream_url`. Users may leverage the
@@ -124,23 +147,6 @@ Formatting is as follows:
   ]
 }
 ```
-
-#### layout: post
-
-Creates a new webpage & podcast item entry for a single track.
-
-Posts may be of type `Composition`, `Reflection`, or `Live Score`..
-
-#### layout: playlist
-
-Creates a new webpage & podcast item entry for a collection of tracks.
-
-Playlists expect there to be a `post.stream_url` containing a remote URL to all
-of the tracks in the playlist, concatenated in the proper order. It also expects
-a `post.sidecar` containing a remote URL to a JSON sidecar file with playlist
-metadata provided to assist with the Wavesurfer region construction process.
-
-Playlists may be of type `Composition` or `Album`.
 
 ### `pages/`
 
