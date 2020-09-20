@@ -419,7 +419,8 @@
   <button id="audioBtnPause" onclick="wavesurfer.pause()">
     <i class="fa fa-pause" aria-hidden="true"></i>
   </button>
-  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
+  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Mute</button>
+  <button id="toggleLossyBtn" onclick="toggleLossy()">Toggle <b>Lossy</b>/Lossless</button>
   
     <button id="toggleBinBtn" onclick="toggleBin()">Toggle Stereo/Binaural</button>
   
@@ -472,6 +473,7 @@
    });
 
    wavesurfer.load(`//${url}`);
+   // wavesurfer.load(opusUrl);
 
    wavesurfer.on('seek', () => {
      alpha = 0.6;
@@ -500,11 +502,27 @@
      
    });
 
+   wavesurfer.on('mute', (m) => {
+        const newBtnText = m === true ? "Unmute" : "Mute";
+        document.getElementById("toggleMuteBtn").innerHTML = newBtnText;
+   });
+
    function toggleBin() {
-     var stUrl = "sonicmultiplicities.audio/feed/SM005b.mp3";
-     var binUrl = "//sonicmultiplicities.audio/feed/SM005b_binaural.mp3";
-     url = url == stUrl ? binUrl : stUrl
-     wavesurfer.load(`//${url}`);
+       var stUrl = "sonicmultiplicities.audio/feed/SM005b.mp3";
+       var binUrl = "//sonicmultiplicities.audio/feed/SM005b_binaural.mp3";
+       url = url == stUrl ? binUrl : stUrl
+       wavesurfer.load(`//${url}`);
+   }
+
+   function toggleLossy() {
+        var stUrl = "sonicmultiplicities.audio/feed/SM005b.mp3";
+        var flacUrl = "sonicmultiplicities.audio/feed/downloads/SM005b.flac";
+        url = url == stUrl ? flacUrl : stUrl;
+        const newBtnText = url == stUrl ?
+          "Toggle <b>Lossy</b>/Lossless" :
+          "Toggle Lossy/<b>Lossless</b>";
+        wavesurfer.load(`//${url}`);
+        document.getElementById("toggleLossyBtn").innerHTML = newBtnText;
    }
 
    // Media controls
