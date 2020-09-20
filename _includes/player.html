@@ -8,7 +8,8 @@
   <button id="audioBtnPause" onclick="wavesurfer.pause()">
     <i class="fa fa-pause" aria-hidden="true"></i>
   </button>
-  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Toggle Mute</button>
+  <button id="toggleMuteBtn" onclick="wavesurfer.toggleMute()">Mute</button>
+  <button id="toggleLossyBtn" onclick="toggleLossy()">Toggle <b>Lossy</b>/Lossless</button>
   {% if page.bin_url %}
     <button id="toggleBinBtn" onclick="toggleBin()">Toggle Stereo/Binaural</button>
   {% endif %}
@@ -61,6 +62,7 @@
    });
 
    wavesurfer.load(`//${url}`);
+   // wavesurfer.load(opusUrl);
 
    wavesurfer.on('seek', () => {
      alpha = 0.6;
@@ -89,11 +91,27 @@
      {% endif %}
    });
 
+   wavesurfer.on('mute', (m) => {
+        const newBtnText = m === true ? "Unmute" : "Mute";
+        document.getElementById("toggleMuteBtn").innerHTML = newBtnText;
+   });
+
    function toggleBin() {
-     var stUrl = "{{ page.stream_url }}";
-     var binUrl = "{{ page.bin_url }}";
-     url = url == stUrl ? binUrl : stUrl
-     wavesurfer.load(`//${url}`);
+       var stUrl = "{{ page.stream_url }}";
+       var binUrl = "{{ page.bin_url }}";
+       url = url == stUrl ? binUrl : stUrl
+       wavesurfer.load(`//${url}`);
+   }
+
+   function toggleLossy() {
+        var stUrl = "{{ page.stream_url }}";
+        var flacUrl = "{{site.cdn}}/downloads/{{page.excerpt}}.flac";
+        url = url == stUrl ? flacUrl : stUrl;
+        const newBtnText = url == stUrl ?
+          "Toggle <b>Lossy</b>/Lossless" :
+          "Toggle Lossy/<b>Lossless</b>";
+        wavesurfer.load(`//${url}`);
+        document.getElementById("toggleLossyBtn").innerHTML = newBtnText;
    }
 
    // Media controls
