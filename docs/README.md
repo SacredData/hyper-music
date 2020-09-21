@@ -21,17 +21,17 @@ This jekyll theme generates the following:
 
 <img src="https://raw.githubusercontent.com/SacredData/pRoJEct-NeGYa/master/assets/img/post_preview.jpg" width="540">
 
-This is where new music releases get added.
+Directory where new music releases are published.
 
-Each post provides cover art and analyzes the art's colors (using Vibrant) to
-draw unique visualizations on both the Wavesurfer waveform, as well as the canvas
-background.
+Each `post` or `playlist` in `./_posts/` provides cover art and analyzes the
+art's colors (using Vibrant) to draw unique visualizations on both the
+Wavesurfer waveform, as well as the canvas background.
 
 #### layout: post
 
-Creates a new webpage & podcast item entry for a single track.
-
-Posts may be of type `Composition`, `Reflection`, or `Live Score`..
+* Creates a new webpage & permalink.
+* Creates podcast item entry.
+* Generates Scheme.org, OpenGraph, and Twitter card metadata for the release.
 
 #### `post` metadata
 
@@ -183,15 +183,17 @@ This approach enables your page to be 100% compatible with GitHub Pages, making 
 
 ## Design Philosophy
 
-COVID-19 has sort of stimulated my assumption that time is of the essence. I am
-seeking to simply get it out there immediately, with caution and with
-forethought.
+Building this site has been a learning process for me, so I am building as I go,
+as the need for new functionality and features present themselves. So yes, I am
+cowboy coding this one.
 
-The site and whatever framework may be spawned from it are always going to target
-saving the host money, playing nice with open standards, and optimizing for
-visibility, indexing, and archiving on the open, modern web. Why pay some org
-to be your archivist when Google will gladly do it for you in order to preserve
-its own sick, dastardly aims? ;)
+The hope is that I can figure out all the nuts and bolts for my own purposes,
+and then generalize the codebase so that anyone can plug in their cloud, CDN,
+branding, metadata, releases, hosting providers, etc., with minimal effort.
+
+If you notice anything I am doing wrong - or could be doing better - I invite
+you to create a new GitHub issue. I will be putting the TODOs for this project
+into GitHub issues for the time being, myself.
 
 ## The Future
 
@@ -208,17 +210,27 @@ graphical interfaces and forms which allow users to easily fill in the front
 matter and metadata. We'll also need to further automate the generation of all 
 metadata from the music assets themselves.
 
-### Planned Future Focuses
+### Planned Features
 
 #### Media Functionality
 
 * Live stream/broadcast events
 * Automated VOD generation & publishing
 * Automated multi-casting
-* Submission to other music services via APIs
 * Live chats
 
-#### eCommerce Features
+#### External Services
+
+* Submission to other music services via APIs such as Bandcamp & SoundCloud
+* Provide new entries in music release databases like Discogs & MusicBrainz
+* Generation of acoustic ID & submit to AcousticBrainz (and others)
+
+#### Metadata Tools
+
+* Auto-generate QR codes
+* Auto-assign ISRC/ISWC numbers and other barcodes
+
+#### eCommerce
 
 * Payment & licensing backends to facilitate independent licensing transactions
 * Merch & special item sales
