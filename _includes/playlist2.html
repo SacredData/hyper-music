@@ -114,7 +114,7 @@
         audio.setAttribute('id', 'audio');
         
         // Set the source
-        audio.src = `//${opusUrl}`; // OPUS first, MP3 fallback
+        audio.src = opusUrl; // OPUS first, MP3 fallback
         audio.appendChild(mp3Source); // See downloads.html
 
         var scData = await fetch("{{site.url}}{{site.base_url}}{{site.assets_path}}/sidecars/{{page.excerpt}}.json")
@@ -151,12 +151,13 @@
             MinimapPlugin.create(minimapConfig)
           ]
         });
+        /*
         var [vibrant, muted, darkVibrant] = await getVibrant();
 
         wavesurfer.setWaveColor(vibrant || "#999");
         wavesurfer.setProgressColor(muted || "#555");
         wavesurfer.setCursorColor(darkVibrant || "#333");
-
+        */
         var volumeInput = document.querySelector('#volume');
         var onChangeVolume = function (e) {
           wavesurfer.setVolume(e.target.value);

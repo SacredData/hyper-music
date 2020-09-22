@@ -120,7 +120,7 @@
         audio.setAttribute('id', 'audio');
         
         // Set the source
-        audio.src = `//${opusUrl}`; // OPUS first, MP3 fallback
+        audio.src = opusUrl;
         audio.appendChild(mp3Source); // See downloads.html
 
         var peaks = await fetch("{{site.url}}{{site.base_url}}{{site.assets_path}}/peaks/{{page.excerpt}}.json")
@@ -134,12 +134,13 @@
           responsive: true,
           partialRender: false,
         });
+        /*
         var [vibrant, muted, darkVibrant] = await getVibrant();
 
         wavesurfer.setWaveColor(vibrant || "#999");
         wavesurfer.setProgressColor(muted || "#555");
         wavesurfer.setCursorColor(darkVibrant || "#333");
-
+        */
         var volumeInput = document.querySelector('#volume');
         var onChangeVolume = function (e) {
           wavesurfer.setVolume(e.target.value);
