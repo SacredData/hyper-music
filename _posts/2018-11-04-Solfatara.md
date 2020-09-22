@@ -17,7 +17,7 @@ season: 2018
 episode: 1
 bandcamp: //sonicmultiplicities.bandcamp.com/album/solfatar
 soundcloud: //soundcloud.com/sonicmultiplicities/solfatara-garrett-semmelink-violin
-cover: //sonicmultiplicities.audio/feed/SMOLD_022.jpg
+cover: //s3.amazonaws.com/sonicmultiplicities.audio/feed/SMOLD_022.jpg
 stream_url: sonicmultiplicities.audio/feed/SMOLD_022.mp3
 duration: 674
 excerpt: "SMOLD_022"

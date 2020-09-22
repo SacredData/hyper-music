@@ -16,7 +16,7 @@ date: 2014-10-23
 episode: 1
 bandcamp: //sonicmultiplicities.bandcamp.com/track/vasoconstriction
 soundcloud: //soundcloud.com/sonicmultiplicities/vasoconstriction-empire
-cover: //sonicmultiplicities.audio/feed/vasoconstriction.jpg
+cover: //s3.amazonaws.com/sonicmultiplicities.audio/feed/vasoconstriction.jpg
 stream_url: sonicmultiplicities.audio/feed/SMOLD_008.mp3
 duration: 1029
 excerpt: "SMOLD_008"

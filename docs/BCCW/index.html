@@ -51,8 +51,8 @@
   
 
   
-  <meta property="og:image" content="https://sonicmultiplicities.audio/feed/bccw.jpg" />
-  <meta property="og:image:secure_url" content="https://sonicmultiplicities.audio/feed/bccw.jpg" />
+  <meta property="og:image" content="https://s3.amazonaws.com/sonicmultiplicities.audio/feed/bccw.jpg" />
+  <meta property="og:image:secure_url" content="https://s3.amazonaws.com/sonicmultiplicities.audio/feed/bccw.jpg" />
   <meta property="og:image:alt" content="A 2020 Sonic Multiplicities recording, performed by Garrett Semmelink on the violin. Catalog number SM006." />
   
   <meta property="og:image:type" content="image/jpeg" />
@@ -281,7 +281,7 @@
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
           
 <h1>
-  <img src="//sonicmultiplicities.audio/feed/bccw.jpg" alt="Cover art for Birthday Cake Chest Wound" height="540" style="vertical-align:bottom"><br><br>
+  <img src="//s3.amazonaws.com/sonicmultiplicities.audio/feed/bccw.jpg" alt="Cover art for Birthday Cake Chest Wound" height="540" style="vertical-align:bottom"><br><br>
   <div id="musicTitle">Birthday Cake Chest Wound</div>
 </h1>
 
@@ -476,7 +476,7 @@
      return a;
    }
    async function getVibrant() {
-      var cover = "//sonicmultiplicities.audio/feed/bccw.jpg";
+      var cover = "//s3.amazonaws.com/sonicmultiplicities.audio/feed/bccw.jpg";
       var v = new Vibrant("https:" + cover);
       var palette = await v.getPalette();
       var muted = palette.Muted ? palette.Muted.getHex() : null;
@@ -513,7 +513,7 @@
         return regions;
    }
    async function initPlayer() {
-        var cover = "//sonicmultiplicities.audio/feed/bccw.jpg";
+        var cover = "//s3.amazonaws.com/sonicmultiplicities.audio/feed/bccw.jpg";
         var url = "sonicmultiplicities.audio/feed/SM006.mp3";
 
         // Create an <audio> Element

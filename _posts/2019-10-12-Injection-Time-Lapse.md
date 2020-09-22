@@ -18,7 +18,7 @@ episode: 1
 bandcamp: //sonicmultiplicities.bandcamp.com/album/injection-time-lapse
 soundcloud: //soundcloud.com/sonicmultiplicities/injection-timelapse
 vimeo: //vimeo.com/351832834
-cover: ///sonicmultiplicities.audio/feed/SM001.jpg
+cover: //s3.amazonaws.com//sonicmultiplicities.audio/feed/SM001.jpg
 stream_url: sonicmultiplicities.audio/feed/SM001.mp3
 intro_url: /sonicmultiplicities.audio/feed/SM001a_intro.mp3
 duration: 1596

@@ -14,7 +14,7 @@ toc_level: 4
 category: Reflection
 date: 2015-02-27
 episode: 4
-cover: ///sonicmultiplicities.audio/feed/artworks-000125170994-cj37zh-t500x500.jpg
+cover: //s3.amazonaws.com//sonicmultiplicities.audio/feed/artworks-000125170994-cj37zh-t500x500.jpg
 stream_url: sonicmultiplicities.audio/feed/SMOLD_016.mp3
 duration: 2415
 excerpt: "SMOLD_016"

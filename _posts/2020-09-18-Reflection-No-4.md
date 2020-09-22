@@ -19,7 +19,7 @@ episode: 12
 explicit: false
 bandcamp: //sonicmultiplicities.bandcamp.com/album/reflection-no-4
 soundcloud: //soundcloud.com/sonicmultiplicities/rn4
-cover: //sonicmultiplicities.audio/feed/SM011.jpg
+cover: //s3.amazonaws.com/sonicmultiplicities.audio/feed/SM011.jpg
 stream_url: sonicmultiplicities.audio/feed/SM011.mp3
 excerpt: "SM011"
 abstract: "CELEBRATING TEN YEARS OF MULTIPLICITATION WITH SPECIAL GUEST, JUDGE JUDY!"

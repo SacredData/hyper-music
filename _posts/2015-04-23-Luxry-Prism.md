@@ -18,7 +18,7 @@ episode: 6
 bandcamp: //sonicmultiplicities.bandcamp.com/album/luxury-prism
 soundcloud: //soundcloud.com/sonicmultiplicities/sets/luxury-prism 
 spotify: //open.spotify.com/album/26GFpl1LwrYjIJrn0ParuG
-cover: //sonicmultiplicities.audio/feed/lp.jpg
+cover: //s3.amazonaws.com/sonicmultiplicities.audio/feed/lp.jpg
 stream_url: sonicmultiplicities.audio/feed/SMOLD_021.mp3
 duration: 1968
 discogs: //www.discogs.com/-Luxury-Prism/release/13824472

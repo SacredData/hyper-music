@@ -17,7 +17,7 @@ duration: 345
 season: 2020
 episode: 9
 explicit: false
-cover: //sonicmultiplicities.audio/feed/SC003.png
+cover: //s3.amazonaws.com/sonicmultiplicities.audio/feed/SC003.png
 bandcamp: //sonicmultiplicities.bandcamp.com/track/perspectum
 soundcloud: //soundcloud.com/sonicmultiplicities/perspectum
 stream_url: sonicmultiplicities.audio/feed/SC003.mp3
