@@ -706,6 +706,7 @@
 				var mult3 = 0;
 				
 				function draw() {
+             setTimeout(() => {
 				 animationId = requestAnimationFrame(draw);
 				 analyser.getByteTimeDomainData(dataArray);
 
@@ -765,6 +766,8 @@
 				 canvasCtx.lineWidth = Math.min(Math.abs(lineWidth), 100);
 				 canvasCtx.lineTo(canvas.width, canvas.height / 2);
 				 canvasCtx.stroke();
+
+                }, 1000/30);
 				}
 
      // Media controls
