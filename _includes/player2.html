@@ -25,6 +25,19 @@
   <input id="volume" type="range" min="0" max="1" value="1" step="0.1" style="float:right">
 </div>
  <script>
+    function isUserMobile() {
+         const mobileAgents = [
+              "iPhone",
+              "iOS",
+              "Mobile",
+              "Android"
+         ];
+         const userAgent = navigator.userAgent;
+         return mobileAgents.some(a => userAgent.includes(a))
+    }
+
+    console.log("Is the user mobile?", isUserMobile());
+
     function getRandom(min, max) {
       return Math.random() * (max - min) + min;
     }
