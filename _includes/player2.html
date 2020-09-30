@@ -117,7 +117,20 @@
 
         return regions;
    }
+   function parsePosCookie (cookieString) {
+        if (!cookieString) {
+             return null
+        }
 
+        const posCookie = cookieString.split('pos=')[1];
+
+        if (posCookie === undefined) {
+             return null;
+        } else {
+             const pos = Number(posCookie);
+             if (pos > 0) { return pos; } else { return null; }
+        }
+   }
    async function initPlayer() {
         var cover = "{{ page.cover }}";
         var url = "{{ page.stream_url }}";
@@ -185,6 +198,11 @@
 					`;
 					 document.head.appendChild(style);
           await wavesurfer.play();
+        });
+
+        wavesurfer.on('pause', () => {
+             document.cookie = `pos=${wavesurfer.getCurrentTime()}`;
+             console.log(document.cookie);
         });
 
         wavesurfer.on('play', () => {
