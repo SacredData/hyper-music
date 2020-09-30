@@ -198,8 +198,8 @@
         });
 
 				wavesurfer.on('play', () => {
-					draw();
-				});
+          if (animationId === undefined) { animationId = draw(); }
+        });
 
         wavesurfer.on('ready', async function () {
           document.getElementById("player_msg").innerHTML = "";
