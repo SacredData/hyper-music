@@ -15,8 +15,12 @@
         {% for post in site.posts %}
         </tr>
         <td class="td_title"><a href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a></td>
-        <td class="td_title"><a href='{{site.url}}{{site.baseurl}}/{{post.author | replace: " ", "-"  }}'>{{post.author}}</a></td>
-        <td class="td_performer">{{post.instrument}}</td>
+        <td class="td_performer">
+          {% for author in post.author %}
+          <a href='{{site.url}}{{site.baseurl}}/{{author | replace: " ", "-"  }}'>{{author}}</a>
+          {% endfor %}
+        </td>
+        <td class="td_instrument">{{post.instrument}}</td>
         <td class="td_category">{{post.category}}</td>
         <td class="td_date">{{post.date | date: "%b %d, %y"}}</td>
         </tr>
