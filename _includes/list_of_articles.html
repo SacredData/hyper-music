@@ -6,7 +6,7 @@
         <tr>
             <th> TITLE </th>
             <th> PERFORMER </th>
-            <th> INSTRUMENT </th>
+            <!--<th> INSTRUMENT </th>-->
             <th> CATEGORY </th>
             <th> DATE </th>
         </tr>
@@ -15,12 +15,12 @@
         {% for post in site.posts %}
         </tr>
         <td class="td_title"><a href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a></td>
-        <td class="td_performer">
+        <td class="td_title">
           {% for author in post.author %}
-          <a href='{{site.url}}{{site.baseurl}}/{{author | replace: " ", "-"  }}'>{{author}}</a>
+          <a href='{{site.url}}{{site.baseurl}}/{{author | replace: " ", "-"  }}'>{{author}}</a> ({{ post.instrument[forloop.index0] | default: post.instrument }})<br>
           {% endfor %}
         </td>
-        <td class="td_instrument">{{post.instrument}}</td>
+        <!--<td class="td_instrument">{{post.instrument | join ', '}}</td>-->
         <td class="td_category">{{post.category}}</td>
         <td class="td_date">{{post.date | date: "%b %d, %y"}}</td>
         </tr>
