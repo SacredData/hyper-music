@@ -5,7 +5,10 @@ author:
 - Garrett Semmelink
 - Tyler Dinner
 - Max Pena
-instrument: violin / guitar / guitar
+instrument:
+- violin
+- guitar
+- guitar
 post_list: "date"
 toc: true
 home_btn: true
