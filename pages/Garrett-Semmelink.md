@@ -1,6 +1,6 @@
 ---
 layout: profile
-post_list: "date"
+post_list: "performer"
 toc: false
 home_btn: true
 btn_text: true
