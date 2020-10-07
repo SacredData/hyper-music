@@ -27,6 +27,29 @@
         {% endfor %}
     </tbody>
 </table>
+{% elsif page.post_list == "performer" %}
+<!-- list of articles: show only this artist's music (profile default) -->
+<h1 class="loa">music by this artist</h1>
+<table>
+    <thead>
+        <tr>
+            <th> TITLE </th>
+            <th> CATEGORY </th>
+            <th> DATE </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in site.posts %}
+        {% if post.author == page.title or post.author contains page.title %}
+        </tr>
+        <td class="td_title"><a href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a></td>
+        <td class="td_category">{{post.category}}</td>
+        <td class="td_date">{{post.date | date: "%b %d, %y"}}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
+</table>
 {% elsif page.post_list == "category" %}
 <!-- list of articles: sorted by category-->
 <h1>music sorted by category</h1>
