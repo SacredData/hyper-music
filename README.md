@@ -1,4 +1,4 @@
-# hyper-music
+# jekyll-hypermusic
 > A jekyll theme designed to maximize musical independence and enhance musical virtue.
 
 Jekyll code for the Sonic Multiplicities deep-learning music project.
