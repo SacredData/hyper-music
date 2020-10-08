@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <!-- multi-device width -->
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta name=”robots” content=”index, follow”>
+  <!-- site description -->
+  
+  <meta content="Cosmo D" name="description" />
+  <!-- referer for 3rd-part images-->
+  <meta content="no-referrer" name="referrer" />
+  <!-- title -->
+  <title>
+    
+    Cosmo D
+    
+  </title>
+  <!-- icon -->
+  <link href="https://multipli.city/assets/img/favicon.ico?" rel="shortcut icon bookmark" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://multipli.city/assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://multipli.city/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://multipli.city/assets/img/favicon-16x16.png">
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="https://multipli.city/assets/css/main.css" type="text/css" />
+  <!-- fa 5.9.0 -->
+  <link rel="stylesheet" href="https://multipli.city/assets/css/fa.min.css" type="text/css" />
+  <!-- rouge theme-->
+  <link rel="stylesheet" href="https://multipli.city/assets/css/rouge-bg.css" />
+  
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@sociosonics" />
+  <meta name="twitter:creator" content="@andrewunmuted" />
+
+  
+
+  
+  
+  <!-- OG metadata -->
+  <meta property="og:site_name" content="multipli.city" />
+  <meta property="og:url" content="https://multipli.city/Cosmo-D/" />
+  <meta property="og:title" content="Cosmo D" />
+
+  
+  <meta property="og:type" content="profile">
+  
+  <meta property="og:image" content="https://multipli.city/assets/img/cosmod.jpg">
+  
+  <meta property="profile:first_name" content="Cosmo">
+  <meta property="profile:last_name" content="D">
+  <meta property="profile:gender" content="male">
+  
+  <meta property="profile:username" scope=“twitter.com“ content="@cosmoddd">
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- mathjax 2.7.5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+  </head>
+
+  <body class="page">
+    <!-- background animations -->
+<div class="div_bg">
+  <canvas id="c"></canvas>
+</div>
+<script>
+  // var colors = [ "#faa", "#f12", "#f2a" ]
+  var colors = [ "#ebbebe", "#b95775", "#be639b", "#a63333", "#7b3349" ]
+  var fontSizeMults = [ 0.5, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.5, 2.0 ]
+  var c = document.getElementById("c");
+  var ctx = c.getContext("2d");
+  c.height = window.innerHeight;
+  c.width = window.innerWidth;
+  var txts = "▲⟁◮◬▷▷△◁⧍⧋⧊⨹∧∨⨺⧌⛛◀▶▵⨻⨻⨻";
+  txts = txts.split("");
+  var font_size = 2;
+  var columns = c.width / font_size;
+  var drops = [];
+  for (var x = 0; x < columns; x++) drops[x] = 1;
+
+  function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.01)";
+    ctx.fillRect(0, 0, c.width, c.height);
+    ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];// "#faa";
+    font_size = font_size * fontSizeMults[Math.floor(Math.random() * fontSizeMults.length)];
+    ctx.font = font_size + "px arial";
+    for (var i = 0; i < drops.length; i++) {
+      var text = txts[Math.floor(Math.random() * txts.length)];
+      ctx.fillText(text, i * font_size, drops[i] * font_size);
+      if (drops[i] * font_size > c.height || Math.random() > 0.98) drops[i] = 0;
+      drops[i]++;
+    }
+  }
+  setInterval(draw, 9000);
+</script>
+
+    <div class="container" id="ctner">
+      <div class="header">
+    <nav class="nav_bar">
+        <ul>
+            <!-- left header -->
+            <li
+                class="li_left">
+                <!-- home -->
+                
+                    <a class="header_btn" href="https://multipli.city">
+                        <i class="fa fa-home">
+                            
+                                <p class="btn_text">Home</p>
+                            
+                        </i>
+                    </a>
+                
+                  <a class="header_btn" href="https://multipli.city/podcast.xml">
+                  <!--<a class="header_btn" href="//s3.amazonaws.com/sonicmultiplicities.audio/feed/feed.xml"> -->
+                  <i class="fa fa-podcast" aria-hidden="true">
+                  
+                  <p class="btn_text">Podcast</p>
+                  
+                  </i>
+                </a>
+                <!-- email -->
+                
+                    <a class="header_btn" href="mailto:andrew@multipli.city">
+                        <i class="fa fa-envelope-square">
+                            
+                                <p class="btn_text">Email</p>
+                            
+                        </i>
+                    </a>
+                
+                <!-- github -->
+                
+                    <a class="header_btn" href="https://github.com/sacreddata">
+                        <i class="fa fa-github">
+                            
+                                <p class="btn_text">Github</p>
+                            
+                        </i>
+                    </a>
+                
+                <!-- maximize -->
+                
+                    <a class="header_btn" id="mxmz_btn" onclick="toggle_maximize()">
+                        <i class="fa fa-window-maximize">
+                            
+                                <p class="btn_text" id="mxmz_text">Maximize</p>
+                            
+                        </i>
+                    </a>
+                
+                <!-- access token -->
+                
+            </li>
+            <!-- right header -->
+            <span
+                class="span_right">
+                <!-- popup table of content -->
+                
+                    <a class="title">multipli.city</a>
+                    
+                        <a class="owner">
+                            -
+                            S⧊CREDdata</a>
+                    
+                
+            </span>
+        </ul>
+    </nav>
+    <hr/>
+</div>
+<!-- table of content -->
+
+<!-- toggle maximize -->
+
+<script>
+  var ctner_state = 0;
+  var ctner = document.getElementById("ctner");
+  function toggle_maximize() {
+    if (ctner_state == 0) {
+      ctner.style.width = "100%";
+      ctner.style.height = "100%";
+      ctner.style.top = "0";
+      ctner.style.maxWidth = "100%";
+      if (document.getElementById("mxmz_text")) {
+        document.getElementById("mxmz_text").innerHTML = "Restore";
+      }
+      ctner_state = 1;
+    } else if (ctner_state == 1) {
+      ctner.style.width = "84%";
+      ctner.style.height = "97%";
+      ctner.style.top = "2%";
+      ctner.style.maxWidth = "1240px";
+      if (document.getElementById("mxmz_text")) {
+        document.getElementById("mxmz_text").innerHTML = "Maximize";
+      }
+      ctner_state = 0;
+    }
+  }
+</script>
+
+<!-- encrypt and decrypt -->
+
+
+      <div class="div_article" id="div_atcl">       
+        <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
+          <center>
+            
+            <img src="https://multipli.city/assets/img/cosmod.jpg" style="width:500px;">
+            
+          </center>
+          <h1 id="cosmo-d">Cosmo D</h1>
+
+
+          
+<!-- list of articles: show only this artist's music (profile default) -->
+<h1 class="loa">music by this artist</h1>
+<table>
+    <thead>
+        <tr>
+            <th> TITLE </th>
+            <th> CATEGORY </th>
+            <th> DATE </th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </tr>
+        <td class="td_title"><a href="https://multipli.city/Untitled/">Untitled</a></td>
+        <td class="td_category">Composition</td>
+        <td class="td_date">Jul 06, 12</td>
+        </tr>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </tbody>
+</table>
+
+
+        </article>
+          
+          <div class="footer">
+    <nav class="nav_bar">
+        <ul>
+            <li class="copyright">
+                © 2020 SACRED DATA
+            </li>
+            
+            <li>
+                uninstall your DAW
+            </li>
+            
+        </ul>
+        <br>
+        <ul>
+          <a href="//itunes.apple.com/us/artist/1493047427"><i class="fa fa-apple" aria-hidden="true"></i></a>
+          <a href="//sonicmultiplicities.bandcamp.com/music"><i class="fa fa-bandcamp" aria-hidden="true"></i></a>
+          <a href="//soundcloud.com/sonicmultiplicities"><i class="fa fa-soundcloud" aria-hidden="true"></i></a>
+          <a href="//open.spotify.com/artist/7y3b4MROsSlg8Md4yDtoS4"><i class="fa fa-spotify" aria-hidden="true"></i></a>
+          <a href="//vimeo.com/sonicmultiplicities"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a>
+          <a href="//www.youtube.com/channel/UCPPgYvCAGXn-HSqtwAEvvrg/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+        </ul>
+    </nav>
+</div>
+
+          
+      </div>
+    </div>
+  </body>
+</html>

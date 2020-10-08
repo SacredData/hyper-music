@@ -1,7 +1,7 @@
-# Multipli.city
+# jekyll-hypermusic
 > A jekyll theme designed to maximize musical independence and enhance musical virtue.
 
-Jekyll code for the Sonic Multiplicities deep-learning music project.
+`jekyll-hypermusic` is a jekyll template for the Sonic Multiplicities deep-learning music project's website. It is meant to serve as the project's "home base," while also linking prodigiously to all other places on the web where our music exists in some form or another.
 
 * Aims to implement [OpenGraph](https://ogp.me/), [Schema.org](https://schema.org/), and other protocols for indexing.
 * Allows for posting of individual tracks, albums, playlists, and/or videos.
