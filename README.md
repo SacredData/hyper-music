@@ -10,7 +10,7 @@
 
 ## Functionality
 
-This jekyll theme generates the following:
+For each new music release written to the `_posts` directory, this theme generates the following:
 
 * New post on the website (with cool audio and visualization features!)
 * New episode in the podcast (fully automated and compliant with Apple podcast directory)
@@ -35,6 +35,13 @@ Wavesurfer waveform, as well as the canvas background.
 
 #### `post` metadata
 
+There are a lot of properties that can be set for each new `post`. Most are not
+optional, so make sure you fill out all of the relevant details before you
+publish your website's new front matter.
+
+*For any new performers in a release, make sure you create an accompanying
+performer profile page so that there's no 404 when you click on their name.*
+
 ##### General metadata
 
 ```
@@ -45,13 +52,11 @@ btn_text: # Whether to include text labels for buttons; default: true
 post_list: # "date" for ordering by `page.date`; "category" for `page.category`
 sidecar: # Sidecar URL provides human-readable album metadata in JSON format
 abstract: # Optional front matter to put on the page as the release's "subtitle"
----
 ```
 
 ##### Release metadata
 
 ```
----
 category: # Type of release - Composition, Album, etc.
 author: # In this case, author = musician name (Make a profile for them in `pages/`)
 instrument: # Instrument played by the musician (Keep this string consistent)
@@ -60,23 +65,25 @@ stream_url: # Streamable remote URL where the release lives
 bin_url: # Optional: Streamable URL for the binaural mix
 duration: # Duration of the complete release, in seconds
 excerpt: # Put the catalog number for the release here, if relevant.
----
 ```
 
 ##### Podcast episode settings
 
+If you don't fill out the season and episode for the podcast feed, it will not
+be published to the podcast.
+
 ```
----
 season: # Podcast season (release year), for iTunes podcast network
 episode: # Podcast episode (count, starting from 1), for iTunes podcast network
 explicit: # Optional: true/false
----
 ```
 
 ##### External services metadata for `post`
 
+If the music is available elsewhere online, you can indicate that here. All of
+these are optional.
+
 ```
----
 # Other homes for this release on the web
 apple_music:
 bandcamp: # Can be album or single release
