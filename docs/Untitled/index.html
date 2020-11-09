@@ -431,14 +431,14 @@
 </div>
  <script>
     function isUserMobile() {
-         const mobileAgents = [
-              "iPhone",
-              "iOS",
-              "Mobile",
-              "Android"
-         ];
-         const userAgent = navigator.userAgent;
-         return mobileAgents.some(a => userAgent.includes(a))
+       const mobileAgents = [
+            "iPhone",
+            "iOS",
+            "Mobile",
+            "Android"
+       ];
+       const userAgent = navigator.userAgent;
+       return mobileAgents.some(a => userAgent.includes(a))
     }
 
     console.log("Is the user mobile?", isUserMobile());
@@ -447,82 +447,68 @@
       return Math.random() * (max - min) + min;
     }
 
-   function initApp(event) {
-        if (event == 'complete') {
+    function initApp(event) {
+      if (event == 'complete') {
           initPlayer();
-
-        }   
-   }
-
-   // Re-draw the track list table. Accepts the regions array for this page
-   // and the `region.id` for the region that should be highlighted.
-   function drawRegionsTable(reg, highlightId="") {
-     const regionsTable = reg.map(r => `${r.id == highlightId ? '<i><b><h3>▼' : '<h3>'}${r.id} [${r.duration} sec]${r.id == highlightId ? '▲</h3></b></i>' : '</h3>'}`)
-     document.getElementById("tracklist").innerHTML = `<div style="text-align:center;"><h2>TRACKLIST</h2><br>${regionsTable.join('\n')}</div><hr>`;
-   }
-
-   function hexToRgbA(hex){
-     var c;
-     if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
-       c= hex.substring(1).split('');
-       if(c.length== 3){
-           c= [c[0], c[0], c[1], c[1], c[2], c[2]];
-       }
-       c= '0x'+c.join('');
-       return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+`,${getRandom(0.1, 0.2)})`;
-     }
-     throw new Error('Bad Hex');
-   }
-
-   function shuffle(a) {
-     for (let i = a.length - 1; i > 0; i--) {
-       const j = Math.floor(Math.random() * (i + 1));
-       [a[i], a[j]] = [a[j], a[i]];
-     }
-     return a;
-   }
-   async function getVibrant() {
-      var cover = "";
-      if (cover == "") {
-        return [null, null, null];
-      } else {
-        var v = new Vibrant("https:" + cover);
-        var palette = await v.getPalette();
-        var muted = palette.Muted ? palette.Muted.getHex() : null;
-        var vibrant = palette.Vibrant ? palette.Vibrant.getHex() : null;
-        var darkVibrant = palette.DarkVibrant ? palette.DarkVibrant.getHex() : null;
-
-        colors.push(darkVibrant, vibrant, muted);
-        return [vibrant, muted, darkVibrant];
       }
-   }
-   function parseRegions(regions) {
-        var drawColors = shuffle(colors);
-        var totalDurs = 0;
-        var startStop = [];
+    }
 
-        var regDurs = regions.map(r => r.duration);
+    // Re-draw the track list table. Accepts the regions array for this page
+    // and the `region.id` for the region that should be highlighted.
+    function drawRegionsTable(reg, highlightId="") {
+      const regionsTable = reg.map(r => `${r.id == highlightId ? '<i><b><h3>▼' : '<h3>'}${r.id} [${r.duration} sec]${r.id == highlightId ? '▲</h3></b></i>' : '</h3>'}`)
+      document.getElementById("tracklist").innerHTML = `<div style="text-align:center;"><h2>TRACKLIST</h2><br>${regionsTable.join('\n')}</div><hr>`;
+    }
 
-        regDurs.forEach(reg => {
-          var start = totalDurs;
-          totalDurs += reg;
-          startStop.push({
-            start, end: totalDurs
-          });
+    function hexToRgbA(hex){
+      var c;
+      if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+        c= hex.substring(1).split('');
+        if(c.length== 3){
+          c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+        }
+        c = '0x'+c.join('');
+        return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+`,${getRandom(0.1, 0.2)})`;
+      }
+      throw new Error('Bad Hex');
+    }
+
+    function shuffle(a) {
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function parseRegions(regions) {
+      var drawColors = shuffle(colors);
+      var totalDurs = 0;
+      var startStop = [];
+
+      var regDurs = regions.map(r => r.duration);
+
+      regDurs.forEach(reg => {
+        var start = totalDurs;
+        totalDurs += reg;
+        startStop.push({
+          start, end: totalDurs
         });
+      });
 
-        let regCount = 0;
+      let regCount = 0;
 
-        regions.forEach(reg => {
-          reg.start = startStop[regCount].start;
-          reg.end = startStop[regCount].end;
-          reg.color = hexToRgbA(shuffle(drawColors)[0]);
-          regCount++;
-        });
+      regions.forEach(reg => {
+        reg.start = startStop[regCount].start;
+        reg.end = startStop[regCount].end;
+        reg.color = hexToRgbA(shuffle(drawColors)[0]);
+        regCount++;
+      });
 
-        return regions;
-   }
-   function parsePosCookie (cookieString) {
+      return regions;
+    }
+ 
+    function parsePosCookie (cookieString) {
         if (!cookieString) {
              return null
         }
@@ -535,230 +521,230 @@
              const pos = Number(posCookie);
              if (pos > 0) { return pos; } else { return null; }
         }
-   }
-   async function initPlayer() {
-        var cover = "";
-        var url = "sonicmultiplicities.audio/feed/SMOLD_006.mp3";
-        var fadeDur = 60;
+    }
 
-        // Create an <audio> Element
-        let audio = document.createElement('audio');
+    async function initPlayer() {
+      var cover = "";
+      var url = "sonicmultiplicities.audio/feed/SMOLD_006.mp3";
+      var fadeDur = 60;
+
+      // Create an <audio> Element
+      let audio = document.createElement('audio');
+      
+      // Set crossOrigin to anonymous to avoid CORS restrictions
+      audio.crossOrigin = 'anonymous';
+      
+      // Don't forget to set the id to an unique one
+      audio.setAttribute('id', 'audio');
+      
+      // Set the source
+      audio.src = opusUrl;
+      audio.appendChild(mp3Source); // See downloads.html
+
+      var peaks = await fetch("https://multipli.city/assets/peaks/SMOLD_006.json")
+        .then(response => response.json());
+      
+      var wavesurfer = WaveSurfer.create({
+        backend: "MediaElementWebAudio",
+        container: "#player",
+        duration: Number("642"),
+        cursorWidth: 2,
+        responsive: true,
+        partialRender: false,
+      });
+      /*
+      var [vibrant, muted, darkVibrant] = await getVibrant();
+
+      wavesurfer.setWaveColor(vibrant || "#999");
+      wavesurfer.setProgressColor(muted || "#555");
+      wavesurfer.setCursorColor(darkVibrant || "#333");
+      */
+      var volumeInput = document.querySelector('#volume');
+      var onChangeVolume = function (e) {
+        wavesurfer.setVolume(e.target.value);
+        console.log(e.target.value);
+      };
+      volumeInput.addEventListener('input', onChangeVolume);
+      volumeInput.addEventListener('change', onChangeVolume);
+
+      wavesurfer.on('finish', () => {
         
-        // Set crossOrigin to anonymous to avoid CORS restrictions
-        audio.crossOrigin = 'anonymous';
+        window.location.href = "/MANQUAMAN/";
         
-        // Don't forget to set the id to an unique one
-        audio.setAttribute('id', 'audio');
-        
-        // Set the source
-        audio.src = opusUrl;
-        audio.appendChild(mp3Source); // See downloads.html
+      });
 
-        var peaks = await fetch("https://multipli.city/assets/peaks/SMOLD_006.json")
-          .then(response => response.json());
-        
-        var wavesurfer = WaveSurfer.create({
-          backend: "MediaElementWebAudio",
-          container: "#player",
-          duration: Number("642"),
-          cursorWidth: 2,
-          responsive: true,
-          partialRender: false,
-        });
-        /*
-        var [vibrant, muted, darkVibrant] = await getVibrant();
+      wavesurfer.on('ready', async function () {
+        document.getElementById("player_msg").innerHTML = "";
+        dur = Number(wavesurfer.getDuration().toFixed(2));
+        document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
+        var style = document.createElement('style');
+        style.innerHTML = `
+         #ctner {
+           opacity: 0;
+           transition: opacity ${Math.round(dur / 6) > fadeDur ? fadeDur : Math.round(dur / 6)}s linear;   
+         }
+         #ctner:hover {
+            opacity: 1;
+            transition: opacity 5s;
+         }
+        `;
+         document.head.appendChild(style);
+        await wavesurfer.play();
+      });
 
-        wavesurfer.setWaveColor(vibrant || "#999");
-        wavesurfer.setProgressColor(muted || "#555");
-        wavesurfer.setCursorColor(darkVibrant || "#333");
-        */
-        var volumeInput = document.querySelector('#volume');
-        var onChangeVolume = function (e) {
-          wavesurfer.setVolume(e.target.value);
-          console.log(e.target.value);
-        };
-        volumeInput.addEventListener('input', onChangeVolume);
-        volumeInput.addEventListener('change', onChangeVolume);
+      wavesurfer.on('pause', () => {
+           document.cookie = `pos=${wavesurfer.getCurrentTime()}`;
+           console.log(document.cookie);
+      });
 
-        wavesurfer.on('finish', () => {
-          
-          window.location.href = "/MANQUAMAN/";
-          
-        });
-
-        wavesurfer.on('ready', async function () {
-          document.getElementById("player_msg").innerHTML = "";
-          dur = Number(wavesurfer.getDuration().toFixed(2));
-          document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
-          var style = document.createElement('style');
-          style.innerHTML = `
-           #ctner {
-             opacity: 0;
-             transition: opacity ${Math.round(dur / 6) > fadeDur ? fadeDur : Math.round(dur / 6)}s linear;   
-           }
-           #ctner:hover {
-              opacity: 1;
-              transition: opacity 5s;
-           }
-          `;
-           document.head.appendChild(style);
-          await wavesurfer.play();
-        });
-
-        wavesurfer.on('pause', () => {
-             document.cookie = `pos=${wavesurfer.getCurrentTime()}`;
-             console.log(document.cookie);
-        });
-
-        var playButton = document.querySelector('#audioBtnPlay');
-        playButton.addEventListener('click', async () => {
-           await wavesurfer.play();
-        });
-        var pauseButton = document.querySelector('#audioBtnPause');
-        pauseButton.addEventListener('click', async () => {
-           await wavesurfer.playPause();
-        });
-        var muteButton = document.querySelector('#toggleMuteBtn');
-        muteButton.addEventListener('click', async () => {
-          await wavesurfer.toggleMute();
-        });
-        
-        function toggleBin() {
-          var binUrl = "";
-          audio.src = binUrl; // OPUS first, MP3 fallback
-          wavesurfer.load(audio, peaks.data);
-        }
-
+      var playButton = document.querySelector('#audioBtnPlay');
+      playButton.addEventListener('click', async () => {
+         await wavesurfer.play();
+      });
+      var pauseButton = document.querySelector('#audioBtnPause');
+      pauseButton.addEventListener('click', async () => {
+         await wavesurfer.playPause();
+      });
+      var muteButton = document.querySelector('#toggleMuteBtn');
+      muteButton.addEventListener('click', async () => {
+        await wavesurfer.toggleMute();
+      });
+      
+      function toggleBin() {
+        var binUrl = "";
+        audio.src = binUrl; // OPUS first, MP3 fallback
         wavesurfer.load(audio, peaks.data);
-
-        var lineWidth = 2;
-        var drawColors = shuffle(colors);
-        var widthDelta = 0;
-        var alpha = 1;
-        var animationId = undefined;
-
-        var audioCtx = wavesurfer.backend.ac;
-        var analyser = audioCtx.createAnalyser();
-        var bufferLength = analyser.frequencyBinCount;
-        var dataArray = new Uint8Array(bufferLength);
-        analyser.getByteTimeDomainData(dataArray);
-
-        var canvas = document.getElementById("c");
-        var canvasCtx = canvas.getContext("2d");
-
-        analyser.fftSize = canvas.height > 2000 ? 4096 : 2048;
-
-        // Add event listener for `click` events.
-        canvas.addEventListener('click', (event) => {
-         var x2 = event.pageX,
-           y2 = event.pageY;
-         console.log(x2, y2);
-         if (animationId) {
-           cancelAnimationFrame(animationId)
-           animationId = undefined;
-         } else {
-           draw()
-         }
-        });
-
-        wavesurfer.backend.setFilter(analyser);
-
-        let [mo, da, ye]    = ( new Date()  ).toLocaleDateString().split("/");
-        let [ho, mi, se] = ( new Date()  ).toLocaleTimeString().slice(0,7).split(":");
-
-        var month = Number(mo);
-        var day = Number(da);
-        var year = Number(ye);
-        var hour = Number(ho);
-        var minute = Number(mi);
-        var second = Number(se);
-
-        var mult1 = day / month;
-        var mult2 = month / day;
-        var mult3 = 0;
-
-     // Media controls
-     document.body.onkeyup = function(e){
-       if(e.keyCode == 32){ // spacebar
-         wavesurfer.playPause()
-       } else if (e.keyCode == 37) { // left arrow key
-         wavesurfer.skip(-10);
-       } else if (e.keyCode == 39) { // right arrow key
-         wavesurfer.skip(10);
-       }
-     }
-      function draw() {
-        setTimeout(() => {
-          animationId = requestAnimationFrame(draw);
-          analyser.getByteTimeDomainData(dataArray);
-
-          canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
-          canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
-
-          canvasCtx.lineWidth = (10 + lineWidth) / hour / day;
-          canvasCtx.strokeStyle = drawColors[0];
-
-          canvasCtx.beginPath();
-          var sliceWidth = canvas.width * 1.0 / bufferLength;
-         var x = 0;
-
-         for (var i = 0; i < bufferLength; i++) {
-           var v = dataArray[i] / 128.0;
-           var y = v * canvas.height / 2;
-
-           if (i === 0) {
-             canvasCtx.moveTo(x, y);
-
-             if (lineWidth > 50) {
-               drawColors = shuffle(drawColors);
-               alpha = 1 - (shuffle([0.1, 0.01, 0.5, 0.91])[1] * mult1);
-             }
-           } else {
-             canvasCtx.lineTo(x, y);
-
-             widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
-
-             if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
-               drawColors = shuffle(drawColors);
-               lineWidth += drawColors.length * mult2;
-             }
-             
-             if (lineWidth > 15) {
-               lineWidth += shuffle([-1, 1, 10])[0] * Math.abs(widthDelta) * (1 - alpha);
-               mult1 += 1;
-               mult3 -= 0.01;
-             } else {
-               lineWidth = mult3 * (2 + Math.abs(widthDelta));
-               alpha += shuffle([0.01, 0.1, 0.2, 0.5, 0.8, 1.0])[0];
-             }
-           }
-           x += sliceWidth;
-         }
-
-         if (lineWidth > 100.0) {
-           lineWidth = 1.0 * mult3;
-           alpha = shuffle([0.5, 0.005, 0.0008])[2];
-         }
-
-         if (alpha > 1) {
-           alpha = shuffle([0.1, 0.001, 0.0001])[0];
-         }
-
-         canvasCtx.lineWidth = Math.min(Math.abs(lineWidth), 100);
-         canvasCtx.lineTo(canvas.width, canvas.height / 2);
-         canvasCtx.stroke();
-
-                }, 1000 / 60);
       }
 
-      wavesurfer.on('play', () => {
-           if (!animationId) {
-                draw();
-            }
-      });
-        
+      wavesurfer.load(audio, peaks.data);
 
-   }
+      var lineWidth = 2;
+      var drawColors = shuffle(colors);
+      var widthDelta = 0;
+      var alpha = 1;
+      var animationId = undefined;
+
+      var audioCtx = wavesurfer.backend.ac;
+      var analyser = audioCtx.createAnalyser();
+      var bufferLength = analyser.frequencyBinCount;
+      var dataArray = new Uint8Array(bufferLength);
+      analyser.getByteTimeDomainData(dataArray);
+
+      var canvas = document.getElementById("c");
+      var canvasCtx = canvas.getContext("2d");
+
+      analyser.fftSize = canvas.height > 2000 ? 4096 : 2048;
+
+      // Add event listener for `click` events.
+      canvas.addEventListener('click', (event) => {
+       var x2 = event.pageX,
+         y2 = event.pageY;
+       console.log(x2, y2);
+       if (animationId) {
+         cancelAnimationFrame(animationId)
+         animationId = undefined;
+       } else {
+         draw()
+       }
+      });
+
+      wavesurfer.backend.setFilter(analyser);
+
+      let [mo, da, ye]    = ( new Date()  ).toLocaleDateString().split("/");
+      let [ho, mi, se] = ( new Date()  ).toLocaleTimeString().slice(0,7).split(":");
+
+      var month = Number(mo);
+      var day = Number(da);
+      var year = Number(ye);
+      var hour = Number(ho);
+      var minute = Number(mi);
+      var second = Number(se);
+
+      var mult1 = day / month;
+      var mult2 = month / day;
+      var mult3 = 0;
+
+      // Media controls
+      document.body.onkeyup = function(e){
+        if(e.keyCode == 32){ // spacebar
+          wavesurfer.playPause()
+        } else if (e.keyCode == 37) { // left arrow key
+          wavesurfer.skip(-10);
+        } else if (e.keyCode == 39) { // right arrow key
+          wavesurfer.skip(10);
+        }
+      }
+    function draw() {
+      setTimeout(() => {
+        animationId = requestAnimationFrame(draw);
+        analyser.getByteTimeDomainData(dataArray);
+
+        canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
+        canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+        canvasCtx.lineWidth = (10 + lineWidth) / hour / day;
+        canvasCtx.strokeStyle = drawColors[0];
+
+        canvasCtx.beginPath();
+        var sliceWidth = canvas.width * 1.0 / bufferLength;
+       var x = 0;
+
+       for (var i = 0; i < bufferLength; i++) {
+         var v = dataArray[i] / 128.0;
+         var y = v * canvas.height / 2;
+
+         if (i === 0) {
+           canvasCtx.moveTo(x, y);
+
+           if (lineWidth > 50) {
+             drawColors = shuffle(drawColors);
+             alpha = 1 - (shuffle([0.1, 0.01, 0.5, 0.91])[1] * mult1);
+           }
+         } else {
+           canvasCtx.lineTo(x, y);
+
+           widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
+
+           if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
+             drawColors = shuffle(drawColors);
+             lineWidth += drawColors.length * mult2;
+           }
+           
+           if (lineWidth > 15) {
+             lineWidth += shuffle([-1, 1, 10])[0] * Math.abs(widthDelta) * (1 - alpha);
+             mult1 += 1;
+             mult3 -= 0.01;
+           } else {
+             lineWidth = mult3 * (2 + Math.abs(widthDelta));
+             alpha += shuffle([0.01, 0.1, 0.2, 0.5, 0.8, 1.0])[0];
+           }
+         }
+         x += sliceWidth;
+       }
+
+       if (lineWidth > 100.0) {
+         lineWidth = 1.0 * mult3;
+         alpha = shuffle([0.5, 0.005, 0.0008])[2];
+       }
+
+       if (alpha > 1) {
+         alpha = shuffle([0.1, 0.001, 0.0001])[0];
+       }
+
+       canvasCtx.lineWidth = Math.min(Math.abs(lineWidth), 100);
+       canvasCtx.lineTo(canvas.width, canvas.height / 2);
+       canvasCtx.stroke();
+
+              }, 1000 / 60);
+    }
+
+    wavesurfer.on('play', () => {
+         if (!animationId) {
+              draw();
+          }
+    });
+
+    }
  document.addEventListener('DOMContentLoaded', initPlayer);
  </script>
  
