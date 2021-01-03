@@ -4,7 +4,13 @@
   <span>
     <i class="fa fa-user-secret"></i>
     {% for author in page.author %}
-    <a href='{{site.url}}{{site.baseurl}}/{{author | replace: " ", "-"  }}'>{{author}}</a>{% endfor %}, {{ page.instrument }}
+      <a href='{{site.url}}{{site.baseurl}}/{{author | replace: " ", "-"
+        }}'>{{author}}</a>{% endfor %} |
+    {% assign instruments = "" | split: ", " %}
+    {% for instrument in page.instrument %}
+      {% assign instruments = instruments | push: {{instrument}} %}
+    {% endfor %}
+    {{instruments | array_to_sentence_string: ''}}
   </span>
   {% endif %}
   <!-- date -->
