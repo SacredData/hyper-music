@@ -138,13 +138,15 @@
                 class="li_left">
                 <!-- home -->
                 
-                    <a class="header_btn" href="https://multipli.city">
-                        <i class="fa fa-home">
-                            
-                                <p class="btn_text">Home</p>
-                            
-                        </i>
-                    </a>
+                    
+                        <a class="header_btn" href="https://multipli.city">
+                            <i class="fa fa-home">
+                                
+                                    <p class="btn_text">Home</p>
+                                
+                            </i>
+                        </a>
+                    
                 
                   <a class="header_btn" href="https://multipli.city/podcast.xml">
                   <!--<a class="header_btn" href="//s3.amazonaws.com/sonicmultiplicities.audio/feed/feed.xml"> -->
@@ -530,7 +532,7 @@
 
       return regions;
     }
- 
+
     function parsePosCookie (cookieString) {
         if (!cookieString) {
              return null
@@ -553,20 +555,20 @@
 
       // Create an <audio> Element
       let audio = document.createElement('audio');
-      
+
       // Set crossOrigin to anonymous to avoid CORS restrictions
       audio.crossOrigin = 'anonymous';
-      
+
       // Don't forget to set the id to an unique one
       audio.setAttribute('id', 'audio');
-      
+
       // Set the source
       audio.src = opusUrl;
       audio.appendChild(mp3Source); // See downloads.html
 
       var peaks = await fetch("https://multipli.city/assets/peaks/SMOLD_007.json")
         .then(response => response.json());
-      
+
       var wavesurfer = WaveSurfer.create({
         backend: "MediaElementWebAudio",
         container: "#player",
@@ -575,13 +577,7 @@
         responsive: true,
         partialRender: false,
       });
-      /*
-      var [vibrant, muted, darkVibrant] = await getVibrant();
 
-      wavesurfer.setWaveColor(vibrant || "#999");
-      wavesurfer.setProgressColor(muted || "#555");
-      wavesurfer.setCursorColor(darkVibrant || "#333");
-      */
       var volumeInput = document.querySelector('#volume');
       var onChangeVolume = function (e) {
         wavesurfer.setVolume(e.target.value);
@@ -604,7 +600,7 @@
         style.innerHTML = `
          #ctner {
            opacity: 0;
-           transition: opacity ${Math.round(dur / 6) > fadeDur ? fadeDur : Math.round(dur / 6)}s linear;   
+           transition: opacity ${Math.round(dur / 6) > fadeDur ? fadeDur : Math.round(dur / 6)}s linear;
          }
          #ctner:hover {
             opacity: 1;
@@ -632,7 +628,7 @@
       muteButton.addEventListener('click', async () => {
         await wavesurfer.toggleMute();
       });
-      
+
       function toggleBin() {
         var binUrl = "";
         audio.src = binUrl; // OPUS first, MP3 fallback
@@ -689,7 +685,15 @@
 
       // Media controls
       document.body.onkeyup = function(e){
-        if(e.keyCode == 32){ // spacebar
+        if (e.keyCode == 0) {
+          if (e.key == "MediaPlay") {
+            wavesurfer.playPause()
+          } else if (e.key == "MediaTrackNext") {
+            wavesurfer.skip(10);
+          } else if (e.key == "MediaTrackPrevious") {
+            wavesurfer.skip(-10);
+          }
+        } else if(e.keyCode == 32){ // spacebar
           wavesurfer.playPause()
         } else if (e.keyCode == 37) { // left arrow key
           wavesurfer.skip(-10);
@@ -732,7 +736,7 @@
              drawColors = shuffle(drawColors);
              lineWidth += drawColors.length * mult2;
            }
-           
+
            if (lineWidth > 15) {
              lineWidth += shuffle([-1, 1, 10])[0] * Math.abs(widthDelta) * (1 - alpha);
              mult1 += 1;
