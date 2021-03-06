@@ -6,13 +6,23 @@
                 class="li_left">
                 <!-- home -->
                 {% if page.home_btn != false %}
-                    <a class="header_btn" href="{{ site.url }}{{ site.baseurl }}">
-                        <i class="fa fa-home">
-                            {% if page.btn_text != false %}
-                                <p class="btn_text">Home</p>
-                            {% endif %}
-                        </i>
-                    </a>
+                    {% if page.title == "Sonic Multiplicities" %}
+                        <a class="header_btn" href="{{ site.url }}{{site.baseurl }}/news/">
+                            <i class="fa fa-exclamation">
+                                {% if page.btn_text != false %}
+                                    <p class="btn_text">News</p>
+                                {% endif %}
+                            </i>
+                        </a>
+                    {% else %}
+                        <a class="header_btn" href="{{ site.url }}{{ site.baseurl }}">
+                            <i class="fa fa-home">
+                                {% if page.btn_text != false %}
+                                    <p class="btn_text">Home</p>
+                                {% endif %}
+                            </i>
+                        </a>
+                    {% endif %}
                 {% endif %}
                   <a class="header_btn" href="{{ site.podcast.url | absolute_url }}">
                   <!--<a class="header_btn" href="//s3.amazonaws.com/sonicmultiplicities.audio/feed/feed.xml"> -->
@@ -125,7 +135,7 @@
         {% assign toclv = page.toc_level %}
         {% elsif  site.toc_level %}
         {% assign toclv = site.toc_level %}
-        {% else %} 
+        {% else %}
         {% assign toclv = 3 %}
     {% endif %}
     <!-- generate toc -->
