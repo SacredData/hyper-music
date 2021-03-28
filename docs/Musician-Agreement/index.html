@@ -7,13 +7,13 @@
   <meta name=”robots” content=”index, follow”>
   <!-- site description -->
   
-  <meta content="SM001" name="description" />
+  <meta content="" name="description" />
   <!-- referer for 3rd-part images-->
   <meta content="no-referrer" name="referrer" />
   <!-- title -->
   <title>
     
-    Injection Time Lapse
+    Musician Agreement
     
   </title>
   <!-- icon -->
@@ -34,44 +34,20 @@
   <meta name="twitter:creator" content="@andrewunmuted" />
 
   
-  <!-- Wavesurfer.js -->
-  <script src="https://multipli.city/assets/js/wavesurfer.js"></script>
-  <script src="https://multipli.city/assets/js/wavesurfer.regions.min.js"></script>
-  
 
   
   
   <!-- OG metadata -->
   <meta property="og:site_name" content="multipli.city" />
-  <meta property="og:url" content="https://multipli.city/Injection-Time-Lapse/" />
-  <meta property="og:title" content="Injection Time Lapse" />
+  <meta property="og:url" content="https://multipli.city/Musician-Agreement/" />
+  <meta property="og:title" content="Musician Agreement" />
 
   
 
   
-  <meta property="og:image" content="https://s3.amazonaws.com//sonicmultiplicities.audio/feed/SM001.jpg" />
-  <meta property="og:image:secure_url" content="https://s3.amazonaws.com//sonicmultiplicities.audio/feed/SM001.jpg" />
-  <meta property="og:image:alt" content="A 2019 Sonic Multiplicities recording, performed by Garrett Semmelink on the violin. Catalog number SM001." />
-  
-  <meta property="og:image:type" content="image/jpeg" />
-  
-  
 
   
-  <meta property="og:description" content="A 2019 Sonic Multiplicities recording, performed by Garrett Semmelink on the violin. Catalog number SM001." />
-  <meta property="og:audio" content="https://sonicmultiplicities.audio/feed/SM001.mp3" />
-  
-  <meta property="og:audio:type" content="audio/mpeg" />
-  
-  <meta property="music:duration" content="1596">
-  
 
-  
-  <meta property="og:type" content="music.song" />
-  <meta property="music:album:url" content="https://multipli.city/Injection-Time-Lapse/">
-  <meta property="music:musician" content="https://multipli.city/Andrew-Grathwohl/">
-  
-  <meta property="music:musician" content="https://multipli.city/Garrett-Semmelink/">
   
 
   
@@ -195,47 +171,26 @@
                 
                 <!-- access token -->
                 
+                    <a class="header_btn" id="acs_btn" onclick="apply_token()">
+                        <i class="fa fa-key">
+                            
+                                <p class="btn_text">Token</p>
+                            
+                        </i>
+                    </a>
+                    <textarea class="access_token" cols="8" id="acs_tkn" rows="1"></textarea>
+                
             </li>
             <!-- right header -->
             <span
                 class="span_right">
                 <!-- popup table of content -->
                 
-                <!--<a class="header_btn" onclick="scroll_percentage(-0.88)">-->
-                    <a class="header_btn" onclick='window.location.href="/MAFA/"'>
-                        <i class="fa fa-backward">
-                            
-                                <p class="btn_text">Prev</p>
-                            
-                        </i>
-                    </a>
-                    <!-- scroll down -->
-                    <a class="header_btn" onclick='window.location.href="/Solfatara/"'>
-                        <i class="fa fa-forward">
-                            
-                                <p class="btn_text">Next</p>
-                            
-                        </i>
-                    </a>
-                    <!-- copy link of page to clipboard -->
+                    <a class="title">multipli.city</a>
                     
-                    <script>
-                      function copyText() {
-                        var data = [new ClipboardItem({ "text/plain": new Blob(["https://multipli.city/Injection-Time-Lapse/"], { type: "text/plain" }) })];
-												navigator.clipboard.write(data).then(function() {
-													console.log("Copied to clipboard successfully!");
-												}, function() {
-													console.error("Unable to write to clipboard. :-(");
-												})
-                  }
-                    </script>
-                    <a class="header_btn" onclick="copyText()" id="sharelink">
-                      <i class="fa fa-share-square">
-                            
-                                <p class="btn_text">Share</p>
-                            
-                        </i>
-                    </a>
+                        <a class="owner">
+                            -
+                            S⧊CREDdata</a>
                     
                 
             </span>
@@ -244,27 +199,6 @@
     <hr/>
 </div>
 <!-- table of content -->
-
-    <div class="div_toc toc" id="popup_toc">
-    
-    <!-- generate toc -->
-    
-    </div>
-    <!-- toggle toc -->
-    <script>
-    function toggle_toc() {
-        var popup = document.getElementById("popup_toc");
-        popup.classList.toggle("show");
-    }
-    </script>
-    <!-- scroll page -->
-        <script>
-    function scroll_percentage(mtpler) {
-        document
-        .getElementById("div_atcl")
-        .scrollBy(0, window.innerHeight * mtpler);
-    }
-    </script>
 
 <!-- toggle maximize -->
 
@@ -296,688 +230,140 @@
 
 <!-- encrypt and decrypt -->
 
+    <script src="https://multipli.city/assets/js/sjcl.js" async></script>
+    <script>
+  function decrypt_all(pwd, class_name) {
+    var elem_clct = document.getElementsByClassName(class_name);
+    if (elem_clct.length == 0) {
+      console.log("No texts to decrypt!");
+      return false;
+    }
+    for (acc = 0; acc < elem_clct.length; acc++) {
+      var encrypted = elem_clct[acc].id;
+      var ct =
+        '{"iv":"' +
+        encrypted.substring(0, 22) +
+        '==",salt:"","ct":"' +
+        encrypted.substring(22) +
+        '"}';
+      try {
+        var txt = sjcl.json.decrypt(pwd, ct);
+      } catch (e) {
+        alert("Invalid Access Token!");
+        return;
+      }
+      elem_clct[acc].innerHTML = txt;
+    }
+    return true;
+  }
+  function apply_token() {
+    var tkn = document.getElementById("acs_tkn");
+    if (decrypt_all(tkn.value, "encrypted")) {
+      tkn.style.display = "none";
+      document.getElementById("acs_btn").style.display = "none";
+    }
+  }
+</script>
+
 
       <div class="div_article" id="div_atcl">       
         <article id="main_atcl" itemscope itemtype="http://schema.org/BlogPosting">
-          <h1>
+          <h1 id="musician-agreement"><strong>MUSICIAN AGREEMENT</strong></h1>
+<blockquote>
+  <p><strong>All musicians that perform with Sonic Multiplicities should be aware of the
+implications and outcomes resulting from that choice.</strong></p>
+</blockquote>
 
-  <img src="//s3.amazonaws.com//sonicmultiplicities.audio/feed/SM001.jpg" alt="Cover art for Injection Time Lapse" height="540" style="vertical-align:bottom"><br><br>
-  <div id="musicTitle">Injection Time Lapse</div>
-</h1>
+<h4 id="a-few-notes-before-we-begin">A few notes before we begin…</h4>
 
-<script type="application/ld+json">
-{
-		"@context": "http://schema.org",
-		"@type": "MusicGroup",
-		"name": "Sonic Multiplicities",
-		"alternateName": "▲",
-		"sameAs": "https://multipli.city",
-		"foundingLocation": {
-				"@type": "City",
-				"name": "New York"
-		},
-		"foundingDate": "2010",
-		"genre": "Experimental",
-		"member": [
-			{
-				"@type": "OrganizationRole",
-				"member": {
-					"@type": "Person",
-					"name": "Andrew Grathwohl"
-				},
-				"startDate": "2010",
-				"roleName": ["composer", "producer", "engineer", "programmer"]
-			},
-			{
-				"@type": "OrganizationRole",
-				"member": {
-					"@type": "Person",
-					"name": "Garrett Semmelink"
-				},
-				"startDate": "2010",
-				"roleName": ["violin"]
-			},
-			{
-				"@type": "OrganizationRole",
-				"member": {
-					"@type": "Person",
-					"name": "Tyler Dinner"
-				},
-				"startDate": "2019",
-				"roleName": ["guitar"]
-			}
-		]
-}
-</script>
+<p>It is the responsibility of each performer to understand and be able to operate
+within the technical concepts explained on this page.</p>
 
+<p>All visitors to this page should expect to have their IP address logged in order
+to validate that they have read the information contained below.</p>
 
-<script type="application/ld+json">
-{
-		"@context": "http://schema.org",
-		"@type": "MusicComposition",
-    "name": "Injection Time Lapse",
-		"composer": [
-				{
-						"@type": "Person",
-						"name": "Andrew Grathwohl"
-				},
-				{
-						"@type": "Person",
-            "name": "Garrett Semmelink"
-				}
-		],
-		"inLanguage": "EN",
-		"publisher": {
-				"@type": "Organization",
-				"name": "Sacred Audio"
-		},
-    "datePublished": "2019"
-}
-</script>
+<p><strong>Please email <a href="mailto:andrew@multipli.city">Andrew Grathwohl</a> with any questions
+related to these matters.</strong></p>
 
+<h2 id="background">Background</h2>
 
-<div class="post_info">
-  <!-- author -->
-  
-  <span>
-    <i class="fa fa-user-secret"></i>
-    
-      <a href='https://multipli.city/Garrett-Semmelink'>Garrett Semmelink</a> |
-    
-    
-    violin
-  </span>
-  
-  <!-- date -->
-  
-  <span>
-    <i class="fa fa-calendar"></i>
-    Oct 12, 2019
-  </span>
-  
-  <!-- category -->
-  
-  <span>
-    <i class="fa fa-archive"></i>
-    Composition
-  </span>
-  
-</div>
-<!-- abstract -->
-<div class="abstract">
-  
-  <p>Marking our triumphant return, with Sonic Multiplicities 1.1!</p>
-  
-</div>
+<p>Playing Sonic Multiplicities music is a pretty sweet deal for the musicians who
+embrace the opportunity. Not only will you be a participant in one of the most
+exciting and revolutionary integrations of free improvisation and artificial
+intelligence out there today, you will also get a trick-ass audio master of your
+performance - and perhaps even more.</p>
 
-<div id="downloads">
-  <b>Download:</b>
-  <a href="" id="flac_download">FLAC</a>
-  <a href="" id="opus_download">OPUS</a>
-  <a href="" id="mp3_download">MP3</a>
-  
-  
-  
-  <br><br>
-</div>
-<script>
-  var sm = "sonicmultiplicities.audio/feed/SM001.mp3".split('/')[2].replace('.mp3','');
-  var mp3Url = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/${sm}.mp3`;
-  var flacUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.flac`;
-  var opusUrl = `//s3.amazonaws.com/sonicmultiplicities.audio/feed/downloads/${sm}.opus`;
+<p>It has taken a lot of time, personal expense, and hardship to get the SM project
+where it is today. It challenges the current musical environment in more ways
+than the purely performative - we also take great leaps forward in how we treat
+rights, licensing, privacy, and even music releases.</p>
 
-  document.getElementById("flac_download").href = flacUrl;
-  document.getElementById("opus_download").href = opusUrl;
-  document.getElementById("mp3_download").href = mp3Url;
+<p>Therefore, your participation in SM is bound to your understanding of the below
+information. We put this document together in order to provide the full scope
+of what performing with SM means.</p>
 
-  var mp3Source= document.createElement('source');
-  mp3Source.type= 'audio/mpeg';
-  mp3Source.src= mp3Url;
-  
-  var opusSource= document.createElement('source');
-  opusSource.type= 'audio/ogg';
-  opusSource.src= opusUrl;
+<p><strong>SM performances have life-long implications.</strong> Your contribution to the SM
+training data will contribute to the outcomes of each and every musician that
+comes to perform on SM after you. Your own outcomes were very much dictated by
+the actions, choices, and decisions made by the performers that came before you.</p>
 
-  var flacSource= document.createElement('source');
-  flacSource.type= 'audio/flac';
-  flacSource.src= flacUrl;
+<h2 id="data-we-ingest">Data We Ingest</h2>
+<blockquote>
+  <p>Without exceptions, every single Sonic Multiplicities performance is thoroughly
+documented. This is the data we take in, and what we do with that data.</p>
+</blockquote>
 
-</script>
+<h3 id="before-the-performance">Before the Performance</h3>
 
+<p>Before any performance officially begins the SM software begins recording a 22
+channel PCM audio file to disk. Performers should therefore expect to have their
+musical performance as well as their spoken conversations recorded to disk.</p>
 
+<h3 id="during-the-performance">During the Performance</h3>
 
-<script src="https://multipli.city/assets/js/vibrant.js"></script>
-<div id="player_msg"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i> LOADING SONICS <br> <h1>SPACEBAR: PLAY/PAUSE <br>ARROW KEYS: SEEK/VOLUME <br>DOUBLE-CLICK: SKIP TO SEGMENT</h1></div>
-<div id="player"></div>
-<div id="player_controls">
-  <div id="music_dur"></div>
-  <button id="audioBtnPlay">
-    <i class="fa fa-play" aria-hidden="true"></i>
-  </button>
-  <button id="audioBtnPause">
-    <i class="fa fa-pause" aria-hidden="true"></i>
-  </button>
-  <button id="toggleMuteBtn">Toggle Mute</button>
-  
-  <input id="volume" type="range" min="0" max="1" value="1" step="0.1" style="float:right">
-</div>
- <script>
-    function isUserMobile() {
-       const mobileAgents = [
-            "iPhone",
-            "iOS",
-            "Mobile",
-            "Android"
-       ];
-       const userAgent = navigator.userAgent;
-       return mobileAgents.some(a => userAgent.includes(a))
-    }
+<p>Audio data is analyzed and logged in real-time by the SM software. This analysis
+and logging data is saved to the SM’s data storage backend, retained indefinately
+for the purposes of training the SM machine learning implementations.</p>
 
-    console.log("Is the user mobile?", isUserMobile());
+<h3 id="after-the-performance">After the Performance</h3>
 
-    function getRandom(min, max) {
-      return Math.random() * (max - min) + min;
-    }
+<p>In addition to the real-time data collected, the SM machine learning
+implementations are trained on other data adjacent to the SM performance. This
+includes the precise date &amp; time the performance took place, the GPS location
+of the performance, and the results of all API calls made before, during, and
+after the recording took place.</p>
 
-    function initApp(event) {
-      if (event == 'complete') {
-          initPlayer();
-      }
-    }
+<h2 id="licenses--credits">Licenses &amp; Credits</h2>
 
-    // Re-draw the track list table. Accepts the regions array for this page
-    // and the `region.id` for the region that should be highlighted.
-    function drawRegionsTable(reg, highlightId="") {
-      const regionsTable = reg.map(r => `${r.id == highlightId ? '<i><b><h3>▼' : '<h3>'}${r.id} [${r.duration} sec]${r.id == highlightId ? '▲</h3></b></i>' : '</h3>'}`)
-      document.getElementById("tracklist").innerHTML = `<div style="text-align:center;"><h2>TRACKLIST</h2><br>${regionsTable.join('\n')}</div><hr>`;
-    }
+<p>All performers surrender their rights of music ownership and publication to Andrew
+Grathwohl, who also retains 50% of the compositional credit. The remaining 50% is
+split evenly between each participant in the recording.</p>
 
-    function hexToRgbA(hex){
-      var c;
-      if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
-        c= hex.substring(1).split('');
-        if(c.length== 3){
-          c= [c[0], c[0], c[1], c[1], c[2], c[2]];
-        }
-        c = '0x'+c.join('');
-        return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+`,${getRandom(0.1, 0.2)})`;
-      }
-      throw new Error('Bad Hex');
-    }
+<p>Unless significant contributions were made, no performer may claim credits for
+production roles. Audio engineering, audio mixing, audio tracking, audio mastering,
+and all other such credits are assigned to Andrew Grathwohl.</p>
 
-    function shuffle(a) {
-      for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-      }
-      return a;
-    }
+<h3 id="releases">Releases</h3>
 
-    function parseRegions(regions) {
-      var drawColors = shuffle(colors);
-      var totalDurs = 0;
-      var startStop = [];
+<p>Performers must understand that any and all Sonic Multiplicities recordings are
+viable for release for free on the official Sonic Multiplicities podcast feed,
+as well as other web endpoints that provide free audio streaming services such
+as the <a href="https://multipli.city">Multipli.city</a> homepage and SoundCloud.</p>
 
-      var regDurs = regions.map(r => r.duration);
+<p>Andrew Grathwohl and Sacred Data, LLC retain exclusive rights to use SM audio
+recordings to produce new music releases, including physical CD &amp; vinyl. These
+releases will be available on, in addition to the free resources listed above,
+paid digital streaming services and physical media.</p>
 
-      regDurs.forEach(reg => {
-        var start = totalDurs;
-        totalDurs += reg;
-        startStop.push({
-          start, end: totalDurs
-        });
-      });
+<h4 id="profits-made-from-releases-go-directly-into-financing-new-opportunities-for-sm-performance">Profits made from releases go directly into financing new opportunities for SM performance.</h4>
 
-      let regCount = 0;
+<p>Performers with more than 20 titles under their belt (as listed on
+the <a href="https://multipli.city">Multipli.city</a> homepage) are entitled to the use of
+SM funds for new experiments such as instrument modifications, equipment purchases,
+and accessories for the creation of new sonic palettes.</p>
 
-      regions.forEach(reg => {
-        reg.start = startStop[regCount].start;
-        reg.end = startStop[regCount].end;
-        reg.color = hexToRgbA(shuffle(drawColors)[0]);
-        regCount++;
-      });
-
-      return regions;
-    }
-
-    function parsePosCookie (cookieString) {
-        if (!cookieString) {
-             return null
-        }
-
-        const posCookie = cookieString.split('pos=')[1];
-
-        if (posCookie === undefined) {
-             return null;
-        } else {
-             const pos = Number(posCookie);
-             if (pos > 0) { return pos; } else { return null; }
-        }
-    }
-
-    async function initPlayer() {
-      var cover = "//s3.amazonaws.com//sonicmultiplicities.audio/feed/SM001.jpg";
-      var url = "sonicmultiplicities.audio/feed/SM001.mp3";
-      var fadeDur = 60;
-
-      // Create an <audio> Element
-      let audio = document.createElement('audio');
-
-      // Set crossOrigin to anonymous to avoid CORS restrictions
-      audio.crossOrigin = 'anonymous';
-
-      // Don't forget to set the id to an unique one
-      audio.setAttribute('id', 'audio');
-
-      // Set the source
-      audio.src = opusUrl;
-      audio.appendChild(mp3Source); // See downloads.html
-
-      var peaks = await fetch("https://multipli.city/assets/peaks/SM001.json")
-        .then(response => response.json());
-
-      var wavesurfer = WaveSurfer.create({
-        backend: "MediaElementWebAudio",
-        container: "#player",
-        duration: Number("1596"),
-        cursorWidth: 2,
-        responsive: true,
-        partialRender: false,
-      });
-
-      var volumeInput = document.querySelector('#volume');
-      var onChangeVolume = function (e) {
-        wavesurfer.setVolume(e.target.value);
-        console.log(e.target.value);
-      };
-      volumeInput.addEventListener('input', onChangeVolume);
-      volumeInput.addEventListener('change', onChangeVolume);
-
-      wavesurfer.on('finish', () => {
-        
-        window.location.href = "/Solfatara/";
-        
-      });
-
-      wavesurfer.on('ready', async function () {
-        document.getElementById("player_msg").innerHTML = "";
-        dur = Number(wavesurfer.getDuration().toFixed(2));
-        document.getElementById("music_dur").innerHTML = `<i class="fa fa-clock-o" aria-hidden="true"></i> ${dur}`;
-        var style = document.createElement('style');
-        style.innerHTML = `
-         #ctner {
-           opacity: 0;
-           transition: opacity ${Math.round(dur / 6) > fadeDur ? fadeDur : Math.round(dur / 6)}s linear;
-         }
-         #ctner:hover {
-            opacity: 1;
-            transition: opacity 5s;
-         }
-        `;
-         document.head.appendChild(style);
-        await wavesurfer.play();
-      });
-
-      wavesurfer.on('pause', () => {
-           document.cookie = `pos=${wavesurfer.getCurrentTime()}`;
-           console.log(document.cookie);
-      });
-
-      var playButton = document.querySelector('#audioBtnPlay');
-      playButton.addEventListener('click', async () => {
-         await wavesurfer.play();
-      });
-      var pauseButton = document.querySelector('#audioBtnPause');
-      pauseButton.addEventListener('click', async () => {
-         await wavesurfer.playPause();
-      });
-      var muteButton = document.querySelector('#toggleMuteBtn');
-      muteButton.addEventListener('click', async () => {
-        await wavesurfer.toggleMute();
-      });
-
-      function toggleBin() {
-        var binUrl = "";
-        audio.src = binUrl; // OPUS first, MP3 fallback
-        wavesurfer.load(audio, peaks.data);
-      }
-
-      wavesurfer.load(audio, peaks.data);
-
-      var lineWidth = 2;
-      var drawColors = shuffle(colors);
-      var widthDelta = 0;
-      var alpha = 1;
-      var animationId = undefined;
-
-      var audioCtx = wavesurfer.backend.ac;
-      var analyser = audioCtx.createAnalyser();
-      var bufferLength = analyser.frequencyBinCount;
-      var dataArray = new Uint8Array(bufferLength);
-      analyser.getByteTimeDomainData(dataArray);
-
-      var canvas = document.getElementById("c");
-      var canvasCtx = canvas.getContext("2d");
-
-      analyser.fftSize = canvas.height > 2000 ? 4096 : 2048;
-
-      // Add event listener for `click` events.
-      canvas.addEventListener('click', (event) => {
-       var x2 = event.pageX,
-         y2 = event.pageY;
-       console.log(x2, y2);
-       if (animationId) {
-         cancelAnimationFrame(animationId)
-         animationId = undefined;
-       } else {
-         draw()
-       }
-      });
-
-      wavesurfer.backend.setFilter(analyser);
-
-      let [mo, da, ye]    = ( new Date()  ).toLocaleDateString().split("/");
-      let [ho, mi, se] = ( new Date()  ).toLocaleTimeString().slice(0,7).split(":");
-
-      var month = Number(mo);
-      var day = Number(da);
-      var year = Number(ye);
-      var hour = Number(ho);
-      var minute = Number(mi);
-      var second = Number(se);
-
-      var mult1 = day / month;
-      var mult2 = month / day;
-      var mult3 = 0;
-
-      // Media controls
-      document.body.onkeyup = function(e){
-        if (e.keyCode == 0) {
-          if (e.key == "MediaPlay") {
-            wavesurfer.playPause()
-          } else if (e.key == "MediaTrackNext") {
-            wavesurfer.skip(10);
-          } else if (e.key == "MediaTrackPrevious") {
-            wavesurfer.skip(-10);
-          }
-        } else if(e.keyCode == 32){ // spacebar
-          wavesurfer.playPause()
-        } else if (e.keyCode == 37) { // left arrow key
-          wavesurfer.skip(-10);
-        } else if (e.keyCode == 39) { // right arrow key
-          wavesurfer.skip(10);
-        }
-      }
-    function draw() {
-      setTimeout(() => {
-        animationId = requestAnimationFrame(draw);
-        analyser.getByteTimeDomainData(dataArray);
-
-        canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
-        canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
-
-        canvasCtx.lineWidth = (10 + lineWidth) / hour / day;
-        canvasCtx.strokeStyle = drawColors[0];
-
-        canvasCtx.beginPath();
-        var sliceWidth = canvas.width * 1.0 / bufferLength;
-       var x = 0;
-
-       for (var i = 0; i < bufferLength; i++) {
-         var v = dataArray[i] / 128.0;
-         var y = v * canvas.height / 2;
-
-         if (i === 0) {
-           canvasCtx.moveTo(x, y);
-
-           if (lineWidth > 50) {
-             drawColors = shuffle(drawColors);
-             alpha = 1 - (shuffle([0.1, 0.01, 0.5, 0.91])[1] * mult1);
-           }
-         } else {
-           canvasCtx.lineTo(x, y);
-
-           widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
-
-           if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
-             drawColors = shuffle(drawColors);
-             lineWidth += drawColors.length * mult2;
-           }
-
-           if (lineWidth > 15) {
-             lineWidth += shuffle([-1, 1, 10])[0] * Math.abs(widthDelta) * (1 - alpha);
-             mult1 += 1;
-             mult3 -= 0.01;
-           } else {
-             lineWidth = mult3 * (2 + Math.abs(widthDelta));
-             alpha += shuffle([0.01, 0.1, 0.2, 0.5, 0.8, 1.0])[0];
-           }
-         }
-         x += sliceWidth;
-       }
-
-       if (lineWidth > 100.0) {
-         lineWidth = 1.0 * mult3;
-         alpha = shuffle([0.5, 0.005, 0.0008])[2];
-       }
-
-       if (alpha > 1) {
-         alpha = shuffle([0.1, 0.001, 0.0001])[0];
-       }
-
-       canvasCtx.lineWidth = Math.min(Math.abs(lineWidth), 100);
-       canvasCtx.lineTo(canvas.width, canvas.height / 2);
-       canvasCtx.stroke();
-
-              }, 1000 / 60);
-    }
-
-    wavesurfer.on('play', () => {
-         if (!animationId) {
-              draw();
-          }
-    });
-
-    }
- document.addEventListener('DOMContentLoaded', initPlayer);
- </script>
- 
-
-<script src="https://multipli.city/assets/js/vibrant.js"></script>
-<script>
-  function shuffle(a) {
-    for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-  }
-  // Converts hex colors from Vibrant into RGB format so that it can be used
-  // in real-time with our canvas animation function `draw()`
-  function hexToRgbA(hex){
-    var c;
-    if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
-      c= hex.substring(1).split('');
-      if(c.length== 3){
-        c= [c[0], c[0], c[1], c[1], c[2], c[2]];
-      }
-      c= '0x'+c.join('');
-      return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.8)';
-    }
-    throw new Error('Bad Hex');
-  }
-
-  var lineWidth = 2;
-  var drawColors = shuffle(colors);
-
-  var widthDelta = 0;
-  var alpha = 1.0;
-  var animationId = undefined;
-/*
-  var audioCtx = wavesurfer.backend.ac;
-  var analyser = audioCtx.createAnalyser();
-  var bufferLength = analyser.frequencyBinCount;
-  var dataArray = new Uint8Array(bufferLength);
-  analyser.getByteTimeDomainData(dataArray);
-
-  var canvas = document.getElementById("c");
-  var canvasCtx = canvas.getContext("2d");
-
-  analyser.fftSize = canvas.height > 2000 ? 2048 : 4096;
-
-  // Add event listener for `click` events.
-  canvas.addEventListener('click', (event) => {
-   var x2 = event.pageX,
-     y2 = event.pageY;
-   console.log(x2, y2);
-   if (animationId) {
-     cancelAnimationFrame(animationId)
-     animationId = undefined;
-   } else {
-     draw()
-   }
-  });
-  let [mo, da, ye]    = ( new Date()  ).toLocaleDateString().split("/");
-  let [ho, mi, se] = ( new Date()  ).toLocaleTimeString().slice(0,7).split(":");
-
-  var month = Number(mo);
-  var day = Number(da);
-  var year = Number(ye);
-  var hour = Number(ho);
-  var minute = Number(mi);
-  var second = Number(se);
-
-  var mult1 = day / month;
-  var mult2 = month / day;
-  var mult3 = 0;
-
-  // draw an oscilloscope of the current audio source
-
-  function draw() {
-   animationId = requestAnimationFrame(draw);
-   analyser.getByteTimeDomainData(dataArray);
-
-   canvasCtx.fillStyle = `rgb(0, 0, 0, ${alpha})`;
-   canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
-
-   canvasCtx.lineWidth = (10 + lineWidth) / hour / day;
-   canvasCtx.strokeStyle = drawColors[0];
-
-   canvasCtx.beginPath();
-   
-   var sliceWidth = canvas.width * 1.0 / bufferLength;
-   var x = 0;
-
-   for (var i = 0; i < bufferLength; i++) {
-     var v = dataArray[i] / 128.0;
-     var y = v * canvas.height / 2;
-
-     if (i === 0) {
-       canvasCtx.moveTo(x, y);
-
-       if (lineWidth > 50) {
-         drawColors = shuffle(drawColors);
-         alpha = 1 - (shuffle([0.1, 0.01, 0.5, 0.91])[1] * mult1);
-       }
-     } else {
-       canvasCtx.lineTo(x, y);
-
-       widthDelta = shuffle([0.001, -0.0001, -1, 0.27, 0.02, 0.1, 0.0000001, 0.00001, -0.000001, -0.000001])[0];
-
-       if (y < (canvas.height / 28) || y > (canvas.height * (28/32))) {
-         drawColors = shuffle(drawColors);
-         lineWidth += drawColors.length * mult2;
-       }
-       
-       if (lineWidth > 15) {
-         lineWidth += shuffle([-1, 1, 10])[0] * Math.abs(widthDelta) * (1 - alpha);
-         mult1 += 1;
-         mult3 -= 0.01;
-       } else {
-         lineWidth = mult3 * (2 + Math.abs(widthDelta));
-         alpha += shuffle([0.01, 0.1, 0.2, 0.5, 0.8, 1.0])[0];
-       }
-     }
-     x += sliceWidth;
-   }
-
-   if (lineWidth > 100.0) {
-     lineWidth = 1.0 * mult3;
-     alpha = shuffle([0.5, 0.005, 0.0008])[2];
-   }
-
-   if (alpha > 1) {
-     alpha = shuffle([0.1, 0.001, 0.0001])[0];
-   }
-
-   canvasCtx.lineWidth = Math.min(Math.abs(lineWidth), 100);
-   canvasCtx.lineTo(canvas.width, canvas.height / 2);
-   canvasCtx.stroke();
-  }
-
-  // wavesurfer.backend.setFilter(analyser);
-
-  
-  var cover = "//s3.amazonaws.com//sonicmultiplicities.audio/feed/SM001.jpg"
-  var v = new Vibrant("https:" + cover);
-
-  v.getPalette((err, palette) => {
-   if (err) {
-     console.log(err)
-   }
-
-   var muted = !err ? palette.Muted ? palette.Muted.getHex() : null : null;
-   var vibrant = !err ? palette.Vibrant ? palette.Vibrant.getHex() : null : null;
-   var darkVibrant = !err ? palette.DarkVibrant ? palette.DarkVibrant.getHex() : null : null;
-
-   wavesurfer.setWaveColor(vibrant || "#999");
-   wavesurfer.setProgressColor(muted || "#555");
-   wavesurfer.setCursorColor(darkVibrant || "#333");
-
-   colors.push(darkVibrant, vibrant, muted);
-  });
-  
-*/
-
- </script>
-
-
-
-<div id="streams"><br><br>
-  <b>Stream:</b>
-  
-  
-  <a href="//sonicmultiplicities.bandcamp.com/album/injection-time-lapse" id="bandcamp"><i class="fa fa-bandcamp"></i></a>
-  
-  
-  <a href="//soundcloud.com/sonicmultiplicities/injection-timelapse" id="soundcloud"><i class="fa fa-soundcloud"></i></a>
-  
-  
-  
-  <a href="//vimeo.com/351832834" id="vimeo"><i class="fa fa-vimeo-square"></i></a>
-  
-  
-  <br><br>
-</div>
-
-
-<div id="cc" style="margin:30px;text-align:center;">
-  <p>
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-  
-  <a href="//www.discogs.com/-Injection-Time-Lapse/release/14283849">View more release information on Discogs.</a>
-  
-  </p>
-</div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                                   ▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁
-                                   The near-timelessness of a pin-prick, upon
-                                   careful observation, lapses time in reverse,
-                                     and unravels its higher-order harmonies
-                                   ever-downward towards its own origin point.
-                                   ◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁▷◁ 
-</code></pre></div></div>
-
+<p>Performers with more than 50 titles are entitled to the use of SM funds to pay for
+travel, room and board expenses relating to new SM endeavors.</p>
 
           
 <!-- list of articles: sort by date (by default) -->
