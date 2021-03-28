@@ -61,7 +61,7 @@ musical performance as well as their spoken conversations recorded to disk.
 ### During the Performance
 
 Audio data is analyzed and logged in real-time by the SM software. This analysis
-and logging data is saved to the SM's data storage backend, retained indefinately
+and logging data is saved to the SM's data storage backend, retained indefinitely
 for the purposes of training the SM machine learning implementations.
 
 ### After the Performance
