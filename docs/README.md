@@ -214,7 +214,7 @@ project - will be necessary for this template to be used successfully.
 
 For this project to serve the average musician effectively, we will need to make
 graphical interfaces and forms which allow users to easily fill in the front
-matter and metadata. We'll also need to further automate the generation of all 
+matter and metadata. We'll also need to further automate the generation of all
 metadata from the music assets themselves.
 
 ### Planned Features
@@ -241,6 +241,26 @@ metadata from the music assets themselves.
 
 * Payment & licensing backends to facilitate independent licensing transactions
 * Merch & special item sales
+
+## Distributed & Decentralized Archives
+> A work-in-progress Hypercore project for SM
+
+### Releases
+
+MP3 releases Hyperdrive:
+`hyper://0e2d7c08d4d6e13ddc01780d6fb54db09452193863b9b922fe3d9edcd2d79ff2/`
+
+To sync it to your file system:
+
+```sh
+$ hyp sync hyper://0e2d7c08d4d6e13ddc01780d6fb54db09452193863b9b922fe3d9edcd2d79ff2/ ./mp3-files
+```
+
+### Mix Sessions
+> TBD
+
+### Mastering Sessions
+> TBD
 
 ## Acknowledgements
 
