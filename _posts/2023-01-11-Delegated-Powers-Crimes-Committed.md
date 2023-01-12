@@ -52,7 +52,7 @@ Worse of all, we are incredibly aware that we are not alone in these harrowing
 experiences.
 
 We have gone to extraordinary lengths to keep our music and our way of life
-alive. For Andrew, it required abandoning the city hellscale in favor of rural
+alive. For Andrew, it required abandoning the city hellscape in favor of rural
 acreage. We rebuilt our lives in order to keep our passions burning, meeting
 incredible friends and well-wishers along the way. Music will never simply die.
 Sonic Multiplicities is an ideal that cannot be put back into the bottle.
