@@ -21,7 +21,7 @@ soundcloud: //soundcloud.com/sonicmultiplicities/delegated-powers-crimes-committ
 cover: //s3.amazonaws.com/sonicmultiplicities.audio/feed/SM012.jpg
 stream_url: sonicmultiplicities.audio/feed/SM012.mp3
 excerpt: "SM012"
-abstract: "we must flatten the œuvre"
+abstract: "Recorded live on January 7th, 2023 in Bon Aqua, TN"
 ---
 
 # This Is A Quarantine Zone
