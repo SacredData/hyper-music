@@ -17,6 +17,7 @@ duration: 1284
 season: 2023
 episode: 1
 explicit: false
+bandcamp: //sonicmultiplicities.bandcamp.com/track/delegated-powers-crimes-committed
 soundcloud: //soundcloud.com/sonicmultiplicities/delegated-powers-crimes-committed
 cover: //s3.amazonaws.com/sonicmultiplicities.audio/feed/SM012.jpg
 stream_url: sonicmultiplicities.audio/feed/SM012.mp3
