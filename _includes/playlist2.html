@@ -118,6 +118,7 @@
         audio.src = opusUrl; // OPUS first, MP3 fallback
         audio.appendChild(mp3Source); // See downloads.html
 
+       console.log("{{site.url}}{{site.base_url}}{{site.assets_path}}/sidecars/{{page.excerpt}}.json")
         var scData = await fetch("{{site.url}}{{site.base_url}}{{site.assets_path}}/sidecars/{{page.excerpt}}.json")
           .then(response => response.json());
 

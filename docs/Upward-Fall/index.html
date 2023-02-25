@@ -535,6 +535,7 @@
         audio.src = opusUrl; // OPUS first, MP3 fallback
         audio.appendChild(mp3Source); // See downloads.html
 
+       console.log("https://multipli.city/assets/sidecars/SM007.json")
         var scData = await fetch("https://multipli.city/assets/sidecars/SM007.json")
           .then(response => response.json());
 

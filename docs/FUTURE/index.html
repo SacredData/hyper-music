@@ -533,6 +533,7 @@
         audio.src = opusUrl; // OPUS first, MP3 fallback
         audio.appendChild(mp3Source); // See downloads.html
 
+       console.log("https://multipli.city/assets/sidecars/SMOLD_025.json")
         var scData = await fetch("https://multipli.city/assets/sidecars/SMOLD_025.json")
           .then(response => response.json());
 
@@ -794,6 +795,8 @@
 
 
 
+
+<div id="tracklist"></div>
 
 
 <div id="cc" style="margin:30px;text-align:center;">
