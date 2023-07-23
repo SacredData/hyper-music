@@ -14,6 +14,7 @@ email: "andrew@multipli.city"
 github: "sacreddata"
 # path to: css/, fonts/, img/ and js/
 assets_path: "/assets" # i.e. "/assets" 
+destination: "./docs"
 statement: "uninstall your DAW"
 # default max toc levels: 1 - 6 (h1 - h6)
 toc_level: 3
